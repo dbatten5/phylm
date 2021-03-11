@@ -72,3 +72,18 @@ class Movie:
 
     def rt_low_confidence(self):
         return self._rt.low_confidence
+
+    def to_csv_row(self):
+        return [
+            self.title,
+            self.year,
+            self.genres(),
+            self.runtime(),
+            self.cast(),
+            self.directors(),
+            self.plot(),
+            self.imdb_score(),
+            self.metacritic_score(),
+            self.rt_tomato_score(),
+            self.rt_audience_score()
+        ]

@@ -31,4 +31,4 @@ class Mtc:
         return re.search('\d{4}', year_meta).group()
 
     def score(self):
-        return self._mt_data.find('span', {'class': 'metascore_w'}).text
+        return self._mtc_data.find('span', {'class': 'metascore_w'}).text
