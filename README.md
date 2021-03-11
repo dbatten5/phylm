@@ -1,13 +1,14 @@
 # PhYlm
 
-Film data aggregration
+Film data aggregation.
 
 ## Motivation
 
-When deciding which film to watch next, it can be helpful to have a spreadsheet of data
-handy to aid your decision. For example, the genre, the cast, the Metacritic score and,
-perhaps most importantly, the runtime. This package receives a csv of movie titles and
-returns a spreadsheet of useful information.
+When deciding which film to watch next, it can be helpful to have some key
+datapoints at your fingertips, for example, the genre, the cast, the
+Metacritic score and, perhaps most importantly, the runtime. This package
+provides a `Movie` class to gather information from various sources for a given
+film.
 
 ## Installation
 
