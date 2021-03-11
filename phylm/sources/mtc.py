@@ -1,7 +1,10 @@
+"""Module to contain Mtc class definition"""
+
 import re
 from phylm.utils.web import soupify, url_encode
 
 class Mtc:
+    """Class to abstract a Metacritic movie search result"""
     def __init__(self, raw_title):
         self.raw_title = raw_title
         self.low_confidence = False
@@ -12,6 +15,8 @@ class Mtc:
         search_url = f"https://www.metacritic.com/search/movie/{url_encoded_film}/results"
         soup = soupify(search_url)
         results = soup.find_all("li", {"class": "result"})
+        if not results:
+            return None
         target = None
         for result in results:
             result_title = result.find("a").string.strip()
@@ -24,11 +29,20 @@ class Mtc:
         return target
 
     def title(self):
+        """Return the title"""
+        if not self._mtc_data:
+            return 'Not found'
         return self._mtc_data.find("a").string.strip()
 
     def year(self):
+        """Return the year"""
+        if not self._mtc_data:
+            return 'Not found'
         year_meta = self._mtc_data.find("p").string
         return re.search('\d{4}', year_meta).group()
 
     def score(self):
+        """Return the score"""
+        if not self._mtc_data:
+            return 'Not found'
         return self._mtc_data.find('span', {'class': 'metascore_w'}).text
