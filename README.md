@@ -33,14 +33,15 @@ returns a spreadsheet of useful information.
 |`imdb_year`|Return the release year from IMDb|
 |`imdb_score`|Return the IMDb score|
 |`imdb_low_confidence`|Return the IMDb low confidence flag|
-|`metacritic_title`|Return the title from Metacritic|
-|`metacritic_year`|Return the release year from Metacritic|
-|`metacritic_score`|Return the Metacritic score|
-|`metacritic_low_confidence`|Return the Metacritic low confidence flag|
+|`mtc_title`|Return the title from Metacritic|
+|`mtc_year`|Return the release year from Metacritic|
+|`mtc_score`|Return the Metacritic score|
+|`mtc_low_confidence`|Return the Metacritic low confidence flag|
 |`rt_title`|Return the title from Rotten Tomatoes|
 |`rt_year`|Return the release year from Rotten Tomatoes|
 |`rt_tomato_score`|Return the Rotten Tomatoes Tomatometer score|
 |`rt_audience_score`|Return the Rotten Tomatoes Audience score|
+|`rt_low_confidence`|Return the Rotten Tomatoes low confidence flag|
 
 ### Attributes
 

@@ -58,19 +58,19 @@ class Movie:
         """Return the IMDb low confidence flag"""
         return self._imdb.low_confidence
 
-    def metacritic_title(self):
+    def mtc_title(self):
         """Return the title from Metacritic"""
         return self._mtc.title()
 
-    def metacritic_year(self):
+    def mtc_year(self):
         """Return the release year from Metacritic"""
         return self._mtc.year()
 
-    def metacritic_score(self):
+    def mtc_score(self):
         """Return the Metacritic score"""
         return self._mtc.score()
 
-    def metacritic_low_confidence(self):
+    def mtc_low_confidence(self):
         """Return the Metacritic low confidence flag"""
         return self._mtc.low_confidence
 
