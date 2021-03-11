@@ -16,7 +16,7 @@ class Imdb:
                 target = result
                 break
         if not target:
-            result = results[0]
+            target = results[0]
             self.low_confidence = True
         Imdb.ia.update(target, info=['main'])
         return target
@@ -33,6 +33,9 @@ class Imdb:
 
     def runtime(self):
         return self._imdb_data['runtimes'][0]
+
+    def year(self):
+        return self._imdb_data['year']
 
     def directors(self):
         try:
