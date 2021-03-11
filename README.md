@@ -9,6 +9,12 @@ handy to aid your decision. For example, the genre, the cast, the Metacritic sco
 perhaps most importantly, the runtime. This package receives a csv of movie titles and
 returns a spreadsheet of useful information.
 
+## Installation
+
+```bash
+pip install phylm
+```
+
 ## Usage
 
 ```python
