@@ -1,5 +1,5 @@
 import re
-from utils.web import soupify, url_encode
+from phylm.utils.web import soupify, url_encode
 
 class Mtc:
     def __init__(self, raw_title):

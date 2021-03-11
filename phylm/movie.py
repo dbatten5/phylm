@@ -1,6 +1,6 @@
-from sources.mtc import Mtc
-from sources.rt import Rt
-from sources.imdb import Imdb
+from phylm.sources.mtc import Mtc
+from phylm.sources.rt import Rt
+from phylm.sources.imdb import Imdb
 
 class Movie:
     def __init__(self, title, year):

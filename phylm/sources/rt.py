@@ -1,5 +1,5 @@
-from utils.web import soupify, url_encode
 import json
+from phylm.utils.web import soupify, url_encode
 
 class Rt:
     def __init__(self, raw_title):

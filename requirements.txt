@@ -1,0 +1,3 @@
+beautifulsoup4==4.9.3
+IMDbPY==2020.9.25
+requests==2.25.1
