@@ -9,13 +9,13 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name='Phylm',
-    version='0.1.1',
+    version='0.1.2',
     description='Aggregrate useful data about films',
     long_description=README,
     long_description_content_type="text/markdown",
     author='Dom Batten',
     author_email='dominic.batten@googlemail.com',
-    url = 'https://github.com/dbatten4/phylm',
+    url = 'https://github.com/dbatten5/phylm',
     license="MIT",
     install_requires=[
         'beautifulsoup4',

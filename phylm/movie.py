@@ -6,7 +6,7 @@ from phylm.sources.imdb import Imdb
 
 class Movie:
     """Class to represent a movie"""
-    def __init__(self, title, year):
+    def __init__(self, title, year=None):
         self.title = title
         self.year = year
         self._mtc = self._get_mtc()

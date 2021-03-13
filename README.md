@@ -60,9 +60,9 @@ pip install phylm
 #### Low Confidence
 
 If the package can't find an exact match by title in one of the sources (IMDb,
-Metacritic, Rotten Tomatoes) then the first result from the search result will
-be returned. In this case the `{source}_low_confidence` flag will be set to
-`True`. Use the `{source}_title` and `{source}_year` values to cross reference
+Metacritic, Rotten Tomatoes) then the first result from the search results will
+be used. In these instances the `{source}_low_confidence` flag will be set to
+`True`.  Use the `{source}_title` and `{source}_year` values to cross reference
 with the given title to decide whether this is a worthwhile result or not.
 
 ## Limitations
