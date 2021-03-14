@@ -7,7 +7,7 @@ Film data aggregation.
 When deciding which film to watch next, it can be helpful to have some key
 datapoints at your fingertips, for example, the genre, the cast, the
 Metacritic score and, perhaps most importantly, the runtime. This package
-provides a `Movie` class to gather information from various sources for a given
+provides a `Phylm` class to gather information from various sources for a given
 film.
 
 ## Installation
@@ -19,9 +19,9 @@ pip install phylm
 ## Usage
 
 ```python
->>> from phylm.movie import Movie
->>> m = Movie('The Matrix', 1999)
->>> m.imdb_score()
+>>> from phylm import Phylm
+>>> p = Phylm('The Matrix', 1999)
+>>> p.imdb_score()
 8.7
 ```
 

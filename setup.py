@@ -8,8 +8,8 @@ HERE = pathlib.Path(__file__).parent
 README = (HERE / "README.md").read_text()
 
 setup(
-    name='Phylm',
-    version='0.1.3',
+    name='phylm',
+    version='1.0.0',
     description='Aggregrate useful data about films',
     long_description=README,
     long_description_content_type="text/markdown",
