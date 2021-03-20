@@ -49,7 +49,10 @@ class Imdb:
         """Return the runtime"""
         if not self._imdb_data:
             return None
-        return self._imdb_data['runtimes'][0]
+        try:
+            return self._imdb_data['runtimes'][0]
+        except KeyError:
+            return None
 
     def year(self):
         """Return the year"""
@@ -63,7 +66,7 @@ class Imdb:
             return None
         try:
             directors = [person['name'] for person in self._imdb_data['directors']]
-        except Exception:
+        except KeyError:
             return None
         return ', '.join(directors)
 
@@ -82,6 +85,6 @@ class Imdb:
             Imdb.ia.update(data, info=['plot'])
         try:
             plot = data['plot'][0].split('::')[0]
-        except Exception:
+        except KeyError:
             plot = ''
         return plot
