@@ -29,38 +29,38 @@ class Imdb:
     def title(self):
         """Return the title"""
         if not self._imdb_data:
-            return 'Not found'
+            return None
         return self._imdb_data['title']
 
     def genres(self):
         """Return the genres"""
         if not self._imdb_data:
-            return 'Not found'
+            return None
         return ', '.join(self._imdb_data['genres'])
 
     def cast(self, limit=5):
         """Return the cast"""
         if not self._imdb_data:
-            return 'Not found'
+            return None
         cast_members = [person['name'] for person in self._imdb_data['cast'][:limit]]
         return ', '.join(cast_members)
 
     def runtime(self):
         """Return the runtime"""
         if not self._imdb_data:
-            return 'Not found'
+            return None
         return self._imdb_data['runtimes'][0]
 
     def year(self):
         """Return the year"""
         if not self._imdb_data:
-            return 'Not found'
+            return None
         return self._imdb_data['year']
 
     def directors(self):
         """Return the directors"""
         if not self._imdb_data:
-            return 'Not found'
+            return None
         try:
             directors = [person['name'] for person in self._imdb_data['directors']]
         except Exception:
@@ -70,13 +70,13 @@ class Imdb:
     def score(self):
         """Return the score"""
         if not self._imdb_data:
-            return 'Not found'
+            return None
         return self._imdb_data['rating']
 
     def plot(self):
         """Return the plot"""
         if not self._imdb_data:
-            return 'Not found'
+            return None
         data = self._imdb_data
         if 'plot' not in data.current_info:
             Imdb.ia.update(data, info=['plot'])

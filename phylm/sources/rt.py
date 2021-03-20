@@ -34,23 +34,23 @@ class Rt:
     def title(self):
         """Return the title"""
         if not self._rt_data:
-            return 'Not found'
+            return None
         return self._rt_data['name']
 
     def year(self):
         """Return the year"""
         if not self._rt_data:
-            return 'Not found'
+            return None
         return self._rt_data['releaseYear']
 
     def tomato_score(self):
         """Return the TomatoScore"""
         if not self._rt_data:
-            return 'Not found'
+            return None
         return self._rt_data['tomatometerScore'].get('score', 'N/A')
 
     def audience_score(self):
         """Return the Audience Score"""
         if not self._rt_data:
-            return 'Not found'
+            return None
         return self._rt_data['audienceScore'].get('score', 'N/A')

@@ -31,18 +31,18 @@ class Mtc:
     def title(self):
         """Return the title"""
         if not self._mtc_data:
-            return 'Not found'
+            return None
         return self._mtc_data.find("a").string.strip()
 
     def year(self):
         """Return the year"""
         if not self._mtc_data:
-            return 'Not found'
+            return None
         year_meta = self._mtc_data.find("p").string
         return re.search('\d{4}', year_meta).group()
 
     def score(self):
         """Return the score"""
         if not self._mtc_data:
-            return 'Not found'
+            return None
         return self._mtc_data.find('span', {'class': 'metascore_w'}).text
