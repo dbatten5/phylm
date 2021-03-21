@@ -15,6 +15,8 @@ class Rt:
         search_url = f"https://www.rottentomatoes.com/search?search={url_encoded_film}"
         soup = soupify(search_url)
         raw = soup.find(id='movies-json')
+        if not raw.string:
+            return None
         items = json.loads(raw.string)['items']
         if not items:
             return None
