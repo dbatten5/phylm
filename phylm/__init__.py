@@ -22,9 +22,9 @@ class Phylm:
     def _get_imdb(self):
         return Imdb(self.title)
 
-    def genres(self):
+    def genres(self, limit=3):
         """Return the genres"""
-        return self._imdb.genres()
+        return self._imdb.genres(limit)
 
     def runtime(self):
         """Return the runtime"""
@@ -34,9 +34,9 @@ class Phylm:
         """Return the cast"""
         return self._imdb.cast(limit)
 
-    def directors(self):
+    def directors(self, limit=3):
         """Return the directors"""
-        return self._imdb.directors()
+        return self._imdb.directors(limit)
 
     def plot(self):
         """Return the plot"""

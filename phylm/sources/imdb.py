@@ -32,18 +32,17 @@ class Imdb:
             return None
         return self._imdb_data['title']
 
-    def genres(self):
+    def genres(self, limit=3):
         """Return the genres"""
         if not self._imdb_data:
             return None
-        return ', '.join(self._imdb_data['genres'])
+        return self._imdb_data['genres'][:limit]
 
     def cast(self, limit=5):
         """Return the cast"""
         if not self._imdb_data:
             return None
-        cast_members = [person['name'] for person in self._imdb_data['cast'][:limit]]
-        return ', '.join(cast_members)
+        return [person['name'] for person in self._imdb_data['cast'][:limit]]
 
     def runtime(self):
         """Return the runtime"""
@@ -60,15 +59,15 @@ class Imdb:
             return None
         return self._imdb_data['year']
 
-    def directors(self):
+    def directors(self, limit=3):
         """Return the directors"""
         if not self._imdb_data:
             return None
         try:
-            directors = [person['name'] for person in self._imdb_data['directors']]
+            directors = [person['name'] for person in self._imdb_data['directors'][:limit]]
         except KeyError:
             return None
-        return ', '.join(directors)
+        return directors
 
     def score(self):
         """Return the score"""

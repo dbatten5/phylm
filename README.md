@@ -23,18 +23,20 @@ pip install phylm
 >>> p = Phylm('The Matrix', 1999)
 >>> p.imdb_score()
 8.7
+>>> p.genres(2)
+['Action', 'Sci-Fi']
 ```
 
 ## Available Datapoints
 
 ### Methods
 
-|name|description|
-|---|---|
-|`genres`|Return the genres|
+|name|description||arguments (default)|
+|---|---|---|---|
+|`genres`|Return the genres|`int(3)` The number of genres returned
 |`runtime`|Return the runtime|
-|`cast`|Return the cast|
-|`directors`|Return the directors|
+|`cast`|Return the cast|`int(5)` The number of cast members returned
+|`directors`|Return the directors|`int(3)` The number of directors returned
 |`plot`|Return the plot|
 |`imdb_title`|Return the title from IMDb|
 |`imdb_year`|Return the release year from IMDb|
