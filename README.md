@@ -20,7 +20,7 @@ pip install phylm
 
 ```python
 >>> from phylm import Phylm
->>> p = Phylm('The Matrix', 1999)
+>>> p = Phylm('The Matrix', 1999) # the year is optional
 >>> p.imdb_score()
 8.7
 >>> p.genres(2)
@@ -31,8 +31,8 @@ pip install phylm
 
 ### Methods
 
-|name|description||arguments (default)|
-|---|---|---|---|
+|name|description|arguments (default)|
+|---|---|---|
 |`genres`|Return the genres|`int(3)` The number of genres returned
 |`runtime`|Return the runtime|
 |`cast`|Return the cast|`int(5)` The number of cast members returned
@@ -52,7 +52,7 @@ pip install phylm
 |`rt_audience_score`|Return the Rotten Tomatoes Audience score|
 |`rt_low_confidence`|Return the Rotten Tomatoes low confidence flag|
 
-### Attributes
+### Properties
 
 |name|description|
 |---|---|
