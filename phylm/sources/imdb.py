@@ -73,7 +73,10 @@ class Imdb:
         """Return the score"""
         if not self._imdb_data:
             return None
-        return self._imdb_data['rating']
+        try:
+            return self._imdb_data['rating']
+        except KeyError:
+            return None
 
     def plot(self):
         """Return the plot"""

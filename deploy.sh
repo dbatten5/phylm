@@ -8,3 +8,6 @@ python setup.py sdist
 
 # upload
 twine upload dist/*
+
+# remove the build
+rm dist/*
