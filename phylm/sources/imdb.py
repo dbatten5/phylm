@@ -35,13 +35,13 @@ class Imdb:
     def genres(self, limit=3):
         """Return the genres"""
         if not self._imdb_data:
-            return None
+            return []
         return self._imdb_data['genres'][:limit]
 
     def cast(self, limit=5):
         """Return the cast"""
         if not self._imdb_data:
-            return None
+            return []
         return [person['name'] for person in self._imdb_data['cast'][:limit]]
 
     def runtime(self):
@@ -66,7 +66,7 @@ class Imdb:
         try:
             directors = [person['name'] for person in self._imdb_data['directors'][:limit]]
         except KeyError:
-            return None
+            return []
         return directors
 
     def score(self):
