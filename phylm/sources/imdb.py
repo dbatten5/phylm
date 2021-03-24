@@ -62,11 +62,11 @@ class Imdb:
     def directors(self, limit=3):
         """Return the directors"""
         if not self._imdb_data:
-            return None
+            return []
         try:
             directors = [person['name'] for person in self._imdb_data['directors'][:limit]]
         except KeyError:
-            return []
+            directors = []
         return directors
 
     def score(self):
