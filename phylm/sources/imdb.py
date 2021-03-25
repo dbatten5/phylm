@@ -57,7 +57,10 @@ class Imdb:
         """Return the year"""
         if not self._imdb_data:
             return None
-        return self._imdb_data['year']
+        try:
+            return self._imdb_data['year']
+        except KeyError:
+            return None
 
     def directors(self, limit=3):
         """Return the directors"""
