@@ -9,7 +9,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name='phylm',
-    version='3.0.5',
+    version='3.0.6',
     description='Aggregrate useful data about films',
     long_description=README,
     long_description_content_type="text/markdown",

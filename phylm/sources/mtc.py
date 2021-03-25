@@ -39,7 +39,10 @@ class Mtc:
         if not self._mtc_data:
             return None
         year_meta = self._mtc_data.find("p").string
-        return re.search('\d{4}', year_meta).group()
+        year_search = re.search('\d{4}', year_meta)
+        if not year_search:
+            return None
+        return year_search.group()
 
     def score(self):
         """Return the score"""
