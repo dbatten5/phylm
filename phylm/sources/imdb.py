@@ -42,7 +42,10 @@ class Imdb:
         """Return the cast"""
         if not self._imdb_data:
             return []
-        return [person['name'] for person in self._imdb_data['cast'][:limit]]
+        try:
+            return [person['name'] for person in self._imdb_data['cast'][:limit]]
+        except KeyError:
+            return []
 
     def runtime(self):
         """Return the runtime"""
@@ -67,10 +70,9 @@ class Imdb:
         if not self._imdb_data:
             return []
         try:
-            directors = [person['name'] for person in self._imdb_data['directors'][:limit]]
+            return [person['name'] for person in self._imdb_data['directors'][:limit]]
         except KeyError:
-            directors = []
-        return directors
+            return []
 
     def score(self):
         """Return the score"""
