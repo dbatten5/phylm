@@ -1,21 +1,23 @@
 """Module to contain IMDb class definition"""
+from typing import Optional, Union
 
 import imdb
+from imdb.Movie import Movie
 
 class Imdb:
     """Class to abstract an IMDb movie object"""
     ia = imdb.IMDb()
 
-    def __init__(self, raw_title):
+    def __init__(self, raw_title) -> None:
         self.raw_title = raw_title
         self.low_confidence = False
         self._imdb_data = self._get_imdb_data()
 
-    def _get_imdb_data(self):
+    def _get_imdb_data(self) -> Union[dict, Movie]:
         results = Imdb.ia.search_movie(self.raw_title)
         if not results:
-            return None
-        target = None
+            return {}
+        target = {}
         for result in results:
             if result['title'].lower() == self.raw_title.lower():
                 target = result
@@ -26,72 +28,42 @@ class Imdb:
         Imdb.ia.update(target, info=['main'])
         return target
 
-    def title(self):
+    def title(self) -> str:
         """Return the title"""
-        if not self._imdb_data:
-            return None
-        return self._imdb_data['title']
+        return self._imdb_data.get('title')
 
-    def genres(self, limit=3):
+    def genres(self, limit: int = 3) -> list[Optional[str]]:
         """Return the genres"""
-        if not self._imdb_data:
-            return []
-        return self._imdb_data['genres'][:limit]
+        return self._imdb_data.get('genres', [])[:limit]
 
-    def cast(self, limit=5):
+    def cast(self, limit: int = 5) -> list[Optional[str]]:
         """Return the cast"""
-        if not self._imdb_data:
-            return []
-        try:
-            return [person['name'] for person in self._imdb_data['cast'][:limit]]
-        except KeyError:
-            return []
+        return [person['name'] for person in self._imdb_data.get('cast', [])[:limit]]
 
-    def runtime(self):
+    def runtime(self) -> Optional[int]:
         """Return the runtime"""
-        if not self._imdb_data:
-            return None
-        try:
-            return self._imdb_data['runtimes'][0]
-        except KeyError:
-            return None
+        return self._imdb_data.get('runtimes', [None])[0]
 
-    def year(self):
+    def year(self) -> Optional[int]:
         """Return the year"""
-        if not self._imdb_data:
-            return None
-        try:
-            return self._imdb_data['year']
-        except KeyError:
-            return None
+        return self._imdb_data.get('year')
 
-    def directors(self, limit=3):
+    def directors(self, limit: int = 3) -> list[Optional[str]]:
         """Return the directors"""
-        if not self._imdb_data:
-            return []
-        try:
-            return [person['name'] for person in self._imdb_data['directors'][:limit]]
-        except KeyError:
-            return []
+        return [person['name'] for person in self._imdb_data.get('directors', [])[:limit]]
 
-    def score(self):
+    def score(self) -> Optional[str]:
         """Return the score"""
-        if not self._imdb_data:
-            return None
-        try:
-            return self._imdb_data['rating']
-        except KeyError:
-            return None
+        return self._imdb_data.get('rating')
 
-    def plot(self):
+    def plot(self) -> Optional[str]:
         """Return the plot"""
         if not self._imdb_data:
             return None
         data = self._imdb_data
         if 'plot' not in data.current_info:
             Imdb.ia.update(data, info=['plot'])
-        try:
-            plot = data['plot'][0].split('::')[0]
-        except KeyError:
-            plot = ''
-        return plot
+        plot = data.get('plot')
+        if not plot:
+            return None
+        return plot[0].split('::')[0]
