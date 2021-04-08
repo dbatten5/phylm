@@ -1,4 +1,5 @@
 """Module to contain IMDb class definition"""
+
 from typing import Optional, Union
 
 import imdb
@@ -28,7 +29,7 @@ class Imdb:
         Imdb.ia.update(target, info=['main'])
         return target
 
-    def title(self) -> str:
+    def title(self) -> Optional[str]:
         """Return the title"""
         return self._imdb_data.get('title')
 
