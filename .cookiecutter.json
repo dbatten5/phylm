@@ -1,0 +1,11 @@
+{
+  "_template": "gh:cjolowicz/cookiecutter-hypermodern-python",
+  "author": "Dom Batten",
+  "email": "dominic.batten@googlemail.com",
+  "friendly_name": "Phylm",
+  "github_user": "dbatten5",
+  "license": "MIT",
+  "package_name": "phylm",
+  "project_name": "phylm",
+  "version": "3.0.7"
+}
