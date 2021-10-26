@@ -57,11 +57,14 @@ class Rt:
         """
         if not self._rt_data:
             return None
+
         title_tag: Optional[Union[Tag, NavigableString]] = self._rt_data.find_all("a")[
             -1
         ]
+
         if title_tag:
             return str(title_tag.get_text()).strip()
+
         return None
 
     def year(self) -> Optional[str]:
@@ -72,6 +75,7 @@ class Rt:
         """
         if not self._rt_data:
             return None
+
         return str(self._rt_data["releaseyear"])
 
     def tomato_score(self) -> Optional[str]:
@@ -82,4 +86,5 @@ class Rt:
         """
         if not self._rt_data:
             return None
+
         return str(self._rt_data["tomatometerscore"])
