@@ -22,6 +22,9 @@ Changelog = "https://github.com/dbatten5/phylm/releases"
 [tool.poetry.dependencies]
 python = "^3.6.1"
 click = "^8.0.1"
+imdbpy = "^2021.4.18"
+requests = "^2.26.0"
+beautifulsoup4 = "^4.10.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
