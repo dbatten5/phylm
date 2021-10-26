@@ -41,15 +41,15 @@ class TestLoadSource:
             phylm.load_source("bar")
 
     @patch("phylm.phylm.Imdb", autospec=True)
-    def test_recognized_source(self, mock_imdb) -> None:
+    def test_recognized_source_imdb(self, mock_imdb) -> None:
         """
         Given a `Phylm` instance,
-        When the `load_source` method is invoked with a recognized source name,
+        When the `load_source` method is invoked with the `imdb` source,
         Then the source is loaded
         """
         phylm = Phylm(title="bar")
         with pytest.raises(
-            SourceNotLoadedError, match="The data for Imdb has not been loaded"
+            SourceNotLoadedError, match="The data for Imdb has not yet been loaded"
         ):
             assert phylm.imdb is None
 
@@ -57,3 +57,22 @@ class TestLoadSource:
 
         assert phylm.imdb == mock_imdb.return_value
         mock_imdb.assert_called_once_with(raw_title="bar")
+
+    @patch("phylm.phylm.Mtc", autospec=True)
+    def test_recognized_source_mtc(self, mock_mtc) -> None:
+        """
+        Given a `Phylm` instance,
+        When the `load_source` method is invoked with the `mtc` source,
+        Then the source is loaded
+        """
+        phylm = Phylm(title="bar")
+        with pytest.raises(
+            SourceNotLoadedError,
+            match="The data for Metacritic has not yet been loaded",
+        ):
+            assert phylm.mtc is None
+
+        phylm.load_source("mtc")
+
+        assert phylm.mtc == mock_mtc.return_value
+        mock_mtc.assert_called_once_with(raw_title="bar")
