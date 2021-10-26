@@ -4,7 +4,6 @@ from unittest.mock import patch
 
 from phylm.sources.imdb import Imdb
 
-
 IMDB_IA_PATH = "phylm.sources.imdb.Imdb.ia"
 
 
@@ -242,13 +241,13 @@ def test_rating(mock_ia):
     mock_ia.search_movie.return_value = [
         {
             "title": raw_title,
-            "rating": "8.1",
+            "rating": 8.1,
         }
     ]
 
     imdb = Imdb(raw_title)
 
-    assert imdb.rating() == "8.1"
+    assert imdb.rating() == 8.1
 
 
 @patch(IMDB_IA_PATH)

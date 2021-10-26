@@ -93,7 +93,7 @@ class Imdb:
             person["name"] for person in self._imdb_data.get("directors", [])[:limit]
         ]
 
-    def rating(self) -> Optional[str]:
+    def rating(self) -> Optional[float]:
         """Return the IMDb rating.
 
         Returns:
