@@ -1,0 +1,91 @@
+[tool.poetry]
+name = "phylm"
+version = "3.0.7"
+description = "Phylm"
+authors = ["Dom Batten <dominic.batten@googlemail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/dbatten5/phylm"
+repository = "https://github.com/dbatten5/phylm"
+documentation = "https://dbatten5.github.io/phylm"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+
+[tool.poetry.urls]
+Changelog = "https://github.com/dbatten5/phylm/releases"
+
+[tool.poetry.dependencies]
+python = "^3.6.1"
+click = "^8.0.1"
+imdbpy = "^2021.4.18"
+requests = "^2.26.0"
+beautifulsoup4 = "^4.10.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+coverage = {extras = ["toml"], version = "^5.4"}
+safety = "^1.10.3"
+mypy = "^0.910"
+typeguard = "^2.12.1"
+xdoctest = {extras = ["colors"], version = "^0.15.5"}
+pre-commit = "^2.13.0"
+flake8 = "^3.9.2"
+black = "^20.8b1"
+flake8-bandit = "^2.1.2"
+flake8-bugbear = "^21.4.3"
+flake8-docstrings = "^1.6.0"
+flake8-rst-docstrings = "^0.2.3"
+pep8-naming = "^0.12.0"
+darglint = "^1.8.0"
+reorder-python-imports = "^2.6.0"
+pre-commit-hooks = "^4.0.1"
+Pygments = "^2.9.0"
+markdown-include = "^0.6.0"
+mkdocs = "^1.2.3"
+mkdocs-autolinks-plugin = "^0.4.0"
+mkdocs-autorefs = "^0.3.0"
+mkdocs-git-revision-date-localized-plugin = "^0.10.0"
+mkdocs-htmlproofer-plugin = "^0.7.0"
+mkdocs-material = "^7.3.4"
+mkdocs-material-extensions = "^1.0.3"
+mkdocs-minify-plugin = "^0.5.0"
+mkdocstrings = "^0.16.2"
+types-requests = "^2.25.11"
+
+[tool.poetry.scripts]
+phylm = "phylm.__main__:main"
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["phylm"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 90
+
+[tool.mypy]
+strict = true
+pretty = true
+show_column_numbers = true
+show_error_codes = true
+show_error_context = true
+implicit_reexport = true
+
+[[tool.mypy.overrides]]
+module = ["imdb", "imdb.Movie", "bs4", "bs4.element", "requests"]
+ignore_missing_imports = true
+
+[tool.isort]
+profile = "open_stack"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

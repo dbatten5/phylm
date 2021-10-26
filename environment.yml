@@ -1,9 +1,0 @@
-name: phylm
-channels:
-  - defaults
-dependencies:
-  - python=3.9
-  - pip:
-    - beautifulsoup4==4.9.3
-    - imdbpy==2020.9.25
-    - requests==2.25.1
