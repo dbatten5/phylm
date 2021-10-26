@@ -40,7 +40,7 @@ instance:
 
 ```python
 phylm.imdb
-phylm.rtom
+phylm.rt
 phylm.mtc
 ```
 

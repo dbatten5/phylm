@@ -1,4 +1,5 @@
 """Tests for the Mtc class."""
+from unittest.mock import MagicMock
 from unittest.mock import patch
 
 import pytest
@@ -25,7 +26,9 @@ class TestInit:
     """Tests for the `__init__` method."""
 
     @patch("phylm.sources.mtc.soupify")
-    def test_exact_match(self, mock_soup, matrix_results):
+    def test_exact_match(
+        self, mock_soup: MagicMock, matrix_results: BeautifulSoup
+    ) -> None:
         """
         Given a raw title,
         When there is an exact match from Mtc,
@@ -38,7 +41,9 @@ class TestInit:
         assert mtc.low_confidence is False
 
     @patch("phylm.sources.mtc.soupify")
-    def test_exact_match_ignoring_case_and_spaces(self, mock_soup, matrix_results):
+    def test_exact_match_ignoring_case_and_spaces(
+        self, mock_soup: MagicMock, matrix_results: BeautifulSoup
+    ) -> None:
         """
         Given a raw title,
         When there is an exact match from Mtc,
@@ -51,7 +56,9 @@ class TestInit:
         assert mtc.low_confidence is False
 
     @patch("phylm.sources.mtc.soupify")
-    def test_no_exact_match(self, mock_soup, matrix_results):
+    def test_no_exact_match(
+        self, mock_soup: MagicMock, matrix_results: BeautifulSoup
+    ) -> None:
         """
         Given a raw title,
         When there is no exact match from Mtc,
@@ -68,7 +75,7 @@ class TestTitle:
     """Tests for the `title` method"""
 
     @patch("phylm.sources.mtc.soupify")
-    def test_no_results(self, mock_soup, no_results):
+    def test_no_results(self, mock_soup: MagicMock, no_results: BeautifulSoup) -> None:
         """
         Given a raw title with no results from Mtc,
         When the title is retrieved,
@@ -84,7 +91,7 @@ class TestYear:
     """Tests for the `year` method"""
 
     @patch("phylm.sources.mtc.soupify")
-    def test_match(self, mock_soup, matrix_results):
+    def test_match(self, mock_soup: MagicMock, matrix_results: BeautifulSoup) -> None:
         """
         Given a raw title with a match from Mtc,
         When the year is retrieved,
@@ -96,7 +103,7 @@ class TestYear:
         assert mtc.year() == 1999
 
     @patch("phylm.sources.mtc.soupify")
-    def test_no_results(self, mock_soup, no_results):
+    def test_no_results(self, mock_soup: MagicMock, no_results: BeautifulSoup) -> None:
         """
         Given a raw title with no results from Mtc,
         When the year is retrieved,
@@ -108,7 +115,7 @@ class TestYear:
         assert mtc.year() is None
 
     @patch("phylm.sources.mtc.soupify")
-    def test_no_match(self, mock_soup, no_results):
+    def test_no_match(self, mock_soup: MagicMock, no_results: BeautifulSoup) -> None:
         """
         Given a raw title with results from Mtc but no year data,
         When the year is retrieved,
@@ -125,7 +132,7 @@ class TestRating:
     """Tests for the `rating` method"""
 
     @patch("phylm.sources.mtc.soupify")
-    def test_match(self, mock_soup, matrix_results):
+    def test_match(self, mock_soup: MagicMock, matrix_results: BeautifulSoup) -> None:
         """
         Given a raw title with a match from Mtc,
         When the rating is retrieved,
@@ -137,7 +144,7 @@ class TestRating:
         assert mtc.rating() == "73"
 
     @patch("phylm.sources.mtc.soupify")
-    def test_no_results(self, mock_soup, no_results):
+    def test_no_results(self, mock_soup: MagicMock, no_results: BeautifulSoup) -> None:
         """
         Given a raw title with no results from Mtc,
         When the rating is retrieved,

@@ -1,4 +1,5 @@
 """Tests for the utils module."""
+from unittest.mock import MagicMock
 from unittest.mock import Mock
 from unittest.mock import patch
 
@@ -28,7 +29,7 @@ class TestSoupify:
     """Tests for the `soupify` function."""
 
     @patch("phylm.utils.web.requests", autospec=True)
-    def test_returns_a_bs4_object(self, mock_requests):
+    def test_returns_a_bs4_object(self, mock_requests: MagicMock) -> None:
         """
         Given a url
         When the soupify function is invoked with it

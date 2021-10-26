@@ -1,4 +1,5 @@
 """Tests for the `Phylm` module."""
+from unittest.mock import MagicMock
 from unittest.mock import patch
 
 import pytest
@@ -41,7 +42,7 @@ class TestLoadSource:
             phylm.load_source("bar")
 
     @patch("phylm.phylm.Imdb", autospec=True)
-    def test_recognized_source_imdb(self, mock_imdb) -> None:
+    def test_recognized_source_imdb(self, mock_imdb: MagicMock) -> None:
         """
         Given a `Phylm` instance,
         When the `load_source` method is invoked with the `imdb` source,
@@ -59,7 +60,7 @@ class TestLoadSource:
         mock_imdb.assert_called_once_with(raw_title="bar")
 
     @patch("phylm.phylm.Mtc", autospec=True)
-    def test_recognized_source_mtc(self, mock_mtc) -> None:
+    def test_recognized_source_mtc(self, mock_mtc: MagicMock) -> None:
         """
         Given a `Phylm` instance,
         When the `load_source` method is invoked with the `mtc` source,
@@ -78,7 +79,7 @@ class TestLoadSource:
         mock_mtc.assert_called_once_with(raw_title="bar")
 
     @patch("phylm.phylm.Rt", autospec=True)
-    def test_recognized_source_rt(self, mock_rt) -> None:
+    def test_recognized_source_rt(self, mock_rt: MagicMock) -> None:
         """
         Given a `Phylm` instance,
         When the `load_source` method is invoked with the `rt` source,
@@ -89,9 +90,9 @@ class TestLoadSource:
             SourceNotLoadedError,
             match="The data for Rotten Tomatoes has not yet been loaded",
         ):
-            assert phylm.rtom is None
+            assert phylm.rt is None
 
         phylm.load_source("rt")
 
-        assert phylm.rtom == mock_rt.return_value
+        assert phylm.rt == mock_rt.return_value
         mock_rt.assert_called_once_with(raw_title="bar")

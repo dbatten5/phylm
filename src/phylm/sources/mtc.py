@@ -93,4 +93,4 @@ class Mtc:
         )
         if not rating_tag:
             return None
-        return rating_tag.get_text().strip()
+        return str(rating_tag.get_text().strip())

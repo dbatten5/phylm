@@ -55,6 +55,7 @@ mkdocs-material = "^7.3.4"
 mkdocs-material-extensions = "^1.0.3"
 mkdocs-minify-plugin = "^0.5.0"
 mkdocstrings = "^0.16.2"
+types-requests = "^2.25.11"
 
 [tool.poetry.scripts]
 phylm = "phylm.__main__:main"
@@ -76,9 +77,10 @@ pretty = true
 show_column_numbers = true
 show_error_codes = true
 show_error_context = true
+implicit_reexport = true
 
 [[tool.mypy.overrides]]
-module = ["imdb", "imdb.Movie"]
+module = ["imdb", "imdb.Movie", "bs4", "bs4.element", "requests"]
 ignore_missing_imports = true
 
 [tool.isort]

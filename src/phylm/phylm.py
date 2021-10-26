@@ -18,6 +18,7 @@ class Phylm:
         self.title: str = title
         self._imdb: Optional[Imdb] = None
         self._mtc: Optional[Mtc] = None
+        self._rt: Optional[Rt] = None
 
     @property
     def imdb(self) -> Optional[Imdb]:
@@ -52,7 +53,7 @@ class Phylm:
         return self._mtc
 
     @property
-    def rtom(self) -> Optional[Rt]:
+    def rt(self) -> Rt:
         """Return the Rotten Tomatoes data.
 
         Returns:
@@ -61,12 +62,12 @@ class Phylm:
         Raises:
             SourceNotLoadedError: if the source is not loaded
         """
-        if self._mtc is None:
+        if self._rt is None:
             raise SourceNotLoadedError(
                 "The data for Rotten Tomatoes has not yet been loaded"
             )
 
-        return self._mtc
+        return self._rt
 
     def load_source(self, source: str) -> Phylm:
         """Load the film data for a source.
@@ -89,7 +90,7 @@ class Phylm:
             return self
 
         if source == "rt":
-            self._mtc = Rt(raw_title=self.title)
+            self._rt = Rt(raw_title=self.title)
             return self
 
         raise UnrecognizedSourceError(f"{source} is not a recognized source")
