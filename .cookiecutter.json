@@ -1,6 +1,7 @@
 {
-  "_template": "gh:cjolowicz/cookiecutter-hypermodern-python",
+  "_template": "gh:dbatten5/cookiecutter-hypermodern-python",
   "author": "Dom Batten",
+  "development_status": "Development Status :: 5 - Production/Stable",
   "email": "dominic.batten@googlemail.com",
   "friendly_name": "Phylm",
   "github_user": "dbatten5",
