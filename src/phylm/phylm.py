@@ -1,6 +1,4 @@
 """Module to contain the `Phylm` class definition."""
-from __future__ import annotations
-
 from typing import Optional
 
 from phylm.errors import SourceNotLoadedError
@@ -69,7 +67,7 @@ class Phylm:
 
         return self._rt
 
-    def load_source(self, source: str) -> Phylm:
+    def load_source(self, source: str) -> "Phylm":
         """Load the film data for a source.
 
         Args:
