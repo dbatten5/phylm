@@ -76,3 +76,22 @@ class TestLoadSource:
 
         assert phylm.mtc == mock_mtc.return_value
         mock_mtc.assert_called_once_with(raw_title="bar")
+
+    @patch("phylm.phylm.Rt", autospec=True)
+    def test_recognized_source_rt(self, mock_rt) -> None:
+        """
+        Given a `Phylm` instance,
+        When the `load_source` method is invoked with the `rt` source,
+        Then the source is loaded
+        """
+        phylm = Phylm(title="bar")
+        with pytest.raises(
+            SourceNotLoadedError,
+            match="The data for Rotten Tomatoes has not yet been loaded",
+        ):
+            assert phylm.rtom is None
+
+        phylm.load_source("rt")
+
+        assert phylm.rtom == mock_rt.return_value
+        mock_rt.assert_called_once_with(raw_title="bar")

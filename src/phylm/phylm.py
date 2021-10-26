@@ -5,8 +5,9 @@ from typing import Optional
 
 from phylm.errors import SourceNotLoadedError
 from phylm.errors import UnrecognizedSourceError
-from phylm.sources.imdb import Imdb
-from phylm.sources.mtc import Mtc
+from phylm.sources import Imdb
+from phylm.sources import Mtc
+from phylm.sources import Rt
 
 
 class Phylm:
@@ -50,6 +51,23 @@ class Phylm:
 
         return self._mtc
 
+    @property
+    def rtom(self) -> Optional[Rt]:
+        """Return the Rotten Tomatoes data.
+
+        Returns:
+            The Rotten Tomatoes data
+
+        Raises:
+            SourceNotLoadedError: if the source is not loaded
+        """
+        if self._mtc is None:
+            raise SourceNotLoadedError(
+                "The data for Rotten Tomatoes has not yet been loaded"
+            )
+
+        return self._mtc
+
     def load_source(self, source: str) -> Phylm:
         """Load the film data for a source.
 
@@ -68,6 +86,10 @@ class Phylm:
 
         if source == "mtc":
             self._mtc = Mtc(raw_title=self.title)
+            return self
+
+        if source == "rt":
+            self._mtc = Rt(raw_title=self.title)
             return self
 
         raise UnrecognizedSourceError(f"{source} is not a recognized source")

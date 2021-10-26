@@ -1,7 +1,24 @@
 """Tests for the Mtc class."""
 from unittest.mock import patch
 
+import pytest
+from bs4 import BeautifulSoup
+
 from phylm.sources.mtc import Mtc
+
+
+@pytest.fixture(scope="module", name="matrix_results")
+def matrix_results_fixture() -> BeautifulSoup:
+    """Return the bs4 representation for a Mtc results page"""
+    with open("tests/data/mtc/matrix_results.html", "r", encoding="UTF-8") as results:
+        return BeautifulSoup(results, "html.parser")
+
+
+@pytest.fixture(scope="module", name="no_results")
+def no_results_fixture() -> BeautifulSoup:
+    """Return the bs4 representation for a Mtc no results page"""
+    with open("tests/data/mtc/no_results.html", "r", encoding="UTF-8") as results:
+        return BeautifulSoup(results, "html.parser")
 
 
 class TestInit:
