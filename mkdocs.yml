@@ -8,11 +8,16 @@ theme:
   features:
     - navigation.instant
   palette:
-    primary: deep orange
-    accent: blue
+    primary: blue
+    accent: deep orange
 
 nav:
   - Phylm: index.md
+  - Sources:
+      IMDb: imdb.md
+      Metacritic: mtc.md
+      Rotten Tomatoes: rt.md
+  - Contributing: contributing.md
 
 plugins:
   - search

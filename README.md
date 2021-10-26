@@ -3,3 +3,23 @@
 [![codecov](https://codecov.io/gh/dbatten5/phylm/branch/main/graph/badge.svg?token=948J8ECAQT)](https://codecov.io/gh/dbatten5/phylm)
 
 # Phylm
+
+Film data aggregation.
+
+## Motivation
+
+When deciding which film to watch next, it can be helpful to have some key datapoints at your fingertips, for example, the genre, the cast, the Metacritic score and, perhaps most importantly, the runtime. This package provides a Phylm class to gather information from various sources for a given film.
+
+## Help
+
+See the [documentation](https://dbatten5.github.io/phylm) for more details.
+
+## Installation
+
+```bash
+pip install phylm
+```
+
+## Licence
+
+MIT
