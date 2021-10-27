@@ -14,7 +14,8 @@ pip freeze | grep phylm
 
 If you would like to contribute to the repo, you would be most welcome. If
 you're tackling an existing issue please comment on the issue that you'd like to
-take it on. If it's a new feature/bug, please first raise an issue.
+take it on. If it's a new feature/bug, please first raise an issue. If it's a trivial
+change (typos, documentation etc.) then no need to raise an issue.
 
 # Local Development
 
