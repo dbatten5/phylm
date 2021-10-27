@@ -13,15 +13,27 @@ your fingertips, for example, the genre, the cast, the Metacritic score and, per
 most importantly, the runtime. This package provides a Phylm class to gather information
 from various sources for a given film.
 
-## Help
-
-See the [documentation](https://dbatten5.github.io/phylm) for more details.
-
 ## Installation
 
 ```bash
 pip install phylm
 ```
+
+# Usage
+
+```python
+>>> from phylm import Phylm
+>>> p = Phylm("The Matrix")
+>>> p.load_source("imdb")
+>>> p.imdb.year
+1999
+>>> p.imdb.rating
+8.7
+```
+
+## Help
+
+See the [documentation](https://dbatten5.github.io/phylm) for more details.
 
 ## Licence
 
