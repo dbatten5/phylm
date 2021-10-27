@@ -49,6 +49,7 @@ class Rt:
             self.low_confidence = True
         return target
 
+    @property
     def title(self) -> Optional[str]:
         """Return the title.
 
@@ -67,6 +68,7 @@ class Rt:
 
         return None
 
+    @property
     def year(self) -> Optional[str]:
         """Return the year.
 
@@ -78,6 +80,7 @@ class Rt:
 
         return str(self._rt_data["releaseyear"])
 
+    @property
     def tomato_score(self) -> Optional[str]:
         """Return the Tomatometer Score.
 

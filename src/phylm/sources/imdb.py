@@ -32,6 +32,7 @@ class Imdb:
         ia.update(target, info=["main"])
         return target
 
+    @property
     def title(self) -> Optional[str]:
         """Return the IMDb title.
 
@@ -71,6 +72,7 @@ class Imdb:
 
         return [person["name"] for person in self._imdb_data.get("cast", [])[:limit]]
 
+    @property
     def runtime(self) -> Optional[str]:
         """Return the runtime.
 
@@ -87,6 +89,7 @@ class Imdb:
 
         return None
 
+    @property
     def year(self) -> Optional[int]:
         """Return the movie's year.
 
@@ -119,6 +122,7 @@ class Imdb:
             person["name"] for person in self._imdb_data.get("directors", [])[:limit]
         ]
 
+    @property
     def rating(self) -> Optional[float]:
         """Return the IMDb rating.
 
@@ -135,6 +139,7 @@ class Imdb:
 
         return float(rating)
 
+    @property
     def plot(self) -> Optional[str]:
         """Return the plot.
 
