@@ -8,6 +8,8 @@ from phylm import Phylm
 from phylm.errors import SourceNotLoadedError
 from phylm.errors import UnrecognizedSourceError
 
+MODULE_PATH = "phylm.phylm"
+
 
 class TestInit:
     """Tests for the __init__ method."""
@@ -41,7 +43,7 @@ class TestLoadSource:
         ):
             phylm.load_source("bar")
 
-    @patch("phylm.phylm.Imdb", autospec=True)
+    @patch(f"{MODULE_PATH}.Imdb", autospec=True)
     def test_recognized_source_imdb(self, mock_imdb: MagicMock) -> None:
         """
         Given a `Phylm` instance,
@@ -59,7 +61,7 @@ class TestLoadSource:
         assert phylm.imdb == mock_imdb.return_value
         mock_imdb.assert_called_once_with(raw_title="bar")
 
-    @patch("phylm.phylm.Mtc", autospec=True)
+    @patch(f"{MODULE_PATH}.Mtc", autospec=True)
     def test_recognized_source_mtc(self, mock_mtc: MagicMock) -> None:
         """
         Given a `Phylm` instance,
@@ -78,7 +80,7 @@ class TestLoadSource:
         assert phylm.mtc == mock_mtc.return_value
         mock_mtc.assert_called_once_with(raw_title="bar")
 
-    @patch("phylm.phylm.Rt", autospec=True)
+    @patch(f"{MODULE_PATH}.Rt", autospec=True)
     def test_recognized_source_rt(self, mock_rt: MagicMock) -> None:
         """
         Given a `Phylm` instance,
@@ -97,12 +99,28 @@ class TestLoadSource:
         assert phylm.rt == mock_rt.return_value
         mock_rt.assert_called_once_with(raw_title="bar")
 
+    @pytest.mark.parametrize("source_class", ("Rt", "Mtc", "Imdb"))
+    def test_source_already_loaded(self, source_class: str) -> None:
+        """
+        Given phylm instance with a source already loaded,
+        When `load_source` is invoked with the same source,
+        Then nothing happens
+        """
+        phylm = Phylm(title="foo")
+
+        with patch(f"{MODULE_PATH}.{source_class}") as mock_source:
+            source_name = source_class.lower()
+            phylm.load_source(source_name)
+            phylm.load_source(source_name)
+
+        assert mock_source.call_count == 1
+
 
 class TestLoadSources:
     """Tests for the `load_sources` method."""
 
-    @patch("phylm.phylm.Mtc", autospec=True)
-    @patch("phylm.phylm.Rt", autospec=True)
+    @patch(f"{MODULE_PATH}.Mtc", autospec=True)
+    @patch(f"{MODULE_PATH}.Rt", autospec=True)
     def test_success(self, mock_rt: MagicMock, mock_mtc: MagicMock) -> None:
         """
         Given a list of sources,
@@ -118,7 +136,7 @@ class TestLoadSources:
         with pytest.raises(SourceNotLoadedError):
             assert phylm.imdb is None
 
-    @patch("phylm.phylm.Rt", autospec=True)
+    @patch(f"{MODULE_PATH}.Rt", autospec=True)
     def test_one_source_not_recognised(self, mock_rt: MagicMock) -> None:
         """
         Given a list of sources where one is unrecognised,

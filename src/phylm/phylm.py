@@ -81,15 +81,18 @@ class Phylm:
             UnrecognizedSourceError: if the source is not recognized
         """
         if source == "imdb":
-            self._imdb = Imdb(raw_title=self.title)
+            if not self._imdb:
+                self._imdb = Imdb(raw_title=self.title)
             return self
 
         if source == "mtc":
-            self._mtc = Mtc(raw_title=self.title)
+            if not self._mtc:
+                self._mtc = Mtc(raw_title=self.title)
             return self
 
         if source == "rt":
-            self._rt = Rt(raw_title=self.title)
+            if not self._rt:
+                self._rt = Rt(raw_title=self.title)
             return self
 
         raise UnrecognizedSourceError(f"{source} is not a recognized source")
