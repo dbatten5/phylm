@@ -15,6 +15,6 @@ rot_tom = Rt(raw_title="The Matrix")
 
 # Reference
 
-::: phylm.sources.Rt
+::: phylm.sources.rt.Rt
     rendering:
       show_source: false

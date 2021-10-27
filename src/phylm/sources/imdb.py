@@ -5,11 +5,11 @@ from typing import Optional
 import imdb
 from imdb.Movie import Movie
 
+ia = imdb.IMDb()
+
 
 class Imdb:
     """Class to abstract an IMDb movie object."""
-
-    ia = imdb.IMDb()
 
     def __init__(self, raw_title: str) -> None:
         """Initialize the object."""
@@ -18,7 +18,7 @@ class Imdb:
         self._imdb_data: Optional[Movie] = self._get_imdb_data()
 
     def _get_imdb_data(self) -> Optional[Movie]:
-        results: List[Movie] = Imdb.ia.search_movie(self.raw_title)
+        results: List[Movie] = ia.search_movie(self.raw_title)
         if not results:
             return None
         target = None
@@ -29,7 +29,7 @@ class Imdb:
         if not target:
             target = results[0]
             self.low_confidence = True
-        Imdb.ia.update(target, info=["main"])
+        ia.update(target, info=["main"])
         return target
 
     def title(self) -> Optional[str]:
@@ -146,7 +146,7 @@ class Imdb:
 
         data = self._imdb_data
         if "plot" not in data.current_info:
-            Imdb.ia.update(data, info=["plot"])
+            ia.update(data, info=["plot"])
 
         plot = data.get("plot")
 

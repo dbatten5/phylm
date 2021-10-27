@@ -8,7 +8,7 @@ from imdb.Movie import Movie
 
 from phylm.sources.imdb import Imdb
 
-IMDB_IA_PATH = "phylm.sources.imdb.Imdb.ia"
+IMDB_IA_PATH = "phylm.sources.imdb.ia"
 
 ia = IMDb()
 

@@ -15,6 +15,6 @@ mtc = Mtc(raw_title="The Matrix")
 
 # Reference
 
-::: phylm.sources.Mtc
+::: phylm.sources.mtc.Mtc
     rendering:
       show_source: false
