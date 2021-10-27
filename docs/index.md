@@ -21,7 +21,7 @@ pip install phylm
 >>> from phylm import Phylm
 >>> p = Phylm("The Matrix")
 >>> p.load_source("imdb")
->>> p.imdb.rating()
+>>> p.imdb.rating
 8.7
 ```
 
@@ -62,6 +62,6 @@ one
 from phylm import Phylm
 p = Phylm("Ambiguous Movie") # suppose this movie was released in 1999
 p.load_source("imdb")
-if p.imdb.low_confidence and p.imdb.year() != 1999:
+if p.imdb.low_confidence and p.imdb.year != 1999:
     # it's unlikely we're dealing with the right "Ambigous Movie"
 ```

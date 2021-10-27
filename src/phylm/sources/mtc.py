@@ -51,6 +51,7 @@ class Mtc:
             self.low_confidence = True
         return target
 
+    @property
     def title(self) -> Optional[str]:
         """Return the title.
 
@@ -64,6 +65,7 @@ class Mtc:
             return str(title_tag.get_text()).strip()
         return None
 
+    @property
     def year(self) -> Optional[int]:
         """Return the year.
 
@@ -80,6 +82,7 @@ class Mtc:
             return None
         return int(year_search.group())
 
+    @property
     def rating(self) -> Optional[str]:
         """Return the rating.
 

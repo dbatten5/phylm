@@ -37,7 +37,7 @@ class TestInit:
         mock_soup.return_value = matrix_results
         rot_tom = Rt("The Matrix")
 
-        assert rot_tom.title() == "The Matrix"
+        assert rot_tom.title == "The Matrix"
         assert rot_tom.low_confidence is False
 
     @patch("phylm.sources.rt.soupify")
@@ -52,7 +52,7 @@ class TestInit:
         mock_soup.return_value = matrix_results
         rot_tom = Rt("The Matrix")
 
-        assert rot_tom.title() == "The Matrix"
+        assert rot_tom.title == "The Matrix"
         assert rot_tom.low_confidence is False
 
     @patch("phylm.sources.rt.soupify")
@@ -67,7 +67,7 @@ class TestInit:
         mock_soup.return_value = matrix_results
         rot_tom = Rt("blort")
 
-        assert rot_tom.title() == "The Matrix Resurrections"
+        assert rot_tom.title == "The Matrix Resurrections"
         assert rot_tom.low_confidence is True
 
 
@@ -84,7 +84,7 @@ class TestTitle:
         mock_soup.return_value = no_results
         rot_tom = Rt("blort")
 
-        assert rot_tom.title() is None
+        assert rot_tom.title is None
 
 
 class TestYear:
@@ -100,7 +100,7 @@ class TestYear:
         mock_soup.return_value = matrix_results
         rot_tom = Rt("The Matrix")
 
-        assert rot_tom.year() == "1999"
+        assert rot_tom.year == "1999"
 
     @patch("phylm.sources.rt.soupify")
     def test_no_results(self, mock_soup: MagicMock, no_results: BeautifulSoup) -> None:
@@ -112,7 +112,7 @@ class TestYear:
         mock_soup.return_value = no_results
         rot_tom = Rt("blort")
 
-        assert rot_tom.year() is None
+        assert rot_tom.year is None
 
     @patch("phylm.sources.rt.soupify")
     def test_no_match(self, mock_soup: MagicMock, no_results: BeautifulSoup) -> None:
@@ -125,7 +125,7 @@ class TestYear:
         rot_tom = Rt("A Glitch in the Matrix")
 
         assert rot_tom.low_confidence is False
-        assert rot_tom.year() is None
+        assert rot_tom.year is None
 
 
 class TestTomatoScore:
@@ -141,7 +141,7 @@ class TestTomatoScore:
         mock_soup.return_value = matrix_results
         rot_tom = Rt("The Matrix")
 
-        assert rot_tom.tomato_score() == "88"
+        assert rot_tom.tomato_score == "88"
 
     @patch("phylm.sources.rt.soupify")
     def test_no_results(self, mock_soup: MagicMock, no_results: BeautifulSoup) -> None:
@@ -153,4 +153,4 @@ class TestTomatoScore:
         mock_soup.return_value = no_results
         rot_tom = Rt("blort")
 
-        assert rot_tom.tomato_score() is None
+        assert rot_tom.tomato_score is None

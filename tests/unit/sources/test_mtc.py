@@ -37,7 +37,7 @@ class TestInit:
         mock_soup.return_value = matrix_results
         mtc = Mtc("The Matrix")
 
-        assert mtc.title() == "The Matrix"
+        assert mtc.title == "The Matrix"
         assert mtc.low_confidence is False
 
     @patch("phylm.sources.mtc.soupify")
@@ -52,7 +52,7 @@ class TestInit:
         mock_soup.return_value = matrix_results
         mtc = Mtc(" the matrix ")
 
-        assert mtc.title() == "The Matrix"
+        assert mtc.title == "The Matrix"
         assert mtc.low_confidence is False
 
     @patch("phylm.sources.mtc.soupify")
@@ -67,7 +67,7 @@ class TestInit:
         mock_soup.return_value = matrix_results
         mtc = Mtc("blort")
 
-        assert mtc.title() == "The Matrix"
+        assert mtc.title == "The Matrix"
         assert mtc.low_confidence is True
 
 
@@ -84,7 +84,7 @@ class TestTitle:
         mock_soup.return_value = no_results
         mtc = Mtc("blort")
 
-        assert mtc.title() is None
+        assert mtc.title is None
 
 
 class TestYear:
@@ -100,7 +100,7 @@ class TestYear:
         mock_soup.return_value = matrix_results
         mtc = Mtc("The Matrix")
 
-        assert mtc.year() == 1999
+        assert mtc.year == 1999
 
     @patch("phylm.sources.mtc.soupify")
     def test_no_results(self, mock_soup: MagicMock, no_results: BeautifulSoup) -> None:
@@ -112,7 +112,7 @@ class TestYear:
         mock_soup.return_value = no_results
         mtc = Mtc("blort")
 
-        assert mtc.year() is None
+        assert mtc.year is None
 
     @patch("phylm.sources.mtc.soupify")
     def test_no_match(self, mock_soup: MagicMock, no_results: BeautifulSoup) -> None:
@@ -125,7 +125,7 @@ class TestYear:
         mtc = Mtc("A Glitch in the Matrix")
 
         assert mtc.low_confidence is False
-        assert mtc.year() is None
+        assert mtc.year is None
 
 
 class TestRating:
@@ -141,7 +141,7 @@ class TestRating:
         mock_soup.return_value = matrix_results
         mtc = Mtc("The Matrix")
 
-        assert mtc.rating() == "73"
+        assert mtc.rating == "73"
 
     @patch("phylm.sources.mtc.soupify")
     def test_no_results(self, mock_soup: MagicMock, no_results: BeautifulSoup) -> None:
@@ -153,4 +153,4 @@ class TestRating:
         mock_soup.return_value = no_results
         mtc = Mtc("blort")
 
-        assert mtc.rating() is None
+        assert mtc.rating is None

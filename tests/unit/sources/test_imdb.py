@@ -50,7 +50,7 @@ class TestInit:
 
         imdb = Imdb("Alien")
 
-        assert imdb.title() == "Alien"
+        assert imdb.title == "Alien"
         assert imdb.low_confidence is False
 
     @patch(IMDB_IA_PATH)
@@ -65,7 +65,7 @@ class TestInit:
 
         imdb = Imdb(raw_title)
 
-        assert imdb.title() == "The Matrix"
+        assert imdb.title == "The Matrix"
         assert imdb.low_confidence is True
 
     @patch(IMDB_IA_PATH)
@@ -80,7 +80,7 @@ class TestInit:
 
         imdb = Imdb(raw_title)
 
-        assert imdb.title() is None
+        assert imdb.title is None
 
 
 class TestGenres:
@@ -183,7 +183,7 @@ class TestRuntime:
 
         imdb = Imdb("The Matrix")
 
-        assert imdb.runtime() == "136"
+        assert imdb.runtime == "136"
 
     @patch(IMDB_IA_PATH)
     def test_no_runtime(self, mock_ia: MagicMock, the_matrix: Movie) -> None:
@@ -196,7 +196,7 @@ class TestRuntime:
 
         imdb = Imdb("The Matrix")
 
-        assert imdb.runtime() is None
+        assert imdb.runtime is None
 
     @patch(IMDB_IA_PATH)
     def test_no_results(self, mock_ia: MagicMock) -> None:
@@ -209,7 +209,7 @@ class TestRuntime:
 
         imdb = Imdb("The Matrix")
 
-        assert imdb.runtime() is None
+        assert imdb.runtime is None
 
 
 class TestYear:
@@ -226,7 +226,7 @@ class TestYear:
 
         imdb = Imdb("The Matrix")
 
-        assert imdb.year() == 1999
+        assert imdb.year == 1999
 
     @patch(IMDB_IA_PATH)
     def test_no_year(self, mock_ia: MagicMock, the_matrix: Movie) -> None:
@@ -239,7 +239,7 @@ class TestYear:
 
         imdb = Imdb("The Matrix")
 
-        assert imdb.year() == 1999
+        assert imdb.year == 1999
 
     @patch(IMDB_IA_PATH)
     def test_no_results(self, mock_ia: MagicMock) -> None:
@@ -252,7 +252,7 @@ class TestYear:
 
         imdb = Imdb("The Matrix")
 
-        assert imdb.year() is None
+        assert imdb.year is None
 
 
 class TestDirectors:
@@ -313,7 +313,7 @@ class TestRating:
 
         imdb = Imdb("The Matrix")
 
-        assert imdb.rating() == 8.7
+        assert imdb.rating == 8.7
 
     @patch(IMDB_IA_PATH)
     def test_no_rating(self, mock_ia: MagicMock, the_matrix: Movie) -> None:
@@ -326,7 +326,7 @@ class TestRating:
 
         imdb = Imdb("The Matrix")
 
-        assert imdb.rating() is None
+        assert imdb.rating is None
 
     @patch(IMDB_IA_PATH)
     def test_no_results(self, mock_ia: MagicMock) -> None:
@@ -339,7 +339,7 @@ class TestRating:
 
         imdb = Imdb("The Matrix")
 
-        assert imdb.rating() is None
+        assert imdb.rating is None
 
 
 class TestPlot:
@@ -360,7 +360,7 @@ class TestPlot:
 
         imdb = Imdb(raw_title)
 
-        assert imdb.plot() == "the plot"
+        assert imdb.plot == "the plot"
         mock_movie.get.assert_called_once_with("plot")
 
     @patch(IMDB_IA_PATH)
@@ -378,7 +378,7 @@ class TestPlot:
 
         imdb = Imdb(raw_title)
 
-        assert imdb.plot() == "the plot"
+        assert imdb.plot == "the plot"
         mock_ia.update.assert_called_with(mock_movie, info=["plot"])
 
     @patch(IMDB_IA_PATH)
@@ -395,7 +395,7 @@ class TestPlot:
 
         imdb = Imdb(raw_title)
 
-        assert imdb.plot() is None
+        assert imdb.plot is None
 
     @patch(IMDB_IA_PATH)
     def test_no_movie_results(self, mock_ia: MagicMock) -> None:
@@ -408,4 +408,4 @@ class TestPlot:
 
         imdb = Imdb("The Movie")
 
-        assert imdb.plot() is None
+        assert imdb.plot is None
