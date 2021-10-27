@@ -1,4 +1,5 @@
 """Module to contain the `Phylm` class definition."""
+from typing import List
 from typing import Optional
 
 from phylm.errors import SourceNotLoadedError
@@ -71,7 +72,7 @@ class Phylm:
         """Load the film data for a source.
 
         Args:
-            source (str): a list of the desired sources
+            source (str): the desired source
 
         Returns:
             the instance
@@ -92,3 +93,17 @@ class Phylm:
             return self
 
         raise UnrecognizedSourceError(f"{source} is not a recognized source")
+
+    def load_sources(self, sources: List[str]) -> "Phylm":
+        """Load multiple sources.
+
+        Args:
+            sources: a list of the desired sources
+
+        Returns:
+            the instance
+        """
+        for source in sources:
+            self.load_source(source)
+
+        return self

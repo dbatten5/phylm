@@ -96,3 +96,38 @@ class TestLoadSource:
 
         assert phylm.rt == mock_rt.return_value
         mock_rt.assert_called_once_with(raw_title="bar")
+
+
+class TestLoadSources:
+    """Tests for the `load_sources` method."""
+
+    @patch("phylm.phylm.Mtc", autospec=True)
+    @patch("phylm.phylm.Rt", autospec=True)
+    def test_success(self, mock_rt: MagicMock, mock_mtc: MagicMock) -> None:
+        """
+        Given a list of sources,
+        When the `load_sources` is invoked with the list,
+        Then the sources are loaded
+        """
+        phylm = Phylm(title="foo")
+
+        phylm.load_sources(["rt", "mtc"])
+
+        assert phylm.rt == mock_rt.return_value
+        assert phylm.mtc == mock_mtc.return_value
+        with pytest.raises(SourceNotLoadedError):
+            assert phylm.imdb is None
+
+    @patch("phylm.phylm.Rt", autospec=True)
+    def test_one_source_not_recognised(self, mock_rt: MagicMock) -> None:
+        """
+        Given a list of sources where one is unrecognised,
+        When the `load_sources` is invoked with the list,
+        Then a UnrecognizedSourceError is raised
+        """
+        phylm = Phylm(title="foo")
+
+        with pytest.raises(UnrecognizedSourceError):
+            phylm.load_sources(["rt", "blort"])
+
+        assert phylm.rt == mock_rt.return_value

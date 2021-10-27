@@ -13,10 +13,12 @@ theme:
 
 nav:
   - Phylm: index.md
-  - Sources:
-      IMDb: imdb.md
-      Metacritic: mtc.md
-      Rotten Tomatoes: rt.md
+  - Classes:
+      - Phylm: phylm.md
+      - Sources:
+          IMDb: imdb.md
+          Metacritic: mtc.md
+          Rotten Tomatoes: rt.md
   - Contributing: contributing.md
 
 plugins:
