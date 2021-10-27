@@ -8,7 +8,10 @@ Film data aggregation.
 
 ## Motivation
 
-When deciding which film to watch next, it can be helpful to have some key datapoints at your fingertips, for example, the genre, the cast, the Metacritic score and, perhaps most importantly, the runtime. This package provides a Phylm class to gather information from various sources for a given film.
+When deciding which film to watch next, it can be helpful to have some key datapoints at
+your fingertips, for example, the genre, the cast, the Metacritic score and, perhaps
+most importantly, the runtime. This package provides a Phylm class to gather information
+from various sources for a given film.
 
 ## Help
 

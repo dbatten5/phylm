@@ -8,7 +8,7 @@ from imdb.Movie import Movie
 
 from phylm.sources.imdb import Imdb
 
-IMDB_IA_PATH = "phylm.sources.imdb.Imdb.ia"
+IMDB_IA_PATH = "phylm.sources.imdb.ia"
 
 ia = IMDb()
 
@@ -112,6 +112,19 @@ class TestGenres:
 
         assert imdb.genres(1) == []
 
+    @patch(IMDB_IA_PATH)
+    def test_no_results(self, mock_ia: MagicMock) -> None:
+        """
+        Given no search results,
+        When the genres are retrieved,
+        Then an empty list is returned
+        """
+        mock_ia.search_movie.return_value = []
+
+        imdb = Imdb("The Matrix")
+
+        assert imdb.genres(1) == []
+
 
 class TestCast:
     """Tests for the `cast` method."""
@@ -137,6 +150,19 @@ class TestCast:
         Then an empty list is returned
         """
         mock_ia.search_movie.return_value = [the_matrix]
+
+        imdb = Imdb("The Matrix")
+
+        assert imdb.cast(1) == []
+
+    @patch(IMDB_IA_PATH)
+    def test_no_results(self, mock_ia: MagicMock) -> None:
+        """
+        Given no search results,
+        When the cast is retrieved,
+        Then an empty list is returned
+        """
+        mock_ia.search_movie.return_value = []
 
         imdb = Imdb("The Matrix")
 
@@ -172,6 +198,19 @@ class TestRuntime:
 
         assert imdb.runtime() is None
 
+    @patch(IMDB_IA_PATH)
+    def test_no_results(self, mock_ia: MagicMock) -> None:
+        """
+        Given no search results,
+        When the runtime is retrieved,
+        Then `None` is returned
+        """
+        mock_ia.search_movie.return_value = []
+
+        imdb = Imdb("The Matrix")
+
+        assert imdb.runtime() is None
+
 
 class TestYear:
     """Tests for the `year` method."""
@@ -188,6 +227,32 @@ class TestYear:
         imdb = Imdb("The Matrix")
 
         assert imdb.year() == 1999
+
+    @patch(IMDB_IA_PATH)
+    def test_no_year(self, mock_ia: MagicMock, the_matrix: Movie) -> None:
+        """
+        Given a match with year,
+        When the year is retrieved,
+        Then the year is returned
+        """
+        mock_ia.search_movie.return_value = [the_matrix]
+
+        imdb = Imdb("The Matrix")
+
+        assert imdb.year() == 1999
+
+    @patch(IMDB_IA_PATH)
+    def test_no_results(self, mock_ia: MagicMock) -> None:
+        """
+        Given no search results,
+        When the year is retrieved,
+        Then `None` is returned
+        """
+        mock_ia.search_movie.return_value = []
+
+        imdb = Imdb("The Matrix")
+
+        assert imdb.year() is None
 
 
 class TestDirectors:
@@ -220,6 +285,19 @@ class TestDirectors:
 
         assert imdb.directors(1) == []
 
+    @patch(IMDB_IA_PATH)
+    def test_no_results(self, mock_ia: MagicMock) -> None:
+        """
+        Given no search results,
+        When the directors are retrieved,
+        Then an empty list is returned
+        """
+        mock_ia.search_movie.return_value = []
+
+        imdb = Imdb("The Matrix")
+
+        assert imdb.directors(1) == []
+
 
 class TestRating:
     """Tests for the `rating` method."""
@@ -245,6 +323,19 @@ class TestRating:
         Then None is return
         """
         mock_ia.search_movie.return_value = [the_matrix]
+
+        imdb = Imdb("The Matrix")
+
+        assert imdb.rating() is None
+
+    @patch(IMDB_IA_PATH)
+    def test_no_results(self, mock_ia: MagicMock) -> None:
+        """
+        Given no search results,
+        When the rating is retrieved,
+        Then `None` is returned
+        """
+        mock_ia.search_movie.return_value = []
 
         imdb = Imdb("The Matrix")
 

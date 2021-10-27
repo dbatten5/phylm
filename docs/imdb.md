@@ -15,6 +15,6 @@ imdb = Imdb(raw_title="The Matrix")
 
 # Reference
 
-::: phylm.sources.Imdb
+::: phylm.sources.imdb.Imdb
     rendering:
       show_source: false
