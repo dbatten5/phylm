@@ -1,3 +1,5 @@
+# Usage
+
 To access IMDb data points, first ensure you have loaded the IMDb source
 through:
 

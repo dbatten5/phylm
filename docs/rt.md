@@ -1,3 +1,5 @@
+# Usage
+
 To access Rotten Tomatoes data points, first ensure you have loaded the Rotten Tomatoes source
 through:
 

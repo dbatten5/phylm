@@ -1,3 +1,5 @@
+# Usage
+
 To access Metacritic data points, first ensure you have loaded the Metacritic source
 through:
 
