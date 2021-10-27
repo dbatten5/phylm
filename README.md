@@ -19,7 +19,7 @@ from various sources for a given film.
 pip install phylm
 ```
 
-# Usage
+## Usage
 
 ```python
 >>> from phylm import Phylm
@@ -29,6 +29,27 @@ pip install phylm
 1999
 >>> p.imdb.rating
 8.7
+```
+
+`phylm` also provides some tools around movie search results:
+
+```python
+>>> from phylm.tools import search_movies
+>>> search_movies("the matrix")
+[{
+  'title': 'The Matrix',
+  'kind': 'movie',
+  'year': 1999,
+  'cover url': 'https://some-url.com',
+  'imdb_id': '0133093',
+}, {
+  'title': 'The Matrix Reloaded',
+  'kind': 'movie',
+  'year': 2003,
+  'cover url': 'https://some-url.com',
+  'imdb_id': '0234215',
+}, {
+...
 ```
 
 ## Help
