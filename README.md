@@ -1,8 +1,9 @@
+# Phylm
+
 [![Actions Status](https://github.com/dbatten5/phylm/workflows/Tests/badge.svg)](https://github.com/dbatten5/phylm/actions)
 [![Actions Status](https://github.com/dbatten5/phylm/workflows/Release/badge.svg)](https://github.com/dbatten5/phylm/actions)
 [![codecov](https://codecov.io/gh/dbatten5/phylm/branch/master/graph/badge.svg?token=P233M48EA6)](https://codecov.io/gh/dbatten5/phylm)
-
-# Phylm
+[![PyPI version](https://badge.fury.io/py/phylm.svg)](https://badge.fury.io/py/phylm)
 
 Film data aggregation.
 
