@@ -57,4 +57,7 @@ See the docs for a source for a full list of the available data points.
 
 ::: phylm.Phylm
     rendering:
-      show_source: true
+      show_signature_annotations: true
+      heading_level: 2
+      show_root_heading: false
+      show_root_toc_entry: false
