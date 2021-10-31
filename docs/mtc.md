@@ -19,4 +19,7 @@ mtc = Mtc(raw_title="The Matrix")
 
 ::: phylm.sources.mtc.Mtc
     rendering:
-      show_source: false
+      show_signature_annotations: true
+      heading_level: 2
+      show_root_heading: false
+      show_root_toc_entry: false
