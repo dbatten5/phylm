@@ -11,13 +11,49 @@ ia = imdb.IMDb()
 class Imdb:
     """Class to abstract an IMDb movie object."""
 
-    def __init__(self, raw_title: str) -> None:
-        """Initialize the object."""
-        self.raw_title: str = raw_title
+    def __init__(
+        self,
+        raw_title: Optional[str] = None,
+        movie_id: Optional[str] = None,
+    ) -> None:
+        """Initialize the object.
+
+        Note that at least one of `raw_title` or `movie_id` must be given to be used as
+        a search term. `movie_id` is preferred over `raw_title`.
+
+        Args:
+            raw_title: the title of the movie
+            movie_id: the `IMDb` id of the movie
+
+        Raises:
+            ValueError: if neither `raw_title` nor `movie_id` is supplied
+        """
+        if not (raw_title or movie_id):
+            raise ValueError("At least one of raw_title and movie_id must be given")
+
+        self.raw_title: Optional[str] = raw_title
+        self.movie_id: Optional[str] = movie_id
         self.low_confidence: bool = False
         self._imdb_data: Optional[Movie] = self._get_imdb_data()
 
     def _get_imdb_data(self) -> Optional[Movie]:
+        """Fetch the data from IMDb.
+
+        If `self.movie_id` exists, prefer that as a search query, falling back to
+        `self.raw_title` if that exists. If `movie_id` exists but is unrecognised
+        by `IMDb` then we also fall back to the `raw_title`.
+
+        Returns:
+            an optional `IMDb` `Movie` object
+        """
+        if self.movie_id:
+            get_movie_result: Movie = ia.get_movie(self.movie_id)
+            if get_movie_result:
+                return get_movie_result
+
+        if not self.raw_title:
+            return None
+
         results: List[Movie] = ia.search_movie(self.raw_title)
         if not results:
             return None
@@ -30,6 +66,7 @@ class Imdb:
             target = results[0]
             self.low_confidence = True
         ia.update(target, info=["main"])
+
         return target
 
     @property

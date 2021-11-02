@@ -409,3 +409,83 @@ class TestPlot:
         imdb = Imdb("The Movie")
 
         assert imdb.plot is None
+
+
+class TestMovieId:
+    """Tests for working with an IMDb `movie_id`."""
+
+    def test_no_raw_title_or_movie_id(self) -> None:
+        """
+        When an `Imdb` instance is created without a `raw_title` or ` movie_id`,
+        Then a `ValueError` is raised
+        """
+        with pytest.raises(
+            ValueError,
+            match="At least one of raw_title and movie_id must be given",
+        ):
+            Imdb()
+
+    @patch(IMDB_IA_PATH)
+    def test_valid_movie_id(
+        self,
+        mock_ia: MagicMock,
+        the_matrix_full: Movie,
+    ) -> None:
+        """
+        Given a valid `movie_id`,
+        When there is a match from IMDb,
+        Then the match is selected and `low_confidence` remains False
+        """
+        mock_ia.get_movie.return_value = the_matrix_full
+
+        imdb = Imdb(movie_id="0133093")
+
+        assert imdb.title == "The Matrix"
+        assert imdb.low_confidence is False
+
+    def test_invalid_movie_id_with_no_raw_title(
+        self,
+    ) -> None:
+        """
+        Given an unrecognised `movie_id` and no `raw_title` given,
+        When there are no matches from IMDb,
+        Then data remains as `None`
+        """
+        imdb = Imdb(movie_id="9999999999999999999999999999")
+
+        assert imdb.title is None
+
+    @patch(IMDB_IA_PATH)
+    def test_invalid_movie_id_with_raw_title(
+        self,
+        mock_ia: MagicMock,
+        the_matrix: Movie,
+    ) -> None:
+        """
+        Given an unrecognised `movie_id` and a `raw_title` given,
+        When there are no matches from IMDb id search,
+        Then the title is used to perform the search
+        """
+        mock_ia.get_movie.return_value = Movie(movieID="9999999999999999999999999999")
+        mock_ia.search_movie.return_value = [the_matrix]
+
+        imdb = Imdb(raw_title="The Matrix", movie_id="9999999999999999999999999999")
+
+        assert imdb.title == "The Matrix"
+
+    @patch(IMDB_IA_PATH)
+    def test_valid_movie_id_with_raw_title(
+        self,
+        mock_ia: MagicMock,
+        the_matrix: Movie,
+    ) -> None:
+        """
+        Given a recognized `movie_id` and a `raw_title` given,
+        Then the movie_id is used to perform the search
+        """
+        mock_ia.get_movie.return_value = the_matrix
+
+        imdb = Imdb(movie_id="0133093")
+
+        assert imdb.title == "The Matrix"
+        mock_ia.search_movie.assert_not_called()

@@ -15,6 +15,30 @@ from phylm.sources import Imdb
 imdb = Imdb(raw_title="The Matrix")
 ```
 
+## Movie ID
+
+If you know the IMDb movie id you can pass it to `load_sources` to perform a more
+accurate search for the movie:
+
+```python
+phylm.load_source("imdb", movie_id="0133093")
+```
+
+`phylm` will first perform a search based on the ID. If the ID is valid the result will
+be selected, if not then it will fall back to a title search.
+
+Alternatively, instantiate the IMDb source class with the ID:
+
+```python
+from phylm.sources import Imdb
+
+imdb = Imdb(movie_id="0133093")
+```
+
+!!! warning ""
+    If instantiating the class directly you must supply at least one of `movie_id`
+    or `raw_title`, otherwise a `ValueError` will be raised.
+
 # Reference
 
 ::: phylm.sources.imdb.Imdb
