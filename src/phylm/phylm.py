@@ -20,7 +20,7 @@ class Phylm:
         self._rt: Optional[Rt] = None
 
     @property
-    def imdb(self) -> Optional[Imdb]:
+    def imdb(self) -> Imdb:
         """Return the IMDb data.
 
         Returns:
@@ -35,7 +35,7 @@ class Phylm:
         return self._imdb
 
     @property
-    def mtc(self) -> Optional[Mtc]:
+    def mtc(self) -> Mtc:
         """Return the Metacritic data.
 
         Returns:
@@ -68,11 +68,13 @@ class Phylm:
 
         return self._rt
 
-    def load_source(self, source: str) -> "Phylm":
+    def load_source(self, source: str, imdb_id: Optional[str] = None) -> "Phylm":
         """Load the film data for a source.
 
         Args:
-            source (str): the desired source
+            source: the desired source
+            imdb_id: an optional `IMDb` id which will be used to load the imdb data
+                instead of a basic search on the title
 
         Returns:
             the instance
@@ -82,7 +84,7 @@ class Phylm:
         """
         if source == "imdb":
             if not self._imdb:
-                self._imdb = Imdb(raw_title=self.title)
+                self._imdb = Imdb(raw_title=self.title, movie_id=imdb_id)
             return self
 
         if source == "mtc":

@@ -59,7 +59,22 @@ class TestLoadSource:
         phylm.load_source("imdb")
 
         assert phylm.imdb == mock_imdb.return_value
-        mock_imdb.assert_called_once_with(raw_title="bar")
+        mock_imdb.assert_called_once_with(raw_title="bar", movie_id=None)
+
+    @patch(f"{MODULE_PATH}.Imdb", autospec=True)
+    def test_recognized_source_imdb_with_movie_id(self, mock_imdb: MagicMock) -> None:
+        """
+        Given a `Phylm` instance,
+        When the `load_source` method is invoked with the `imdb` source
+            and a `movie_id`,
+        Then the source is loaded with the `movie_id`
+        """
+        phylm = Phylm(title="bar")
+
+        phylm.load_source("imdb", imdb_id="abc")
+
+        assert phylm.imdb == mock_imdb.return_value
+        mock_imdb.assert_called_once_with(raw_title="bar", movie_id="abc")
 
     @patch(f"{MODULE_PATH}.Mtc", autospec=True)
     def test_recognized_source_mtc(self, mock_mtc: MagicMock) -> None:
