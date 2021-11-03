@@ -26,6 +26,18 @@ class TestInit:
 
         assert phylm.title == title
 
+    def test_imdb_id(self) -> None:
+        """
+        Given an `imdb_id`,
+        When a `Phylm` object is created with the id,
+        Then `imdb_id` is added as an instance variable
+        """
+        imdb_id = "bar"
+
+        phylm = Phylm(title="foo", imdb_id=imdb_id)
+
+        assert phylm.imdb_id == imdb_id
+
 
 class TestLoadSource:
     """Tests for the `load_source` method."""
@@ -75,6 +87,22 @@ class TestLoadSource:
 
         assert phylm.imdb == mock_imdb.return_value
         mock_imdb.assert_called_once_with(raw_title="bar", movie_id="abc")
+
+    @patch(f"{MODULE_PATH}.Imdb", autospec=True)
+    def test_recognized_source_imdb_with_movie_id_instance_variable(
+        self, mock_imdb: MagicMock
+    ) -> None:
+        """
+        Given a `Phylm` instance,
+        When the `load_source` method is invoked with an `imdb_id` provided at `init`,
+        Then the source is loaded with the `movie_id` instance variable
+        """
+        phylm = Phylm(title="foo", imdb_id="abc")
+
+        phylm.load_source("imdb")
+
+        assert phylm.imdb == mock_imdb.return_value
+        mock_imdb.assert_called_once_with(raw_title="foo", movie_id="abc")
 
     @patch(f"{MODULE_PATH}.Mtc", autospec=True)
     def test_recognized_source_mtc(self, mock_mtc: MagicMock) -> None:
