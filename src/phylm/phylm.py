@@ -12,12 +12,30 @@ from phylm.sources import Rt
 class Phylm:
     """Main `Phylm` entrypoint."""
 
-    def __init__(self, title: str) -> None:
-        """Initialize a `Phylm` object."""
-        self.title: str = title
+    def __init__(self, title: str, imdb_id: Optional[str] = None) -> None:
+        """Initialize a `Phylm` object.
+
+        Args:
+            title: the title of the movie
+            imdb_id: an optional `IMDb` ID of the movie
+        """
+        self.title = title
+        self.imdb_id = imdb_id
         self._imdb: Optional[Imdb] = None
         self._mtc: Optional[Mtc] = None
         self._rt: Optional[Rt] = None
+
+    def __repr__(self) -> str:
+        """Return the string representation.
+
+        Returns:
+            the string representation
+        """
+        return f"<class '{self.__class__.__name__}' title:'{self.title}'>"
+
+    def __str__(self) -> str:
+        """Return the string representation."""
+        return self.__repr__()
 
     @property
     def imdb(self) -> Imdb:
@@ -84,7 +102,8 @@ class Phylm:
         """
         if source == "imdb":
             if not self._imdb:
-                self._imdb = Imdb(raw_title=self.title, movie_id=imdb_id)
+                movie_id = imdb_id or self.imdb_id
+                self._imdb = Imdb(raw_title=self.title, movie_id=movie_id)
             return self
 
         if source == "mtc":
