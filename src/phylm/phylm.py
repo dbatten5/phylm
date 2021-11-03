@@ -25,6 +25,18 @@ class Phylm:
         self._mtc: Optional[Mtc] = None
         self._rt: Optional[Rt] = None
 
+    def __repr__(self) -> str:
+        """Return the string representation.
+
+        Returns:
+            the string representation
+        """
+        return f"<class '{self.__class__.__name__}' title:'{self.title}'>"
+
+    def __str__(self) -> str:
+        """Return the string representation."""
+        return self.__repr__()
+
     @property
     def imdb(self) -> Imdb:
         """Return the IMDb data.

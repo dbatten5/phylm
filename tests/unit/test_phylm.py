@@ -39,6 +39,21 @@ class TestInit:
         assert phylm.imdb_id == imdb_id
 
 
+class TestRepr:
+    """Tests for the __repr__ method."""
+
+    def test_repr(self) -> None:
+        """
+        Given a `Phylm` object,
+        When the string representation is retrieved,
+        Then a informative string is returned
+        """
+        phylm = Phylm(title="foo")
+
+        assert repr(phylm) == "<class 'Phylm' title:'foo'>"
+        assert str(phylm) == "<class 'Phylm' title:'foo'>"
+
+
 class TestLoadSource:
     """Tests for the `load_source` method."""
 
