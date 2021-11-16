@@ -47,6 +47,34 @@ class TestInit:
         assert mtc.low_confidence is True
 
 
+class TestYearMatching:
+    """Tests for the `init` method with a `raw_title`."""
+
+    @vcr.use_cassette(f"{VCR_FIXTURES_DIR}/dune_2021.yaml")
+    def test_year_match_first_result(self) -> None:
+        """
+        Given a `raw_title` and `raw_year`
+        When the source is instantiated
+        Then the year is the preferred method of matching
+        """
+        mtc = Mtc(raw_title="Dune", raw_year=2021)
+
+        assert mtc.title == "Dune: Part One"
+        assert mtc.year == 2021
+
+    @vcr.use_cassette(f"{VCR_FIXTURES_DIR}/dune_1984.yaml")
+    def test_year_match_not_first_result(self) -> None:
+        """
+        Given a `raw_title` and `raw_year`
+        When the source is instantiated
+        Then the year is the preferred method of matching
+        """
+        mtc = Mtc(raw_title="Dune", raw_year=1984)
+
+        assert mtc.title == "Dune"
+        assert mtc.year == 1984
+
+
 class TestTitle:
     """Tests for the `title` method"""
 

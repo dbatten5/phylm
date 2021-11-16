@@ -1,12 +1,7 @@
 """Module to define the Mtc class."""
 import re
-from typing import Match
 from typing import Optional
-from typing import Union
 
-from bs4 import BeautifulSoup
-from bs4.element import NavigableString
-from bs4.element import ResultSet
 from bs4.element import Tag
 
 from phylm.utils.web import soupify
@@ -18,15 +13,17 @@ MTC_BASE_MOVIE_URL = "https://www.metacritic.com/search/movie"
 class Mtc:
     """Class to abstract a Metacritic movie search result."""
 
-    def __init__(self, raw_title: str) -> None:
+    def __init__(self, raw_title: str, raw_year: Optional[int] = None) -> None:
         """Initialize the object.
 
         Args:
             raw_title: the given title of the movie
+            raw_year: an optional year for improved matching
         """
-        self.raw_title: str = raw_title
-        self.low_confidence: bool = False
-        self._mtc_data: Optional[Tag] = self._get_mtc_data()
+        self.raw_title = raw_title
+        self.raw_year = raw_year
+        self.low_confidence = False
+        self._mtc_data = self._get_mtc_data()
 
     def _get_mtc_data(self) -> Optional[Tag]:
         """Scrape mtc for the movie.
@@ -34,22 +31,29 @@ class Mtc:
         Attempt to find a match with the given `raw_title`. If none is found then select
         the first result and set `low_confidence` to `True`.
         """
-        url_encoded_film: str = url_encode(self.raw_title)
-        search_url: str = f"{MTC_BASE_MOVIE_URL}/{url_encoded_film}/results"
-        soup: BeautifulSoup = soupify(search_url)
-        results: ResultSet = soup.find_all("li", {"class": "result"})
+        url_encoded_film = url_encode(self.raw_title)
+        search_url = f"{MTC_BASE_MOVIE_URL}/{url_encoded_film}/results"
+        soup = soupify(search_url)
+        results = soup.find_all("li", {"class": "result"})
+
         if not results:
             return None
-        target = None
+
+        # first try matching on year
+        for result in results:
+            year = _extract_year(result)
+            if self.raw_year and self.raw_year == year:
+                return result
+
+        # then try matching on title
         for result in results:
             result_title: str = result.find("a").string.strip()
             if result_title.lower().strip() == self.raw_title.lower().strip():
-                target = result
-                break
-        if target is None:
-            target = results[0]
-            self.low_confidence = True
-        return target
+                return result
+
+        # finally pick the first result
+        self.low_confidence = True
+        return results[0]
 
     @property
     def title(self) -> Optional[str]:
@@ -60,7 +64,7 @@ class Mtc:
         """
         if not self._mtc_data:
             return None
-        title_tag: Optional[Union[Tag, NavigableString]] = self._mtc_data.find("a")
+        title_tag = self._mtc_data.find("a")
         if title_tag:
             return str(title_tag.get_text()).strip()
         return None
@@ -74,13 +78,7 @@ class Mtc:
         """
         if not self._mtc_data:
             return None
-        year_tag: Optional[Union[Tag, NavigableString]] = self._mtc_data.find("p")
-        if not year_tag:
-            return None
-        year_search: Optional[Match[str]] = re.search(r"\d{4}", year_tag.get_text())
-        if not year_search:
-            return None
-        return int(year_search.group())
+        return _extract_year(self._mtc_data)
 
     @property
     def rating(self) -> Optional[str]:
@@ -91,9 +89,29 @@ class Mtc:
         """
         if not self._mtc_data:
             return None
-        rating_tag: Optional[Union[Tag, NavigableString]] = self._mtc_data.find(
-            "span", {"class": "metascore_w"}
-        )
+        rating_tag = self._mtc_data.find("span", {"class": "metascore_w"})
         if not rating_tag:
             return None
         return str(rating_tag.get_text().strip())
+
+
+def _extract_year(tag: Tag) -> Optional[int]:
+    """Return the year if it exists in a tag.
+
+    Args:
+        tag: the mtc search result bs4 tag to search
+
+    Returns:
+        Optional[int]: the year of the movie
+    """
+    year_tag = tag.find("p")
+
+    if not year_tag:
+        return None
+
+    year_search = re.search(r"\d{4}", year_tag.get_text())
+
+    if not year_search:
+        return None
+
+    return int(year_search.group())
