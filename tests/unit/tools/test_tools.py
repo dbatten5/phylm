@@ -39,4 +39,4 @@ class TestSearchMovies:
         assert result[0]["imdb_id"] == "0133093"
         assert result[0]["title"] == "The Matrix"
         assert result[0]["year"] == 1999
-        assert result[0]["cover url"]
+        assert result[0]["cover_photo"]

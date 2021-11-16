@@ -19,4 +19,13 @@ def search_movies(query: str) -> List[Dict[str, Union[str, int]]]:
     """
     results: List[Movie] = ia.search_movie(query)
 
-    return [{**r.data, "imdb_id": r.movieID} for r in results]
+    return [
+        {
+            "title": r.data.get("title"),
+            "kind": r.data.get("kind"),
+            "year": r.data.get("year"),
+            "imdb_id": r.movieID,
+            "cover_photo": r.data.get("cover url"),
+        }
+        for r in results
+    ]
