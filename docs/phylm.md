@@ -10,6 +10,14 @@ from phylm import Phylm
 p = Phylm(title="The Matrix")
 ```
 
+You can also provide a `year` property for improved matching:
+
+```python
+from phylm import Phylm
+
+p = Phylm(title="The Matrix", year=1999)
+```
+
 Next load a source through either `load_sources` or `load_source`:
 
 ```python
