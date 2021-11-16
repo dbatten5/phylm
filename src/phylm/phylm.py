@@ -12,15 +12,22 @@ from phylm.sources import Rt
 class Phylm:
     """Main `Phylm` entrypoint."""
 
-    def __init__(self, title: str, imdb_id: Optional[str] = None) -> None:
+    def __init__(
+        self,
+        title: str,
+        imdb_id: Optional[str] = None,
+        year: Optional[int] = None,
+    ) -> None:
         """Initialize a `Phylm` object.
 
         Args:
             title: the title of the movie
             imdb_id: an optional `IMDb` ID of the movie
+            year: an optional year of the movie
         """
         self.title = title
         self.imdb_id = imdb_id
+        self.year = year
         self._imdb: Optional[Imdb] = None
         self._mtc: Optional[Mtc] = None
         self._rt: Optional[Rt] = None
@@ -103,17 +110,21 @@ class Phylm:
         if source == "imdb":
             if not self._imdb:
                 movie_id = imdb_id or self.imdb_id
-                self._imdb = Imdb(raw_title=self.title, movie_id=movie_id)
+                self._imdb = Imdb(
+                    raw_title=self.title,
+                    movie_id=movie_id,
+                    raw_year=self.year,
+                )
             return self
 
         if source == "mtc":
             if not self._mtc:
-                self._mtc = Mtc(raw_title=self.title)
+                self._mtc = Mtc(raw_title=self.title, raw_year=self.year)
             return self
 
         if source == "rt":
             if not self._rt:
-                self._rt = Rt(raw_title=self.title)
+                self._rt = Rt(raw_title=self.title, raw_year=self.year)
             return self
 
         raise UnrecognizedSourceError(f"{source} is not a recognized source")

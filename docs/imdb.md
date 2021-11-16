@@ -12,7 +12,7 @@ Alternatively you can instantiate the IMDb source class directly through:
 ```python
 from phylm.sources import Imdb
 
-imdb = Imdb(raw_title="The Matrix")
+imdb = Imdb(raw_title="The Matrix", raw_year=1999)  # raw_year is optional
 ```
 
 ## Movie ID

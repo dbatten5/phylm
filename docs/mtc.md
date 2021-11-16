@@ -12,7 +12,7 @@ Alternatively you can instantiate the Metacritic source class directly through:
 ```python
 from phylm.sources import Mtc
 
-mtc = Mtc(raw_title="The Matrix")
+mtc = Mtc(raw_title="The Matrix", raw_year=1999)  # raw_year is optional
 ```
 
 # Reference

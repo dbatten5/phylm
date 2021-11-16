@@ -77,7 +77,7 @@ class TestLoadSource:
         When the `load_source` method is invoked with the `imdb` source,
         Then the source is loaded
         """
-        phylm = Phylm(title="bar")
+        phylm = Phylm(title="bar", year=2000)
         with pytest.raises(
             SourceNotLoadedError, match="The data for Imdb has not yet been loaded"
         ):
@@ -86,7 +86,7 @@ class TestLoadSource:
         phylm.load_source("imdb")
 
         assert phylm.imdb == mock_imdb.return_value
-        mock_imdb.assert_called_once_with(raw_title="bar", movie_id=None)
+        mock_imdb.assert_called_once_with(raw_title="bar", movie_id=None, raw_year=2000)
 
     @patch(f"{MODULE_PATH}.Imdb", autospec=True)
     def test_recognized_source_imdb_with_movie_id(self, mock_imdb: MagicMock) -> None:
@@ -101,7 +101,9 @@ class TestLoadSource:
         phylm.load_source("imdb", imdb_id="abc")
 
         assert phylm.imdb == mock_imdb.return_value
-        mock_imdb.assert_called_once_with(raw_title="bar", movie_id="abc")
+        mock_imdb.assert_called_once_with(
+            raw_title="bar", movie_id="abc", raw_year=None
+        )
 
     @patch(f"{MODULE_PATH}.Imdb", autospec=True)
     def test_recognized_source_imdb_with_movie_id_instance_variable(
@@ -117,7 +119,9 @@ class TestLoadSource:
         phylm.load_source("imdb")
 
         assert phylm.imdb == mock_imdb.return_value
-        mock_imdb.assert_called_once_with(raw_title="foo", movie_id="abc")
+        mock_imdb.assert_called_once_with(
+            raw_title="foo", movie_id="abc", raw_year=None
+        )
 
     @patch(f"{MODULE_PATH}.Mtc", autospec=True)
     def test_recognized_source_mtc(self, mock_mtc: MagicMock) -> None:
@@ -126,7 +130,7 @@ class TestLoadSource:
         When the `load_source` method is invoked with the `mtc` source,
         Then the source is loaded
         """
-        phylm = Phylm(title="bar")
+        phylm = Phylm(title="bar", year=2000)
         with pytest.raises(
             SourceNotLoadedError,
             match="The data for Metacritic has not yet been loaded",
@@ -136,7 +140,7 @@ class TestLoadSource:
         phylm.load_source("mtc")
 
         assert phylm.mtc == mock_mtc.return_value
-        mock_mtc.assert_called_once_with(raw_title="bar")
+        mock_mtc.assert_called_once_with(raw_title="bar", raw_year=2000)
 
     @patch(f"{MODULE_PATH}.Rt", autospec=True)
     def test_recognized_source_rt(self, mock_rt: MagicMock) -> None:
@@ -145,7 +149,7 @@ class TestLoadSource:
         When the `load_source` method is invoked with the `rt` source,
         Then the source is loaded
         """
-        phylm = Phylm(title="bar")
+        phylm = Phylm(title="bar", year=2000)
         with pytest.raises(
             SourceNotLoadedError,
             match="The data for Rotten Tomatoes has not yet been loaded",
@@ -155,7 +159,7 @@ class TestLoadSource:
         phylm.load_source("rt")
 
         assert phylm.rt == mock_rt.return_value
-        mock_rt.assert_called_once_with(raw_title="bar")
+        mock_rt.assert_called_once_with(raw_title="bar", raw_year=2000)
 
     @pytest.mark.parametrize("source_class", ("Rt", "Mtc", "Imdb"))
     def test_source_already_loaded(self, source_class: str) -> None:

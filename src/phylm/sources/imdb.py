@@ -15,6 +15,7 @@ class Imdb:
         self,
         raw_title: Optional[str] = None,
         movie_id: Optional[str] = None,
+        raw_year: Optional[int] = None,
     ) -> None:
         """Initialize the object.
 
@@ -24,6 +25,7 @@ class Imdb:
         Args:
             raw_title: the title of the movie
             movie_id: the `IMDb` id of the movie
+            raw_year: an optional year for improved matching if only title is given
 
         Raises:
             ValueError: if neither `raw_title` nor `movie_id` is supplied
@@ -31,10 +33,11 @@ class Imdb:
         if not (raw_title or movie_id):
             raise ValueError("At least one of raw_title and movie_id must be given")
 
-        self.raw_title: Optional[str] = raw_title
-        self.movie_id: Optional[str] = movie_id
-        self.low_confidence: bool = False
-        self._imdb_data: Optional[Movie] = self._get_imdb_data()
+        self.raw_title = raw_title
+        self.movie_id = movie_id
+        self.raw_year = raw_year
+        self.low_confidence = False
+        self._imdb_data = self._get_imdb_data()
 
     def _get_imdb_data(self) -> Optional[Movie]:
         """Fetch the data from IMDb.
@@ -55,19 +58,40 @@ class Imdb:
             return None
 
         results: List[Movie] = ia.search_movie(self.raw_title)
+
         if not results:
             return None
-        target = None
-        for result in results:
-            if result["title"].lower() == self.raw_title.lower():
-                target = result
-                break
-        if not target:
-            target = results[0]
-            self.low_confidence = True
+
+        target = self._find_match(results)
+
         ia.update(target, info=["main"])
 
         return target
+
+    def _find_match(self, results: List[Movie]) -> Optional[Movie]:
+        """Find a match based on year or title.
+
+        Args:
+            results: A list of search results
+
+        Returns:
+            Optional[Movie]: the matched movie if found
+        """
+        # first try matching on year
+        if self.raw_year:
+            for result in results:
+                if result.get("year") == self.raw_year:
+                    return result
+
+        # then try matching on title
+        if self.raw_title:
+            for result in results:
+                if result["title"].lower() == self.raw_title.lower():
+                    return result
+
+        # finally pick the first result
+        self.low_confidence = True
+        return results[0]
 
     @property
     def title(self) -> Optional[str]:
