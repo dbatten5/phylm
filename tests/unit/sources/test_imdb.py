@@ -1,4 +1,5 @@
 """Module for `Imdb` tests."""
+from typing import Any
 from unittest.mock import MagicMock
 from unittest.mock import patch
 
@@ -29,6 +30,12 @@ def the_matrix_full_fixture() -> Movie:
 def alien_fixture() -> Movie:
     """Return The Matrix IMDb Movie object"""
     return ia.search_movie("Alien")[0]
+
+
+@pytest.fixture(scope="module", name="dune_results")
+def dune_search_results_fixture() -> Any:
+    """Return Dune search results IMDb Movie object"""
+    return ia.search_movie("Dune")
 
 
 class TestInit:
@@ -81,6 +88,34 @@ class TestInit:
         imdb = Imdb(raw_title)
 
         assert imdb.title is None
+
+
+class TestYearMatching:
+    """Tests for the `init` method with a `raw_title`."""
+
+    @pytest.mark.usefixtures("dune_results")
+    def test_year_match_first_result(self) -> None:
+        """
+        Given a `raw_title` and `raw_year`
+        When the source is instantiated
+        Then the year is the preferred method of matching
+        """
+        mtc = Imdb(raw_title="Dune", raw_year=2021)
+
+        assert mtc.title == "Dune"
+        assert mtc.year == 2021
+
+    @pytest.mark.usefixtures("dune_results")
+    def test_year_match_not_first_result(self) -> None:
+        """
+        Given a `raw_title` and `raw_year`
+        When the source is instantiated
+        Then the year is the preferred method of matching
+        """
+        mtc = Imdb(raw_title="Dune", raw_year=1984)
+
+        assert mtc.title == "Dune"
+        assert mtc.year == 1984
 
 
 class TestGenres:
@@ -361,7 +396,7 @@ class TestPlot:
         imdb = Imdb(raw_title)
 
         assert imdb.plot == "the plot"
-        mock_movie.get.assert_called_once_with("plot")
+        mock_movie.get.assert_called_with("plot")
 
     @patch(IMDB_IA_PATH)
     def test_without_plot_data_already_retrieved(self, mock_ia: MagicMock) -> None:
