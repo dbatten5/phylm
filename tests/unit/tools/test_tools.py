@@ -12,16 +12,19 @@ from phylm.errors import NoTMDbApiKeyError
 from phylm.tools import search_movies
 from phylm.tools import search_tmdb_movies
 
-ia = IMDb()
-
-
 TOOLS_MODULE_PATH = "phylm.tools"
 
 
+@pytest.fixture(scope="module", name="imdb_ia")
+def imdb_ia_fixture() -> IMDb:
+    """Return the IMDb class."""
+    return IMDb()
+
+
 @pytest.fixture(scope="module", name="the_matrix")
-def the_matrix_fixture() -> List[Movie]:
+def the_matrix_fixture(imdb_ia: IMDb) -> List[Movie]:
     """Return The Matrix IMDb Movie object."""
-    return list(ia.search_movie("The Matrix"))
+    return list(imdb_ia.search_movie("The Matrix"))
 
 
 class TestSearchMovies:
