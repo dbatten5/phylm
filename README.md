@@ -41,13 +41,13 @@ pip install phylm
   'title': 'The Matrix',
   'kind': 'movie',
   'year': 1999,
-  'cover url': 'https://some-url.com',
+  'cover_photo': 'https://some-url.com',
   'imdb_id': '0133093',
 }, {
   'title': 'The Matrix Reloaded',
   'kind': 'movie',
   'year': 2003,
-  'cover url': 'https://some-url.com',
+  'cover_photo': 'https://some-url.com',
   'imdb_id': '0234215',
 }, {
 ...
