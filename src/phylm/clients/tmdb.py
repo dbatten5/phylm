@@ -6,7 +6,7 @@ from typing import List
 from requests import Session
 
 
-class TmdbClient(Session):
+class TmdbClient:
     """Class to abstract to the Tmdb API."""
 
     def __init__(self, api_key: str) -> None:
@@ -16,6 +16,7 @@ class TmdbClient(Session):
             api_key: an api_key for authentication
         """
         super().__init__()
+        self.session = Session()
         self.api_key = api_key
         self._base = "https://api.themoviedb.org/3"
 
@@ -35,6 +36,6 @@ class TmdbClient(Session):
             "include_adult": False,
             "region": "GB",
         }
-        res = self.get(f"{self._base}/search/movie", params=payload)  # type: ignore
+        res = self.session.get(f"{self._base}/search/movie", params=payload)
         results: List[Dict[str, Any]] = res.json()["results"]
         return results
