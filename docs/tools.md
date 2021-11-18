@@ -3,7 +3,7 @@
 # Search movies
 
 For a given movie title query you can return a list of search results from `IMDb`
-through `get_suggestions`:
+through `search_movies`:
 
 ```python
 >>> from phylm.tools import search_movies
@@ -12,13 +12,13 @@ through `get_suggestions`:
   'title': 'The Matrix',
   'kind': 'movie',
   'year': 1999,
-  'cover url': 'https://some-url.com',
+  'cover_photo': 'https://some-url.com',
   'imdb_id': '0133093',
 }, {
   'title': 'The Matrix Reloaded',
   'kind': 'movie',
   'year': 2003,
-  'cover url': 'https://some-url.com',
+  'cover_photo': 'https://some-url.com',
   'imdb_id': '0234215',
 }, {
 ...
@@ -28,3 +28,47 @@ through `get_suggestions`:
     rendering:
       show_signature_annotations: true
       heading_level: 2
+
+# TMDB
+
+`phylm` also provides tools to interact with [The Movie Database](https://www.themoviedb.org/) (TMDb).
+
+!!! info ""
+    To use TMDB tools you'll need to sign up for an API key, instructions [here](https://developers.themoviedb.org/3).
+    Once you have your key, export it as an env var called `TMDB_API_KEY` so that it's
+    available to use in these tools. You also have the option of passing in the key as
+    an argument to each function.
+
+## Search movies
+
+For a given movie title query you can return a list of search results from `TMDb`
+through `search_tmdb_movies`. Note that this search performs a lot quicker than the
+`imdb` `search_movies`.
+
+```python
+>>> from phylm.tools import search_tmdb_movies
+>>> search_tmdb_movies("The Matrix", api_key="abc") # the api key can be provided as an env var instead
+[{
+  'adult': False,
+  'backdrop_path': '/fNG7i7RqMErkcqhohV2a6cV1Ehy.jpg',
+  'genre_ids': [28, 878],
+  'id': 603,
+  'original_language': 'en',
+  'original_title': 'The Matrix',
+  'overview': 'Set in the 22nd century, The Matrix tells the story of a computer hacker...'
+  'popularity': 79.956,
+  'poster_path': '/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg',
+  'release_date': '1999-06-11',
+  'title': 'The Matrix',
+  'video': False,
+  'vote_average': 8.2,
+  'vote_count': 20216,
+}, {
+  ...
+}
+```
+
+::: phylm.tools.search_tmdb_movies
+    rendering:
+      show_signature_annotations: true
+      heading_level: 3
