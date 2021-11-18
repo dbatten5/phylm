@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "phylm"
-version = "4.2.0"
+version = "4.2.1"
 description = "Phylm"
 authors = ["Dom Batten <dominic.batten@googlemail.com>"]
 license = "MIT"

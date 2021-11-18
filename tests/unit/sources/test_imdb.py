@@ -247,6 +247,36 @@ class TestRuntime:
         assert imdb.runtime is None
 
 
+class TestId:
+    """Tests for the `id` property."""
+
+    @patch(IMDB_IA_PATH)
+    def test_year(self, mock_ia: MagicMock, the_matrix: Movie) -> None:
+        """
+        Given a match with id,
+        When the year is retrieved,
+        Then the id is returned
+        """
+        mock_ia.search_movie.return_value = [the_matrix]
+
+        imdb = Imdb("The Matrix")
+
+        assert imdb.id == "0133093"
+
+    @patch(IMDB_IA_PATH)
+    def test_no_results(self, mock_ia: MagicMock) -> None:
+        """
+        Given no search results,
+        When the id is retrieved,
+        Then `None` is returned
+        """
+        mock_ia.search_movie.return_value = []
+
+        imdb = Imdb("The Matrix")
+
+        assert imdb.id is None
+
+
 class TestYear:
     """Tests for the `year` method."""
 
