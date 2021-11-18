@@ -38,6 +38,12 @@ def dune_search_results_fixture() -> Any:
     return ia.search_movie("Dune")
 
 
+@pytest.fixture(scope="module", name="zdt_results")
+def zdt_search_results_fixture() -> Any:
+    """Return Zero Dark Thirty search results IMDb Movie object"""
+    return ia.search_movie("Zero Dark Thirty")
+
+
 class TestInit:
     """Tests for the `__init__` method."""
 
@@ -100,10 +106,10 @@ class TestYearMatching:
         When the source is instantiated
         Then the year is the preferred method of matching
         """
-        mtc = Imdb(raw_title="Dune", raw_year=2021)
+        imdb = Imdb(raw_title="Dune", raw_year=2021)
 
-        assert mtc.title == "Dune"
-        assert mtc.year == 2021
+        assert imdb.title == "Dune"
+        assert imdb.year == 2021
 
     @pytest.mark.usefixtures("dune_results")
     def test_year_match_not_first_result(self) -> None:
@@ -112,10 +118,22 @@ class TestYearMatching:
         When the source is instantiated
         Then the year is the preferred method of matching
         """
-        mtc = Imdb(raw_title="Dune", raw_year=1984)
+        imdb = Imdb(raw_title="Dune", raw_year=1984)
 
-        assert mtc.title == "Dune"
-        assert mtc.year == 1984
+        assert imdb.title == "Dune"
+        assert imdb.year == 1984
+
+    @pytest.mark.usefixtures("zdt_results")
+    def test_year_matches_non_movie_results(self) -> None:
+        """
+        Given a `raw_title` and `raw_year` that matches a non-movie result
+        When the source is instantiated
+        Then the year is the preferred method of matching
+        """
+        imdb = Imdb(raw_title="Zero Dark Thirty", raw_year=2013)
+
+        assert imdb.title == "Zero Dark Thirty"
+        assert imdb.year == 2012
 
 
 class TestGenres:
@@ -411,22 +429,22 @@ class TestPlot:
     """Tests for the `plot` method."""
 
     @patch(IMDB_IA_PATH)
-    def test_plot_data_already_retrieved(self, mock_ia: MagicMock) -> None:
+    def test_plot_data_already_retrieved(
+        self,
+        mock_ia: MagicMock,
+        the_matrix_full: Movie,
+    ) -> None:
         """
         Given a match with existing plot data,
         When the plot is retrieved,
         Then the plot is returned
         """
-        raw_title = "The Movie"
-        mock_movie = MagicMock(current_info=["plot"])
-        movie_data = {"title": raw_title, "plot": ["the plot::author"]}
-        mock_movie.get.return_value = movie_data["plot"]
-        mock_ia.search_movie.return_value = [mock_movie]
+        mock_ia.get_movie.return_value = the_matrix_full
 
-        imdb = Imdb(raw_title)
+        imdb = Imdb(movie_id="0133093")
 
-        assert imdb.plot == "the plot"
-        mock_movie.get.assert_called_with("plot")
+        assert isinstance(imdb.plot, str)
+        assert "Neo" in imdb.plot
 
     @patch(IMDB_IA_PATH)
     def test_without_plot_data_already_retrieved(self, mock_ia: MagicMock) -> None:
@@ -438,7 +456,7 @@ class TestPlot:
         raw_title = "The Movie"
         mock_movie = MagicMock()
         movie_data = {"title": "The Movie", "plot": ["the plot::author"]}
-        mock_movie.get.return_value = movie_data["plot"]
+        mock_movie.get.side_effect = ["movie", movie_data["plot"]]
         mock_ia.search_movie.return_value = [mock_movie]
 
         imdb = Imdb(raw_title)
