@@ -105,6 +105,18 @@ class Imdb:
 
         return str(self._imdb_data.get("title"))
 
+    @property
+    def id(self) -> Optional[str]:
+        """Return the IMDb id.
+
+        Returns:
+            the id of the movie
+        """
+        if not self._imdb_data:
+            return None
+
+        return str(self._imdb_data.movieID)
+
     def genres(self, limit: int = 3) -> List[str]:
         """Return the genres.
 
