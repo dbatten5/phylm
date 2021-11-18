@@ -57,7 +57,11 @@ class Imdb:
         if not self.raw_title:
             return None
 
-        results: List[Movie] = ia.search_movie(self.raw_title)
+        results: List[Movie] = [
+            result
+            for result in ia.search_movie(self.raw_title)
+            if result.get("kind") == "movie"
+        ]
 
         if not results:
             return None
