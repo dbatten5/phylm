@@ -2,7 +2,7 @@
 
 # Search movies
 
-For a given movie title query you can return a list of search results from `IMDb`
+For a given movie title query you can return a list of search results from _IMDb_
 through `search_movies`:
 
 ```python
@@ -31,17 +31,17 @@ through `search_movies`:
 
 # TMDB
 
-`phylm` also provides tools to interact with [The Movie Database](https://www.themoviedb.org/) (TMDb).
+`phylm` also provides tools to interact with [The Movie Database](https://www.themoviedb.org/) (_TMDb_).
 
 !!! info ""
-    To use TMDB tools you'll need to sign up for an API key, instructions [here](https://developers.themoviedb.org/3).
+    To use _TMDb_ tools you'll need to sign up for an API key, instructions [here](https://developers.themoviedb.org/3).
     Once you have your key, export it as an env var called `TMDB_API_KEY` so that it's
     available to use in these tools. You also have the option of passing in the key as
     an argument to each function.
 
 ## Search movies
 
-For a given movie title query you can return a list of search results from `TMDb`
+For a given movie title query you can return a list of search results from _TMDb_
 through `search_tmdb_movies`. Note that this search performs a lot quicker than the
 `imdb` `search_movies`.
 
@@ -69,6 +69,35 @@ through `search_tmdb_movies`. Note that this search performs a lot quicker than 
 ```
 
 ::: phylm.tools.search_tmdb_movies
+    rendering:
+      show_signature_annotations: true
+      heading_level: 3
+
+## Get streaming providers
+
+For a given movie _TMDb_ id and list of regions, you can return a list of streaming
+providers from _TMDb_ via _Just Watch_ through `get_streaming_providers`.
+
+```python
+>>> from phylm.tools import get_streaming_providers
+>>> get_streaming_providers(tmdb_movie_id="438631", regions=["gb"], api_key="abc")
+{
+  'gb': {
+    'link': 'https://www.themoviedb.org/movie/438631-dune/watch?locale=GB',
+    'rent': [{
+      'display_priority': 8,
+      'logo_path': '/pZgeSWpfvD59x6sY6stT5c6uc2h.jpg',
+      'provider_id': 130,
+      'provider_name': 'Sky Store',
+    }],
+  },
+}
+```
+
+Consult the [TMDb docs](https://developers.themoviedb.org/3/movies/get-movie-watch-providers)
+for more information on the data that's returned.
+
+::: phylm.tools.get_streaming_providers
     rendering:
       show_signature_annotations: true
       heading_level: 3
