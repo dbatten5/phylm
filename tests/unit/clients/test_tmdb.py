@@ -1,5 +1,7 @@
 """Tests for the Tmdb client."""
+import pytest
 import vcr
+from requests.exceptions import HTTPError
 from tests.conftest import FIXTURES_DIR
 
 from phylm.clients.tmdb import TmdbClient
@@ -41,3 +43,40 @@ class TestSearchMovies:
         results = client.search_movies(query="aslkdjaskldjaslkdjaslkdjasd")
 
         assert len(results) == 0
+
+
+class TestStreamingProviders:
+    """Tests for the `get_streaming_providers` method."""
+
+    @vcr.use_cassette(
+        f"{VCR_FIXTURES_DIR}/matrix_providers.yaml", filter_query_parameters=["api_key"]
+    )
+    def test_results(self) -> None:
+        """
+        Given a movie id,
+        When the `get_streaming_providers` method is invoked with the id,
+        Then search results are returned from the api and keyed by region name
+        """
+        client = TmdbClient(api_key="dummy_key")
+
+        results = client.get_streaming_providers(movie_id="603", regions=["gb", "fr"])
+
+        assert "fr" in results
+        assert "gb" in results
+        assert "flatrate" in results["gb"]
+        assert len(results["gb"]["flatrate"])
+
+    @vcr.use_cassette(
+        f"{VCR_FIXTURES_DIR}/no_results_providers.yaml",
+        filter_query_parameters=["api_key"],
+    )
+    def test_no_results(self) -> None:
+        """
+        Given an unrecognized movie id,
+        When the `get_streaming_providers` method is invoked with the id,
+        Then search results are returned from the api
+        """
+        client = TmdbClient(api_key="dummy_key")
+
+        with pytest.raises(HTTPError):
+            client.get_streaming_providers(movie_id="-1", regions=["gb"])

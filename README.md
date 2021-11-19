@@ -32,10 +32,10 @@ pip install phylm
 8.7
 ```
 
-`phylm` also provides some tools around movie search results:
+`phylm` also provides some tools around movie search results and more:
 
 ```python
->>> from phylm.tools import search_movies
+>>> from phylm.tools import search_movies, get_streaming_providers
 >>> search_movies("the matrix")
 [{
   'title': 'The Matrix',
@@ -51,6 +51,24 @@ pip install phylm
   'imdb_id': '0234215',
 }, {
 ...
+>>> get_streaming_providers("0234215", regions=["gb"])
+{
+  'gb': {
+    'rent': [{
+      'display_priority': 8,
+      'logo_path': '/pZgeSWpfvD59x6sY6stT5c6uc2h.jpg',
+      'provider_id': 130,
+      'provider_name': 'Sky Store',
+    }],
+    'flatrate': [{
+      'display_priority': 8,
+      'logo_path': '/ik9djlxNlex6sY6Kjsundc2h.jpg',
+      'provider_id': 87,
+      'provider_name': 'Netflix',
+    }]
+  }, {
+  ...
+}
 ```
 
 ## Help

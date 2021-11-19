@@ -9,6 +9,7 @@ from imdb import IMDb
 from imdb.Movie import Movie
 
 from phylm.errors import NoTMDbApiKeyError
+from phylm.tools import get_streaming_providers
 from phylm.tools import search_movies
 from phylm.tools import search_tmdb_movies
 
@@ -110,3 +111,30 @@ class TestSearchTmdbMovies:
 
         assert results == [{"title": "The Matrix"}]
         mock_tmdb_client_class.assert_called_once_with(api_key=api_key)
+
+
+class TestGetStreamingProviders:
+    """Tests for the `get_streaming_providers` method."""
+
+    @patch(f"{TOOLS_MODULE_PATH}.TmdbClient", autospec=True)
+    def test_success(
+        self,
+        mock_initialize_client: MagicMock,
+    ) -> None:
+        """
+        Given an api_key supplied as an arg,
+        When the `get_streaming_providers` function is invoked,
+        Then the results are returned
+        """
+        api_key = "nice_key"
+        mock_tmdb_client = mock_initialize_client.return_value
+        mock_tmdb_client.get_streaming_providers.return_value = {"gb": "Netflix"}
+
+        results = get_streaming_providers(
+            tmdb_movie_id="123",
+            regions=["gb"],
+            api_key=api_key,
+        )
+
+        assert results == {"gb": "Netflix"}
+        mock_initialize_client.assert_called_once_with(api_key=api_key)

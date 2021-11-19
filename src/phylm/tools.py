@@ -36,6 +36,26 @@ def search_movies(query: str) -> List[Dict[str, Union[str, int]]]:
     ]
 
 
+def _initialize_tmdb_client(api_key: Optional[str] = None) -> TmdbClient:
+    """Initialize and return a TmdbClient.
+
+    Args:
+        api_key: an optional api_key to take precedence over an env var key
+
+    Raises:
+        NoTMDbApiKeyError: when no api_key has been provided
+
+    Returns:
+        TmdbClient: an authorized Tmdb client
+    """
+    tmdb_api_key = api_key or os.environ.get("TMDB_API_KEY")
+
+    if not tmdb_api_key:
+        raise NoTMDbApiKeyError("An `api_key` must be provided to use this service")
+
+    return TmdbClient(api_key=tmdb_api_key)
+
+
 def search_tmdb_movies(
     query: str, api_key: Optional[str] = None
 ) -> List[Dict[str, Any]]:
@@ -46,17 +66,30 @@ def search_tmdb_movies(
         api_key: an api_key can either be provided here or through a TMDB_API_KEY env
             var
 
-    Raises:
-        NoTMDbApiKeyError: when no api_key has been provided
-
     Returns:
         List[Dict[str, Any]]: the search results
     """
-    tmdb_api_key = api_key or os.environ.get("TMDB_API_KEY")
-
-    if not tmdb_api_key:
-        raise NoTMDbApiKeyError("An `api_key` must be provided to use this service")
-
-    client = TmdbClient(api_key=tmdb_api_key)
+    client = _initialize_tmdb_client(api_key=api_key)
 
     return client.search_movies(query=query)
+
+
+def get_streaming_providers(
+    tmdb_movie_id: str,
+    regions: List[str],
+    api_key: Optional[str] = None,
+) -> Dict[str, Any]:
+    """Return a list of streaming providers for a given movie.
+
+    Args:
+        tmdb_movie_id: the tmdb id of the movie
+        regions: a list of regions to trim down the return list
+        api_key: an api_key can either be provided here or through a TMDB_API_KEY env
+            var
+
+    Returns:
+        Dict[str, Any]: a dictionary of streaming providers, keyed by region name
+    """
+    client = _initialize_tmdb_client(api_key=api_key)
+
+    return client.get_streaming_providers(movie_id=tmdb_movie_id, regions=regions)

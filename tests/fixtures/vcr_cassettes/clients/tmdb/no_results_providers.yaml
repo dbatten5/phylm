@@ -11,12 +11,12 @@ interactions:
         User-Agent:
           - python-requests/2.26.0
       method: GET
-      uri: https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-GB&query=aslkdjaskldjaslkdjaslkdjasd&region=GB
+      uri: https://api.themoviedb.org/3/movie/-1/watch/providers
     response:
       body:
         string: !!binary |
-          H4sIAAAAAAAAA6tWKkhMT1WyMtRRKkotLs0pKVayio7VUSrJL0nMiQfJAQUMYHy4EoNaALNPV645
-          AAAA
+          H4sIAAAAAAAAAz3KIQ6AMAxG4as01QQDinPgyeh+QIw1rKsghLszhXxf3sPmIjDjaQvJ0LHVUN0W
+          0QiehvGHs01hb8bzASow9SKgW73F5bCKSKKeImWttII29Rx7fj94apY6ZAAAAA==
       headers:
         Access-Control-Allow-Methods:
           - GET, HEAD, POST, PUT, DELETE, OPTIONS
@@ -26,7 +26,7 @@ interactions:
           - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
             Content-Length, Content-Range
         Cache-Control:
-          - public, max-age=600
+          - public, max-age=28800
         Connection:
           - keep-alive
         Content-Encoding:
@@ -34,7 +34,7 @@ interactions:
         Content-Type:
           - application/json;charset=utf-8
         Date:
-          - Fri, 19 Nov 2021 14:23:36 GMT
+          - Fri, 19 Nov 2021 12:36:20 GMT
         Server:
           - openresty
         Transfer-Encoding:
@@ -42,14 +42,22 @@ interactions:
         Vary:
           - Accept-Encoding
         Via:
-          - 1.1 68126347056de2d05be3dd362ccba987.cloudfront.net (CloudFront)
+          - 1.1 9c46a92c66fe21525310bd5d2f471e46.cloudfront.net (CloudFront)
         X-Amz-Cf-Id:
-          - MZgNnx0ZejBqMqIgXJ86OP5OtMBnbboSC5jTI8w_I5BKmv2vpMLJLA==
+          - eGBK3-_IiZnsDjldxkR9DDZX9rq9QJ3aSOotB9ZX7VWpkbUnkDRuTA==
         X-Amz-Cf-Pop:
-          - LHR50-C1
+          - LHR61-C2
         X-Cache:
-          - Miss from cloudfront
+          - Error from cloudfront
+        X-Memc:
+          - MISS
+        X-Memc-Age:
+          - "0"
+        X-Memc-Expires:
+          - "14687"
+        X-Memc-Key:
+          - eae09eb6e89d7ab563e7bd6dc85e159fb173badd
       status:
-        code: 200
-        message: OK
+        code: 404
+        message: Not Found
 version: 1
