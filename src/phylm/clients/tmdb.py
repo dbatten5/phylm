@@ -39,3 +39,26 @@ class TmdbClient:
         res = self.session.get(f"{self._base}/search/movie", params=payload)
         results: List[Dict[str, Any]] = res.json()["results"]
         return results
+
+    def get_streaming_providers(
+        self, movie_id: str, regions: List[str]
+    ) -> Dict[str, Any]:
+        """Return a list of streaming providers for a given movie.
+
+        Args:
+            movie_id: the tmdb id of the movie
+            regions: a list of regions to trim down the return list
+
+        Returns:
+            Dict[str, Any]: a dictionary of streaming providers, keyed by region name
+        """
+        payload = {"api_key": self.api_key}
+        res = self.session.get(
+            f"{self._base}/movie/{movie_id}/watch/providers", params=payload
+        )
+
+        res.raise_for_status()
+
+        results: Dict[str, Any] = res.json()["results"]
+
+        return {key: results[key.upper()] for key in regions}
