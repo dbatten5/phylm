@@ -33,7 +33,7 @@ class TmdbClient:
             "api_key": self.api_key,
             "language": "en-GB",
             "query": query,
-            "include_adult": False,
+            "include_adult": "false",
             "region": "GB",
         }
         res = self.session.get(f"{self._base}/search/movie", params=payload)

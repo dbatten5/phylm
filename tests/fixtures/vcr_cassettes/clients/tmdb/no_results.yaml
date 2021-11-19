@@ -11,7 +11,7 @@ interactions:
         User-Agent:
           - python-requests/2.26.0
       method: GET
-      uri: https://api.themoviedb.org/3/search/movie?include_adult=False&language=en-GB&query=aslkdjaskldjaslkdjaslkdjasd&region=GB
+      uri: https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-GB&query=aslkdjaskldjaslkdjaslkdjasd&region=GB
     response:
       body:
         string: !!binary |
@@ -34,7 +34,7 @@ interactions:
         Content-Type:
           - application/json;charset=utf-8
         Date:
-          - Thu, 18 Nov 2021 13:36:12 GMT
+          - Fri, 19 Nov 2021 14:23:36 GMT
         Server:
           - openresty
         Transfer-Encoding:
@@ -42,9 +42,9 @@ interactions:
         Vary:
           - Accept-Encoding
         Via:
-          - 1.1 f781469e78b7a441c6f692b1629e1519.cloudfront.net (CloudFront)
+          - 1.1 68126347056de2d05be3dd362ccba987.cloudfront.net (CloudFront)
         X-Amz-Cf-Id:
-          - ZzoH_Hbughh50zblladdE7sdS_RFUstsVkCVQHAykhgmOgpaqP1jmQ==
+          - MZgNnx0ZejBqMqIgXJ86OP5OtMBnbboSC5jTI8w_I5BKmv2vpMLJLA==
         X-Amz-Cf-Pop:
           - LHR50-C1
         X-Cache:
