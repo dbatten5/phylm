@@ -20,23 +20,27 @@ class TmdbClient:
         self.api_key = api_key
         self._base = "https://api.themoviedb.org/3"
 
-    def search_movies(self, query: str) -> List[Dict[str, Any]]:
+    def search_movies(self, query: str, region: str = "us") -> List[Dict[str, Any]]:
         """Search for movies.
 
         Args:
             query: the search query
+            region: the region for the query, affects the release date value
 
         Returns:
-            Any: the search results
+            List[Dict[str, Any]]: the search results
         """
         payload = {
             "api_key": self.api_key,
-            "language": "en-GB",
+            "language": "en-US",
             "query": query,
             "include_adult": "false",
-            "region": "GB",
+            "region": region.upper(),
         }
         res = self.session.get(f"{self._base}/search/movie", params=payload)
+
+        res.raise_for_status()
+
         results: List[Dict[str, Any]] = res.json()["results"]
         return results
 

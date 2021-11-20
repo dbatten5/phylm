@@ -27,7 +27,7 @@ class TestSearchMovies:
 
         assert len(results)
         assert results[0]["title"] == "The Matrix"
-        assert results[0]["release_date"] == "1999-06-11"
+        assert results[0]["release_date"] == "1999-03-30"
 
     @vcr.use_cassette(
         f"{VCR_FIXTURES_DIR}/no_results.yaml", filter_query_parameters=["api_key"]
@@ -43,6 +43,33 @@ class TestSearchMovies:
         results = client.search_movies(query="aslkdjaskldjaslkdjaslkdjasd")
 
         assert len(results) == 0
+
+    @vcr.use_cassette(
+        f"{VCR_FIXTURES_DIR}/different_region.yaml", filter_query_parameters=["api_key"]
+    )
+    def test_override_region(self) -> None:
+        """
+        When the `search_movies` method is invoked with the region,
+        Then the region is passed to the api request
+        """
+        client = TmdbClient(api_key="9017d5457c4e8ec5f0999d1b10012ae1")
+
+        results = client.search_movies(query="The Matrix", region="gb")
+
+        assert results[0]["release_date"] == "1999-06-11"
+
+    @vcr.use_cassette(
+        f"{VCR_FIXTURES_DIR}/invalid_key.yaml", filter_query_parameters=["api_key"]
+    )
+    def test_api_error(self) -> None:
+        """
+        When the `search_movies` method is invoked with an invalid api_key,
+        Then an HTTP error is raised
+        """
+        client = TmdbClient(api_key="not_a_key")
+
+        with pytest.raises(HTTPError):
+            client.search_movies(query="The Matrix")
 
 
 class TestStreamingProviders:
