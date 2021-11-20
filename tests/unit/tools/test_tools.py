@@ -76,6 +76,9 @@ class TestSearchTmdbMovies:
 
         assert results == [{"title": "The Matrix"}]
         mock_tmdb_client_class.assert_called_once_with(api_key=api_key)
+        mock_tmdb_client.search_movies.assert_called_once_with(
+            query="The Matrix", region="us"
+        )
 
     @patch(f"{TOOLS_MODULE_PATH}.TmdbClient", autospec=True)
     @patch.dict(os.environ, {"TMDB_API_KEY": "nice_key"}, clear=True)
@@ -111,6 +114,24 @@ class TestSearchTmdbMovies:
 
         assert results == [{"title": "The Matrix"}]
         mock_tmdb_client_class.assert_called_once_with(api_key=api_key)
+
+    @patch(f"{TOOLS_MODULE_PATH}.TmdbClient", autospec=True)
+    def test_different_region(self, mock_tmdb_client_class: MagicMock) -> None:
+        """
+        Given a region supplied as an arg,
+        When the `search_tmdb_movies` function is invoked,
+        Then the region is passed to the `search_movies` method
+        """
+        api_key = "nice_key"
+        mock_tmdb_client = mock_tmdb_client_class.return_value
+        mock_tmdb_client.search_movies.return_value = [{"title": "The Matrix"}]
+
+        results = search_tmdb_movies(query="The Matrix", api_key=api_key, region="gb")
+
+        assert results == [{"title": "The Matrix"}]
+        mock_tmdb_client.search_movies.assert_called_once_with(
+            query="The Matrix", region="gb"
+        )
 
 
 class TestGetStreamingProviders:
