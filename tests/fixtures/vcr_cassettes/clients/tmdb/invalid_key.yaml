@@ -11,12 +11,14 @@ interactions:
         User-Agent:
           - python-requests/2.26.0
       method: GET
-      uri: https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&query=aslkdjaskldjaslkdjaslkdjasd&region=US
+      uri: https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&query=The+Matrix&region=US
     response:
       body:
-        string: !!binary |
-          H4sIAAAAAAAAA6tWKkhMT1WyMtRRKkotLs0pKVayio7VUSrJL0nMiQfJAQUMYHy4EoNaALNPV645
-          AAAA
+        string:
+          '{"status_code":7,"status_message":"Invalid API key: You must be granted
+          a valid key.","success":false}
+
+          '
       headers:
         Access-Control-Allow-Methods:
           - GET, HEAD, POST, PUT, DELETE, OPTIONS
@@ -26,30 +28,26 @@ interactions:
           - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
             Content-Length, Content-Range
         Cache-Control:
-          - public, max-age=600
+          - public, max-age=300
         Connection:
           - keep-alive
-        Content-Encoding:
-          - gzip
         Content-Type:
-          - application/json;charset=utf-8
+          - application/json; charset=utf-8
         Date:
-          - Sat, 20 Nov 2021 10:13:00 GMT
+          - Sat, 20 Nov 2021 10:19:07 GMT
         Server:
           - openresty
         Transfer-Encoding:
           - chunked
-        Vary:
-          - Accept-Encoding
         Via:
-          - 1.1 38625201ad7f896d72a7ab055328881f.cloudfront.net (CloudFront)
+          - 1.1 bdbd00aed84ab2a1b2623adb63c9331f.cloudfront.net (CloudFront)
         X-Amz-Cf-Id:
-          - 4PLVZIxaLwY7MEg16ZKq9lvl2_7L69aF_s3fDB7kmtMiKdyPxYC2IA==
+          - oeHPChCFqG9v3RhOYMdD7zFVgpREaR4uyeTjy26ALcug3h1GcYPHOg==
         X-Amz-Cf-Pop:
-          - LHR52-C1
+          - LHR61-P1
         X-Cache:
-          - Miss from cloudfront
+          - Error from cloudfront
       status:
-        code: 200
-        message: OK
+        code: 401
+        message: Unauthorized
 version: 1

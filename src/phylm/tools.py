@@ -57,7 +57,7 @@ def _initialize_tmdb_client(api_key: Optional[str] = None) -> TmdbClient:
 
 
 def search_tmdb_movies(
-    query: str, api_key: Optional[str] = None
+    query: str, api_key: Optional[str] = None, region: str = "us"
 ) -> List[Dict[str, Any]]:
     """Search for movies on TMDb.
 
@@ -65,13 +65,16 @@ def search_tmdb_movies(
         query: the query string
         api_key: an api_key can either be provided here or through a TMDB_API_KEY env
             var
+        region: an optional region to provide with the search request, affects the
+            release_date value returned, must be provided in ISO 3166-1 format (eg.
+            "us" or "gb")
 
     Returns:
         List[Dict[str, Any]]: the search results
     """
     client = _initialize_tmdb_client(api_key=api_key)
 
-    return client.search_movies(query=query)
+    return client.search_movies(query=query, region=region)
 
 
 def get_streaming_providers(
