@@ -58,11 +58,28 @@ through `search_tmdb_movies`. Note that this search performs a lot quicker than 
   'overview': 'Set in the 22nd century, The Matrix tells the story of a computer hacker...'
   'popularity': 79.956,
   'poster_path': '/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg',
-  'release_date': '1999-06-11',
+  'release_date': '1999-03-30',
   'title': 'The Matrix',
   'video': False,
   'vote_average': 8.2,
   'vote_count': 20216,
+}, {
+  ...
+}
+```
+
+By default the `release_date` will be the US release date. You can specify a different
+region by providing a region argument:
+
+```python
+>>> from phylm.tools import search_tmdb_movies
+>>> search_tmdb_movies("The Matrix", region="gb")
+[{
+  'id': 603,
+  ...
+  'release_date': '1999-06-11',
+  'title': 'The Matrix',
+  ...
 }, {
   ...
 }
