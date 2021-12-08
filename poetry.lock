@@ -598,7 +598,7 @@ mkdocs = ">=1.1,<2.0"
 
 [[package]]
 name = "mkdocs-git-revision-date-localized-plugin"
-version = "0.10.1"
+version = "0.11"
 description = "Mkdocs plugin that enables displaying the localized date of the last git modification of a markdown file."
 category = "dev"
 optional = false
@@ -626,11 +626,11 @@ requests = "*"
 
 [[package]]
 name = "mkdocs-material"
-version = "7.3.6"
+version = "8.0.5"
 description = "A Material Design theme for MkDocs"
 category = "dev"
 optional = false
-python-versions = "*"
+python-versions = ">=3.6"
 
 [package.dependencies]
 jinja2 = ">=2.11.1"
@@ -1285,7 +1285,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6.1"
-content-hash = "bfa048f08dc9095cdf4dbbbc86200195ab3401fc7461acccf0ec514897da108b"
+content-hash = "4f7de5cda1063535825682c47cb2979995bdf2cc0143e0dad3535de55652f03b"
 
 [metadata.files]
 appdirs = [
@@ -1692,16 +1692,16 @@ mkdocs-autorefs = [
     {file = "mkdocs_autorefs-0.3.0-py3-none-any.whl", hash = "sha256:261875003e49b5d708993fd2792a69d624cbc8cf7de49e96c81d3d9825977ca4"},
 ]
 mkdocs-git-revision-date-localized-plugin = [
-    {file = "mkdocs-git-revision-date-localized-plugin-0.10.1.tar.gz", hash = "sha256:dbfdf3ad132b0751c00b42c8cc86d6938e7ebe8fb6308038cd30a6200c83b8a3"},
-    {file = "mkdocs_git_revision_date_localized_plugin-0.10.1-py3-none-any.whl", hash = "sha256:0f138c4fa7e9ad0038cee3b4d1a4b5a2b1a7eb5a2c00cc0625082430f3a5914f"},
+    {file = "mkdocs-git-revision-date-localized-plugin-0.11.tar.gz", hash = "sha256:a0f21d0df01368f151dfed78a7b9e741109d9e4c8b79762d696cee215658c6dc"},
+    {file = "mkdocs_git_revision_date_localized_plugin-0.11-py3-none-any.whl", hash = "sha256:409479ec718a25d898f1c5f4b69c8e409efe04c1ab8a3a18952167c6706149bf"},
 ]
 mkdocs-htmlproofer-plugin = [
     {file = "mkdocs-htmlproofer-plugin-0.7.0.tar.gz", hash = "sha256:dc80990bc4c8d982c323cfaab80ac4eccb2d92ecb1ea4092d18362dd886b20d8"},
     {file = "mkdocs_htmlproofer_plugin-0.7.0-py3-none-any.whl", hash = "sha256:6a54ae77c0401fd7cf64e599d43e9bcce08bf9c0fc28670cafb2357c24572c8a"},
 ]
 mkdocs-material = [
-    {file = "mkdocs-material-7.3.6.tar.gz", hash = "sha256:1b1dbd8ef2508b358d93af55a5c5db3f141c95667fad802301ec621c40c7c217"},
-    {file = "mkdocs_material-7.3.6-py2.py3-none-any.whl", hash = "sha256:1b6b3e9e09f922c2d7f1160fe15c8f43d4adc0d6fb81aa6ff0cbc7ef5b78ec75"},
+    {file = "mkdocs-material-8.0.5.tar.gz", hash = "sha256:7ff116fbd2c494f352d88ebd92730e297b5aefe87148d5c904c32907ed8bfe42"},
+    {file = "mkdocs_material-8.0.5-py2.py3-none-any.whl", hash = "sha256:76aaf358846483f8e81eea6277a577e72be4271321f8fdb5728f8c904576ec9d"},
 ]
 mkdocs-material-extensions = [
     {file = "mkdocs-material-extensions-1.0.3.tar.gz", hash = "sha256:bfd24dfdef7b41c312ede42648f9eb83476ea168ec163b613f9abd12bbfddba2"},
