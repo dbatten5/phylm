@@ -1,6 +1,9 @@
 """Module to contain the `Phylm` class definition."""
+import asyncio
 from typing import List
 from typing import Optional
+
+from aiohttp import ClientSession
 
 from phylm.errors import SourceNotLoadedError
 from phylm.errors import UnrecognizedSourceError
@@ -115,16 +118,19 @@ class Phylm:
                     movie_id=movie_id,
                     raw_year=self.year,
                 )
+                self._imdb.load_data()
             return self
 
         if source == "mtc":
             if not self._mtc:
                 self._mtc = Mtc(raw_title=self.title, raw_year=self.year)
+                self._mtc.load_data()
             return self
 
         if source == "rt":
             if not self._rt:
                 self._rt = Rt(raw_title=self.title, raw_year=self.year)
+                self._rt.load_data()
             return self
 
         raise UnrecognizedSourceError(f"{source} is not a recognized source")
@@ -140,5 +146,76 @@ class Phylm:
         """
         for source in sources:
             self.load_source(source)
+
+        return self
+
+    async def async_load_source(
+        self,
+        source: str,
+        imdb_id: Optional[str] = None,
+        session: Optional[ClientSession] = None,
+    ) -> "Phylm":
+        """Asynchronously load the film data for a source.
+
+        Args:
+            source: the desired source
+            imdb_id: an optional `IMDb` id which will be used to load the imdb data
+                instead of a basic search on the title
+            session: an optional instance of `aiohttp.ClientSession` in which to run the
+                request
+
+        Returns:
+            the instance
+
+        Raises:
+            UnrecognizedSourceError: if the source is not recognized
+        """
+        if source == "imdb":
+            if not self._imdb:
+                movie_id = imdb_id or self.imdb_id
+                self._imdb = Imdb(
+                    raw_title=self.title,
+                    movie_id=movie_id,
+                    raw_year=self.year,
+                )
+                await self._imdb.async_load_data()
+            return self
+
+        if source == "mtc":
+            if not self._mtc:
+                self._mtc = Mtc(raw_title=self.title, raw_year=self.year)
+                await self._mtc.async_load_data(session=session)
+            return self
+
+        if source == "rt":
+            if not self._rt:
+                self._rt = Rt(raw_title=self.title, raw_year=self.year)
+                await self._rt.async_load_data(session=session)
+            return self
+
+        raise UnrecognizedSourceError(f"{source} is not a recognized source")
+
+    async def async_load_sources(
+        self,
+        sources: List[str],
+        session: Optional[ClientSession] = None,
+    ) -> "Phylm":
+        """Asynchronously load multiple sources.
+
+        Args:
+            sources: a list of the desired sources
+            session: an optional instance of `aiohttp.ClientSession` in which to run the
+                request
+
+        Returns:
+            the instance
+        """
+        session = session or ClientSession()
+
+        await asyncio.gather(
+            *[self.async_load_source(source, session=session) for source in sources]
+        )
+
+        await session.close()
 
         return self
