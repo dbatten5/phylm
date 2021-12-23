@@ -3,10 +3,17 @@ from unittest.mock import MagicMock
 from unittest.mock import Mock
 from unittest.mock import patch
 
+import vcr
+from aiohttp import ClientSession
 from bs4 import BeautifulSoup
+from tests.conftest import FIXTURES_DIR
 
+from phylm.utils.web import async_soupify
 from phylm.utils.web import soupify
 from phylm.utils.web import url_encode
+
+
+VCR_FIXTURES_DIR = f"{FIXTURES_DIR}/utils/web"
 
 
 class TestUrlEncode:
@@ -46,3 +53,36 @@ class TestSoupify:
         mock_requests.get.assert_called_once_with(
             url=url, headers={"User-agent": "Mozilla/5.0"}
         )
+
+
+class TestAsyncSoupify:
+    """Tests for the `async_soupify` method."""
+
+    async def test_success(self) -> None:
+        """
+        Given a url,
+        When the `async_soupify` function is invoked,
+        Then an async request is made to the url and the bs4 representation is returned
+        """
+        url = "http://httpbin.org"
+
+        with vcr.use_cassette(f"{VCR_FIXTURES_DIR}/async_soupify.yaml") as cass:
+            result = await async_soupify(url=url)
+            assert len(cass.requests) == 1
+            assert cass.requests[0].headers == {"User-agent": "Mozilla/5.0"}
+
+        assert isinstance(result, BeautifulSoup)
+
+    @vcr.use_cassette(f"{VCR_FIXTURES_DIR}/async_soupify.yaml")
+    async def test_session_closed(self) -> None:
+        """
+        Given a url and an instance of `ClientSession`,
+        When the `async_soupify` function is invoked,
+        Then an async request is made and the session remains open
+        """
+        session = ClientSession()
+        url = "http://httpbin.org"
+
+        await async_soupify(url=url, session=session)
+
+        assert not session.closed
