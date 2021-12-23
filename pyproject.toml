@@ -88,6 +88,7 @@ ignore_missing_imports = true
 
 [tool.isort]
 profile = "open_stack"
+known_first_party = ["phylm", "tests"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
