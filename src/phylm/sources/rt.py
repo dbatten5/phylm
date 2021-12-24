@@ -6,7 +6,6 @@ from bs4 import BeautifulSoup
 from bs4.element import Tag
 
 from phylm.utils.web import async_soupify
-from phylm.utils.web import soupify
 from phylm.utils.web import url_encode
 
 RT_BASE_MOVIE_URL = "https://www.rottentomatoes.com/search"
@@ -49,33 +48,21 @@ class Rt:
         self.low_confidence = True
         return results[0]
 
-    def _generate_search_url(self) -> str:
-        url_encoded_film = url_encode(self.raw_title)
-        return f"{RT_BASE_MOVIE_URL}?search={url_encoded_film}"
-
-    def _scrape_data(self) -> BeautifulSoup:
-        search_url = self._generate_search_url()
-        return soupify(search_url)
-
-    async def _async_scrape_data(
+    async def _scrape_data(
         self, session: Optional[ClientSession] = None
     ) -> BeautifulSoup:
-        search_url = self._generate_search_url()
+        url_encoded_film = url_encode(self.raw_title)
+        search_url = f"{RT_BASE_MOVIE_URL}?search={url_encoded_film}"
         return await async_soupify(search_url, session)
 
-    def load_data(self) -> None:
-        """Load the data for from the source."""
-        raw_data = self._scrape_data()
-        self._rt_data = self._parse_data(raw_data)
-
-    async def async_load_data(self, session: Optional[ClientSession] = None) -> None:
+    async def load_data(self, session: Optional[ClientSession] = None) -> None:
         """Asynchronously load the data for from the source.
 
         Args:
             session: an optional instance of `aiohttp.ClientSession` in which to run the
                 request
         """
-        raw_data = await self._async_scrape_data(session=session)
+        raw_data = await self._scrape_data(session=session)
         self._rt_data = self._parse_data(raw_data)
 
     @property

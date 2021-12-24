@@ -85,7 +85,7 @@ implicit_reexport = true
 disallow_untyped_decorators = false
 
 [[tool.mypy.overrides]]
-module = ["imdb", "imdb.Movie", "bs4", "bs4.element", "requests", "vcr"]
+module = ["imdb", "imdb.Movie", "bs4", "bs4.element", "requests", "vcr", "yaml"]
 ignore_missing_imports = true
 
 [tool.isort]

@@ -2,6 +2,7 @@
 import asyncio
 from typing import List
 from typing import Optional
+from typing import Union
 
 from aiohttp import ClientSession
 
@@ -96,6 +97,34 @@ class Phylm:
 
         return self._rt
 
+    def _prepare_source(
+        self, source: str, imdb_id: Optional[str] = None
+    ) -> Optional[Union[Imdb, Rt, Mtc]]:
+        if source == "imdb":
+            if not self._imdb:
+                movie_id = imdb_id or self.imdb_id
+                self._imdb = Imdb(
+                    raw_title=self.title,
+                    movie_id=movie_id,
+                    raw_year=self.year,
+                )
+                return self._imdb
+            return None
+
+        if source == "mtc":
+            if not self._mtc:
+                self._mtc = Mtc(raw_title=self.title, raw_year=self.year)
+                return self._mtc
+            return None
+
+        if source == "rt":
+            if not self._rt:
+                self._rt = Rt(raw_title=self.title, raw_year=self.year)
+                return self._rt
+            return None
+
+        raise UnrecognizedSourceError(f"{source} is not a recognized source")
+
     def load_source(self, source: str, imdb_id: Optional[str] = None) -> "Phylm":
         """Load the film data for a source.
 
@@ -106,34 +135,13 @@ class Phylm:
 
         Returns:
             the instance
-
-        Raises:
-            UnrecognizedSourceError: if the source is not recognized
         """
-        if source == "imdb":
-            if not self._imdb:
-                movie_id = imdb_id or self.imdb_id
-                self._imdb = Imdb(
-                    raw_title=self.title,
-                    movie_id=movie_id,
-                    raw_year=self.year,
-                )
-                self._imdb.load_data()
-            return self
+        prepared_source = self._prepare_source(source=source, imdb_id=imdb_id)
 
-        if source == "mtc":
-            if not self._mtc:
-                self._mtc = Mtc(raw_title=self.title, raw_year=self.year)
-                self._mtc.load_data()
-            return self
+        if prepared_source:
+            prepared_source.load_data()
 
-        if source == "rt":
-            if not self._rt:
-                self._rt = Rt(raw_title=self.title, raw_year=self.year)
-                self._rt.load_data()
-            return self
-
-        raise UnrecognizedSourceError(f"{source} is not a recognized source")
+        return self
 
     def load_sources(self, sources: List[str]) -> "Phylm":
         """Load multiple sources.
@@ -166,34 +174,13 @@ class Phylm:
 
         Returns:
             the instance
-
-        Raises:
-            UnrecognizedSourceError: if the source is not recognized
         """
-        if source == "imdb":
-            if not self._imdb:
-                movie_id = imdb_id or self.imdb_id
-                self._imdb = Imdb(
-                    raw_title=self.title,
-                    movie_id=movie_id,
-                    raw_year=self.year,
-                )
-                await self._imdb.async_load_data()
-            return self
+        prepared_source = self._prepare_source(source=source, imdb_id=imdb_id)
 
-        if source == "mtc":
-            if not self._mtc:
-                self._mtc = Mtc(raw_title=self.title, raw_year=self.year)
-                await self._mtc.async_load_data(session=session)
-            return self
+        if prepared_source:
+            await prepared_source.async_load_data(session=session)
 
-        if source == "rt":
-            if not self._rt:
-                self._rt = Rt(raw_title=self.title, raw_year=self.year)
-                await self._rt.async_load_data(session=session)
-            return self
-
-        raise UnrecognizedSourceError(f"{source} is not a recognized source")
+        return self
 
     async def async_load_sources(
         self,

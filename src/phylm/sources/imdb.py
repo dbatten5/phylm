@@ -98,11 +98,7 @@ class Imdb:
         self.low_confidence = True
         return results[0]
 
-    def load_data(self) -> None:
-        """Load the data for from the source."""
-        self._imdb_data = self._get_imdb_data()
-
-    async def async_load_data(self) -> None:
+    async def load_data(self) -> None:
         """Asynchronously load the data for from the source."""
         loop = asyncio.get_running_loop()
         self._imdb_data = await loop.run_in_executor(None, self._get_imdb_data)
