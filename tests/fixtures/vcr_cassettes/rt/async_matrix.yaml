@@ -1,0 +1,1115 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        User-agent:
+          - Mozilla/5.0
+      method: GET
+      uri: https://www.rottentomatoes.com/search?search=The+Matrix
+    response:
+      body:
+        string:
+          "<!DOCTYPE html>\n<html lang=\"en\" dir=\"ltr\" xmlns=\"http://www.w3.org/1999/xhtml\"
+          prefix=\"fb: http://www.facebook.com/2008/fbml og: http://opengraphprotocol.org/schema/\">\n
+          \   <head prefix=\"og: http://ogp.me/ns# flixstertomatoes: http://ogp.me/ns/apps/flixstertomatoes#\">\n
+          \       \n            <script src=\"/assets/pizza-pie/javascripts/bundles/roma/rt-common.js?single\"></script>\n
+          \       \n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"
+          />\n        <meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\">\n        <meta
+          name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\n        <title>Search
+          Results - Rotten Tomatoes</title>\n        <meta name=\"description\" content=\"Rotten
+          Tomatoes, home of the Tomatometer, is the most trusted measurement of quality
+          for Movies & TV. The definitive site for Reviews, Trailers, Showtimes, and
+          Tickets\">\n\n        \n\n        \n            \n        \n\n        <link
+          rel=\"shortcut icon\" sizes=\"76x76\" type=\"image/x-icon\" href=\"https://www.rottentomatoes.com/assets/pizza-pie/images/favicon.ico\"
+          />\n        \n\n        \n            <meta property=\"fb:app_id\" content=\"326803741017\">\n
+          \           <meta property=\"og:site_name\" content=\"Rotten Tomatoes\">\n
+          \           <meta property=\"og:title\" content=\"Search Results\">\n            <meta
+          property=\"og:description\" content=\"Rotten Tomatoes, home of the Tomatometer,
+          is the most trusted measurement of quality for Movies & TV. The definitive
+          site for Reviews, Trailers, Showtimes, and Tickets\">\n            <meta property=\"og:type\"
+          content=\"\">\n            <meta property=\"og:url\" content=\"\">\n            <meta
+          property=\"og:image\" content=\"https://www.rottentomatoes.com/assets/pizza-pie/head-assets/images/RT_TwitterCard_2018.jpg\">\n
+          \           <meta property=\"og:locale\" content=\"en_US\">\n        \n\n
+          \       <meta name=\"twitter:card\" content=\"summary_large_image\">\n        <meta
+          name=\"twitter:image\" content=\"https://www.rottentomatoes.com/assets/pizza-pie/head-assets/images/RT_TwitterCard_2018.jpg\">\n
+          \       <meta name=\"twitter:title\" content=\"Search Results\">\n        <meta
+          name=\"twitter:text:title\" content=\"Search Results\">\n        <meta name=\"twitter:description\"
+          content=\"Rotten Tomatoes, home of the Tomatometer, is the most trusted measurement
+          of quality for Movies & TV. The definitive site for Reviews, Trailers, Showtimes,
+          and Tickets\">\n        <meta name=\"twitter:site\" content=\"@rottentomatoes\">\n\n
+          \       <link rel=\"manifest\" href=\"https://www.rottentomatoes.com/assets/pizza-pie/manifest/manifest.json\"
+          />\n\n        <link rel=\"apple-touch-icon\" href=\"https://www.rottentomatoes.com/assets/pizza-pie/head-assets/images/apple-touch-icon-60.jpg\"
+          />\n        <link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"https://www.rottentomatoes.com/assets/pizza-pie/head-assets/images/apple-touch-icon-152.jpg\"
+          />\n        <link rel=\"apple-touch-icon\" sizes=\"167x167\" href=\"https://www.rottentomatoes.com/assets/pizza-pie/head-assets/images/apple-touch-icon-167.jpg\"
+          />\n        <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"https://www.rottentomatoes.com/assets/pizza-pie/head-assets/images/apple-touch-icon-180.jpg\"
+          />\n\n        <!-- JSON+LD -->\n        \n\n        \n        \n\n        \n
+          \       <meta name=\"google-site-verification\" content=\"VPPXtECgUUeuATBacnqnCm4ydGO99reF-xgNklSbNbc\"
+          />\n\n        \n        <meta name=\"msvalidate.01\" content=\"034F16304017CA7DCF45D43850915323\"
+          />\n        <meta name=\"theme-color\" content=\"#FA320A\">\n\n        <!--
+          DNS prefetch -->\n        <meta http-equiv=\"x-dns-prefetch-control\" content=\"on\">\n
+          \       \n            <link rel=\"dns-prefetch\" href=\"//www.rottentomatoes.com\"
+          />\n        \n        \n            <link rel=\"preconnect\" href=\"//www.rottentomatoes.com\"
+          />\n        \n\n        \n        \n\n        \n\n        \n<!-- BEGIN: critical-->\n<style
+          id=\"critical-path\">*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}a,aside,body,button,div,footer,h1,h2,header,html,img,li,nav,p,section,span,sup,ul{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}aside,footer,header,nav,section{display:block}body{line-height:1}li,ul{list-style:none}a{text-decoration:none}img{vertical-align:middle}h1,h2{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}button{background-color:transparent}.hide{display:none!important}.unset{font-size:unset;font-weight:unset;line-height:unset;margin:unset;padding:unset;color:inherit}h2.unset:before{display:none}.mobile-visible{display:block}.mobile-hidden{display:none}@media
+          (min-width:768px){.mobile-hidden{display:block}.mobile-visible{display:none}}@font-face{font-family:\"Franklin
+          Gothic\";src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book)
+          format(\"svg\");font-weight:400;font-style:normal}@font-face{font-family:\"Franklin
+          Gothic\";src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med)
+          format(\"svg\");font-weight:500;font-style:normal}@font-face{font-family:\"Franklin
+          Gothic\";src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi)
+          format(\"svg\");font-weight:600;font-style:normal}@font-face{font-family:Neusa;src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium)
+          format(\"svg\");font-weight:400;font-style:normal}@font-face{font-family:rt-icon;src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon)
+          format(\"svg\");font-weight:400;font-style:normal}html{--webkit-font-smoothing:antialiased;--moz-osx-font-smoothing:grayscale;font-size:16px}body{background-color:#f3f3f3;color:#2a2c32;font-family:\"Franklin
+          Gothic\",-apple-system,BlinkMacSystemFont,\"PT Sans\",Arial,Sans-Serif;font-size:1rem;line-height:1.5;letter-spacing:.016em}p{font-family:\"Franklin
+          Gothic\",-apple-system,BlinkMacSystemFont,\"PT Sans\",Arial,Sans-Serif;font-size:1rem;font-weight:400;line-height:1.25;margin-bottom:1.25rem}section{margin-bottom:2.5rem}.button,button{display:inline-block;height:40px;font-family:\"Franklin
+          Gothic\",-apple-system,BlinkMacSystemFont,\"PT Sans\",Arial,Sans-Serif;font-size:.875rem;font-weight:500;line-height:2.85;padding:0
+          16px;text-align:center;text-overflow:ellipsis;text-transform:uppercase;vertical-align:middle;-webkit-line-clamp:2;white-space:nowrap;word-wrap:break-word;border:1px
+          transparent;border-radius:4px;background-color:#3976dc;color:#fff}.button--link{height:auto;background-color:transparent;color:#3976dc;font-size:1rem;line-height:inherit;padding:0}h1{font-family:\"Franklin
+          Gothic\",-apple-system,BlinkMacSystemFont,\"PT Sans\",Arial,Sans-Serif;font-weight:500;font-size:1.625rem;letter-spacing:0;line-height:1.15;margin-bottom:1.15em}h2{font-family:Neusa,Impact,Helvetica
+          Neue,Arial,Sans-Serif;font-weight:500;font-size:1.25rem;letter-spacing:0;line-height:1.2;padding-left:9px;text-transform:uppercase;margin-bottom:1em}h2:before{position:absolute;content:\"\";height:1.1em;border-left:3px
+          solid #fa320a;margin:-1px 0 0 -9px}.h3{font-family:\"Franklin Gothic\",-apple-system,BlinkMacSystemFont,\"PT
+          Sans\",Arial,Sans-Serif;font-weight:500;font-size:1.25rem;line-height:1.2;letter-spacing:0;margin-bottom:1.25rem}a{background-color:transparent;color:#3976dc;fill:#2a2c32;font-family:\"Franklin
+          Gothic\",-apple-system,BlinkMacSystemFont,\"PT Sans\",Arial,Sans-Serif;font-size:inherit;font-weight:400;line-height:inherit;letter-spacing:inherit;text-decoration:none}sup{vertical-align:super;font-size:.6em}ul{padding:5px
+          0}ul ul{margin-top:0;margin-left:12px}li{margin-bottom:.4em;text-align:-webkit-match-parent}.list-inline{list-style:none}.list-inline>li{display:inline-block}.list-inline--separator>li{display:inline-block}.list-inline--separator>li:after{content:\"|\";display:inline-block;color:#505257;margin-left:10px;margin-right:10px}.list-inline--separator>li:last-child:after{content:none}img{max-width:100%}[skeleton]{display:block;background-color:#eee;color:transparent}[skeleton]
+          *{visibility:hidden}[skeleton=transparent]{background-color:transparent}.rt-icon:before{display:inline-block;font-family:rt-icon;font-style:normal;font-variant:normal;font-weight:400;line-height:1em;margin-left:.2em;margin-right:.2em;position:relative;text-align:center;text-decoration:inherit;text-transform:none;width:1em;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}.rt-icon__boxoffice:before{content:\"\\f103\"}.rt-icon__facebook-squared:before{content:\"\\f10c\"}.rt-icon__home:before{content:\"\\f110\"}.rt-icon__instagram:before{content:\"\\f111\"}.rt-icon__mail:before{content:\"\\f116\"}.rt-icon__more:before{content:\"\\f117\"}.rt-icon__podcast:before{content:\"\\f11c\"}.rt-icon__snapchat:before{content:\"\\f124\"}.rt-icon__tv2-1:before{content:\"\\f12c\"}.rt-icon__twitter:before{content:\"\\f12e\"}.rt-icon__youtube-play:before{content:\"\\f132\"}@font-face{font-family:\"Franklin
+          Gothic\";src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book)
+          format(\"svg\");font-weight:400;font-style:normal}@font-face{font-family:\"Franklin
+          Gothic\";src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med)
+          format(\"svg\");font-weight:500;font-style:normal}@font-face{font-family:\"Franklin
+          Gothic\";src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi)
+          format(\"svg\");font-weight:600;font-style:normal}@font-face{font-family:Neusa;src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium)
+          format(\"svg\");font-weight:400;font-style:normal}@font-face{font-family:rt-icon;src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon)
+          format(\"svg\");font-weight:400;font-style:normal}.footer{background-color:#2a2c32;font-family:\"Franklin
+          Gothic\",-apple-system,BlinkMacSystemFont,\"PT Sans\",Arial,Sans-Serif;font-size:.875rem;display:block;color:#fff}.footer__content-desktop-block{display:none}.footer__content-mobile-block{display:block;color:#fff;font-size:.875rem;padding:15px
+          15px 69px;text-align:center;font-family:\"Franklin Gothic\",-apple-system,BlinkMacSystemFont,\"PT
+          Sans\",Arial,Sans-Serif}.footer__content-mobile-block a{font-size:.875rem}.footer__content-group-title{line-height:1.875rem}.footer__links-list{padding:0}.footer__links-list-item{margin-bottom:0;padding:2px
+          5px;font-size:1rem}.footer__links-list-item a{color:#fff;line-height:1.375rem}.footer__newsletter-block{display:block;margin:auto;width:100%}.footer__newsletter-icon{margin-right:9px}.footer__newsletter-btn{display:flex;justify-content:center;align-items:center;width:175px;margin:10px
+          auto;font-weight:500;color:#fff}.footer__copyright{display:none}.footer__copyright
+          .footer__links-list{font-size:.75rem}.footer__copyright a{font-size:1rem}.footer__copyright-legal{margin-bottom:0;font-size:1rem}.footer__copyright
+          .footer__links-list{font-size:.75rem}@media (min-width:768px){.footer__content-desktop-block{display:flex;justify-content:space-between}.footer__content-mobile-block{display:none}.footer__content-group{padding:20px
+          0}.footer__content-group-title{margin-bottom:10px;font-size:1.125rem;text-transform:uppercase}.footer__newsletter-block{display:block;margin:0;text-align:center;width:250px}.footer__newsletter-copy{margin:10px
+          0;line-height:1.09rem}.footer__social-block .icon-social{font-size:20px}.footer__copyright{display:block;padding-top:10px;padding-bottom:10px}.footer__copyright
+          .version{color:#2a2c32;padding:0;font-size:.875rem}.footer__copyright .legal:after,.footer__copyright
+          .version:after{content:none;border-right:0;padding:0}.footer__copyright-legal{color:#757a84;font-size:.875rem}}@font-face{font-family:\"Franklin
+          Gothic\";src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book)
+          format(\"svg\");font-weight:400;font-style:normal}@font-face{font-family:\"Franklin
+          Gothic\";src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med)
+          format(\"svg\");font-weight:500;font-style:normal}@font-face{font-family:\"Franklin
+          Gothic\";src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi)
+          format(\"svg\");font-weight:600;font-style:normal}@font-face{font-family:Neusa;src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium)
+          format(\"svg\");font-weight:400;font-style:normal}@font-face{font-family:rt-icon;src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon)
+          format(\"svg\");font-weight:400;font-style:normal}.masthead{background-color:#fff;color:#fff;position:relative;height:100%}.masthead--hide,.masthead__dropdown-menus,.masthead__inline-links{display:none}.masthead__navbar{display:flex;justify-content:space-between;align-items:center;background-color:#fa320a}.masthead
+          search-algolia{flex:1}.masthead__header-link,.masthead__link-btn{padding:0
+          5px;color:#fff;font-weight:500;letter-spacing:.016em}.masthead__link-btn{margin:2px
+          14px}.masthead__header-link{margin:2px 6px}.masthead__logo-container{flex-shrink:0;padding:7px
+          15px 10px 18px}.masthead__logo{height:34px}.masthead__dropdown-menus .masthead__menu-header{padding:15px
+          18px 15px}.masthead__dropdown-menus .masthead__menu-header--podcast{position:relative}.masthead__menu-header-title{color:#fff;font-family:Neusa,Impact,Helvetica
+          Neue,Arial,Sans-Serif;letter-spacing:.9px;text-transform:uppercase}.masthead__no-content{border-radius:5px}@media
+          (min-width:768px){.masthead__inline-links{display:flex;position:absolute;top:11px;right:19px;padding:0;font-size:.875rem}.masthead__log-in-wrap{margin-left:-15px}.masthead__log-in-wrap
+          button{margin-right:0}.masthead__dropdown-menus{display:inline-block;margin-top:13px}.masthead__logo{height:51px;width:165px}.masthead__navbar{padding:6px
+          6px 0 11px;align-items:center}.masthead search-algolia{margin-top:10px}.masthead__auth-group
+          .masthead__link-btn{font-size:.875rem}.masthead__auth-group ul{padding:0;margin:0}.masthead__auth-group
+          ul li{margin-bottom:0}.masthead__auth-group ul button{margin-bottom:0;margin-top:0;vertical-align:top}.masthead
+          rt-badge{position:absolute;top:0;right:0}}.mobile-nav__list{display:flex;flex-wrap:nowrap;justify-content:flex-start;position:fixed;bottom:0;left:0;width:100vw;z-index:100;background:#2a2c32;border-top:1px
+          solid #bcbdbe;padding:0;color:#fff;font-size:.75rem;line-height:15px}.mobile-nav__item{flex:0
+          0 auto;flex-grow:1;flex-basis:0;max-width:100%;margin-bottom:0;line-height:1.375rem;position:relative}.mobile-nav__item--popup{border-bottom:1px
+          solid #f3f3f3;border-bottom:1px solid rgba(243,243,243,.35);padding:7px 10px;color:#fff;text-transform:uppercase}.mobile-nav__link{display:block;width:100%;padding:5px
+          0;margin-bottom:0;color:inherit;font-size:.625rem;text-align:center;text-decoration:none;text-transform:uppercase}.mobile-nav__icon{display:block;margin-bottom:2px;font-size:1.5625rem}.mobile-nav__overlay{display:none;position:fixed;height:100%;width:100%;bottom:0;left:0;background:rgba(0,0,0,.5);z-index:99}.mobile-nav__menu-popup{display:none;position:absolute;bottom:53px;overflow:hidden;background:#fa320a;width:100%;font-size:1rem}.mobile-nav__inherit-color{color:inherit}.mobile-nav__popup-btn{border-radius:5px;padding:4px
+          5px;color:inherit;font-size:.75rem;text-transform:uppercase;background-color:transparent;-webkit-box-shadow:0
+          0 0 1px rgba(255,255,255,.35) inset;box-shadow:0 0 0 1px rgba(255,255,255,.35)
+          inset}.mobile-nav__popup-icon{font-size:1.5625rem}.mobile-nav__login-social-wrap{display:flex}.mobile-nav__login-social-wrap
+          section:last-child{margin-left:auto}.mobile-nav__login-social-wrap button:first-child{margin-right:5px}.mobile-nav
+          rt-badge{z-index:1;position:absolute;top:0;right:0}.trending-bar{background-color:rgba(0,0,0,.6);color:#fff;display:none;padding:4px
+          10px;font-size:.875rem;z-index:1;opacity:.9;position:relative;height:26px;margin-bottom:0}.trending-bar
+          a,.trending-bar a:before{color:#fff}.trending-bar__header{color:#ffe400;margin-bottom:0;padding-right:5px;white-space:nowrap;font-size:1rem;font-family:Neusa,Impact,Helvetica
+          Neue,Arial,Sans-Serif;line-height:18px;letter-spacing:.055em;text-transform:uppercase}.trending-bar__list{display:flex;padding:0}.trending-bar__list
+          li{margin-bottom:0}.trending-bar__link,.trending-bar__social-link{padding:0
+          5px;font-weight:400;line-height:18px}.trending-bar__social-link{font-size:1rem;color:#fff}.trending-bar__social-link:last-child{padding-right:0}.trending-list-wrap{display:flex;flex-wrap:nowrap;justify-content:space-between;align-items:flex-start}@media
+          (min-width:768px){.trending-bar{display:block}}search-algolia{font-size:1rem;z-index:199;padding:9px
+          0;margin-left:15px}search-algolia[skeleton]{height:35px;border-radius:26px;margin-right:15px;width:100%}search-algolia-controls
+          a,search-algolia-controls button,search-algolia-controls input{font-family:\"Franklin
+          Gothic\"}search-algolia-controls a rt-icon,search-algolia-controls button
+          rt-icon{fill:#fff}search-algolia-controls a{display:flex;width:fit-content;width:-moz-fit-content}search-algolia-controls
+          button{display:flex;border-radius:0;background:0 0;height:auto;padding:0;line-height:0}search-algolia-controls
+          button.search-clear{font-size:20px}search-algolia-controls button.search-cancel{padding-right:15px}search-algolia-results-category{margin-bottom:40px;color:#2a2c32}search-algolia-results-category[slot=none]{margin-bottom:0}search-algolia-results-category
+          ul{padding:0}@media (min-width:768px){search-algolia{margin-right:15px}}@font-face{font-family:\"Franklin
+          Gothic\";src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book)
+          format(\"svg\");font-weight:400;font-style:normal}@font-face{font-family:\"Franklin
+          Gothic\";src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med)
+          format(\"svg\");font-weight:500;font-style:normal}@font-face{font-family:\"Franklin
+          Gothic\";src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi)
+          format(\"svg\");font-weight:600;font-style:normal}@font-face{font-family:Neusa;src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium)
+          format(\"svg\");font-weight:400;font-style:normal}@font-face{font-family:rt-icon;src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon)
+          format(\"svg\");font-weight:400;font-style:normal}@font-face{font-family:\"Franklin
+          Gothic\";src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Book)
+          format(\"svg\");font-weight:400;font-style:normal}@font-face{font-family:\"Franklin
+          Gothic\";src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Med)
+          format(\"svg\");font-weight:500;font-style:normal}@font-face{font-family:\"Franklin
+          Gothic\";src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/FranklinGothicFS-Demi)
+          format(\"svg\");font-weight:600;font-style:normal}@font-face{font-family:Neusa;src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/NeusaNextPro-CompactMedium)
+          format(\"svg\");font-weight:400;font-style:normal}@font-face{font-family:rt-icon;src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.eot);src:url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.eot)
+          format(\"embedded-opentype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.woff2)
+          format(\"woff2\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.woff)
+          format(\"woff\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon.ttf)
+          format(\"truetype\"),url(/assets/pizza-pie/stylesheets/roma/global/fonts/rt-icon)
+          format(\"svg\");font-weight:400;font-style:normal}.social-tools{background-color:var(--white);border:none;margin-top:-100px;overflow:hidden;position:fixed;right:0;top:75%}.social-tools__facebook-like-btn{text-align:center;background-position:0
+          -31px;display:block;height:32px;width:57px;padding-top:7px}.social-tools__facebook-like-btn:after{background-position:-57px
+          -32px}.social-tools__btn{background-image:url(/assets/pizza-pie/stylesheets/global/images/social/sharevert-sprite.png);display:block;height:32px;width:57px}.social-tools__btn::after{background-image:url(/assets/pizza-pie/stylesheets/global/images/social/sharevert-sprite.png);content:\"\";display:block;height:32px;opacity:0;width:57px}.social-tools__btn--facebook{background-position:0
+          0}.social-tools__btn--facebook:after{background-position:-57px 0}.social-tools__btn--twitter{background-position:0
+          -97px}.social-tools__btn--twitter:after{background-position:-57px -96px}.social-tools__btn--pinterest{background-position:0
+          -128px}.social-tools__btn--pinterest:after{background-position:-57px -128px}.social-tools__btn--stumbleupon{background-position:0
+          -192px}.social-tools__btn--stumbleupon:after{background-position:-57px -192px}@media
+          (max-width:1150px){.social-tools{display:none}}@media (max-width:767px){.social-tools__facebook-like-btn{width:23%}.social-tools__btn--facebook{width:23%}.social-tools__btn--twitter{width:23%}.social-tools__btn--pinterest{width:23%}.social-tools__btn--stumbleupon{width:23%}}.roma-layout__body{line-height:1.25}.roma-layout__content{background-color:var(--white);overflow-x:hidden;padding-left:15px;padding-right:15px}.container{margin-right:auto;margin-left:auto}@media
+          (min-width:768px){.container{overflow-x:unset;width:1100px;padding-left:15px;padding-right:15px}.roma-layout__body{padding:0}}.layout{display:flex;justify-content:space-between}.layout__column{position:relative}.layout__column--main{flex:3;width:100%}.layout__column--sidebar{flex:1}.skip-link{clip:rect(1px,1px,1px,1px);height:1px;overflow:hidden;position:absolute;white-space:nowrap;width:1px}.leaderboard_wrapper
+          .leaderboard_helper{display:block;text-align:center}.leaderboard_wrapper{min-height:50px}#trending_bar_ad{position:absolute;top:0;right:0}@media
+          (min-width:768px){.leaderboard_wrapper{padding-top:5px;min-height:90px}.sleaderboard_wrapper{background-color:var(--white);clear:both;padding:10px;text-align:center}}:root{--red:#FA320A;--redDark1:#A33E2A;--blue:#3976DC;--blueHover:#2A62C0;--gray:#757A84;--grayLight1:#F3F3F3;--grayLight2:#E9E9EA;--grayLight3:#DCDCE6;--grayLight4:#BCBDBE;--grayDark1:#505257;--grayDark2:#2A2C32;--yellow:#FFB600;--white:#FFFFFF;--black:#000000;--yellowLegacy:#FFE400;--blueLightLegacy:#EBF3FE;--fontFranklinGothic:'Franklin
+          Gothic',-apple-system,BlinkMacSystemFont,'PT Sans',Arial,Sans-Serif;--fontNeusa:'Neusa','Impact','Helvetica
+          Neue',Arial,Sans-Serif;--fontMonospace:'Courier New',Courier,monospace;--fontRtIcon:'rt-icon'}.searchNav__filters{display:flex;flex-wrap:wrap;padding:0;margin:20px
+          0;border-radius:5px}.searchNav__filter{position:relative;margin-bottom:0;padding:6px
+          12px;color:#2a2c32;background-color:#f3f3f3;line-height:1.25rem;text-decoration:none;font-size:.875rem;font-weight:500}.searchNav__filter--active{background-color:#ebf3fe;border-color:#ebf3fe;color:#3976dc}.search__main{margin:20px
+          0}.search__sidebar{display:none}search-page-result-container{display:block;width:100%}@media
+          (min-width:768px){.search__sidebar{display:block}}</style>\n<!-- /END: critical-->\n\n\n
+          \       \n\n    \n        <link rel=\"preload\" href=\"/assets/pizza-pie/stylesheets/bundles/roma/layouts/default.f167d872dfc.css\"
+          as=\"style\" onload=\"this.onload=null;this.rel='stylesheet'\">\n\n        \n
+          \       \n\n        \n    <link rel=\"preload\" href=\"/assets/pizza-pie/stylesheets/bundles/search.ebba4b173a4.css\"
+          as=\"style\" onload=\"this.onload=null;this.rel='stylesheet'\">\n\n\n\n        <script>\n
+          \       !function(t){\"use strict\";t.loadCSS||(t.loadCSS=function(){});var
+          e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement(\"link\").relList.supports(\"preload\")}catch(t){e=!1}return
+          function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||\"all\";function
+          a(){t.media=e}t.addEventListener?t.addEventListener(\"load\",a):t.attachEvent&&t.attachEvent(\"onload\",a),setTimeout(function(){t.rel=\"stylesheet\",t.media=\"only
+          x\"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName(\"link\"),n=0;n<a.length;n++){var
+          o=a[n];\"preload\"!==o.rel||\"style\"!==o.getAttribute(\"as\")||o.getAttribute(\"data-loadcss\")||(o.setAttribute(\"data-loadcss\",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var
+          a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener(\"load\",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent(\"onload\",function(){e.poly(),t.clearInterval(a)})}\"undefined\"!=typeof
+          exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}(\"undefined\"!=typeof global?global:this);\n
+          \       </script>\n\n        <script>\n            window.RottenTomatoes =
+          {};\n            window.RTLocals = {};\n        </script>\n\n        <script>var
+          dataLayer = dataLayer || [];</script>\n\n        \n        \n\n\n    <script
+          id=\"mps-page-integration\">\n      window.mpscall = {\"adunits\":\"Marquee
+          Banner|Top Banner\",\"cag[score]\":null,\"cag[certified_fresh]\":null,\"cag[fresh_rotten]\":null,\"cag[rating]\":null,\"cag[release]\":null,\"cag[movieshow]\":null,\"cag[genre]\":null,\"cag[urlid]\":null,\"cat\":\"search|results\",\"field[env]\":\"production\",\"field[rtid]\":null,\"path\":\"/search\",\"site\":\"rottentomatoes-web\",\"title\":\"Search
+          Results\",\"type\":\"results\"};\n      var mpsopts={'host':'mps.nbcuni.com',
+          'updatecorrelator':1};\n      var mps=mps||{};mps._ext=mps._ext||{};mps._adsheld=[];mps._queue=mps._queue||{};mps._queue.mpsloaded=mps._queue.mpsloaded||[];mps._queue.mpsinit=mps._queue.mpsinit||[];mps._queue.gptloaded=mps._queue.gptloaded||[];mps._queue.adload=mps._queue.adload||[];mps._queue.adclone=mps._queue.adclone||[];mps._queue.adview=mps._queue.adview||[];mps._queue.refreshads=mps._queue.refreshads||[];mps.__timer=Date.now||function(){return+new
+          Date};mps.__intcode=\"v2\";if(typeof mps.getAd!=\"function\")mps.getAd=function(adunit){if(typeof
+          adunit!=\"string\")return false;var slotid=\"mps-getad-\"+adunit.replace(/\\W/g,\"\");if(!mps._ext||!mps._ext.loaded){mps._queue.gptloaded.push(function(){typeof
+          mps._gptfirst==\"function\"&&mps._gptfirst(adunit,slotid);mps.insertAd(\"#\"+slotid,adunit)});mps._adsheld.push(adunit)}return'<div
+          id=\"'+slotid+'\" class=\"mps-wrapper\" data-mps-fill-slot=\"'+adunit+'\"></div>'};(function(){head=document.head||document.getElementsByTagName(\"head\")[0],mpsload=document.createElement(\"script\");mpsload.src=\"//\"+mpsopts.host+\"/fetch/ext/load-\"+mpscall.site+\".js?nowrite=2\";mpsload.id=\"mps-load\";head.insertBefore(mpsload,head.firstChild)})();\n
+          \   </script>\n\n        \n    <script>\n        function endsWith(str, suffix)
+          {\n            return str.indexOf(suffix, str.length - suffix.length) !==
+          -1;\n        }\n    \n        //--Ad Unit Loaded (called for each ad loaded)\n
+          \       var mps = mps||{}; mps._queue = mps._queue||{}; mps._queue.adload
+          = mps._queue.adload||[];\n        mps._queue.adload.push(function (eo) {\n
+          \           if (!eo.isEmpty) {\n                var slotName = eo._mps._slot;\n
+          \   \n                if ('topbanner' === slotName) {\n                    var
+          leaderboardHeight = eo.size[1];\n                    if (leaderboardHeight
+          > 50){\n                        \n                            $('#header-main').removeClass('header_main_scroll');\n
+          \                           $('#header-main').css('margin-top', leaderboardHeight
+          + 10);\n                            var bannerEl = $('#header_and_leaderboard');\n
+          \                           bannerEl.addClass('header_and_leaderboard_scroll');\n
+          \                       \n                        if (leaderboardHeight <
+          90){\n                            $('.leaderboard_wrapper').css('min-height',
+          leaderboardHeight);\n                        }\n                        $('#top_leaderboard_wrapper').animate({
+          height: (leaderboardHeight + 10) },1000);\n                    }\n                }\n
+          \   \n                if ('trendinggraphic' === slotName) {\n                    //Hide
+          Trending bar social section\n                    $('#trending_bar_social').hide();\n
+          \                   // Roma version\n                    $('.trending-bar__social').hide();\n
+          \                   //Removing padding for trending bar ad\n                    $('.trendingBar
+          > .trendingEl').css('padding','0px');\n                    $('#trending_bar_ad').show();\n
+          \   \n                    $('a.trendingLink').addClass('trending-link-truncate');\n
+          \                   // Roma version\n                    $('.trending-bar__link').addClass('trending-link--truncate');\n
+          \               }\n    \n                if ('tomatometer' === slotName) {\n
+          \                   if (eo.size[0] == 524 && eo.size[1] == 40) {\n                        //Increase
+          score panel margin\n                        $('#scorePanel').css('margin-bottom',
+          '20px');\n                    }\n                    // Only show Tomatometer
+          Sponsorship div if rendered\n                    $('#tomatometer_sponsorship_ad').show();\n
+          \               }\n            }\n        });\n    </script>\n\n\n\n\n        \n
+          \       \n        \n            <script>\n                dataLayer.push({\"webVersion\":\"node\",\"clicktale\":true,\"rtVersion\":3.1,\"loggedInStatus\":\"\",\"customerId\":\"\"});\n
+          \           </script>\n            <script>\n                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n
+          \               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n
+          \               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n
+          \               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n
+          \               })(window,document,'script','dataLayer','GTM-M5LKWCR');\n
+          \           </script>\n        \n        \n\n        \n        <script type=\"text/javascript\">!(function(o,n,t){t=o.createElement(n),o=o.getElementsByTagName(n)[0],t.async=1,t.src=\"https://honorableland.com/v2xglf05UGcVvzEUFlB6672D6fDwhuTsalYNh9J8Q6zzvZToUzEeznRfzQK-ELINP\",o.parentNode.insertBefore(t,o)})(document,\"script\"),(function(o,n){o[n]=o[n]||function(){(o[n].q=o[n].q||[]).push(arguments)}})(window,\"admiral\");!(function(c,e,o,t,n){function
+          r(o,t){(function n(){try{return 0<(localStorage.getItem(\"v4ac1eiZr0\")||\"\").split(\",\")[4]}catch(o){}return!1})()&&(t=c[e].pubads())&&t.setTargeting(\"admiral-engaged\",\"true\")}(n=c[e]=c[e]||{}).cmd=n.cmd||[],typeof
+          n.pubads===o?r():typeof n.cmd.unshift===o?n.cmd.unshift(r):n.cmd.push(r)})(window,\"googletag\",\"function\");</script>\n
+          \       \n\n        \n        <script>\n            var ALGOLIA_INSIGHTS_SRC
+          = \"https://cdn.jsdelivr.net/npm/search-insights@1.5.0\";\n\n            !function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){\n
+          \           (e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],\n
+          \           i.async=1,i.src=n,c.parentNode.insertBefore(i,c)\n            }(window,document,\"script\",ALGOLIA_INSIGHTS_SRC,\"aa\");\n
+          \       </script>\n        \n\n        \n            <script src=\"https://www.google.com/recaptcha/enterprise.js\"
+          async defer></script>\n        \n\n        \n        \n    </head>\n    \n
+          \   <body class=\"body no-touch js-mptd-layout\">\n\n        \n\n        <div
+          id=\"emptyPlaceholder\"></div> \n            \n                <script>\n
+          \                   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function()\n
+          \                   {n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}\n
+          \                   ;if(!f._fbq)f._fbq=n;\n                        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;\n
+          \                       t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,\n
+          \                           document,'script','https://connect.facebook.net/en_US/fbevents.js');\n
+          \                   fbq('init', '1147905821962466');\n                    fbq('track',
+          'PageView');\n                </script>\n            \n        <noscript>\n
+          \           <img height=\"1\" width=\"1\" style=\"display:none\" src=\"https://www.facebook.com/tr?id=1147905821962466&ev=PageView&noscript=1\"
+          />\n        </noscript>\n\n        \n            <script ASYNC src=\"//assets.adobedtm.com/launch-EN549327edc13e414a9beb5d61bfd9aac6.min.js\"></script>\n
+          \       \n\n        \n            <!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->\r\n<script
+          type='text/javascript'>\r\n  (function(){var g=function(e,h,f,g){\r\n  this.get=function(a){for(var
+          a=a+\"=\",c=document.cookie.split(\";\"),b=0,e=c.length;b<e;b++){for(var d=c[b];\"
+          \"==d.charAt(0);)d=d.substring(1,d.length);if(0==d.indexOf(a))return d.substring(a.length,d.length)}return
+          null};\r\n  this.set=function(a,c){var b=\"\",b=new Date;b.setTime(b.getTime()+6048E5);b=\";
+          expires=\"+b.toGMTString();document.cookie=a+\"=\"+c+b+\"; path=/; \"};\r\n
+          \ this.check=function(){var a=this.get(f);if(a)a=a.split(\":\");else if(100!=e)\"v\"==h&&(e=Math.random()>=e/100?0:100),a=[h,e,0],this.set(f,a.join(\":\"));else
+          return!0;var c=a[1];if(100==c)return!0;switch(a[0]){case \"v\":return!1;case
+          \"r\":return c=a[2]%Math.floor(100/c),a[2]++,this.set(f,a.join(\":\")),!c}return!0};\r\n
+          \ this.go=function(){if(this.check()){var a=document.createElement(\"script\");a.type=\"text/javascript\";a.src=g;document.body&&document.body.appendChild(a)}};\r\n
+          \ this.start=function(){var t=this;\"complete\"!==document.readyState?window.addEventListener?window.addEventListener(\"load\",function(){t.go()},!1):window.attachEvent&&window.attachEvent(\"onload\",function(){t.go()}):t.go()};};\r\n
+          \ try{(new g(100,\"r\",\"QSI_S_ZN_6SDb0uWojRgLmmN\",\"https://zn6sdb0uwojrglmmn-fandango.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_6SDb0uWojRgLmmN\")).start()}catch(i){}})();\r\n
+          \ </script><div id='ZN_6SDb0uWojRgLmmN'><!--DO NOT REMOVE-CONTENTS PLACED
+          HERE--></div>\r\n<!--END WEBSITE FEEDBACK SNIPPET-->\n        \n\n        <div
+          class=\"container roma-layout__body\">\n            <div id=\"header_and_leaderboard\">\n
+          \               \n\n                \n\n            </div>\n\n            <!--
+          salt=mastheader-not-grendel -->\n<header class=\"masthead\">\n    \n    <nav
+          id=\"navbar\" class=\"masthead__navbar\" aria-label=\"navigation bar\" data-qa=\"header-nav-bar\">\n
+          \       <a href=\"#main-page-content\" class=\"skip-link\">Skip to Main Content</a>\n
+          \       <a href=\"#masthead-dropdown-menus\" class=\"skip-link\">Skip to Dropdowns</a>\n
+          \       <h2 class=\"unset masthead__logo-container\">\n            <a href=\"/\">\n
+          \               <img id=\"masthead-logo\" class=\"masthead__logo\" src=\"/assets/pizza-pie/images/rtlogo.9b892cff3fd.png\"
+          alt=\"Rotten Tomatoes\" data-qa=\"header-logo\">\n                <span class=\"masthead--hide\">Rotten
+          Tomatoes</span>\n            </a>\n        </h2>\n        \n        \n\n        <ul
+          class=\"list-inline masthead__inline-links\">\n            <li><a href=\"/about#whatisthetomatometer\"
+          class=\"masthead__header-link\" data-qa=\"header:link-whats-tmeter\">What's
+          the Tomatometer&reg;?</a></li>\n            <li><a href=\"/critics\" class=\"masthead__header-link\"
+          data-qa=\"header:link-critics-home\">Critics</a></li>\n            <li class=\"js-masthead-account-links-login
+          masthead__auth-group\">\n                <ul class=\"list-inline\">\n                    <li><button
+          id=\"masthead-show-registration-btn\" class=\"js-cognito-signup masthead__link-btn
+          button--link\" data-qa=\"header:sign-up-btn\">Sign up</button></li>\n                    <li
+          class=\"masthead__log-in-wrap\"><button id=\"masthead-show-login-btn\" class=\"js-cognito-signin
+          masthead__link-btn button--link\" data-qa=\"header:login-btn\">Log in</button></li>\n
+          \               </ul>\n            </li>\n            <li class=\"js-masthead-account-links-user\"
+          data-qa=\"header:user\"></li>\n        </ul>\n        <search-algolia skeleton=\"transparent\">\n
+          \           <search-algolia-controls slot=\"search-controls\">\n                <input\n
+          \                   class=\"search-text\"\n                    aria-label=\"Search\"\n
+          \                   data-qa=\"search-input\"\n                    placeholder=\"Search\"\n
+          \                   slot=\"search-input\"\n                    type=\"text\"\n
+          \               />\n                <button\n                    class=\"search-clear\"\n
+          \                   data-qa=\"search-clear\"\n                    slot=\"search-clear\"\n
+          \               >\n                    <rt-icon icon=\"close\" image></rt-icon>\n
+          \               </button>\n                <a\n                    class=\"search-submit\"\n
+          \                   aria-label=\"Submit search\"\n                    data-qa=\"search-submit\"\n
+          \                   href=\"/search\"\n                    slot=\"search-submit\"\n
+          \               >\n                    <rt-icon icon=\"search\" image></rt-icon>\n
+          \               </a>\n                <button\n                    class=\"search-cancel\"\n
+          \                   data-qa=\"search-cancel\"\n                    slot=\"search-cancel\"\n
+          \               >\n                    Cancel\n                </button>\n
+          \           </search-algolia-controls>\n            <search-algolia-results
+          slot=\"search-results\" data-qa=\"search-results-overlay\">\n                <search-algolia-results-category
+          slot=\"content\" data-qa=\"search-results-category\">\n                    <h2
+          slot=\"title\" data-qa=\"search-category-header\">Movies / TV</h2>\n                    <ul
+          slot=\"results\"></ul>\n                </search-algolia-results-category>\n
+          \               <search-algolia-results-category slot=\"celebrity\" data-qa=\"search-results-category\">\n
+          \                   <h2 slot=\"title\" data-qa=\"search-category-header\">Celebrity</h2>\n
+          \                   <ul slot=\"results\"></ul>\n                </search-algolia-results-category>\n
+          \               <search-algolia-results-category slot=\"none\">\n                    <h2
+          slot=\"title\" data-qa=\"search-no-results\">No Results Found</h2>\n                </search-algolia-results-category>\n
+          \               <a slot=\"view-all\" href=\"/\" data-qa=\"search-view-all\">View
+          All</a>\n            </search-algolia-results>\n        </search-algolia>\n
+          \       <mobile-search-algolia logoselector=\"#navbar .masthead__logo-container\"
+          navselector=\"#navbar\" data-qa=\"mobile-search-algolia\"></mobile-search-algolia>\n
+          \       \n        <div id=\"masthead-dropdown-menus\" class=\"masthead__dropdown-menus\">\n
+          \           <a href=\"#trending-bar-start\" class=\"skip-link\">Skip to Trending
+          Bar</a>\n            <ul class=\"masthead__dropdown-menus list-inline\">\n
+          \               <li class=\"masthead__menu-header js-masthead-menu-header\"
+          data-content=\"_moviesAndDvds\" data-qa=\"masthead:movies-dvds\">\n                    <a
+          class=\"masthead__menu-header-title\" href=\"/browse/opening/\" data-qa=\"masthead:movies-dvds-link\">Movies</a>\n
+          \               </li>\n                <li class=\"masthead__menu-header js-masthead-menu-header\"
+          data-content=\"_tv\" data-qa=\"masthead:tv\">\n                    <a class=\"masthead__menu-header-title\"
+          href=\"https://www.rottentomatoes.com/top-tv\" data-qa=\"masthead:tv-link\">TV
+          Shows</a>\n                </li>\n                <li class=\"masthead__menu-header
+          masthead__menu-header--podcast masthead__no-content js-masthead-menu-header\">\n
+          \                   <temporary-display key=\"podcast\" element=\"#podcast-link\"
+          event=\"click\">\n                        <rt-badge hidden>New</rt-badge>\n
+          \                   </temporary-display>\n                    <a class=\"masthead__menu-header-title\"
+          href=\"https://editorial.rottentomatoes.com/article/rotten-tomatoes-is-wrong-a-podcast-from-rotten-tomatoes/\"
+          id=\"podcast-link\" data-qa=\"masthead:podcast-link\">RT Podcast</a>\n                </li>\n
+          \               <li class=\"masthead__menu-header js-masthead-menu-header\"
+          data-content=\"_news\" data-qa=\"masthead:news\">\n                    <a
+          class=\"masthead__menu-header-title\" href=\"https://editorial.rottentomatoes.com/\"
+          data-qa=\"masthead:news-link\">News</a>\n                </li>\n                <li
+          class=\"masthead__menu-header masthead__no-content js-masthead-menu-header\">\n
+          \                   <a href=\"/showtimes\" class=\"masthead__menu-header-title\"
+          data-qa=\"masthead:tickets-showtimes-link\">Showtimes</a>\n                </li>\n
+          \           </ul>\n        </div>\n    </nav>\n    <section class=\"trending-bar\">\n
+          \   \n    \n    <div id=\"trending_bar_ad\" style=\"display: none;\"></div>\n
+          \   <script>\n        var mps = mps||{}; mps._queue = mps._queue||{}; mps._queue.gptloaded
+          = mps._queue.gptloaded||[];\n        mps._queue.gptloaded.push(function ()
+          {\n            if (mps.getResponsiveSet() != '0') { //DESKTOP or TABLET\n
+          \               mps.insertAd('#trending_bar_ad','trendinggraphic');\n            }\n
+          \       });\n    </script>\n\n\n    <div id=\"trending-bar-start\" class=\"trending-list-wrap\"
+          data-qa=\"trending-bar\">\n        <ul\n            class=\"list-inline trending-bar__list\"\n
+          \           data-curation=\"rt-nav-trending\"\n            data-qa=\"trending-bar-list\">\n
+          \           <li class=\"trending-bar__header\">Trending on RT</li>\n            \n
+          \               <li><a class=\"trending-bar__link\" href=\"https://editorial.rottentomatoes.com/article/ultimate-binge-guide/\"
+          \ data-qa=\"trending-bar-item\"> The Ultimate Binge Guide </a></li>\n            \n
+          \               <li><a class=\"trending-bar__link\" href=\"https://editorial.rottentomatoes.com/guide/best-christmas-movies/\"
+          \ data-qa=\"trending-bar-item\"> Best Christmas Movies </a></li>\n            \n
+          \               <li><a class=\"trending-bar__link\" href=\"https://editorial.rottentomatoes.com/article/2021-2022-awards-leaderboard/\"
+          \ data-qa=\"trending-bar-item\"> Awards Leaderboard </a></li>\n            \n
+          \               <li><a class=\"trending-bar__link\" href=\"https://editorial.rottentomatoes.com/article/nightmare-alley-first-reviews-a-winning-cast-and-gorgeous-visuals-make-guillermo-del-toros-thriller-shine/\"
+          \ data-qa=\"trending-bar-item\"> Nightmare Alley Reviews </a></li>\n            \n
+          \       </ul>\n        <div class=\"list-inline trending-bar__social\" data-qa=\"trending-bar-social-list\">\n
+          \           <a id=\"header-facebook-social-link\" class=\"trending-bar__social-link
+          rt-icon rt-icon__facebook-squared\" href=\"//www.facebook.com/rottentomatoes\"
+          target=\"_blank\" rel=\"noopener\" aria-label=\"Facebook\" data-qa=\"trending-bar-social-facebook\"></a>\n
+          \           <a id=\"header-twitter-social-link\" class=\"trending-bar__social-link
+          rt-icon rt-icon__twitter\" href=\"//twitter.com/rottentomatoes\" target=\"_blank\"
+          rel=\"noopener\" aria-label=\"Twitter\" data-qa=\"trending-bar-social-twitter\"></a>\n
+          \           <a id=\"header-instagram-social-link\" class=\"trending-bar__social-link
+          rt-icon rt-icon__instagram\" href=\"//www.instagram.com/rottentomatoes/\"
+          target=\"_blank\" rel=\"noopener\" aria-label=\"Instagram\" data-qa=\"trending-bar-social-instagram\"></a>\n
+          \           <a id=\"header-snapchat-social-link\" class=\"trending-bar__social-link
+          rt-icon rt-icon__snapchat\" href=\" https://www.snapchat.com/add/rottentomatoes\"
+          target=\"_blank\" rel=\"noopener\" aria-label=\"Snapchat\" data-qa=\"trending-bar-social-snapchat\"></a>\n
+          \           <a id=\"header-youtube-social-link\" class=\"trending-bar__social-link
+          rt-icon rt-icon__youtube-play\" href=\"//www.youtube.com/user/rottentomatoes\"
+          target=\"_blank\" rel=\"noopener\" aria-label=\"Youtube\" data-qa=\"trending-bar-social-youtube\"></a>\n
+          \       </div>\n    </div>\n</section>\n\n</header>\n\n            <main id=\"main_container\"
+          class=\"container roma-layout__content\">\n                <div id=\"main-page-content\">\n
+          \               \n\n  \n                \n\n  <div class=\"search__container
+          layout\">\n\n    <section class=\"search__main layout__column layout__column--main\">\n
+          \       \n            <h1>Search Results for : \"The Matrix\"</h1>\n            \n
+          \           <search-page-manager></search-page-manager>\n            <search-page-result-container
+          searchQuery=\"The Matrix\" data-qa=\"search-results\">\n                <nav
+          class=\"search__nav\" slot=\"searchNav\">\n                    <ul class=\"searchNav__filters\">\n
+          \                       <li class=\"js-search-filter searchNav__filter searchNav__filter-all
+          searchNav__filter--active\" data-filter=\"all\" tabindex=\"0\"><span data-qa=\"search-filter-text\">All</span></li>\n
+          \                       \n                            <li class=\"js-search-filter
+          searchNav__filter\" data-filter=\"franchise\" tabindex=\"0\"><span data-qa=\"search-filter-text\">Franchises
+          (48)</span></li>\n                        \n                        \n                            <li
+          class=\"js-search-filter searchNav__filter\" data-filter=\"movie\" tabindex=\"0\"><span
+          data-qa=\"search-filter-text\">Movies (54)</span></li>\n                        \n
+          \                       \n                            <li class=\"js-search-filter
+          searchNav__filter\" data-filter=\"tv\" tabindex=\"0\"><span data-qa=\"search-filter-text\">TV
+          Shows (2121)</span></li>\n                        \n                        \n
+          \                   </ul>\n                </nav>\n\n                \n                    <search-page-result
+          slot=\"franchise\" skeleton=\"panel\" type=\"franchise\" data-qa=\"search-result\">\n
+          \                       <h2 slot=\"title\" data-qa=\"search-result-title\">Franchises</h2>\n
+          \                       <button slot=\"prev-btn\" data-qa=\"paging-btn-prev\">Prev</button>\n
+          \                       <button slot=\"next-btn\" data-qa=\"paging-btn-next\">Next</button>\n
+          \                       <ul slot=\"list\">\n                            \n
+          \                               <search-page-item-row\n                                    skeleton=\"panel\"\n
+          \                                   data-qa=\"data-row\"\n                                >\n
+          \                                   <a href=\"/franchise/the_purge\" class=\"unset\"
+          data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Purge\" src=\"https://resizing.flixster.com/UK8dLqc9171ZoNcJg5DY40Wdemw=/fit-in/80x126/v2/https://resizing.flixster.com/YDPYSzg1f4-ZAbKYdx7nFk2w5hs=/ems.ZW1zLXByZC1hc3NldHMvZnJhbmNoaXNlcy9kNzY1YTE2Zi00YzNlLTMxZjMtOWI5Ny04Mzg3NTViY2VjMmQtaGVyby53ZWJw\">\n
+          \                                   </a>\n                                    <a
+          href=\"/franchise/the_purge\" class=\"unset\" data-qa=\"info-name\" slot=\"title\">\n
+          \                                       <span>The Purge</span>\n                                    </a>\n
+          \                               </search-page-item-row>\n                            \n
+          \                               <search-page-item-row\n                                    skeleton=\"panel\"\n
+          \                                   data-qa=\"data-row\"\n                                >\n
+          \                                   <a href=\"/franchise/the_fast_and_the_furious\"
+          class=\"unset\" data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Fast and the Furious\" src=\"https://resizing.flixster.com/9vqvFypTv7mCH50-rrmJOBZGim0=/fit-in/80x126/v2/https://resizing.flixster.com/Re-DUDEC9C4FRTRmFS5vxehBq-Q=/ems.ZW1zLXByZC1hc3NldHMvZnJhbmNoaXNlcy9jMTIyOTIwOS00N2MxLTNlOGYtYTFkNy04YjkwMjkxYTM5NzUtaGVyby53ZWJw\">\n
+          \                                   </a>\n                                    <a
+          href=\"/franchise/the_fast_and_the_furious\" class=\"unset\" data-qa=\"info-name\"
+          slot=\"title\">\n                                        <span>The Fast and
+          the Furious</span>\n                                    </a>\n                                </search-page-item-row>\n
+          \                           \n                                <search-page-item-row\n
+          \                                   skeleton=\"panel\"\n                                    data-qa=\"data-row\"\n
+          \                               >\n                                    <a
+          href=\"/franchise/the_exorcist\" class=\"unset\" data-qa=\"thumbnail-link\"
+          slot=\"thumbnail\">\n                                        <img alt=\"The
+          Exorcist\" src=\"https://resizing.flixster.com/HYJMsx2zUWL13wLZgF917mOPq6g=/fit-in/80x126/v2/https://resizing.flixster.com/2s2lF5Wgcjfw1CkNvRXaelm_MUQ=/ems.ZW1zLXByZC1hc3NldHMvZnJhbmNoaXNlcy84NjdjNWRhZS1lNzU0LTMxNGEtYjdjZC0xNjEwZjJmNGIxMDMtaGVyby53ZWJw\">\n
+          \                                   </a>\n                                    <a
+          href=\"/franchise/the_exorcist\" class=\"unset\" data-qa=\"info-name\" slot=\"title\">\n
+          \                                       <span>The Exorcist</span>\n                                    </a>\n
+          \                               </search-page-item-row>\n                            \n
+          \                               <search-page-item-row\n                                    skeleton=\"panel\"\n
+          \                                   data-qa=\"data-row\"\n                                >\n
+          \                                   <a href=\"/franchise/the_hunger_games\"
+          class=\"unset\" data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Hunger Games\" src=\"https://resizing.flixster.com/x7C-uogoihbFXSowvAOaD3mtGkQ=/fit-in/80x126/v2/https://resizing.flixster.com/eqhaWMAv11Y8MTAMUFPZJku07FY=/ems.ZW1zLXByZC1hc3NldHMvZnJhbmNoaXNlcy82NDYwZjJkZi1iYTcxLTNmODgtOGY0Yy0xMmRlMjg0ZGE3OWItaGVyby53ZWJw\">\n
+          \                                   </a>\n                                    <a
+          href=\"/franchise/the_hunger_games\" class=\"unset\" data-qa=\"info-name\"
+          slot=\"title\">\n                                        <span>The Hunger
+          Games</span>\n                                    </a>\n                                </search-page-item-row>\n
+          \                           \n                                <search-page-item-row\n
+          \                                   skeleton=\"panel\"\n                                    data-qa=\"data-row\"\n
+          \                               >\n                                    <a
+          href=\"/franchise/the_xfiles\" class=\"unset\" data-qa=\"thumbnail-link\"
+          slot=\"thumbnail\">\n                                        <img alt=\"The
+          X-Files\" src=\"https://resizing.flixster.com/NOWvAQvYvOEBG3QTUrPM-inWntY=/fit-in/80x126/v2/https://resizing.flixster.com/OOmMt6XjXgeyHFJqbWHEKmmpAlU=/ems.ZW1zLXByZC1hc3NldHMvZnJhbmNoaXNlcy82MjY4ODg3OC0zNmYyLTMwYzEtYThkMS05YmUwZDMxOGM4NTAtaGVyby53ZWJw\">\n
+          \                                   </a>\n                                    <a
+          href=\"/franchise/the_xfiles\" class=\"unset\" data-qa=\"info-name\" slot=\"title\">\n
+          \                                       <span>The X-Files</span>\n                                    </a>\n
+          \                               </search-page-item-row>\n                            \n
+          \                               <search-page-item-row\n                                    skeleton=\"panel\"\n
+          \                                   data-qa=\"data-row\"\n                                >\n
+          \                                   <a href=\"/franchise/the_bourne_collection\"
+          class=\"unset\" data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Bourne Collection\" src=\"https://resizing.flixster.com/yr8TT0nRHf8qSDiw5Q0epuKHqcY=/fit-in/80x126/v2/https://resizing.flixster.com/ifHAXLL7TIaoeKaCRBYW2ACjimE=/ems.ZW1zLXByZC1hc3NldHMvZnJhbmNoaXNlcy81Mjc2NzllMy1iNTc3LTM3YzgtYTkxZS1iM2NiNjdmZDcyNGItaGVyby53ZWJw\">\n
+          \                                   </a>\n                                    <a
+          href=\"/franchise/the_bourne_collection\" class=\"unset\" data-qa=\"info-name\"
+          slot=\"title\">\n                                        <span>The Bourne
+          Collection</span>\n                                    </a>\n                                </search-page-item-row>\n
+          \                           \n                                <search-page-item-row\n
+          \                                   skeleton=\"panel\"\n                                    data-qa=\"data-row\"\n
+          \                               >\n                                    <a
+          href=\"/franchise/the_conjuring_universe\" class=\"unset\" data-qa=\"thumbnail-link\"
+          slot=\"thumbnail\">\n                                        <img alt=\"The
+          Conjuring Universe\" src=\"https://resizing.flixster.com/LG552GczuesrYzlZsUL1i4CDJoQ=/fit-in/80x126/v2/https://resizing.flixster.com/gzQ9bo6TGCJHUgjyui-9LTOErzk=/ems.ZW1zLXByZC1hc3NldHMvZnJhbmNoaXNlcy80ZmNjZWQ0OS1iZThmLTMxYzItYTdmNy05NGZlNjJmZjQ4ZjMtaGVyby53ZWJw\">\n
+          \                                   </a>\n                                    <a
+          href=\"/franchise/the_conjuring_universe\" class=\"unset\" data-qa=\"info-name\"
+          slot=\"title\">\n                                        <span>The Conjuring
+          Universe</span>\n                                    </a>\n                                </search-page-item-row>\n
+          \                           \n                                <search-page-item-row\n
+          \                                   skeleton=\"panel\"\n                                    data-qa=\"data-row\"\n
+          \                               >\n                                    <a
+          href=\"/franchise/the_walking_dead\" class=\"unset\" data-qa=\"thumbnail-link\"
+          slot=\"thumbnail\">\n                                        <img alt=\"The
+          Walking Dead\" src=\"https://resizing.flixster.com/45jXcWHovhg9b_J79rUlxe176r0=/fit-in/80x126/v2/https://resizing.flixster.com/vRo-pxQnQZro1B1b6hC7NK1vtcc=/ems.ZW1zLXByZC1hc3NldHMvZnJhbmNoaXNlcy8zZTcyOWRhOC0xOWM0LTM5MGYtODY4NC01ODg5Mjg1MjNhNWYtaGVyby53ZWJw\">\n
+          \                                   </a>\n                                    <a
+          href=\"/franchise/the_walking_dead\" class=\"unset\" data-qa=\"info-name\"
+          slot=\"title\">\n                                        <span>The Walking
+          Dead</span>\n                                    </a>\n                                </search-page-item-row>\n
+          \                           \n                                <search-page-item-row\n
+          \                                   skeleton=\"panel\"\n                                    data-qa=\"data-row\"\n
+          \                               >\n                                    <a
+          href=\"/franchise/friday_the_13th\" class=\"unset\" data-qa=\"thumbnail-link\"
+          slot=\"thumbnail\">\n                                        <img alt=\"Friday
+          the 13th\" src=\"https://resizing.flixster.com/Gt5BIaEEK4qJYD3VA93ta4IzTR0=/fit-in/80x126/v2/https://resizing.flixster.com/qTdAMRXvI2MlWKQF31gM9K7nZb0=/ems.ZW1zLXByZC1hc3NldHMvZnJhbmNoaXNlcy9mZDlhZWZlYi00OWMwLTM0ZmQtYWJmZC04MzZiNzk0ODI2YmYtaGVyby53ZWJw\">\n
+          \                                   </a>\n                                    <a
+          href=\"/franchise/friday_the_13th\" class=\"unset\" data-qa=\"info-name\"
+          slot=\"title\">\n                                        <span>Friday the
+          13th</span>\n                                    </a>\n                                </search-page-item-row>\n
+          \                           \n                                <search-page-item-row\n
+          \                                   skeleton=\"panel\"\n                                    data-qa=\"data-row\"\n
+          \                               >\n                                    <a
+          href=\"/franchise/pirates_of_the_caribbean\" class=\"unset\" data-qa=\"thumbnail-link\"
+          slot=\"thumbnail\">\n                                        <img alt=\"Pirates
+          of the Caribbean\" src=\"https://resizing.flixster.com/Ys5te62tUDO6vEBuhWWOapizqOI=/fit-in/80x126/v2/https://resizing.flixster.com/FWUb5ZyLyztM44v8AhSF16o5Y90=/ems.ZW1zLXByZC1hc3NldHMvZnJhbmNoaXNlcy82YTFiYzUyYS1hMmNlLTMyYzEtOTQyZS1iMmYwNTFkZDBlNTUtaGVyby53ZWJw\">\n
+          \                                   </a>\n                                    <a
+          href=\"/franchise/pirates_of_the_caribbean\" class=\"unset\" data-qa=\"info-name\"
+          slot=\"title\">\n                                        <span>Pirates of
+          the Caribbean</span>\n                                    </a>\n                                </search-page-item-row>\n
+          \                           \n                        </ul>\n                        <button
+          slot=\"more-btn\" data-qa=\"search-more-btn\">More Franchises...</button>\n
+          \                   </search-page-result>\n                \n\n                \n
+          \                   <search-page-result slot=\"movie\" skeleton=\"panel\"
+          type=\"movie\" data-qa=\"search-result\">\n                        <h2 slot=\"title\"
+          data-qa=\"search-result-title\">Movies</h2>\n                        <button
+          slot=\"prev-btn\" data-qa=\"paging-btn-prev\">Prev</button>\n                        <button
+          slot=\"next-btn\" data-qa=\"paging-btn-next\">Next</button>\n                        <ul
+          slot=\"list\">\n                            \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"Keanu
+          Reeves,Carrie-Anne Moss,Yahya Abdul-Mateen II\"\n                                    data-qa=\"data-row\"\n
+          \                                   endyear=\"\"\n                                    releaseyear=\"2021\"\n
+          \                                   startyear=\"\"\n                                    tomatometerscore=\"67\"\n
+          \                                   tomatometerstate=\"fresh\"\n                                >\n
+          \                                   <a href=\"https://www.rottentomatoes.com/m/the_matrix_resurrections\"
+          class=\"unset\" data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Matrix Resurrections\" src=\"https://resizing.flixster.com/8cmAagr-FoHM5kmJVz-iPVvNtec=/fit-in/80x126/v2/https://resizing.flixster.com/7iXvQDzlyLlOA88HlhqivC8JFA8=/ems.ZW1zLXByZC1hc3NldHMvbW92aWVzL2Q4ZWE4ZTUwLTI5MTMtNDQ5Yi05M2Y5LTVlNWVlNjU5YWRmZC5qcGc=\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/m/the_matrix_resurrections\" class=\"unset\"
+          data-qa=\"info-name\" slot=\"title\">\n                                        The
+          Matrix Resurrections\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"Keanu
+          Reeves,Laurence Fishburne,Carrie-Anne Moss\"\n                                    data-qa=\"data-row\"\n
+          \                                   endyear=\"\"\n                                    releaseyear=\"2003\"\n
+          \                                   startyear=\"\"\n                                    tomatometerscore=\"73\"\n
+          \                                   tomatometerstate=\"certified-fresh\"\n
+          \                               >\n                                    <a
+          href=\"https://www.rottentomatoes.com/m/matrix_reloaded\" class=\"unset\"
+          data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Matrix Reloaded\" src=\"https://resizing.flixster.com/GdmhuVMheB2vGX6CAKVa5HF4voQ=/fit-in/80x126/v2/https://flxt.tmsimg.com/NowShowing/28901/28901_cm.jpg\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/m/matrix_reloaded\" class=\"unset\"
+          data-qa=\"info-name\" slot=\"title\">\n                                        The
+          Matrix Reloaded\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"Keanu
+          Reeves,Laurence Fishburne,Carrie-Anne Moss\"\n                                    data-qa=\"data-row\"\n
+          \                                   endyear=\"\"\n                                    releaseyear=\"2003\"\n
+          \                                   startyear=\"\"\n                                    tomatometerscore=\"35\"\n
+          \                                   tomatometerstate=\"rotten\"\n                                >\n
+          \                                   <a href=\"https://www.rottentomatoes.com/m/matrix_revolutions\"
+          class=\"unset\" data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Matrix Revolutions\" src=\"https://resizing.flixster.com/Ofl-rhoLQ0iA9N2gCmrtZI3FBtc=/fit-in/80x126/v2/https://flxt.tmsimg.com/assets/p33157_p_v13_aa.jpg\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/m/matrix_revolutions\" class=\"unset\"
+          data-qa=\"info-name\" slot=\"title\">\n                                        The
+          Matrix Revolutions\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"Unknown
+          Actor\"\n                                    data-qa=\"data-row\"\n                                    endyear=\"\"\n
+          \                                   releaseyear=\"2001\"\n                                    startyear=\"\"\n
+          \                                   tomatometerscore=\"71\"\n                                    tomatometerstate=\"fresh\"\n
+          \                               >\n                                    <a
+          href=\"https://www.rottentomatoes.com/m/matrix_revisited\" class=\"unset\"
+          data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Matrix Revisited\" src=\"https://staticv2-4.rottentomatoes.com/static/images/redesign/poster_default_redesign.gif\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/m/matrix_revisited\" class=\"unset\"
+          data-qa=\"info-name\" slot=\"title\">\n                                        The
+          Matrix Revisited\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"Keanu
+          Reeves,Laurence Fishburne,Carrie-Anne Moss\"\n                                    data-qa=\"data-row\"\n
+          \                                   endyear=\"\"\n                                    releaseyear=\"1999\"\n
+          \                                   startyear=\"\"\n                                    tomatometerscore=\"88\"\n
+          \                                   tomatometerstate=\"certified-fresh\"\n
+          \                               >\n                                    <a
+          href=\"https://www.rottentomatoes.com/m/matrix\" class=\"unset\" data-qa=\"thumbnail-link\"
+          slot=\"thumbnail\">\n                                        <img alt=\"The
+          Matrix\" src=\"https://resizing.flixster.com/6UHQX0XXTHsWAgnapGOSE3NslW4=/fit-in/80x126/v2/https://flxt.tmsimg.com/assets/p22804_p_v10_ab.jpg\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/m/matrix\" class=\"unset\" data-qa=\"info-name\"
+          slot=\"title\">\n                                        The Matrix\n                                    </a>\n
+          \                               </search-page-media-row>\n                            \n
+          \                               <search-page-media-row\n                                    skeleton=\"panel\"\n
+          \                                   cast=\"Nick Bostrom,Joshua Cooke,Erik
+          Davis\"\n                                    data-qa=\"data-row\"\n                                    endyear=\"\"\n
+          \                                   releaseyear=\"2020\"\n                                    startyear=\"\"\n
+          \                                   tomatometerscore=\"67\"\n                                    tomatometerstate=\"fresh\"\n
+          \                               >\n                                    <a
+          href=\"https://www.rottentomatoes.com/m/a_glitch_in_the_matrix\" class=\"unset\"
+          data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"A Glitch in the Matrix\" src=\"https://resizing.flixster.com/GoH1KwqNnNsPd5LGVGsglilfL-s=/fit-in/80x126/v2/https://resizing.flixster.com/x_dN4sQ2i-cxEZ1_50tqw5V0OGQ=/ems.ZW1zLXByZC1hc3NldHMvbW92aWVzLzQ4MzNiM2I4LTgxZDYtNDVlYi05OGU2LTBlZDMyNGY4NWE5Yi5qcGc=\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/m/a_glitch_in_the_matrix\" class=\"unset\"
+          data-qa=\"info-name\" slot=\"title\">\n                                        A
+          Glitch in the Matrix\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"Adam
+          Dreamhealer,Arielle Essex,Peter Fraser\"\n                                    data-qa=\"data-row\"\n
+          \                                   endyear=\"\"\n                                    releaseyear=\"2009\"\n
+          \                                   startyear=\"\"\n                                    tomatometerscore=\"\"\n
+          \                                   tomatometerstate=\"\"\n                                >\n
+          \                                   <a href=\"https://www.rottentomatoes.com/m/the-living-matrix\"
+          class=\"unset\" data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Living Matrix\" src=\"https://resizing.flixster.com/WYA-odh0nk6EK0OGEy-STJUwqY0=/fit-in/80x126/v2/https://flxt.tmsimg.com/assets/p7865446_p_v10_aa.jpg\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/m/the-living-matrix\" class=\"unset\"
+          data-qa=\"info-name\" slot=\"title\">\n                                        The
+          Living Matrix\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"Samantha
+          Phillips,Morgan Kelly,John Matrix\"\n                                    data-qa=\"data-row\"\n
+          \                                   endyear=\"\"\n                                    releaseyear=\"2000\"\n
+          \                                   startyear=\"\"\n                                    tomatometerscore=\"\"\n
+          \                                   tomatometerstate=\"\"\n                                >\n
+          \                                   <a href=\"https://www.rottentomatoes.com/m/andromina_the_pleasure_planet\"
+          class=\"unset\" data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"Andromina: The Pleasure Planet\" src=\"https://resizing.flixster.com/lDCmUxHa_67S3FSlQYeHVBTLHX8=/fit-in/80x126/v2/https://flxt.tmsimg.com/assets/p25867_v_v10_aa.jpg\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/m/andromina_the_pleasure_planet\" class=\"unset\"
+          data-qa=\"info-name\" slot=\"title\">\n                                        Andromina:
+          The Pleasure Planet\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"Leon
+          Lai,Rene Liu,Bingbing Fan\"\n                                    data-qa=\"data-row\"\n
+          \                                   endyear=\"\"\n                                    releaseyear=\"2007\"\n
+          \                                   startyear=\"\"\n                                    tomatometerscore=\"\"\n
+          \                                   tomatometerstate=\"\"\n                                >\n
+          \                                   <a href=\"https://www.rottentomatoes.com/m/the-matrimony-xin-zhong-you-gui\"
+          class=\"unset\" data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Matrimony\" src=\"https://staticv2-4.rottentomatoes.com/static/images/redesign/poster_default_redesign.gif\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/m/the-matrimony-xin-zhong-you-gui\"
+          class=\"unset\" data-qa=\"info-name\" slot=\"title\">\n                                        The
+          Matrimony\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"Douglas
+          Fairbanks,Constance Talmadge,Wilbur Higby\"\n                                    data-qa=\"data-row\"\n
+          \                                   endyear=\"\"\n                                    releaseyear=\"1916\"\n
+          \                                   startyear=\"\"\n                                    tomatometerscore=\"\"\n
+          \                                   tomatometerstate=\"\"\n                                >\n
+          \                                   <a href=\"https://www.rottentomatoes.com/m/the_matrimaniac\"
+          class=\"unset\" data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Matrimaniac\" src=\"https://staticv2-4.rottentomatoes.com/static/images/redesign/poster_default_redesign.gif\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/m/the_matrimaniac\" class=\"unset\"
+          data-qa=\"info-name\" slot=\"title\">\n                                        The
+          Matrimaniac\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                        </ul>\n                        <button
+          slot=\"more-btn\" data-qa=\"search-more-btn\">More Movies...</button>\n                    </search-page-result>\n
+          \               \n\n                \n                    <search-page-result
+          slot=\"tv\" skeleton=\"panel\" type=\"tv\" data-qa=\"search-result\">\n                        <h2
+          slot=\"title\" data-qa=\"search-result-title\">TV shows</h2>\n                        <button
+          slot=\"prev-btn\" data-qa=\"paging-btn-prev\">Prev</button>\n                        <button
+          slot=\"next-btn\" data-qa=\"paging-btn-next\">Next</button>\n                        <ul
+          slot=\"list\">\n                            \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"\"\n
+          \                                   data-qa=\"data-row\"\n                                    endyear=\"\"\n
+          \                                   releaseyear=\"\"\n                                    startyear=\"2022\"\n
+          \                                   tomatometerscore=\"\"\n                                    tomatometerstate=\"\"\n
+          \                               >\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_legend_of_vox_machina\" class=\"unset\"
+          data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Legend of Vox Machina\" src=\"https://staticv2-4.rottentomatoes.com/static/images/redesign/poster_default_redesign.gif\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_legend_of_vox_machina\" class=\"unset\"
+          data-qa=\"info-name\" slot=\"title\">\n                                        The
+          Legend of Vox Machina\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"\"\n
+          \                                   data-qa=\"data-row\"\n                                    endyear=\"\"\n
+          \                                   releaseyear=\"\"\n                                    startyear=\"2022\"\n
+          \                                   tomatometerscore=\"\"\n                                    tomatometerstate=\"\"\n
+          \                               >\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_80s_top_ten\" class=\"unset\"
+          data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The &#39;80s: Top Ten\" src=\"https://resizing.flixster.com/47U12bDwhk80T-_URgKTbQlSoC4=/fit-in/80x126/v2/https://flxt.tmsimg.com/assets/p21049990_b_v13_ab.jpg\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_80s_top_ten\" class=\"unset\"
+          data-qa=\"info-name\" slot=\"title\">\n                                        The
+          &#39;80s: Top Ten\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"\"\n
+          \                                   data-qa=\"data-row\"\n                                    endyear=\"\"\n
+          \                                   releaseyear=\"\"\n                                    startyear=\"2022\"\n
+          \                                   tomatometerscore=\"\"\n                                    tomatometerstate=\"\"\n
+          \                               >\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_afterparty\" class=\"unset\"
+          data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Afterparty\" src=\"https://staticv2-4.rottentomatoes.com/static/images/redesign/poster_default_redesign.gif\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_afterparty\" class=\"unset\"
+          data-qa=\"info-name\" slot=\"title\">\n                                        The
+          Afterparty\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"\"\n
+          \                                   data-qa=\"data-row\"\n                                    endyear=\"\"\n
+          \                                   releaseyear=\"\"\n                                    startyear=\"2022\"\n
+          \                                   tomatometerscore=\"\"\n                                    tomatometerstate=\"\"\n
+          \                               >\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_lord_of_the_rings\" class=\"unset\"
+          data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Lord of the Rings\" src=\"https://resizing.flixster.com/6MeEoPR_5DZ5AAVI7fvW-KYqGkA=/fit-in/80x126/v2/https://flxt.tmsimg.com/assets/p20450286_b_v9_ac.jpg\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_lord_of_the_rings\" class=\"unset\"
+          data-qa=\"info-name\" slot=\"title\">\n                                        The
+          Lord of the Rings\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"\"\n
+          \                                   data-qa=\"data-row\"\n                                    endyear=\"\"\n
+          \                                   releaseyear=\"\"\n                                    startyear=\"\"\n
+          \                                   tomatometerscore=\"\"\n                                    tomatometerstate=\"\"\n
+          \                               >\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_hunters_anthology\" class=\"unset\"
+          data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Hunter&#39;s Anthology\" src=\"https://resizing.flixster.com/N_3CO8HLCQ3NOCBouMToDnJOsuU=/fit-in/80x126/v2/https://resizing.flixster.com/1j1niBnU63YI6o28XerBZxxYwBo=/ems.ZW1zLXByZC1hc3NldHMvdHZzZXJpZXMvYTkzMTJkNTEtNmI5Yi00Y2FjLWIwYzctMWQ5OWI2OTg4ODcyLmpwZw==\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_hunters_anthology\" class=\"unset\"
+          data-qa=\"info-name\" slot=\"title\">\n                                        The
+          Hunter&#39;s Anthology\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"\"\n
+          \                                   data-qa=\"data-row\"\n                                    endyear=\"\"\n
+          \                                   releaseyear=\"\"\n                                    startyear=\"2021\"\n
+          \                                   tomatometerscore=\"71\"\n                                    tomatometerstate=\"fresh\"\n
+          \                               >\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_way_down_god_greed_and_the_cult_of_gwen_shamblin\"
+          class=\"unset\" data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Way Down: God, Greed, and the Cult of Gwen Shamblin\" src=\"https://resizing.flixster.com/j1pXcL5yYHYftVNPgZ9yRpVV040=/fit-in/80x126/v2/https://resizing.flixster.com/vgGr_McBvKTfRE9OkLG-3T1oIjM=/ems.ZW1zLXByZC1hc3NldHMvdHZzZXJpZXMvYTBmZGQzNzYtNzI5My00MzIwLWI5MTUtNDBjNTBmZGM3YjUyLmpwZw==\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_way_down_god_greed_and_the_cult_of_gwen_shamblin\"
+          class=\"unset\" data-qa=\"info-name\" slot=\"title\">\n                                        The
+          Way Down: God, Greed, and the Cult of Gwen Shamblin\n                                    </a>\n
+          \                               </search-page-media-row>\n                            \n
+          \                               <search-page-media-row\n                                    skeleton=\"panel\"\n
+          \                                   cast=\"\"\n                                    data-qa=\"data-row\"\n
+          \                                   endyear=\"\"\n                                    releaseyear=\"\"\n
+          \                                   startyear=\"2021\"\n                                    tomatometerscore=\"\"\n
+          \                                   tomatometerstate=\"\"\n                                >\n
+          \                                   <a href=\"https://www.rottentomatoes.com/tv/the_five_juanas\"
+          class=\"unset\" data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Five Juanas\" src=\"https://resizing.flixster.com/2wSEwMjvS6781h_AXPdOEsWne5I=/fit-in/80x126/v2/https://resizing.flixster.com/gqu5uzYhCx0tzpyt-1wUqOqmbAI=/ems.ZW1zLXByZC1hc3NldHMvdHZzZXJpZXMvMDBjNTg3Y2ItZDk4ZS00OTgzLTkzZGUtN2UwZjM1N2M3MDQ3LmpwZw==\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_five_juanas\" class=\"unset\"
+          data-qa=\"info-name\" slot=\"title\">\n                                        The
+          Five Juanas\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"\"\n
+          \                                   data-qa=\"data-row\"\n                                    endyear=\"\"\n
+          \                                   releaseyear=\"\"\n                                    startyear=\"2021\"\n
+          \                                   tomatometerscore=\"\"\n                                    tomatometerstate=\"\"\n
+          \                               >\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_hungry_and_the_hairy\" class=\"unset\"
+          data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Hungry and the Hairy\" src=\"https://resizing.flixster.com/NSySTwak_L9Cbk-Y5UXcsnZ333E=/fit-in/80x126/v2/https://resizing.flixster.com/9E4Hr1M5d8oSw2LxctQi1rVsqvI=/ems.ZW1zLXByZC1hc3NldHMvdHZzZXJpZXMvZjkwY2FkNjctY2I4ZC00ZTI0LWFiNjEtODQzODc2YmIyMzcwLmpwZw==\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_hungry_and_the_hairy\" class=\"unset\"
+          data-qa=\"info-name\" slot=\"title\">\n                                        The
+          Hungry and the Hairy\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"\"\n
+          \                                   data-qa=\"data-row\"\n                                    endyear=\"2021\"\n
+          \                                   releaseyear=\"\"\n                                    startyear=\"2021\"\n
+          \                                   tomatometerscore=\"\"\n                                    tomatometerstate=\"\"\n
+          \                               >\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_billion_dollar_code\" class=\"unset\"
+          data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Billion Dollar Code\" src=\"https://resizing.flixster.com/-5Vxq73kRiqzn_2DJpyfaqLAlVI=/fit-in/80x126/v2/https://resizing.flixster.com/WMMmlLLpp3oAS6o1jtLIav-QYw4=/ems.ZW1zLXByZC1hc3NldHMvdHZzZXJpZXMvZDlmMDA5YWYtODU1NS00ODYyLWJhMDMtOGY3NzFlZTliODhlLmpwZw==\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_billion_dollar_code\" class=\"unset\"
+          data-qa=\"info-name\" slot=\"title\">\n                                        The
+          Billion Dollar Code\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                                <search-page-media-row\n
+          \                                   skeleton=\"panel\"\n                                    cast=\"\"\n
+          \                                   data-qa=\"data-row\"\n                                    endyear=\"\"\n
+          \                                   releaseyear=\"\"\n                                    startyear=\"2021\"\n
+          \                                   tomatometerscore=\"\"\n                                    tomatometerstate=\"\"\n
+          \                               >\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_future_diary_2021\" class=\"unset\"
+          data-qa=\"thumbnail-link\" slot=\"thumbnail\">\n                                        <img
+          alt=\"The Future Diary\" src=\"https://resizing.flixster.com/y6Ur3aDKgsBpyLlA-7mcfV92jJE=/fit-in/80x126/v2/https://flxt.tmsimg.com/assets/p21009474_b_v12_ab.jpg\">\n
+          \                                   </a>\n                                    <a
+          href=\"https://www.rottentomatoes.com/tv/the_future_diary_2021\" class=\"unset\"
+          data-qa=\"info-name\" slot=\"title\">\n                                        The
+          Future Diary\n                                    </a>\n                                </search-page-media-row>\n
+          \                           \n                        </ul>\n                        <button
+          slot=\"more-btn\" data-qa=\"search-more-btn\">More TV Shows...</button>\n
+          \                   </search-page-result>\n                \n\n                \n
+          \           </search-page-result-container>\n        \n\n    </section>\n\n
+          \   <section class=\"search__sidebar layout__column layout__column--sidebar\"></section>\n\n
+          \ </div>\n\n\n                </div>\n            </main>\n\n            \n\n
+          \           \n                \n\n            \n\n            <footer class=\"footer
+          container\">\n    <div class=\"footer__content-desktop-block\" data-qa=\"footer:section\">\n
+          \       <div class=\"footer__content-group\">\n            <ul class=\"footer__links-list\">\n
+          \               <li class=\"footer__links-list-item\">\n                    <a
+          href=\"/help_desk\" data-qa=\"footer:link-helpdesk\">Help</a>\n                </li>\n
+          \               <li class=\"footer__links-list-item\">\n                    <a
+          href=\"/about\" data-qa=\"footer:link-about\">About Rotten Tomatoes</a>\n
+          \               </li>\n                <li class=\"footer__links-list-item\">\n
+          \                   <a href=\"/about#whatisthetomatometer\" data-qa=\"footer:link-whats-tmeter\">What's
+          the Tomatometer<sup>&reg;</sup>?</a>\n                </li>\n                <li
+          id=\"footer-feedback\" class=\"footer__links-list-item\">\n                    \n
+          \               </li>\n            </ul>\n        </div>\n        <div class=\"footer__content-group\">\n
+          \           <ul class=\"footer__links-list\">\n                <li class=\"footer__links-list-item\">\n
+          \                   <a href=\"/critics/criteria\" data-qa=\"footer:link-critic-submission\">Critic
+          Submission</a>\n                </li>\n                <li class=\"footer__links-list-item\">\n
+          \                   <a href=\"/help_desk/licensing\" data-qa=\"footer:link-licensing\">Licensing</a>\n
+          \               </li>\n                <li class=\"footer__links-list-item\">\n
+          \                   <a href=\"//www.fandango.com/Advertising.aspx\" target=\"_blank\"
+          data-qa=\"footer:link-ads\">Advertise</a>\n                </li>\n                <li
+          class=\"footer__links-list-item\">\n                    <a href=\"//www.fandango.com/careers\"
+          target=\"_blank\" data-qa=\"footer:link-careers\">Careers</a>\n                </li>\n
+          \           </ul>\n        </div>\n        <div class=\"footer__content-group
+          footer__newsletter-block\">\n            <p class=\"h3 footer__content-group-title\"><span
+          class=\"rt-icon rt-icon__mail footer__newsletter-icon\"></span>Join The Newsletter</p>\n
+          \           <p class=\"footer__newsletter-copy\">Get the freshest reviews,
+          news, and more delivered right to your inbox!</p>\n            <button class=\"js-cognito-join-newsletter
+          button footer__newsletter-btn\" data-qa=\"footer:newsletter-btn\">Join The
+          Newsletter</button>\n            <a href=\"https://optout.services.fandango.com/rottentomatoes\"
+          class=\"button footer__newsletter-btn hide\" data-qa=\"footer:newsletter-btn-signed-in\"><span>Join
+          The Newsletter</span></a>\n        </div>\n        <div class=\"footer__content-group
+          footer__social-block\" data-qa=\"footer:social\">\n            <p class=\"h3
+          footer__content-group-title\">Follow Us</p>\n            <ul class=\"footer__links-list
+          list-inline\">\n                <li class=\"footer__links-list-item\">\n                    <a
+          href=\"//www.facebook.com/rottentomatoes\" aria-label=\"Facebook\" class=\"icon-social
+          rt-icon rt-icon__facebook-squared\" target=\"_blank\" data-qa=\"footer:social-fb\"></a>\n
+          \               </li>\n                <li class=\"footer__links-list-item\">\n
+          \                   <a href=\"//twitter.com/rottentomatoes\" aria-label=\"Twitter\"
+          class=\"icon-social rt-icon rt-icon__twitter\" target=\"_blank\" data-qa=\"footer:social-twitter\"></a>\n
+          \               </li>\n                <li class=\"footer__links-list-item\">\n
+          \                   <a href=\"//www.instagram.com/rottentomatoes/\" aria-label=\"Instagram\"
+          class=\"icon-social rt-icon rt-icon__instagram\" target=\"_blank\" data-qa=\"footer:social-instagram\"></a>\n
+          \               </li>\n                <li class=\"footer__links-list-item\">\n
+          \                   <a href=\"https://www.snapchat.com/add/rottentomatoes\"
+          aria-label=\"Snapchat\" class=\"icon-social rt-icon rt-icon__snapchat\" target=\"_blank\"
+          data-qa=\"footer:social-snapchat\"></a>\n                </li>\n                <li
+          class=\"footer__links-list-item\">\n                    <a href=\"//www.youtube.com/user/rottentomatoes\"
+          aria-label=\"YouTube\" class=\"icon-social rt-icon rt-icon__youtube-play\"
+          target=\"_blank\" data-qa=\"footer:social-yt\"></a>\n                </li>\n
+          \           </ul>\n        </div>\n    </div>\n    <div class=\"footer__content-mobile-block\"
+          data-qa=\"mfooter:section\">\n        <div class=\"footer__content-group\">\n
+          \           <p class=\"footer__copyright-legal\" data-qa=\"mfooter:copyright\">Copyright
+          &copy; Fandango. All rights reserved.</p>\n            <button class=\"button
+          footer__newsletter-btn\" data-qa=\"mfooter:newsletter-btn\">Join Newsletter</button>\n
+          \           <a href=\"https://optout.services.fandango.com/rottentomatoes\"
+          class=\"button footer__newsletter-btn hide\" data-qa=\"mfooter:newsletter-btn-signed-in\">Join
+          Newsletter</a>\n            <ul class=\"footer__links-list list-inline\">\n
+          \               <li class=\"footer__links-list-item\">\n                    <a
+          href=\"//www.fandango.com/policies/privacy-policy\" data-qa=\"mfooter:link-privacy-policy\">\n
+          \                       Privacy Policy\n                    </a>\n                </li>\n
+          \               <li class=\"footer__links-list-item\">\n                    <a
+          href=\"//www.fandango.com/policies/terms-and-policies\" data-qa=\"mfooter:link-terms-policies\">Terms
+          and Policies</a>\n                </li>\n                <li class=\"footer__links-list-item\">\n
+          \                   <a href=\"//www.fandango.com/donotsellmyinfo\" data-qa=\"mfooter:link-ccpa\">Do
+          Not Sell My Info</a>\n                </li>\n                <li class=\"footer__links-list-item\">\n
+          \                   <a href=\"//www.fandango.com/policies/cookies-and-tracking#cookie_management\"
+          data-qa=\"mfooter:link-adChoices\">AdChoices</a>\n                </li>\n
+          \               <li id=\"footer-feedback-mobile\" class=\"footer__links-list-item\">\n
+          \                   \n                </li>\n            </ul>\n        </div>\n
+          \   </div>\n    <div class=\"footer__copyright\">\n        <ul class=\"footer__links-list
+          list-inline list-inline--separator\" data-qa=\"footer:links-list-privacy\">\n
+          \           <li class=\"footer__links-list-item legal\">\n                <span
+          class=\"footer__copyright-legal\" data-qa=\"footer:copyright\">Copyright &copy;
+          Fandango. All rights reserved.</span>\n            </li>\n            <li
+          class=\"footer__links-list-item version\" data-qa=\"footer:version\">\n                <span>V3.1</span>\n
+          \           </li>\n            <li class=\"footer__links-list-item\">\n                <a
+          href=\"//www.fandango.com/policies/privacy-policy\" data-qa=\"footer:link-privacy-policy\">\n
+          \                   Privacy Policy\n                </a>\n            </li>\n
+          \           <li class=\"footer__links-list-item\">\n                <a href=\"//www.fandango.com/policies/terms-and-policies\"
+          data-qa=\"footer:link-terms-policies\">Terms and Policies</a>\n            </li>\n
+          \           <li class=\"footer__links-list-item\">\n                <a href=\"//www.fandango.com/donotsellmyinfo\"
+          data-qa=\"footer:link-ccpa\">Do Not Sell My Info</a>\n            </li>\n
+          \           <li class=\"footer__links-list-item\">\n                <a href=\"//www.fandango.com/policies/cookies-and-tracking#cookie_management\"
+          data-qa=\"footer:link-adChoices\">AdChoices</a>\n            </li>\n        </ul>\n
+          \   </div>\n</footer>\n\n            \n                <nav id=\"mobile-nav\"
+          class=\"js-mobile-nav__body mobile-nav mobile-visible\">\n    <ul id=\"nav-list\"
+          class=\"mobile-nav__list\" data-qa=\"nav-list\">\n        <li class=\"mobile-nav__item\">\n
+          \           <a href=\"/\" class=\"mobile-nav__link \" data-qa=\"mfooternav:home\">\n
+          \               <span class=\"rt-icon rt-icon__home mobile-nav__icon\"></span>\n
+          \               Home\n            </a>\n        </li>\n        <li class=\"mobile-nav__item\">\n
+          \           <a href=\"/browse/in-theaters/\" class=\"mobile-nav__link \" data-qa=\"mfooternav:box-office\">\n
+          \               <span class=\"rt-icon rt-icon__boxoffice mobile-nav__icon\"></span>\n
+          \               Movies\n            </a>\n        </li>\n\n        <li class=\"mobile-nav__item\">\n
+          \           <a href=\"/browse/tv-list-2\" class=\"mobile-nav__link \" data-qa=\"mfooternav:tv\">\n
+          \               <span class=\"rt-icon rt-icon__tv2-1 mobile-nav__icon\"></span>\n
+          \               TV Shows\n            </a>\n        </li>\n        <li class=\"mobile-nav__item
+          mobile-nav__item\">\n            <temporary-display key=\"podcast\" element=\"#podcast-mobile-link\"
+          event=\"click\">\n                <rt-badge hidden>New</rt-badge>\n            </temporary-display>\n
+          \           <a href=\"https://editorial.rottentomatoes.com/article/rotten-tomatoes-is-wrong-a-podcast-from-rotten-tomatoes/\"
+          class=\"mobile-nav__link\" id=\"podcast-mobile-link\" data-qa=\"mfooternav:podcast\">\n
+          \               <span class=\"rt-icon rt-icon__podcast mobile-nav__icon\"></span>\n
+          \               RT Podcast\n            </a>\n        </li>\n        <li class=\"mobile-nav__item\">\n
+          \           <button id=\"menu-btn\" class=\"mobile-nav__link js-mobile-nav__more-btn
+          button--link\" data-qa=\"mfooternav:more\">\n                <span class=\"rt-icon
+          rt-icon__more mobile-nav__icon\"></span>\n                MORE\n            </button>\n
+          \       </li>\n    </ul>\n    <div id=\"mobile-nav-overlay\" class=\"mobile-nav__overlay\">\n
+          \       <!--mobile dropdown-->\n        <ul class=\"mobile-nav__menu-popup\"
+          data-qa=\"mfooternav:menu-drawer\">\n            <li class=\"mobile-nav__item
+          mobile-nav__item--popup\">\n                <a class=\"mobile-nav__inherit-color\"
+          href=\"//editorial.rottentomatoes.com\" data-qa=\"mfooternav:link-news\">News</a>\n
+          \           </li>\n            <li class=\"mobile-nav__item mobile-nav__item--popup
+          hide js-mobile-nav__menu-my-account\">\n                <a class=\"mobile-nav__inherit-color\"
+          href=\"#\" data-qa=\"mfooternav:my-account\">My Account</a>\n            </li>\n
+          \           <li class=\"mobile-nav__item mobile-nav__item--popup mobile-nav__login-social-wrap\">\n
+          \               <button id=\"mobile-nav-sign-up\" class=\"mobile-nav__popup-btn\"
+          data-qa=\"mfooternav:signup\">sign up</button>\n                <button id=\"mobile-nav-login-btn\"
+          class=\"mobile-nav__popup-btn\" data-qa=\"mfooternav:login\">log in</button>\n
+          \               <button id=\"mobile-nav-logout-btn\" class=\"mobile-nav__popup-btn
+          hide\" data-qa=\"mfooternav:logout\">log out</button>\n                <section>\n
+          \                   <a class=\"mobile-nav__inherit-color\" href=\"\" data-qa=\"mfooternav:social-fb\">\n
+          \                       <span class=\"rt-icon rt-icon__facebook-squared mobile-nav__popup-icon\"></span>\n
+          \                   </a>\n                    <a class=\"mobile-nav__inherit-color\"
+          href=\"\" data-qa=\"mfooternav:social-twitter\">\n                        <span
+          class=\"rt-icon rt-icon__twitter mobile-nav__popup-icon\"></span>\n                    </a>\n
+          \               </section>\n            </li>\n        </ul>\n        <!--mobile
+          dropdown end-->\n    </div>\n</nav>\n\n            \n            <aside id=\"social-tools\"
+          class=\"social-tools\" aria-hidden=\"true\">\n    <div class=\"social-tools__facebook-like-btn\"
+          id=\"social-tools-like-btn\">\n        <div class=\"fb-like\" data-href=\"\"
+          data-layout=\"button\" data-action=\"like\" data-size=\"small\" data-show-faces=\"true\"
+          data-share=\"false\"></div>\n    </div>\n    <ul>\n        <li><a class=\"js-social-tools-btn
+          social-tools__btn social-tools__btn--facebook\" title=\"Facebook Share\" data-name=\"facebookShare\"></a></li>\n
+          \       <li><a class=\"js-social-tools-btn social-tools__btn social-tools__btn--twitter\"
+          title=\"Twitter\" data-name=\"twitter\"></a></li>\n        <li><a class=\"js-social-tools-btn
+          social-tools__btn social-tools__btn--pinterest\" title=\"Pinterest\" data-name=\"pinterest\"></a></li>\n
+          \       <li><a class=\"js-social-tools-btn social-tools__btn social-tools__btn--stumbleupon\"
+          title=\"StumbleUpon\" data-name=\"stumbleUpon\"></a></li>\n    </ul>\n</aside>\n\n
+          \       </div>\n\n\n        <!-- Blue Kai -->\n        \n            <iframe
+          name=\"__bkframe\" height=\"0\" width=\"0\" frameborder=\"0\" style=\"display:none;position:absolute;clip:rect(0px
+          0px 0px 0px)\" src=\"about:blank\"></iframe>\n            <script type=\"text/javascript\"
+          src=\"//tags.bkrtx.com/js/bk-coretag.js\"></script>\n        \n\n        <!--
+          End Blue Kai -->\n\n        <!-- PDK -->\n        <script src=\"//pdk.theplatform.com/current/pdk/tpPdkController.js\"></script>\n
+          \       <!-- End PDK -->\n\n        \n    \n        <script type=\"text/javascript\">\n(function
+          (root) {\n/* -- Data -- */\nroot.RottenTomatoes || (root.RottenTomatoes =
+          {});\nroot.RottenTomatoes.context = {\"_routes\":{\"adminManagePeople\":{\"path\":\"https:\\u002F\\u002Fadmin.flixster.com\\u002Fadmin\\u002Fmanage-people?id=:id\",\"tokens\":[{\"literal\":\"https:\\u002F\\u002Fadmin.flixster.com\\u002Fadmin\\u002Fmanage-people?id=\"},{\"key\":\"id\"}]},\"adminMerge\":{\"path\":\"https:\\u002F\\u002Fadmin.flixster.com\\u002Factor\\u002Fmerge?from=:id\",\"tokens\":[{\"literal\":\"https:\\u002F\\u002Fadmin.flixster.com\\u002Factor\\u002Fmerge?from=\"},{\"key\":\"id\"}]},\"baseCanonicalUrl\":{\"path\":\"https:\\u002F\\u002Fwww.rottentomatoes.com\",\"tokens\":[{\"literal\":\"https:\\u002F\\u002Fwww.rottentomatoes.com\"}]},\"webCriticSourceReviewsNapi\":{\"path\":\"\\u002Fnapi\\u002Fcritics\\u002Fsource\\u002F:publicationId\\u002F:filter(movies|tv)\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fcritics\\u002Fsource\\u002F\"},{\"key\":\"publicationId\"},{\"literal\":\"\\u002F\"},{\"key\":\"filter\"}]},\"editorialPageCodeOfConduct\":{\"path\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fotg-article\\u002Fcommunity-code-of-conduct\",\"tokens\":[{\"literal\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fotg-article\\u002Fcommunity-code-of-conduct\"}]},\"editorialPageProductBlog\":{\"path\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Frt-product-blog\",\"tokens\":[{\"literal\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Frt-product-blog\"}]},\"flixsterGeoLocationApi\":{\"path\":\"https:\\u002F\\u002Fapi.flixster.com\\u002Fticketing\\u002Fapi\\u002Fv1\\u002Fgeoip\",\"tokens\":[{\"literal\":\"https:\\u002F\\u002Fapi.flixster.com\\u002Fticketing\\u002Fapi\\u002Fv1\\u002Fgeoip\"}]},\"commonAccountForgotPWNapi\":{\"path\":\"\\u002Fnapi\\u002Faccount\\u002FforgotPassword\\u002F\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Faccount\\u002FforgotPassword\\u002F\"}]},\"commonAccountLoginNapi\":{\"path\":\"\\u002Fnapi\\u002Faccount\\u002Flogin\\u002F\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Faccount\\u002Flogin\\u002F\"}]},\"commonAccountLoginFacebookOauthNapi\":{\"path\":\"\\u002Fnapi\\u002Faccount\\u002FloginFacebookOauth\\u002F\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Faccount\\u002FloginFacebookOauth\\u002F\"}]},\"commonAccountLogoutNapi\":{\"path\":\"\\u002Fnapi\\u002Faccount\\u002Flogout\\u002F\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Faccount\\u002Flogout\\u002F\"}]},\"commonAccountRegisterNapi\":{\"path\":\"\\u002Fnapi\\u002Faccount\\u002Fregister\\u002F\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Faccount\\u002Fregister\\u002F\"}]},\"commonAccountThemePreferencesNapi\":{\"path\":\"\\u002Fnapi\\u002Fpreferences\\u002Fthemes\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fpreferences\\u002Fthemes\"}]},\"commonAccountVerifyTokenNapi\":{\"path\":\"\\u002Fnapi\\u002Faccount\\u002FverifyToken\\u002F\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Faccount\\u002FverifyToken\\u002F\"}]},\"adminMovieDetailMenuNapi\":{\"path\":\"\\u002Fnapi\\u002Fadmin\\u002FmovieDetailPage\\u002F:id\\u002Fmenu\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fadmin\\u002FmovieDetailPage\\u002F\"},{\"key\":\"id\"},{\"literal\":\"\\u002Fmenu\"}]},\"adminTvEpisodeDetailMenuNapi\":{\"path\":\"\\u002Fnapi\\u002Fadmin\\u002FtvEpisodeDetailPage\\u002F:episodeId\\u002F:seasonId\\u002F:seriesId\\u002Fmenu\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fadmin\\u002FtvEpisodeDetailPage\\u002F\"},{\"key\":\"episodeId\"},{\"literal\":\"\\u002F\"},{\"key\":\"seasonId\"},{\"literal\":\"\\u002F\"},{\"key\":\"seriesId\"},{\"literal\":\"\\u002Fmenu\"}]},\"adminTvSeasonDetailMenuNapi\":{\"path\":\"\\u002Fnapi\\u002Fadmin\\u002FtvSeasonDetailPage\\u002F:seasonId\\u002F:seriesId\\u002Fmenu\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fadmin\\u002FtvSeasonDetailPage\\u002F\"},{\"key\":\"seasonId\"},{\"literal\":\"\\u002F\"},{\"key\":\"seriesId\"},{\"literal\":\"\\u002Fmenu\"}]},\"adminTvSeriesDetailMenuNapi\":{\"path\":\"\\u002Fnapi\\u002Fadmin\\u002FtvSeasonDetailPage\\u002F:seriesId\\u002Fmenu\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fadmin\\u002FtvSeasonDetailPage\\u002F\"},{\"key\":\"seriesId\"},{\"literal\":\"\\u002Fmenu\"}]},\"adminFranchiseDetailMenuNapi\":{\"path\":\"\\u002Fnapi\\u002Fadmin\\u002FfranchiseDetailPage\\u002F:franchiseId\\u002Fmenu\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fadmin\\u002FfranchiseDetailPage\\u002F\"},{\"key\":\"franchiseId\"},{\"literal\":\"\\u002Fmenu\"}]},\"commonAutocompleteNapi\":{\"path\":\"\\u002Fnapi\\u002Flocation\\u002Fautocomplete\\u002F:text\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Flocation\\u002Fautocomplete\\u002F\"},{\"key\":\"text\"}]},\"commonReviewFlagNapi\":{\"path\":\"\\u002Fnapi\\u002Freview\\u002Fflag\\u002F\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Freview\\u002Fflag\\u002F\"}]},\"commonGetLocationFromTextNapi\":{\"path\":\"\\u002Fnapi\\u002Flocation\\u002Ftext\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Flocation\\u002Ftext\"}]},\"webShowtimesMoviesNapi\":{\"path\":\"\\u002Fnapi\\u002Fmovies\\u002F:ids\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fmovies\\u002F\"},{\"key\":\"ids\"}]},\"webShowtimesMovieCalendarNapi\":{\"path\":\"\\u002Fnapi\\u002FmovieCalendar\\u002F:title-:id(\\\\d+)\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002FmovieCalendar\\u002F\"},{\"key\":\"title\"},{\"literal\":\"-\"},{\"key\":\"id\"}]},\"webBrowseMovieListDvdAllNapi\":{\"path\":\"\\u002Fnapi\\u002FmovieList\\u002FdvdAll\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002FmovieList\\u002FdvdAll\"}]},\"webBrowseMovieListOpeningNapi\":{\"path\":\"\\u002Fnapi\\u002FmovieList\\u002FOpening\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002FmovieList\\u002FOpening\"}]},\"webBrowseMovieListUpcomingNapi\":{\"path\":\"\\u002Fnapi\\u002FmovieList\\u002FUpcoming\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002FmovieList\\u002FUpcoming\"}]},\"webBrowseMovieListDvdUpcomingNapi\":{\"path\":\"\\u002Fnapi\\u002FmovieList\\u002FdvdUpcoming\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002FmovieList\\u002FdvdUpcoming\"}]},\"webBrowseMovieListDvdCertifiedNapi\":{\"path\":\"\\u002Fnapi\\u002FmovieList\\u002FdvdCertified\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002FmovieList\\u002FdvdCertified\"}]},\"webShowtimesMovieShowtimeGroupingsNapi\":{\"path\":\"\\u002Fnapi\\u002FtheaterShowtimeGroupings\\u002F:id(\\\\d+)\\u002F:startDate\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002FtheaterShowtimeGroupings\\u002F\"},{\"key\":\"id\"},{\"literal\":\"\\u002F\"},{\"key\":\"startDate\"}]},\"webMovieReviewsGetAudienceReviewNapi\":{\"path\":\"\\u002Fnapi\\u002Fmovie\\u002F:movieId\\u002Freviews\\u002F:type(user|verified_audience)\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fmovie\\u002F\"},{\"key\":\"movieId\"},{\"literal\":\"\\u002Freviews\\u002F\"},{\"key\":\"type\"}]},\"webMovieReviewsGetCriticsReviewNapi\":{\"path\":\"\\u002Fnapi\\u002Fmovie\\u002F:movieId\\u002FcriticsReviews\\u002F:type(all|top_critics)\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fmovie\\u002F\"},{\"key\":\"movieId\"},{\"literal\":\"\\u002FcriticsReviews\\u002F\"},{\"key\":\"type\"}]},\"commonTrackingFreewheelPixelSyncNapi\":{\"path\":\"\\u002Fnapi\\u002Ftracking\\u002Ffreewheel\\u002Fpixelsync\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Ftracking\\u002Ffreewheel\\u002Fpixelsync\"}]},\"webTvEpisodeGetReviewsNapi\":{\"path\":\"\\u002Fnapi\\u002Ftv\\u002F:vanity\\u002F:tvSeason\\u002F:tvEpisode\\u002Freviews\\u002F:type(all|top_critics)\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Ftv\\u002F\"},{\"key\":\"vanity\"},{\"literal\":\"\\u002F\"},{\"key\":\"tvSeason\"},{\"literal\":\"\\u002F\"},{\"key\":\"tvEpisode\"},{\"literal\":\"\\u002Freviews\\u002F\"},{\"key\":\"type\"}]},\"webSeasonReviewsGetReviewsNapi\":{\"path\":\"\\u002Fnapi\\u002Ftv\\u002F:vanity\\u002Fseason\\u002F:seasonEmsId\\u002Freviews\\u002F:type(user)\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Ftv\\u002F\"},{\"key\":\"vanity\"},{\"literal\":\"\\u002Fseason\\u002F\"},{\"key\":\"seasonEmsId\"},{\"literal\":\"\\u002Freviews\\u002F\"},{\"key\":\"type\"}]},\"webSeasonReviewsGetCriticsReviewsNapi\":{\"path\":\"\\u002Fnapi\\u002Ftv\\u002F:vanity\\u002Fseason\\u002F:seasonEmsId\\u002FcriticsReviews\\u002F:type(all|top_critics)\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Ftv\\u002F\"},{\"key\":\"vanity\"},{\"literal\":\"\\u002Fseason\\u002F\"},{\"key\":\"seasonEmsId\"},{\"literal\":\"\\u002FcriticsReviews\\u002F\"},{\"key\":\"type\"}]},\"commonSearchNapi\":{\"path\":\"\\u002Fnapi\\u002Fsearch\\u002Fall\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fsearch\\u002Fall\"}]},\"commonSearchAllCategoriesNapi\":{\"path\":\"\\u002Fnapi\\u002Fsearch\\u002F\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fsearch\\u002F\"}]},\"commonSearchTopMoviesDefaultListNapi\":{\"path\":\"\\u002Fnapi\\u002Fsearch\\u002Fdefault-list\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fsearch\\u002Fdefault-list\"}]},\"webShowtimesTheatersWithShowtimesNapi\":{\"path\":\"\\u002Fnapi\\u002FtheatersShowtimes\\u002F:location\\u002F:date\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002FtheatersShowtimes\\u002F\"},{\"key\":\"location\"},{\"literal\":\"\\u002F\"},{\"key\":\"date\"}]},\"webTvSeasonGetEpisodesNapi\":{\"path\":\"\\u002Fnapi\\u002Ftv\\u002F:vanity\\u002F:tvSeason\\u002Fepisodes\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Ftv\\u002F\"},{\"key\":\"vanity\"},{\"literal\":\"\\u002F\"},{\"key\":\"tvSeason\"},{\"literal\":\"\\u002Fepisodes\"}]},\"commonUserEmailConfirmationNapi\":{\"path\":\"\\u002Fnapi\\u002Faccount\\u002FemailConfirmation\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Faccount\\u002FemailConfirmation\"}]},\"commonUserEmailStatusNapi\":{\"path\":\"\\u002Fnapi\\u002Faccount\\u002FemailStatus\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Faccount\\u002FemailStatus\"}]},\"webMovieDetailsUserMovieRatingNapi\":{\"path\":\"\\u002Fnapi\\u002Fuser\\u002Frating\\u002Fmovie\\u002F:movieId(\\\\d+)\\u002F\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fuser\\u002Frating\\u002Fmovie\\u002F\"},{\"key\":\"movieId\"},{\"literal\":\"\\u002F\"}]},\"webTvSeasonUserTvRatingNapi\":{\"path\":\"\\u002Fnapi\\u002Fuser\\u002Frating\\u002Ftv\\u002F:tvId(\\\\d+)\\u002F\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fuser\\u002Frating\\u002Ftv\\u002F\"},{\"key\":\"tvId\"},{\"literal\":\"\\u002F\"}]},\"webTvSeasonUserUpdateTvRatingNapi\":{\"path\":\"\\u002Fnapi\\u002Fuser\\u002Frating\\u002Ftv\\u002FupdateRating\\u002F:tvId(\\\\d+)\\u002F\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fuser\\u002Frating\\u002Ftv\\u002FupdateRating\\u002F\"},{\"key\":\"tvId\"},{\"literal\":\"\\u002F\"}]},\"commonUserWTSCreateNapi\":{\"path\":\"\\u002Fnapi\\u002Fuser\\u002Fwts\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fuser\\u002Fwts\"}]},\"commonUserWTSDeleteNapi\":{\"path\":\"\\u002Fnapi\\u002Fuser\\u002Fwts\\u002Fdelete\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fuser\\u002Fwts\\u002Fdelete\"}]},\"commonUserRatingCreateNapi\":{\"path\":\"\\u002Fnapi\\u002Fuser\\u002Frating\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fuser\\u002Frating\"}]},\"commonUserGetWTSNapi\":{\"path\":\"\\u002Fnapi\\u002Fuser\\u002Fwts\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fuser\\u002Fwts\"}]},\"commonUserInfoNapi\":{\"path\":\"\\u002Fnapi\\u002Fuser\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fuser\"}]},\"commonUserGetRatingNapi\":{\"path\":\"\\u002Fnapi\\u002Fuser\\u002Frating\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002Fuser\\u002Frating\"}]},\"webUserProfileMovieRatingsNapi\":{\"path\":\"\\u002Fnapi\\u002FuserProfile\\u002FmovieRatings\\u002F:userId(\\\\d+)\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002FuserProfile\\u002FmovieRatings\\u002F\"},{\"key\":\"userId\"}]},\"webUserProfileTVRatingsNapi\":{\"path\":\"\\u002Fnapi\\u002FuserProfile\\u002FtvRatings\\u002F:userId(\\\\d+)\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002FuserProfile\\u002FtvRatings\\u002F\"},{\"key\":\"userId\"}]},\"webUserProfileWTSNapi\":{\"path\":\"\\u002Fnapi\\u002FuserProfile\\u002Fwts\\u002F:userId(\\\\d+)\",\"tokens\":[{\"literal\":\"\\u002Fnapi\\u002FuserProfile\\u002Fwts\\u002F\"},{\"key\":\"userId\"}]},\"mediaHoundRecommendations\":{\"path\":\"https:\\u002F\\u002Fapi.mediahound.net\\u002Fgraph\\u002Frelate\",\"tokens\":[{\"literal\":\"https:\\u002F\\u002Fapi.mediahound.net\\u002Fgraph\\u002Frelate\"}]},\"resetClient\":{\"path\":\"\\u002Freset-client\",\"tokens\":[{\"literal\":\"\\u002Freset-client\"}]},\"tvSeasonCriticAddArticle\":{\"path\":\"https:\\u002F\\u002Fwww.rottentomatoes.com\\u002Fcritics\\u002Ftools\\u002Ftv\\u002F?reviewableId=:seasonId\",\"tokens\":[{\"literal\":\"https:\\u002F\\u002Fwww.rottentomatoes.com\\u002Fcritics\\u002Ftools\\u002Ftv\\u002F?reviewableId=\"},{\"key\":\"seasonId\"}]},\"userAccount\":{\"path\":\"https:\\u002F\\u002Fwww.rottentomatoes.com\\u002Fuser\\u002Faccount\\u002F\",\"tokens\":[{\"literal\":\"https:\\u002F\\u002Fwww.rottentomatoes.com\\u002Fuser\\u002Faccount\\u002F\"}]},\"userAccountEmailPrefs\":{\"path\":\"https:\\u002F\\u002Foptout.services.fandango.com\\u002Frottentomatoes\",\"tokens\":[{\"literal\":\"https:\\u002F\\u002Foptout.services.fandango.com\\u002Frottentomatoes\"}]},\"webBrowseTheatersTopBoxOffice\":{\"path\":\"\\u002Fbrowse\\u002Fin-theaters\\u002F\",\"tokens\":[{\"literal\":\"\\u002Fbrowse\\u002Fin-theaters\\u002F\"}]},\"webCritic\":{\"path\":\"\\u002Fcritics\\u002F:vanity\\u002F:type(movies|tv)\",\"tokens\":[{\"literal\":\"\\u002Fcritics\\u002F\"},{\"key\":\"vanity\"},{\"literal\":\"\\u002F\"},{\"key\":\"type\"}]},\"webCriticLanding\":{\"path\":\"\\u002Fcritics\\u002F:vanity\",\"tokens\":[{\"literal\":\"\\u002Fcritics\\u002F\"},{\"key\":\"vanity\"}]},\"webSearchResults\":{\"path\":\"\\u002Fsearch\\u002F\",\"tokens\":[{\"literal\":\"\\u002Fsearch\\u002F\"}]},\"webShowtimes\":{\"path\":\"\\u002Fshowtimes\",\"tokens\":[{\"literal\":\"\\u002Fshowtimes\"}]},\"webCriticSource\":{\"path\":\"\\u002Fcritics\\u002Fsource\\u002F:publicationId\",\"tokens\":[{\"literal\":\"\\u002Fcritics\\u002Fsource\\u002F\"},{\"key\":\"publicationId\"}]}}};\nroot.RottenTomatoes.context
+          || (root.RottenTomatoes.context = {});\nroot.RottenTomatoes.context.layout
+          = {\"header\":{\"editorial\":{\"bestAndWorstNews\":[{\"title\":\"Marvel Movies
+          Ranked Worst to Best by Tomatometer\",\"link\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fguide\\u002Fall-marvel-cinematic-universe-movies-ranked\\u002F\",\"featured_image\":{\"source\":\"https:\\u002F\\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\\u002Fwp-content\\u002Fuploads\\u002F2018\\u002F02\\u002F14193805\\u002FMarvel-Movies-Recall2.jpg\"}},{\"title\":\"All
+          \\u003Cem\\u003EStar Wars\\u003C\\u002Fem\\u003E Movies Ranked Worst to Best
+          By Tomatometer\",\"link\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fguide\\u002Fall-star-wars-movies-ranked\\u002F\",\"featured_image\":{\"source\":\"https:\\u002F\\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\\u002Fwp-content\\u002Fuploads\\u002F2017\\u002F12\\u002F06171712\\u002FStar-Wars-Movies.jpg\"}}],\"guides\":[{\"title\":\"Fall
+          TV\",\"link\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Frt-hub\\u002Ffall-tv\\u002F\",\"featured_image\":{\"source\":\"https:\\u002F\\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\\u002Fwp-content\\u002Fuploads\\u002F2019\\u002F11\\u002F24171414\\u002FRT_fall-tv-2021_600X314.jpg\"}},{\"title\":\"Celebrating
+          Hispanic Heritage\",\"link\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Frt-hub\\u002Fhispanic-heritage\\u002F\",\"featured_image\":{\"source\":\"https:\\u002F\\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\\u002Fwp-content\\u002Fuploads\\u002F2021\\u002F09\\u002F14143917\\u002FRT_HHM_600x314.jpg\"}}],\"newsItems\":[{\"title\":\"6
+          Directions Spider-Man Can Go In The Wake of \\u003Cem\\u003ESpider-Man: No
+          Way Home\\u003C\\u002Fem\\u003E\",\"link\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Farticle\\u002F6-directions-spider-man-can-go-in-the-wake-of-spider-man-no-way-home\\u002F\",\"featured_image\":{\"source\":\"https:\\u002F\\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\\u002Fwp-content\\u002Fuploads\\u002F2021\\u002F12\\u002F23130534\\u002FSpider-Man_NWH_Future.jpg\"}},{\"title\":\"&#8220;Rotten
+          Tomatoes Is Wrong&#8221; About&#8230; The \\u003Cem\\u003EMatrix\\u003C\\u002Fem\\u003E
+          Sequels\",\"link\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Farticle\\u002Frotten-tomatoes-is-wrong-about-the-matrix-sequels\\u002F\",\"featured_image\":{\"source\":\"https:\\u002F\\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\\u002Fwp-content\\u002Fuploads\\u002F2021\\u002F12\\u002F21164720\\u002FPodcast-Matrix_Sequels-Rep.jpg\"}}]},\"trendingTarsSlug\":\"rt-nav-trending\",\"trending\":[{\"header\":\"The
+          Ultimate Binge Guide\",\"url\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Farticle\\u002Fultimate-binge-guide\\u002F\"},{\"header\":\"Best
+          Christmas Movies\",\"url\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fguide\\u002Fbest-christmas-movies\\u002F\"},{\"header\":\"Awards
+          Leaderboard\",\"url\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Farticle\\u002F2021-2022-awards-leaderboard\\u002F\"},{\"header\":\"Nightmare
+          Alley Reviews\",\"url\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Farticle\\u002Fnightmare-alley-first-reviews-a-winning-cast-and-gorgeous-visuals-make-guillermo-del-toros-thriller-shine\\u002F\"}],\"certifiedMedia\":{\"certifiedFreshTvSeason\":{\"header\":null,\"media\":{\"url\":\"\\u002Ftv\\u002Flupin\\u002Fs02\",\"name\":\"Lupin:
+          Season 2\",\"score\":96,\"posterImg\":\"https:\\u002F\\u002Fresizing.flixster.com\\u002Fopj2i4MFeU8LXn_2BQgjVPK1u5M=\\u002Ffit-in\\u002F180x240\\u002Fv2\\u002Fhttps:\\u002F\\u002Fresizing.flixster.com\\u002FFvUX-kMi-cH2PPRZOzRIR1EARGI=\\u002Fems.ZW1zLXByZC1hc3NldHMvdHZzZWFzb24vUlRUVjkxNDYxMy53ZWJw\"},\"tarsSlug\":\"rt-nav-list-cf-picks\"},\"certifiedFreshMovieInTheater\":{\"header\":null,\"media\":{\"url\":\"\\u002Fm\\u002Fblack_widow_2021\",\"name\":\"Black
+          Widow\",\"score\":79,\"posterImg\":\"https:\\u002F\\u002Fresizing.flixster.com\\u002F2Pb2GucTgjUF2PdRJZ2jdCynmTk=\\u002Ffit-in\\u002F180x240\\u002Fv2\\u002Fhttps:\\u002F\\u002Fresizing.flixster.com\\u002F8Cps_AWwNbk0bMzDtqzwRhccnY0=\\u002Fems.ZW1zLXByZC1hc3NldHMvbW92aWVzLzRkMWJjZjI2LWE0MDktNDczZC05ZmNiLTIzMTQ0NTE5MGJiMC5qcGc=\"}},\"certifiedFreshMovieInTheater4\":{\"header\":null,\"media\":{\"url\":\"\\u002Fm\\u002Ffear_street_part_one_1994\",\"name\":\"Fear
+          Street Part One: 1994\",\"score\":83,\"posterImg\":\"https:\\u002F\\u002Fresizing.flixster.com\\u002FoKd2m-d1XbPYTnSHS1gtU46_NrU=\\u002Ffit-in\\u002F180x240\\u002Fv2\\u002Fhttps:\\u002F\\u002Fresizing.flixster.com\\u002FnKBIQdS2aFb1E91-7AAPN2mjEn8=\\u002Fems.ZW1zLXByZC1hc3NldHMvbW92aWVzLzc3YTBmOTNjLWJmYTAtNDAxMy1hNGFhLTk5N2I0MjdhN2FmMi5qcGc=\"}},\"certifiedFreshMovieAtHome\":{\"header\":null,\"media\":{\"url\":\"\\u002Fm\\u002F2001_a_space_odyssey\",\"name\":\"2001:
+          A Space Odyssey\",\"score\":92,\"posterImg\":\"https:\\u002F\\u002Fresizing.flixster.com\\u002FB0XhHX49YgZxHc4xUc6wObl5yg4=\\u002Ffit-in\\u002F180x240\\u002Fv2\\u002Fhttps:\\u002F\\u002Fflxt.tmsimg.com\\u002FNowShowing\\u002F43074\\u002F43074_aa.jpg\"}},\"tarsSlug\":\"rt-nav-list-cf-picks\"},\"tvLists\":{\"newTvTonight\":{\"tarsSlug\":\"rt-hp-text-list-new-tv-this-week\",\"title\":\"New
+          TV Tonight\",\"shows\":[{\"title\":\"Emily in Paris: Season 2\",\"tomatometer\":{\"tomatometer\":54,\"state\":\"rotten\",\"certifiedFresh\":false},\"tvPageUrl\":\"\\u002Ftv\\u002Femily_in_paris\\u002Fs02\"},{\"title\":\"1883:
+          Season 1\",\"tomatometer\":{\"tomatometer\":82,\"state\":\"fresh\",\"certifiedFresh\":false},\"tvPageUrl\":\"\\u002Ftv\\u002F1883\\u002Fs01\"},{\"title\":\"Vigil:
+          Season 1\",\"tomatometer\":{\"tomatometer\":79,\"state\":\"fresh\",\"certifiedFresh\":false},\"tvPageUrl\":\"\\u002Ftv\\u002Fvigil_2021\\u002Fs01\"},{\"title\":\"Dragons:
+          The Nine Realms: Season 1\",\"tomatometer\":{\"tomatometer\":undefined,\"state\":\"\",\"certifiedFresh\":false},\"tvPageUrl\":\"\\u002Ftv\\u002Fdragons_nine_realms\\u002Fs01\"},{\"title\":\"Dynasty:
+          Season 5\",\"tomatometer\":{\"tomatometer\":undefined,\"state\":\"\",\"certifiedFresh\":false},\"tvPageUrl\":\"\\u002Ftv\\u002Fdynasty\\u002Fs05\"}]},\"mostPopularTvOnRt\":{\"tarsSlug\":\"rt-hp-text-list-most-popular-tv-on-rt\",\"title\":\"Most
+          Popular TV on RT\",\"shows\":[{\"title\":\"The Witcher: Season 2\",\"tomatometer\":{\"tomatometer\":94,\"state\":\"certified_fresh\",\"certifiedFresh\":true},\"tvPageUrl\":\"\\u002Ftv\\u002Fthe_witcher\\u002Fs02\"},{\"title\":\"Hawkeye:
+          Season 1\",\"tomatometer\":{\"tomatometer\":92,\"state\":\"certified_fresh\",\"certifiedFresh\":true},\"tvPageUrl\":\"\\u002Ftv\\u002Fhawkeye\\u002Fs01\"},{\"title\":\"Emily
+          in Paris: Season 2\",\"tomatometer\":{\"tomatometer\":54,\"state\":\"rotten\",\"certifiedFresh\":false},\"tvPageUrl\":\"\\u002Ftv\\u002Femily_in_paris\\u002Fs02\"},{\"title\":\"Station
+          Eleven: Season 1\",\"tomatometer\":{\"tomatometer\":97,\"state\":\"certified_fresh\",\"certifiedFresh\":true},\"tvPageUrl\":\"\\u002Ftv\\u002Fstation_eleven\\u002Fs01\"},{\"title\":\"Arcane:
+          League of Legends: Season 1\",\"tomatometer\":{\"tomatometer\":100,\"state\":\"fresh\",\"certifiedFresh\":false},\"tvPageUrl\":\"\\u002Ftv\\u002Farcane_league_of_legends\\u002Fs01\"},{\"title\":\"The
+          Wheel of Time: Season 1\",\"tomatometer\":{\"tomatometer\":82,\"state\":\"certified_fresh\",\"certifiedFresh\":true},\"tvPageUrl\":\"\\u002Ftv\\u002Fthe_wheel_of_time\\u002Fs01\"},{\"title\":\"1883:
+          Season 1\",\"tomatometer\":{\"tomatometer\":82,\"state\":\"fresh\",\"certifiedFresh\":false},\"tvPageUrl\":\"\\u002Ftv\\u002F1883\\u002Fs01\"},{\"title\":\"Yellowstone:
+          Season 4\",\"tomatometer\":{\"tomatometer\":100,\"state\":\"fresh\",\"certifiedFresh\":false},\"tvPageUrl\":\"\\u002Ftv\\u002Fyellowstone\\u002Fs04\"},{\"title\":\"Yellowjackets:
+          Season 1\",\"tomatometer\":{\"tomatometer\":100,\"state\":\"certified_fresh\",\"certifiedFresh\":true},\"tvPageUrl\":\"\\u002Ftv\\u002Fyellowjackets\\u002Fs01\"},{\"title\":\"Landscapers:
+          Season 1\",\"tomatometer\":{\"tomatometer\":97,\"state\":\"certified_fresh\",\"certifiedFresh\":true},\"tvPageUrl\":\"\\u002Ftv\\u002Flandscapers\\u002Fs01\"}]}},\"legacyItems\":{\"tarsSlug\":\"rt-nav-list-tv-episodic-reviews\",\"tv\":{\"mediaLists\":[{},{},{},{\"title\":\"Episodic
+          Reviews\",\"shows\":[{\"link\":\"\\u002Ftv\\u002Famerican_horror_stories\\u002Fs01\",\"showTitle\":\"American
+          Horror Stories: Season 1\"},{\"link\":\"\\u002Ftv\\u002Floki\\u002Fs01\",\"showTitle\":\"Loki:
+          Season 1\"},{\"link\":\"\\u002Ftv\\u002Fstar_wars_the_bad_batch\\u002Fs01\",\"showTitle\":\"Star
+          Wars: The Bad Batch: Season 1\"},{\"link\":\"\\u002Ftv\\u002Fthe_falcon_and_the_winter_soldier\\u002Fs01\",\"showTitle\":\"The
+          Falcon and the Winter Soldier: Season 1\"},{\"link\":\"\\u002Ftv\\u002Fthe_walking_dead\\u002Fs10\",\"showTitle\":\"The
+          Walking Dead: Season 10\"}]}]}}},\"links\":{\"moviesInTheaters\":{\"openingThisWeek\":\"\\u002Fbrowse\\u002Fopening\\u002F\",\"topBoxOffice\":\"\\u002Fbrowse\\u002Fin-theaters\\u002F\",\"comingSoon\":\"\\u002Fbrowse\\u002Fupcoming\\u002F\",\"weekendEarnings\":\"\\u002Fbrowse\\u002Fbox-office\\u002F\",\"certifiedFresh\":\"\\u002Fbrowse\\u002Fcf-in-theaters\\u002F\"},\"onDvdAndStreaming\":{\"all\":\"\\u002Fbrowse\\u002Fdvd-streaming-all\\u002F\",\"top\":\"\\u002Fbrowse\\u002Ftop-dvd-streaming\\u002F\",\"certifiedFresh\":\"\\u002Fbrowse\\u002Fcf-dvd-streaming-all\\u002F\"},\"moreMovies\":{\"topMovies\":\"\\u002Ftop\",\"trailers\":\"\\u002Ftrailers\"},\"tvTonight\":\"\\u002Fbrowse\\u002Ftv-list-1\",\"tvPopular\":\"\\u002Fbrowse\\u002Ftv-list-2\",\"moreTv\":{\"topTv\":\"https:\\u002F\\u002Fwww.rottentomatoes.com\\u002Ftop-tv\",\"certifiedFresh\":\"\\u002Fbrowse\\u002Ftv-list-3\"},\"editorial\":{\"allTimeLists\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fall-time-lists\\u002F\",\"bingeGuide\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fbinge-guide\\u002F\",\"comicsOnTv\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fcomics-on-tv\\u002F\",\"countdown\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fcountdown\\u002F\",\"criticsConsensus\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fcritics-consensus\\u002F\",\"fiveFavoriteFilms\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Ffive-favorite-films\\u002F\",\"guidesHome\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Frt-hubs\\u002F\",\"home\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002F\",\"news\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fnews\\u002F\",\"nowStreaming\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fnow-streaming\\u002F\",\"parentalGuidance\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fparental-guidance\\u002F\",\"podcast\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Farticle\\u002Frotten-tomatoes-is-wrong-a-podcast-from-rotten-tomatoes\\u002F\",\"redCarpetRoundup\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fred-carpet-roundup\\u002F\",\"scorecards\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fmovie-tv-scorecards\\u002F\",\"subCult\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fsub-cult\\u002F\",\"theZeros\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fthe-zeros\\u002F\",\"totalRecall\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Ftotal-recall\\u002F\",\"twentyFourFrames\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002F24-frames\\u002F\",\"videoInterviews\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fvideo-interviews\\u002F\",\"weekendBoxOffice\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fweekend-box-office\\u002F\",\"weeklyKetchup\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fweekly-ketchup\\u002F\",\"whatToWatch\":\"https:\\u002F\\u002Feditorial.rottentomatoes.com\\u002Fwhat-to-watch\\u002F\"}}};\nroot.BK
+          = {\"PageName\":\"http:\\u002F\\u002Fwww.rottentomatoes.com\\u002Fsearch?search=The+Matrix\",\"SiteID\":37528,\"SiteSection\":\"\"};\nroot.RottenTomatoes.thirdParty
+          = {\"chartBeat\":{\"auth\":\"64558\",\"domain\":\"rottentomatoes.com\"},\"facebook\":{\"appId\":\"326803741017\",\"version\":\"v6.0\",\"appName\":\"flixstertomatoes\"},\"mpx\":{\"accountPid\":\"NGweTC\",\"playerPid\":\"y__7B0iQTi4P\",\"playerPidPDK6\":\"pdk6_y__7B0iQTi4P\",\"accountId\":\"2474312077\"},\"algoliaSearch\":{\"aId\":\"79FRDP12PN\",\"sId\":\"175588f6e5f8319b27702e4cc4013561\"},\"cognito\":{\"upId\":\"us-west-2_4L0ZX4b1U\",\"clientId\":\"7pu48v8i2n25t4vhes0edck31c\"}};\nroot.RottenTomatoes.serviceWorker
+          = {\"isServiceWokerOn\":true};\nroot.RottenTomatoes.dtmData = {\"webVersion\":\"node\",\"clicktale\":true,\"rtVersion\":3.1,\"loggedInStatus\":\"\",\"customerId\":\"\"};\nroot.RottenTomatoes.context.useCognito
+          = false;\nroot.RottenTomatoes.context.disableFeatureDetection = true;\nroot.RottenTomatoes.context.reCaptchaConfig
+          = {\"COMPACT_BREAKPOINT\":355,\"SCRIPT_SRC\":\"https:\\u002F\\u002Fwww.google.com\\u002Frecaptcha\\u002Fenterprise.js\",\"SITEKEY\":\"6LdNO4IaAAAAADfSdANONQ1m73X8LoX9rhDlX-6q\",\"THEME\":\"light\",\"WHICH\":\"enterprise\"};\nroot.RottenTomatoes.context.req
+          = {\"params\":{},\"queries\":{\"search\":\"The Matrix\"},\"route\":{},\"url\":\"\\u002Fsearch?search=The+Matrix\",\"secure\":false,\"buildVersion\":undefined};\nroot.RottenTomatoes.context.config
+          = {};\nroot.RottenTomatoes.context.gptSite = \"search\";\n}(this));\n</script>\n\n
+          \       <!--[if IE]>\n        <script src=\"/assets/pizza-pie/javascripts/roma/common/polyfills.js\"></script>\n
+          \       <![endif]-->\n\n        <script src=\"/assets/pizza-pie/javascripts/bundles/roma/vendors.3b4c93a4652.js\"></script>\n\n
+          \       \n            <script src=\"/assets/pizza-pie/javascripts/bundles/roma/micromodal.0554523c3ba.js\"></script>\n
+          \       \n\n        <script src=\"/assets/pizza-pie/javascripts/bundles/roma/templates.a146ff8b546.js\"></script>\n\n
+          \       <script src=\"/assets/pizza-pie/javascripts/bundles/roma/default.9f83b575f90.js\"></script>\n\n
+          \       <script src=\"https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js\"></script>\n
+          \       <script src=\"/assets/pizza-pie/javascripts/bundles/roma/search-algolia.b133a7164fe.js\"></script>\n\n
+          \       \n            <script src=\"/assets/pizza-pie/javascripts/bundles/roma/blueKai.361b26dbc6d.js\"></script>\n
+          \       \n\n        \n            <script src=\"/assets/pizza-pie/javascripts/bundles/roma/chartbeat.692f1df566a.js\"></script>\n
+          \       \n\n        \n\n    <script src=\"/assets/pizza-pie/javascripts/bundles/search.ff9d95e898a.js\"></script>\n\n\n
+          \       \n            <script>\n                if (window.mps && typeof window.mps.writeFooter
+          === 'function') {\n                    window.mps.writeFooter();\n                }\n
+          \           </script>\n        \n\n        <script>\n            window._satellite
+          && _satellite.pageBottom();\n        </script>\n\n        \n    <script type=\"text/javascript\"
+          \ src=\"/T0VTSr_I2mfVJ-vxvw/9JX3cNt8/DVFVDD0DAQ/NAxSeyQT/FE4B\"></script></body>\n</html>\n"
+      headers:
+        Connection:
+          - keep-alive
+        Content-Encoding:
+          - gzip
+        Content-Length:
+          - "23007"
+        Content-Type:
+          - text/html; charset=utf-8
+        Date:
+          - Fri, 24 Dec 2021 09:05:27 GMT
+        Etag:
+          - W/"20172-U6MEAkzQL5hgiLX16To4kZXz9Wg"
+        Set-Cookie:
+          - akamai_generated_location={"zip":"""","city":"CANTERBURY","state":"EN","county":"""","areacode":"""","lat":"51.27","long":"1.08","countrycode":"GB"};
+            expires=Sun, 23-Jan-2022 09:05:27 GMT; path=/; domain=.rottentomatoes.com;
+            secure
+          - akacd_RTReplatform=2177452799~rv=39~id=62f4d67e9e57e2453788c32dbe32d6a5; path=/;
+            Expires=Mon, 31 Dec 2038 23:59:59 GMT; Secure; SameSite=None
+          - _abck=F0147F7A70F8536351E80DFBA31D79E4~-1~YAAQXKcQAlUs8cV9AQAAPR+w6weMnvXEquHZ9mEjdT6eMIWJavqSjlaGoPGDPT0QSM3sC+gmFYtdQTE1lju6p7psznvkmlsD7zhXShbYl7Z+TJ3OLsZMg+Juu9qpSlwxHUrnOQnktkcRlczcHlhQ4pwjh7hQP0ejDumTeHANewHRS0Vs78SkGrTj+9Jdx+xJqIrSe6Gvut/g1YxNWLCJBhVIJB7SV7SiiWUJ+FjVHLF/2RKDKe+q3pSBhhffGlTwbJ/irdGMRNfwSe4+e7MGVufGNmHv1CnOCZn75su56TZW4MVXSuqyE0aT8hNL11tL1fReApjr4MLDIFKowGkLrnBac4wsgiM5UlwXXSXR5d5p57DTaEZ9w6NvUq1WL7SrqQ==~-1~-1~-1;
+            Domain=.rottentomatoes.com; Path=/; Expires=Sat, 24 Dec 2022 09:05:27 GMT;
+            Max-Age=31536000; Secure
+          - bm_sz=4E19F68F21214748BC6182E64403307D~YAAQXKcQAlYs8cV9AQAAPR+w6w7FsuhNChXyqmrXWKN+EJrPkO/qyYJKbx6DE55tScKEznA3/8Kgf9oVDY8tRXVnuJ4eTifGD+8ge7WSvsT+duRni9F3p5nE5ibGEZ/K5Qajqugv2kVIH7lcMJ3vqwD5XaN/J+NGbW+veSAoS6FYjdMirtyWI2phb1tydCbD8Eau4NNzBG5siw9Ct5TDHZ5O9k+K3nD5ZaEIlhE4l2TnxpL1bTyZjHjaX/pu2+XNGmXz3Qc21PgvRgFFuR0BEH/FsUBYiC7r9iBO6qvIxgU2WC/CQY+16LZD6w==~4277315~4272953;
+            Domain=.rottentomatoes.com; Path=/; Expires=Fri, 24 Dec 2021 13:05:27 GMT;
+            Max-Age=14400
+        Strict-Transport-Security:
+          - max-age=31536000 ; includeSubDomains
+        Vary:
+          - Accept-Encoding
+        X-Akamai-Transformed:
+          - 9 22952 0 pmb=mTOE,1
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - SAMEORIGIN
+        X-Response-Time:
+          - 9.576ms
+      status:
+        code: 200
+        message: OK
+      url: https://www.rottentomatoes.com/search?search=The+Matrix
+version: 1

@@ -1,4 +1,5 @@
 """Tests for the Rt class."""
+import pytest
 import vcr
 from tests.conftest import FIXTURES_DIR
 
@@ -18,6 +19,7 @@ class TestInit:
         Then the match is selected and low confidence remains False
         """
         rot_tom = Rt("The Matrix")
+        rot_tom.load_data()
 
         assert rot_tom.title == "The Matrix"
         assert rot_tom.low_confidence is False
@@ -30,6 +32,7 @@ class TestInit:
         Then the match is selected
         """
         rot_tom = Rt("  The mAtrix  ")
+        rot_tom.load_data()
 
         assert rot_tom.title == "The Matrix"
         assert rot_tom.low_confidence is False
@@ -42,6 +45,7 @@ class TestInit:
         Then the first match with a tomato score is selected and low confidence is True
         """
         rot_tom = Rt("The Matrix Resuur")
+        rot_tom.load_data()
 
         assert rot_tom.title == "The Matrix Resurrections"
         assert rot_tom.low_confidence is True
@@ -57,10 +61,11 @@ class TestYearMatching:
         When the source is instantiated
         Then the year is the preferred method of matching
         """
-        mtc = Rt(raw_title="Dune", raw_year=2021)
+        rot_tom = Rt(raw_title="Dune", raw_year=2021)
+        rot_tom.load_data()
 
-        assert mtc.title == "Dune"
-        assert mtc.year == "2021"
+        assert rot_tom.title == "Dune"
+        assert rot_tom.year == "2021"
 
     @vcr.use_cassette(f"{VCR_FIXTURES_DIR}/dune_1984.yaml")
     def test_year_match_not_first_result(self) -> None:
@@ -69,10 +74,11 @@ class TestYearMatching:
         When the source is instantiated
         Then the year is the preferred method of matching
         """
-        mtc = Rt(raw_title="Dune", raw_year=1984)
+        rot_tom = Rt(raw_title="Dune", raw_year=1984)
+        rot_tom.load_data()
 
-        assert mtc.title == "Dune"
-        assert mtc.year == "1984"
+        assert rot_tom.title == "Dune"
+        assert rot_tom.year == "1984"
 
 
 class TestTitle:
@@ -86,6 +92,7 @@ class TestTitle:
         Then None is returned
         """
         rot_tom = Rt("asldkjaskdnlaskdjaslkjdas")
+        rot_tom.load_data()
 
         assert rot_tom.title is None
 
@@ -101,6 +108,7 @@ class TestYear:
         Then the year can be returned
         """
         rot_tom = Rt("The Matrix")
+        rot_tom.load_data()
 
         assert rot_tom.year == "1999"
 
@@ -112,6 +120,7 @@ class TestYear:
         Then None is returned
         """
         rot_tom = Rt("asldkjaskdnlaskdjaslkjdas")
+        rot_tom.load_data()
 
         assert rot_tom.year is None
 
@@ -127,6 +136,7 @@ class TestTomatoScore:
         Then the score is returned
         """
         rot_tom = Rt("The Matrix")
+        rot_tom.load_data()
 
         assert rot_tom.tomato_score == "88"
 
@@ -138,5 +148,23 @@ class TestTomatoScore:
         Then None is returned
         """
         rot_tom = Rt("asldkjaskdnlaskdjaslkjdas")
+        rot_tom.load_data()
 
         assert rot_tom.tomato_score is None
+
+
+@pytest.mark.asyncio
+class TestAsyncLoadData:
+    """Tests for the `async_load_data` method."""
+
+    @vcr.use_cassette(f"{VCR_FIXTURES_DIR}/async_matrix.yaml")
+    async def test_success(self) -> None:
+        """
+        Given a raw title with exact match,
+        When the `async_load_data` method is invoked,
+        Then the match is selected asynchronously
+        """
+        rot_tom = Rt("The Matrix")
+        await rot_tom.async_load_data()
+
+        assert rot_tom.title == "The Matrix"

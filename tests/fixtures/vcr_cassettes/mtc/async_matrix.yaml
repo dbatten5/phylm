@@ -1,0 +1,1424 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        User-agent:
+          - Mozilla/5.0
+      method: GET
+      uri: https://www.metacritic.com/search/movie/The+Matrix/results
+    response:
+      body:
+        string:
+          "<!DOCTYPE html>\n<html xmlns:og=\"http://opengraphprotocol.org/schema/\"
+          xmlns:fb=\"http://ogp.me/ns/fb#\">\n<head>\n            <title>The Matrix
+          - Reviews, Articles, People, Trailers and more at Metacritic - Metacritic</title>\n
+          \       \n    <meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">\n\n
+          \   \n    <meta name=\"description\" content=\"Search results for The Matrix
+          at Metacritic.com\">\n\n    \n    <meta  name=\"robots\" content=\"NOINDEX,
+          FOLLOW\">\n\n    \n    <meta name=\"application-name\" content=\"Metacritic\">\n
+          \   <meta name=\"msapplication-TileColor\" content=\"#000000\">\n    <meta
+          name=\"msapplication-TileImage\" content=\"/images/win8tile/76bf1426-2886-4b87-ae1c-06424b6bb8a2.png\">\n\n
+          \   \n    \n    \n    \n        \n    \n\n    \n                           \n
+          \                       \n    \n    \n    \n<link rel=\"dns-prefetch\" href=\"//cdn.cookielaw.org\"
+          pr=\"1\">\n<link rel=\"dns-prefetch\" href=\"//geolocation.onetrust.com\"
+          pr=\"1\">\n<link rel=\"preload\" href=\"//cdn.cookielaw.org/scripttemplates/otSDKStub.js\"
+          pr=\"1\" as=\"script\" crossorigin>\n<link rel=\"preload\" type=\"application/x-javascript\"
+          href=\"//cdn.cookielaw.org/consent/099cf09d-47b1-46c4-89e9-9f2cce394562/099cf09d-47b1-46c4-89e9-9f2cce394562.json\"
+          pr=\"1\" as=\"fetch\" crossorigin=\"anonymous\" data-no-header>\n<link rel=\"preload\"
+          as=\"script\" type=\"text/javascript\" href=\"https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location\"
+          data-no-header>\n\n    \n<script\n    src=\"https://cdn.cookielaw.org/scripttemplates/otSDKStub.js\"\n
+          \   type=\"text/javascript\"\n    charset=\"UTF-8\"\n    data-domain-script=\"099cf09d-47b1-46c4-89e9-9f2cce394562\"\n
+          \   async\n>\n</script>\n\n\n<script type=\"application/javascript\">\n    \n
+          \   (function(a){\n        var w=window,b='cbsoptanon',q='cmd',r='config';\n
+          \       w[b] = w[b] ? w[b] : {};\n        w[b][q] = w[b][q] ? w[b][q] : [];\n
+          \       w[b][r] = w[b][r] ? w[b][r] : [];\n\n        a.forEach(function(z){\n
+          \           w[b][z] = w[b][z] || function(){\n                var c=arguments;\n
+          \               w[b][q].push(function(){\n                    w[b][z].apply(w[b],c);\n
+          \               })\n            }\n        });\n    })([\"onIframesReady\",\"onFormsReady\",\"onScriptsReady\",\"onAdsReady\"]);\n\n
+          \   //Add configs\n    window.cbsoptanon.config.push({\n        setNpaOnConsentChange:
+          true,\n        euMaxAttempts: 25,\n        countryCodeMaxAttempts: 25,\n        oneTrustTimeout:
+          2000,\n        enableServices: false\n    });\n\n    //Load iframes as soon
+          as ready\n    window.cbsoptanon.onIframesReady(function(_cbsoptanon) {\n        console.log('Loading
+          iframes');\n        _cbsoptanon.tags.load(\"IFRAME\");\n    });\n\n    window.MetaC
+          = window.MetaC || {};\n    MetaC.scriptExecuted = {};\n\n    function gdprConsentCallback(id,
+          callback, callbackArgs, category, onReady) {\n        onReady = onReady ||
+          'Scripts';\n        var opt = window.cbsoptanon['on'+onReady+'Ready'];\n        MetaC.scriptExecuted[id]
+          = false;\n\n        opt(function(_cbsoptanon, options) {\n            //If
+          we have categories we need to check if they are allowed\n            if (category
+          != null) {\n                //Gets the current state of all categories\n                var
+          checkState = function () {\n                    _cbsoptanon.ot.getState(function
+          (targeting, performance, functional, social) {\n                        var
+          obj = {\n                            targeting: targeting,\n                            performance:
+          performance,\n                            functional: functional,\n                            social:
+          social\n                        };\n\n                        if (obj[category.toLowerCase()])
+          {\n                            window.MetaC.scriptExecuted[id] = true;\n                            callback.apply(this,
+          [callbackArgs, _cbsoptanon, options]);\n                        }\n                    });\n
+          \               };\n\n                checkState();\n\n                _cbsoptanon.ot.addOnConsentChangedHandler(function()
+          {\n                    if (window.MetaC.scriptExecuted[id] !== true) {\n                        checkState();\n
+          \                   }\n                });\n            } else {\n                //Just
+          waiting for on ready fire callback\n                callback.apply(this, [callbackArgs,
+          _cbsoptanon, options]);\n            }\n        });\n    }\n\n    // Function
+          to add scripts to the page\n    function append(scriptid,url,async){var d=document,sn='script',f=d.getElementsByTagName(sn)[0];if(!f)f=d.head;var
+          s=d.createElement(sn);s.async=!0;s.id=scriptid;s.src=url;f.parentNode.insertBefore(s,f)}\n
+          \   // Set up Googletag cmd queue and init with disabling initial load\n    \n
+          \   \n    window.googletag = window.googletag || {};\n    googletag.cmd =
+          googletag.cmd || [];\n    googletag.cmd.push(function() {\n        googletag.pubads().disableInitialLoad();\n
+          \   });\n    \n</script>\n\n<script src=\"https://www.metacritic.com/a/privacy/optanon/optanon-v1.1.0.js\"
+          id=\"bb-cbsoptanon\" type=\"application/javascript\" async></script>\n    \n<script
+          type=\"text/javascript\" src=\"/js/omniture/uuid.js\"></script>\n<script type=\"application/javascript\">\n
+          \   \n    var MC_UUID = uuid.v1();\n    var chsn_ad_id = MC_UUID;\n    var
+          utag_data = {\n        isDev:0,\n        siteType:\"desktop web\",\n        deviceType:\"desktop\",\n
+          \       siteSection:\"movies\",\n        pageType:\"search\",\n        pageFindingMethod:\"External\",\n
+          \       searchEventSearch:\"1\",userId:\"\",userState:\"not authenticated\",userType:\"registered\",searchTerm:\"The
+          Matrix\",sitePromotionId:\"Best of 2021 - User Poll\",_test:\"redesign|movie|old\",pageViewGuid:MC_UUID\n
+          \   };\n    \n</script>\n\n        \n<script type=\"application/javascript\">\n
+          \   window.mPulseKeyConfig = {\n        apiKey: '9XV6E-QB382-DERTX-NDA24-ZYS7B',\n
+          \       RestApiSecretKey: '24e8d927-29c8-4452-bd73-5df587e5986a'\n    };\n
+          \   window.mPulseEnabled = true;\n</script>\n\n<script type=\"application/javascript\">\n
+          \       window.BOOMR_config = {\n            Errors: {\n                enabled:
+          true,\n                monitorGlobal: true,  // onerror\n                monitorNetwork:
+          false, // XHRs\n                monitorConsole: true, // window.console.error\n
+          \               monitorEvents: false,  // addEventListener\n                monitorTimeout:
+          false, // setTimeout, setInterval\n                maxErrors: 10,         //
+          max errors sent per page\n                onError: function(err) {\n                    var
+          text = err.message || \"\";\n                    return text.indexOf(\".metacritic.com\")
+          !== -1 &&         //first party\n                            text.indexOf(\"Script
+          error\") === -1 &&           //not a script error\n                            text.indexOf(\"Load
+          timeout for modules\") === -1; //not a load timeout\n                }\n            }\n
+          \       };\n\n        \n        \n        \n        (function(){\n            if
+          (window.BOOMR && window.BOOMR.version) { return; }\n            var dom,doc,where,iframe
+          = document.createElement(\"iframe\"),win = window;\n\n            function
+          boomerangSaveLoadTime(e) {\n                win.BOOMR_onload=(e && e.timeStamp)
+          || new Date().getTime();\n            }\n            if (win.addEventListener)
+          {\n                win.addEventListener(\"load\", boomerangSaveLoadTime, false);\n
+          \           } else if (win.attachEvent) {\n                win.attachEvent(\"onload\",
+          boomerangSaveLoadTime);\n            }\n\n            iframe.src = \"javascript:void(0)\";\n
+          \           iframe.title = \"\"; iframe.role = \"presentation\";\n            (iframe.frameElement
+          || iframe).style.cssText = \"width:0;height:0;border:0;display:none;\";\n
+          \           where = document.getElementsByTagName(\"script\")[0];\n            where.parentNode.insertBefore(iframe,
+          where);\n\n            try {\n                doc = iframe.contentWindow.document;\n
+          \           } catch(e) {\n                dom = document.domain;\n                iframe.src=\"javascript:var
+          d=document.open();d.domain='\"+dom+\"';void(0);\";\n                doc =
+          iframe.contentWindow.document;\n            }\n            doc.open()._l =
+          function() {\n                var js = this.createElement(\"script\");\n                if
+          (dom) { this.domain = dom; }\n                js.id = \"boomr-if-as\";\n                js.src
+          = \"//c.go-mpulse.net/boomerang/\" + window.mPulseKeyConfig.apiKey;\n                BOOMR_lstart=new
+          Date().getTime();\n                this.body.appendChild(js);\n            };\n
+          \           doc.write('<body onload=\"document._l();\">');\n            doc.close();\n
+          \       })();\n    </script>\n    \n    <script type=\"application/javascript\">\n
+          \       \n        // Cohesion\n        gdprConsentCallback('cohesion', function(){!function(co,h,e,s,i,o,n){var
+          d='documentElement';var a='className';h[d][a]+=' preampjs fusejs';    n.k=e;co._Cohesion=n;co._Preamp={k:s,start:new
+          Date};co._Fuse={k:i};co._Tagular={k:o};    [e,s,i,o].map(function(x){co[x]=co[x]||function(){(co[x].q=co[x].q||[]).push([].slice.call(arguments))}});
+          \   h.addEventListener('DOMContentLoaded',function(){co.setTimeout(function(){
+          \   var u=h[d][a];h[d][a]=u.replace(/ ?preampjs| ?fusejs/g,'')},3e3);    co._Preamp.docReady=co._Fuse.docReady=!0});var
+          z=h.createElement('script');z.async=1;z.src='https://cdn.cohesionapps.com/cohesion/cohesion-latest.min.js';h.head.appendChild(z);}
+          \   (window,document,'cohesion','preamp','fuse','tagular',{        tagular:{writeKey:'wk_1kZD6f0kbCS51mSEsdaRjWBbY4r',
+          sourceKey:'src_1kZD6ZLXVCIj0d2XTZb7WONLbaA', apiVersion: 'v2/t'}    })}, {},
+          'performance');\n        // GPT/DFP ads\n        append('gpt-lib', (('https:'
+          == document.location.protocol)?'https:':'http:') + '//securepubads.g.doubleclick.net/tag/js/gpt.js',
+          true);\n        // Google Analytics\n        function loadVendorGoogleAnalytics()
+          { append('ga-lib', (('https:' == document.location.protocol)?'https://ssl':'http://www')
+          + '.google-analytics.com/ga.js', true); }\n        gdprConsentCallback('google-analytics',
+          loadVendorGoogleAnalytics, {}, 'performance');\n        \n    </script>\n\n
+          \   <script src=\"//code.jquery.com/jquery-2.2.0.min.js\"></script>\n\n    <link
+          rel=\"stylesheet\" href=\"/css/global_alt.min.1633026097.css\" type=\"text/css\">\n
+          \   <script type=\"text/javascript\" src=\"/js/global_alt.min.1633026097.js\"></script>\n\n
+          \   \n    \n    <link rel=\"stylesheet\" href=\"//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\">\n
+          \   \n\n    \n    <link rel=\"stylesheet\" href=\"/css/fonts/proxima-nova/stylesheet.css\"
+          type=\"text/css\" charset=\"utf-8\" />\n    <link rel=\"stylesheet\" href=\"/css/video/uvp_custom_controls_3_1.css\"
+          type=\"text/css\" charset=\"utf-8\" />\n\n    \n    <link rel=\"icon\" href=\"/MC_favicon.png\"/>\n\n
+          \   <script type=\"text/javascript\">\n        \n    \tMC_USER_LOGGED_IN =
+          false;\n        \n        \n        \n        window.metac_ads_pushdisplay
+          = window.metac_ads_pushdisplay || [];\n        var googletag = googletag ||
+          {};\n        googletag.cmd = googletag.cmd || [];\n        \n    </script>\n\n
+          \   \n    \n    <script src=\"https://www.metacritic.com/a/video-player/uvpjs-rv/3.1.8/video-player.js\"></script>\n
+          \   <script type=\"text/javascript\" src=\"//imasdk.googleapis.com/js/sdkloader/ima3.js\"></script>\n</head>\n<body
+          class=\"skybox-auto-collapse\">\n\n     \n    <div id=\"nav_ad_wrapper\">\n
+          \                               </div>\n\n    \n    <div id=\"page\"  class=\"page_flex\">\n
+          \       \n        <div id=\"content_header_wrapper\"  class=\"flex_grow_auto\">\n
+          \           <header id=\"top_header\">\n    <nav id=\"primary_nav\">\n        <nav
+          id=\"primary_logo\" class=\"primary_nav_item\">\n            <a class=\"mc-logo\"
+          href=\"https://www.metacritic.com\"><img src=\"/images/icons/metacritic-icon.svg\"
+          alt=\"Metacritic logo\"></a>\n            <a class=\"mc-wordmark\" href=\"https://www.metacritic.com\"><img
+          src=\"/images/icons/metacritic-wordmark.svg\" alt=\"Metacritic logo\"></a>\n
+          \       </nav>\n\n        <nav id=\"primary_search\" class=\"primary_nav_item\">\n
+          \           <div class=\"rounded_field\">\n                <div class=\"imgs\">\n
+          \                   <img class=\"inactive\" src=\"/images/icons/search_inactive.svg\"
+          alt=\"search\">\n                </div>\n                <div class=\"field
+          innerLabel\">\n                    <div class=\"input_wrapper\">\n                        <form
+          action=\"/search\" method=\"post\" autocomplete=\"off\">\n                            <label
+          for=\"primary_search_box\">search...</label>\n                            <input
+          name=\"search_term\" id=\"primary_search_box\" autocomplete=\"off\"\n                                value=\"The
+          Matrix\" onClick=\"this.select();\"                            >\n                            <input
+          type=\"hidden\" name=\"search_filter\" value=\"all\">\n                        </form>\n
+          \                   </div>\n                </div>\n            </div>\n            <div
+          id=\"primary_search_results\">\n\n            </div>\n        </nav>\n\n        <nav
+          id=\"primary_nav_wrapper\">\n                                            <nav
+          id=\"primary_nav_item_games\" class=\"primary_nav_item\">\n                    <span
+          class=\"primary_nav_text\">\n                        \n                            Games\n\n
+          \                   </span>\n\n                                                    <nav
+          class=\"primary_drop_down masked\">\n                                <div
+          class=\"mask-container\" section=\"header-games\">\n                                    <div
+          class=\"mask-section\">\n                                        <div class=\"column
+          feature\">\n                                                                                                                                                                                                \n
+          \                                                   <a href=\"/pictures/worst-video-games-of-2021\"
+          class=\"feature-img-container\" section=\"articles\">\n                                                        <img
+          class=\"primary_feature_img\" src=\"https://static.metacritic.com/images/features/main/worst2021games-180.jpg\"
+          alt=\"The 10 Worst Video Games of 2021 Image\" />\n                                                    </a>\n
+          \                                                   <span class=\"primary_feature_text\"
+          section=\"articles\"><a href=\"/pictures/worst-video-games-of-2021\">The 10
+          Worst Video Games of 2021</a></span>\n                                                    <a
+          class=\"reports-see-all\" href=\"/features\" section=\"see_all_articles\">See
+          All Reports</a>\n                                                                                                                                    </div>\n
+          \                                       <div class=\"column subnav\">\n                                            <ul>\n
+          \                                               <li><a href=\"/game\" section=\"home\">Games
+          Home >></a></li>\n                                                <li><a href=\"/browse/games/release-date/new-releases/all/date\"
+          section=\"New Releases\">New Releases</a></li>\n                                                <li><a
+          href=\"/browse/games/release-date/coming-soon/all/date\" section=\"Coming
+          Soon\">Coming Soon</a></li>\n                                                <h3><p>Best...</p></h3>\n
+          \                                               <li><a href=\"/browse/games/score/metascore/year/all/filtered\"
+          section=\"Games This Year\">Games This Year</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/all/filtered\" section=\"Games of
+          All Time\">Games of All Time</a></li>\n                                                <li><a
+          href=\"/browse/games/genre/metascore/action/all\" section=\"Games by Genre\">Games
+          by Genre</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/90day/all/filtered\" section=\"New Games\">New
+          Games</a></li>\n                                                <h3><p>More...</p></h3>\n
+          \                                               <li><a href=\"/feature/new-free-games-playstation-xbox-pc-switch\"
+          section=\"New Free Games This Month\">New Free Games This Month</a></li>\n
+          \                                               <li><a href=\"/browse/games/score/userscore/90day/filtered\"
+          section=\"User's Best New Games\">User's Best New Games</a></li>\n                                                <li><a
+          href=\"/browse/games/score/userscore/all/filtered\" section=\"User's Best
+          Games of All Time\">User's Best Games of All Time</a></li>\n                                            </ul>\n
+          \                                       </div>\n                                        <div
+          class=\"column platforms\">\n                                            <ul>\n
+          \                                               <li class=\"title\">Platforms:<li>\n
+          \                                               <li><label for=\"game_ps4_open\"
+          class=\"mc_nav_picks\" data-href=\"/game/playstation-4?nav-picks\">PS4</label></li>\n
+          \                                               <li><label for=\"game_ps5_open\"
+          class=\"mc_nav_picks\" data-href=\"/game/playstation-5?nav-picks\">PS5</label></li>\n
+          \                                               <li><label for=\"game_xone_open\"
+          class=\"mc_nav_picks\" data-href=\"/game/xbox-one?nav-picks\">Xbox One</label></li>\n
+          \                                               <li><label for=\"game_xboxx_open\"
+          class=\"mc_nav_picks\" data-href=\"/game/xbox-series-x?nav-picks\">Xbox Series
+          X</label></li>\n                                                <li><label
+          for=\"game_switch_open\" class=\"mc_nav_picks\" data-href=\"/game/switch?nav-picks\">Switch</label></li>\n
+          \                                               <li><label for=\"game_pc_open\"
+          class=\"mc_nav_picks\" data-href=\"/game/pc?nav-picks\">PC</label></li>\n
+          \                                               <li><label for=\"game_legacy_open\">More...</label></li>\n
+          \                                           </ul>\n                                        </div>\n
+          \                                       <div class=\"column top-five\">\n
+          \                                       \n                                                                                                                                                            \n
+          \                                                                                                                                                                               <h3>Top\n
+          \       Games\n     Right Now</h3>\n<div class=\"top-five\" section=top_games>\n
+          \                   \n<div class=\"item\">\n    <a href=\"/game/xbox-series-x/forza-horizon-5\">\n\n
+          \       <div class=\"img-wrap\">\n            <img src=\"https://static.metacritic.com/images/products/games/3/c3a8634bbf83888742c8fc7290559202-98.jpg\"
+          alt=\"Forza Horizon 5\" />\n                                <img src=\"/images/icons/mc-mustplay-sm.svg\"
+          class=\"must-see-list\" />\n                    </div>\n\n                    <div
+          class=\"product-name\">\n                Forza Horizon 5\n            </div>\n
+          \       \n        <div class=\"mid\">\n                     \n        </div>\n
+          \   </a>\n</div>\n\n                    \n<div class=\"item\">\n    <a href=\"/game/playstation-5/final-fantasy-xiv-endwalker\">\n\n
+          \       <div class=\"img-wrap\">\n            <img src=\"https://static.metacritic.com/images/products/games/7/e8159d7deef2e0ad60132484fa4f7bec-98.jpg\"
+          alt=\"Final Fantasy XIV: Endwalker\" />\n                            \n\n
+          \       \n<div class=\"metascore_w medium game positive\">92</div>\n\n                    </div>\n\n
+          \                   <div class=\"product-name\">\n                Final Fantasy
+          XIV: Endwalker\n            </div>\n        \n        <div class=\"mid\">\n
+          \                    \n        </div>\n    </a>\n</div>\n\n                    \n<div
+          class=\"item\">\n    <a href=\"/game/xbox-series-x/halo-infinite\">\n\n        <div
+          class=\"img-wrap\">\n            <img src=\"https://static.metacritic.com/images/products/games/4/2f478401a538d7adb4c9e031b7fd6432-98.jpg\"
+          alt=\"Halo Infinite\" />\n                            \n\n        \n<div class=\"metascore_w
+          medium game positive\">87</div>\n\n                    </div>\n\n                    <div
+          class=\"product-name\">\n                Halo Infinite\n            </div>\n
+          \       \n        <div class=\"mid\">\n                     \n        </div>\n
+          \   </a>\n</div>\n\n                    \n<div class=\"item\">\n    <a href=\"/game/pc/shovel-knight-pocket-dungeon\">\n\n
+          \       <div class=\"img-wrap\">\n            <img src=\"https://static.metacritic.com/images/products/games/7/ceb60d8f2681b7ea0eadee61b8073872-98.jpg\"
+          alt=\"Shovel Knight Pocket Dungeon\" />\n                            \n\n
+          \       \n<div class=\"metascore_w medium game positive\">84</div>\n\n                    </div>\n\n
+          \                   <div class=\"product-name\">\n                Shovel Knight
+          Pocket Dungeon\n            </div>\n        \n        <div class=\"mid\">\n
+          \                    \n        </div>\n    </a>\n</div>\n\n                    \n<div
+          class=\"item last\">\n    <a href=\"/game/xbox-series-x/the-gunk\">\n\n        <div
+          class=\"img-wrap\">\n            <img src=\"https://static.metacritic.com/images/products/games/2/9649513feae4fbcfade151166023c902-98.jpg\"
+          alt=\"The Gunk\" />\n                            \n\n        \n<div class=\"metascore_w
+          medium game mixed\">71</div>\n\n                    </div>\n\n                    <div
+          class=\"product-name\">\n                The Gunk\n            </div>\n        \n
+          \       <div class=\"mid\">\n                     \n        </div>\n    </a>\n</div>\n\n
+          \   </div>\n\n                                                                            \n
+          \                                                                                                                                                           \n
+          \                                                                                                                                                           \n
+          \                                                                               \n
+          \                                       </div>\n                                    </div>\n\n
+          \                                   \n                                    <input
+          id=\"game_ps4_close\" class=\"subtier-close\" type=\"radio\" name=\"subtier\"
+          index=\"1\"/>\n                                    <input id=\"game_ps4_open\"
+          class=\"subtier-open\" type=\"radio\" name=\"subtier\" index=\"1\"/>\n                                    <div
+          class=\"mask-section\">\n                                        <div class=\"column
+          subnav ajax\">\n                                            <ul>\n                                                <li
+          class=\"back\"><label for=\"game_ps4_close\">&lt;&lt; Back to All Platforms</label></li>\n
+          \                                               <li class=\"heading\">PS4</li>\n
+          \                                               <li><a href=\"/game/playstation-4\"
+          section=\"PS4;home\">PS4 Home >></a></li>\n                                                <li><a
+          href=\"/browse/games/release-date/new-releases/ps4/date\" section=\"PS4;New
+          Releases\">New Releases</a></li>\n                                                <li><a
+          href=\"/browse/games/release-date/coming-soon/ps4/date\" section=\"PS4;Coming
+          Soon\">Coming Soon</a></li>\n                                                <li
+          class=\"heading\">Best...</li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/90day/ps4/filtered\" section=\"PS4;New
+          Games\">New Games</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/year/ps4/filtered\" section=\"PS4;Games
+          This Year\">Games This Year</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/ps4/filtered\" section=\"PS4;Games
+          of All Time\">Games of All Time</a></li>\n                                                <li><a
+          href=\"/browse/games/genre/metascore/action/ps4\" section=\"PS4;Games by Genre\">Games
+          by Genre</a></li>\n                                            </ul>\n                                        </div>\n
+          \                                       \n                                    </div>\n
+          \                                   \n\n                                    \n
+          \                                   <input id=\"game_ps5_close\" class=\"subtier-close\"
+          type=\"radio\" name=\"subtier\" index=\"1\"/>\n                                    <input
+          id=\"game_ps5_open\" class=\"subtier-open\" type=\"radio\" name=\"subtier\"
+          index=\"1\"/>\n                                    <div class=\"mask-section\">\n
+          \                                       <div class=\"column subnav ajax\">\n
+          \                                           <ul>\n                                                <li
+          class=\"back\"><label for=\"game_ps5_close\">&lt;&lt; Back to All Platforms</label></li>\n
+          \                                               <li class=\"heading\">PS5</li>\n
+          \                                               <li><a href=\"/game/playstation-5\"
+          section=\"PS5;home\">PS5 Home >></a></li>\n                                                <li><a
+          href=\"/browse/games/release-date/new-releases/ps5/date\" section=\"PS5;New
+          Release\">New Games</a></li>\n                                                <li><a
+          href=\"/browse/games/release-date/coming-soon/ps5/date\" section=\"PS5;Coming
+          Soon\">Coming Soon</a></li>\n                                                <li
+          class=\"heading\">Best...</li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/90day/ps5/filtered\" section=\"PS5;New
+          Games\">New Games</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/year/ps5/filtered\" section=\"PS5;Games
+          This Year\">Games This Year</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/ps5/filtered\" section=\"PS5;Games
+          of All Time\">Games of All Time</a></li>\n                                                <li><a
+          href=\"/browse/games/genre/metascore/action/ps5\" section=\"PS5;Games by Genre\">Games
+          by Genre </a></li>\n                                            </ul>\n                                        </div>\n
+          \                                       \n                                    </div>\n
+          \                                   \n\n                                    \n
+          \                                   <input id=\"game_xone_close\" class=\"subtier-close\"
+          type=\"radio\" name=\"subtier\" index=\"1\"/>\n                                    <input
+          id=\"game_xone_open\" class=\"subtier-open\" type=\"radio\" name=\"subtier\"
+          index=\"1\"/>\n                                    <div class=\"mask-section\">\n
+          \                                       <div class=\"column subnav ajax\">\n
+          \                                           <ul>\n                                                <li
+          class=\"back\"><label for=\"game_xone_close\">&lt;&lt; Back to All Platforms</label></li>\n
+          \                                               <li class=\"heading\">Xbox
+          One</li>\n                                                <li><a href=\"/game/xbox-one\"
+          section=\"Xbox One;home\">Xbox One Home >></a></li>\n                                                <li><a
+          href=\"/browse/games/release-date/new-releases/xboxone/date\" section=\"Xbox
+          One;New Releases\">New Releases</a></li>\n                                                <li><a
+          href=\"/browse/games/release-date/coming-soon/xboxone/date\" section=\"Xbox
+          One;Coming Soon\">Coming Soon</a></li>\n                                                <li
+          class=\"heading\">Best...</li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/90day/xboxone/filtered\" section=\"Xbox
+          One;New Games\">New Games</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/year/xboxone/filtered\" section=\"Xbox
+          One;Games This Year\">Games This Year</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/xboxone/filtered\" section=\"Xbox
+          One;Games of All Time\">Games of All Time</a></li>\n                                                <li><a
+          href=\"/browse/games/genre/metascore/action/xboxone\" section=\"Xbox One;Games
+          by Genre\">Games by Genre</a></li>\n                                            </ul>\n
+          \                                       </div>\n                                        \n
+          \                                   </div>\n                                    \n\n
+          \                                   \n                                    <input
+          id=\"game_xboxx_close\" class=\"subtier-close\" type=\"radio\" name=\"subtier\"
+          index=\"1\"/>\n                                    <input id=\"game_xboxx_open\"
+          class=\"subtier-open\" type=\"radio\" name=\"subtier\" index=\"1\"/>\n                                    <div
+          class=\"mask-section\">\n                                        <div class=\"column
+          subnav ajax\">\n                                            <ul>\n                                                <li
+          class=\"back\"><label for=\"game_xboxx_close\">&lt;&lt; Back to All Platforms</label></li>\n
+          \                                               <li class=\"heading\">Xbox
+          Series X</li>\n                                                <li><a href=\"/game/xbox-series-x\"
+          section=\"Xbox SX;home\">Xbox Series X Home >></a></li>\n                                                <li><a
+          href=\"/browse/games/release-date/new-releases/xbox-series-x/date\" section=\"Xbox
+          SX;New Releases\">New Releases</a></li>\n                                                <li><a
+          href=\"/browse/games/release-date/coming-soon/xbox-series-x/date\" section=\"Xbox
+          SX;Coming Soon\">Coming Soon</a></li>\n                                                <li
+          class=\"heading\">Best...</li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/90day/xbox-series-x/filtered\" section=\"Xbox
+          SX;New Games\">New Games</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/year/xbox-series-x/filtered\" section=\"Xbox
+          SX;Games This Year\">Games This Year</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/xbox-series-x/filtered\" section=\"Xbox
+          SX;Games of All Time\">Games of All Time</a></li>\n                                                <li><a
+          href=\"/browse/games/genre/metascore/action/xbox-series-x\" section=\"Xbox
+          SX;Games by Genre\">Games by Genre </a></li>\n                                            </ul>\n
+          \                                       </div>\n                                        \n
+          \                                   </div>\n                                    \n\n
+          \                                   \n                                    <input
+          id=\"game_switch_close\" class=\"subtier-close\" type=\"radio\" name=\"subtier\"
+          index=\"1\"/>\n                                    <input id=\"game_switch_open\"
+          class=\"subtier-open\" type=\"radio\" name=\"subtier\" index=\"1\"/>\n                                    <div
+          class=\"mask-section\">\n                                        <div class=\"column
+          subnav ajax\">\n                                            <ul>\n                                                <li
+          class=\"back\"><label for=\"game_switch_close\">&lt;&lt; Back to All Platforms</label></li>\n
+          \                                               <li class=\"heading\">Switch</li>\n
+          \                                               <li><a href=\"/game/switch\"
+          section=\"Switch;home\">Switch Home >></a></li>\n                                                <li><a
+          href=\"/browse/games/release-date/new-releases/switch/date\" section=\"Switch;New
+          Releases\">New Releases</a></li>\n                                                <li><a
+          href=\"/browse/games/release-date/coming-soon/switch/date\" section=\"Switch;Coming
+          Soon\">Coming Soon</a></li>\n                                                <li
+          class=\"heading\">Best...</li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/90day/switch/filtered\" section=\"Switch;New
+          Games\">New Games</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/year/switch/filtered\" section=\"Switch;Games
+          This Year\">Games This Year</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/switch/filtered\" section=\"Switch;Games
+          of All Time\">Games of All Time</a></li>\n                                                <li><a
+          href=\"/browse/games/genre/metascore/action/switch\" section=\"Switch;Games
+          by Genre\">Games by Genre</a></li>\n                                            </ul>\n
+          \                                       </div>\n                                        \n
+          \                                   </div>\n                                    \n\n
+          \                                   \n                                    <input
+          id=\"game_pc_close\" class=\"subtier-close\" type=\"radio\" name=\"subtier\"
+          index=\"1\"/>\n                                    <input id=\"game_pc_open\"
+          class=\"subtier-open\" type=\"radio\" name=\"subtier\" index=\"1\"/>\n                                    <div
+          class=\"mask-section\">\n                                        <div class=\"column
+          subnav ajax\">\n                                            <ul>\n                                                <li
+          class=\"back\"><label for=\"game_pc_close\">&lt;&lt; Back to All Platforms</label></li>\n
+          \                                               <li class=\"heading\">PC</li>\n
+          \                                               <li><a href=\"/game/pc\" section=\"PC;home\">PC
+          Home >></a></li>\n                                                <li><a href=\"/browse/games/release-date/new-releases/pc/date\"
+          section=\"PC;New Releases\">New Releases</a></li>\n                                                <li><a
+          href=\"/browse/games/release-date/coming-soon/pc/date\" section=\"PC;Coming
+          Soon\">Coming Soon</a></li>\n                                                <li
+          class=\"heading\">Best...</li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/90day/pc/filtered\" section=\"PC;New
+          Games\">New Games</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/year/pc/filtered\" section=\"PC;Games
+          This Year\">Games This Year</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/pc/filtered\" section=\"PC;Games
+          of All Time\">Games of All Time</a></li>\n                                                <li><a
+          href=\"/browse/games/genre/metascore/action/pc\" section=\"PC;Games by Genre\">Games
+          by Genre</a></li>\n                                            </ul>\n                                        </div>\n
+          \                                   </div>\n                                    \n\n
+          \                                   \n                                    <input
+          id=\"game_legacy_close\" class=\"subtier-close\" type=\"radio\" name=\"subtier\"
+          index=\"1\"/>\n                                    <input id=\"game_legacy_open\"
+          class=\"subtier-open\" type=\"radio\" name=\"subtier\" index=\"1\"/>\n                                    <div
+          class=\"mask-section\">\n                                        <div class=\"column
+          subnav\">\n                                            <ul>\n                                                <li
+          class=\"back\"><label for=\"game_legacy_close\">&lt;&lt; Back to All Platforms</label></li>\n
+          \                                               <li class=\"heading\">More...</li>\n
+          \                                           </ul>\n                                            <ul>\n
+          \                                               <li><a href=\"/game/stadia\"
+          section=\"Legacy;Stadia\">Stadia</a></li>\n                                                <li><a
+          href=\"/game/ios\" section=\"Legacy;iOS\">iOS</a></li>\n                                            </ul>\n
+          \                                       </div>\n                                        <div
+          class=\"column subnav\">\n                                            <ul>\n
+          \                                               <li class=\"heading\">Legacy</li>\n
+          \                                           </ul>\n                                            <ul
+          class=\"multicol\">\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/3ds/filtered\" section=\"Legacy;Best
+          of 3DS\">Best of 3DS</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/wii-u/filtered\" section=\"Legacy;Best
+          of Wii U\">Best of Wii U</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/vita/filtered\" section=\"Legacy;Best
+          of PS Vita\">Best of PS Vita</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/ps3/filtered\" section=\"Legacy;Best
+          of PS3\">Best of PS3</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/wii/filtered\" section=\"Legacy;Best
+          of Wii\">Best of Wii</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/n64/filtered\" section=\"Legacy;Best
+          of N64\">Best of N64</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/gamecube/filtered\" section=\"Legacy;Best
+          of Gamecube\">Best of Gamecube</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/ps2/filtered\" section=\"Legacy;Best
+          of PS2\">Best of PS2</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/ps/filtered\" section=\"Legacy;Best
+          of PS\">Best of PS</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/xbox360/filtered\" section=\"Legacy;Best
+          of Xbox 360\">Best of Xbox 360</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/xbox/filtered\" section=\"Legacy;Best
+          of Xbox\">Best of Xbox</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/ds/filtered\" section=\"Legacy;Best
+          of DS\">Best of DS</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/gba/filtered\" section=\"Legacy;Best
+          of Game Boy Advance\">Best of Game Boy Advance</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/psp/filtered\" section=\"Legacy;Best
+          of PSP\">Best of PSP</a></li>\n                                                <li><a
+          href=\"/browse/games/score/metascore/all/dreamcast/filtered\" section=\"Legacy;Best
+          of Dreamcast\">Best of Dreamcast</a></li>\n                                            </ul>\n
+          \                                       </div>\n                                    </div>\n
+          \                                   \n                                </div>\n
+          \                           </nav>\n\n                                        </nav>\n
+          \                                                           <nav id=\"primary_nav_item_movies\"
+          class=\"primary_nav_item\">\n                    <span class=\"primary_nav_text\">\n
+          \                       \n                            Movies\n\n                    </span>\n\n
+          \                                                   <nav class=\"primary_drop_down
+          masked\">\n                                <div class=\"mask-container\" section=\"header-movies\">\n\n
+          \                                   <div class=\"mask-section\">\n                                        <div
+          class=\"column feature\">\n                                                                                                                                                                                                \n
+          \                                                   <a href=\"/feature/peacock-best-movies-tv-shows-to-watch\"
+          class=\"feature-img-container\" section=\"articles\">\n                                                        <img
+          class=\"primary_feature_img\" src=\"https://static.metacritic.com/images/features/main/peacock202112-180.jpg\"
+          alt=\"What to Watch Right Now on Peacock Image\" />\n                                                    </a>\n
+          \                                                   <span class=\"primary_feature_text\"
+          section=\"articles\"><a href=\"/feature/peacock-best-movies-tv-shows-to-watch\">What
+          to Watch Right Now on Peacock</a></span>\n                                                    <a
+          class=\"reports-see-all\" href=\"/features\" section=\"see_all_articles\">See
+          All Reports</a>\n                                                                                                                                    </div>\n
+          \                                       <div class=\"column subnav\">\n                                            <ul>\n
+          \                                               <li><a href=\"/movie\" section=\"home\">Movies
+          Home >></a></li>\n                                                <li><a href=\"/browse/movies/release-date/theaters/date\"
+          section=\"In Theaters\">In Theaters</a></li>\n                                                <li><a
+          href=\"/browse/movies/release-date/coming-soon/date\" section=\"Coming Soon\">Coming
+          Soon</a></li>\n                                                <li><a href=\"/browse/dvds/release-date/new-releases/date\"
+          section=\"New Movies on DVD/Bluray\">New Movies on DVD/Bluray</a></li>\n                                                \n
+          \                                               \n                                                <h3><p>Best...</p></h3>\n
+          \                                               <li><a href=\"/browse/movies/score/metascore/year/filtered\"
+          section=\"Movies This Year\">Movies This Year</a></li>\n                                                <li><a
+          href=\"/browse/movies/score/metascore/all/filtered?sort=desc\" section=\"Movies
+          of All Time\">Movies of All Time</a></li>\n                                                <li><a
+          href=\"/feature/film-awards-and-nominations-scorecard\" section=\"Film Awards
+          and Nominations\">Film Awards & Nominations</a></li>\n                                                <li><a
+          href=\"/browse/movies/genre/metascore/action\" section=\"Movies by Genre\">Movies
+          by Genre</a></li>\n                                                <h3><p>More...</p></h3>\n
+          \                                               <li><a href=\"/browse/movies/score/userscore/90day/filtered\"
+          section=\"Users' Best New Movies\">Users' Best New Movies</a></li>\n                                                <li><a
+          href=\"/browse/movies/score/userscore/all/filtered\" section=\"Users' All
+          Time Best Movies\">Users' All Time Best Movies</a></li>\n                                            </ul>\n
+          \                                       </div>\n                                        <div
+          class=\"column platforms\">\n                                            <ul>\n
+          \                                               <li class=\"title\">Streaming:</li>\n
+          \                                               <li><a href=\"/browse/movies/score/metascore/all/filtered/netflix\"
+          section=\"streaming;Netflix\">Netflix</a></li>\n                                                <li><a
+          href=\"/browse/movies/score/metascore/all/filtered/piv\" section=\"streaming;Amazon\">Amazon</a></li>\n
+          \                                               <li><a href=\"/browse/movies/score/metascore/all/filtered/hulu\"
+          section=\"streaming;Hulu\">Hulu</a></li>\n                                                <li><a
+          href=\"/browse/movies/score/metascore/all/filtered/itunes\" section=\"streaming;iTunes\">iTunes</a></li>\n
+          \                                           </ul>\n                                        </div>\n
+          \                                       <div class=\"column top-five\">\n
+          \                                       \n                                                                                                                                                                                <h3>Top\n
+          \       Movies\n     Right Now</h3>\n<div class=\"top-five\" section=top_movies>\n
+          \                   \n<div class=\"item\">\n    <a href=\"/movie/memoria-2020\">\n\n
+          \       <div class=\"img-wrap\">\n            <img src=\"https://static.metacritic.com/images/products/movies/6/8b933ca6c9f7e97d6f97ed23b74d02f4-98.jpg\"
+          alt=\"Memoria\" />\n                                <img src=\"/images/icons/mc-mustsee-sm.svg\"
+          class=\"must-see-list\" />\n                    </div>\n\n                    <div
+          class=\"product-name\">\n                Memoria\n            </div>\n        \n
+          \       <div class=\"mid\">\n                     \n        </div>\n    </a>\n</div>\n\n
+          \                   \n<div class=\"item\">\n    <a href=\"/movie/spider-man-no-way-home\">\n\n
+          \       <div class=\"img-wrap\">\n            <img src=\"https://static.metacritic.com/images/products/movies/8/522591463dfe464bc75a8b207247e2a3-98.jpg\"
+          alt=\"Spider-Man: No Way Home\" />\n                            \n\n        \n<div
+          class=\"metascore_w medium movie positive\">71</div>\n\n                    </div>\n\n
+          \                   <div class=\"product-name\">\n                Spider-Man:
+          No Way Home\n            </div>\n        \n        <div class=\"mid\">\n                     \n
+          \       </div>\n    </a>\n</div>\n\n                    \n<div class=\"item\">\n
+          \   <a href=\"/movie/the-matrix-4\">\n\n        <div class=\"img-wrap\">\n
+          \           <img src=\"https://static.metacritic.com/images/products/movies/9/e170448d81eb1535a158eb3a834aacf2-98.jpg\"
+          alt=\"The Matrix Resurrections\" />\n                            \n\n        \n<div
+          class=\"metascore_w medium movie positive\">64</div>\n\n                    </div>\n\n
+          \                   <div class=\"product-name\">\n                The Matrix
+          Resurrections\n            </div>\n        \n        <div class=\"mid\">\n
+          \                    \n        </div>\n    </a>\n</div>\n\n                    \n<div
+          class=\"item\">\n    <a href=\"/movie/sing-2\">\n\n        <div class=\"img-wrap\">\n
+          \           <img src=\"https://static.metacritic.com/images/products/movies/3/cb1caa472f261fba867d337ed6ac956d-98.jpg\"
+          alt=\"Sing 2\" />\n                            \n\n        \n<div class=\"metascore_w
+          medium movie mixed\">49</div>\n\n                    </div>\n\n                    <div
+          class=\"product-name\">\n                Sing 2\n            </div>\n        \n
+          \       <div class=\"mid\">\n                     \n        </div>\n    </a>\n</div>\n\n
+          \                   \n<div class=\"item last\">\n    <a href=\"/movie/the-kings-man\">\n\n
+          \       <div class=\"img-wrap\">\n            <img src=\"https://static.metacritic.com/images/products/movies/1/9daa942536a3a45ae137c0fd349c97a5-98.jpg\"
+          alt=\"The King's Man\" />\n                            \n\n        \n<div
+          class=\"metascore_w medium movie mixed\">44</div>\n\n                    </div>\n\n
+          \                   <div class=\"product-name\">\n                The King's
+          Man\n            </div>\n        \n        <div class=\"mid\">\n                     \n
+          \       </div>\n    </a>\n</div>\n\n    </div>\n\n                                                                            \n
+          \                                                                                                                                                           \n
+          \                                                                                                                                                           \n
+          \                                                                                                                                                           \n
+          \                                                                               \n
+          \                                       </div>\n                                    </div>\n\n
+          \                                   \n                                    <input
+          id=\"movie_netflix_close\" class=\"subtier-close\" type=\"radio\" name=\"subtier\"
+          index=\"1\"/>\n                                    <input id=\"movie_netflix_open\"
+          class=\"subtier-open\" type=\"radio\" name=\"subtier\" index=\"1\"/>\n                                    <div
+          class=\"mask-section\">\n                                        <div class=\"column
+          subnav\">\n                                            <ul>\n                                                <li
+          class=\"back\"><label for=\"movie_netflix_close\">&lt;&lt; Back to All Streaming</label></li>\n
+          \                                               <li class=\"heading\">Netflix</li>\n
+          \                                               <li><a href=\"/browse/movies/score/metascore/90day/filtered/netflix\">New
+          Releases for Netflix</a></li>\n                                                <li><a
+          href=\"/browse/movies/score/metascore/year/filtered/netflix\">Best New Movies
+          on Netflix</a></li>\n                                                <li><a
+          href=\"/browse/movies/score/metascore/all/filtered/netflix\">Best Movies on
+          Netflix</a></li>\n                                            </ul>\n                                        </div>\n
+          \                                   </div>\n                                    \n\n
+          \                                   \n                                    <input
+          id=\"movie_hulu_close\" class=\"subtier-close\" type=\"radio\" name=\"subtier\"
+          index=\"1\"/>\n                                    <input id=\"movie_hulu_open\"
+          class=\"subtier-open\" type=\"radio\" name=\"subtier\" index=\"1\"/>\n                                    <div
+          class=\"mask-section\">\n                                        <div class=\"column
+          subnav\">\n                                            <ul>\n                                                <li
+          class=\"back\"><label for=\"movie_netflix_close\">&lt;&lt; Back to All Streaming</label></li>\n
+          \                                               <li class=\"heading\">HULU</li>\n
+          \                                               <li><a href=\"/browse/movies/score/metascore/90day/filtered/hulu\">New
+          Releases for Hulu</a></li>\n                                                <li><a
+          href=\"/browse/movies/score/metascore/year/filtered/hulu\">Best New Movies
+          on Hulu</a></li>\n                                                <li><a href=\"/browse/movies/score/metascore/all/filtered/hulu\">Best
+          Movies on Hulu</a></li>\n                                            </ul>\n
+          \                                       </div>\n                                    </div>\n
+          \                                   \n\n                                    \n
+          \                                   <input id=\"movie_amazon_close\" class=\"subtier-close\"
+          type=\"radio\" name=\"subtier\" index=\"1\"/>\n                                    <input
+          id=\"movie_amazon_open\" class=\"subtier-open\" type=\"radio\" name=\"subtier\"
+          index=\"1\"/>\n                                    <div class=\"mask-section\">\n
+          \                                       <div class=\"column subnav\">\n                                            <ul>\n
+          \                                               <li class=\"back\"><label
+          for=\"movie_netflix_close\">&lt;&lt; Back to All Streaming</label></li>\n
+          \                                               <li class=\"heading\">Amazon</li>\n
+          \                                               <li><a href=\"/browse/movies/score/metascore/90day/filtered/piv\">New
+          Releases for Amazon</a></li>\n                                                <li><a
+          href=\"/browse/movies/score/metascore/year/filtered/piv\">Best New Movies
+          on Amazon</a></li>\n                                                <li><a
+          href=\"/browse/movies/score/metascore/all/filtered/piv\">Best Movies on Amazon</a></li>\n
+          \                                           </ul>\n                                        </div>\n
+          \                                   </div>\n                                    \n\n
+          \                                   \n                                    <input
+          id=\"movie_apple_close\" class=\"subtier-close\" type=\"radio\" name=\"subtier\"
+          index=\"1\"/>\n                                    <input id=\"movie_apple_open\"
+          class=\"subtier-open\" type=\"radio\" name=\"subtier\" index=\"1\"/>\n                                    <div
+          class=\"mask-section\">\n                                        <div class=\"column
+          subnav\">\n                                            <ul>\n                                                <li
+          class=\"back\"><label for=\"movie_netflix_close\">&lt;&lt; Back to All Streaming</label></li>\n
+          \                                               <li class=\"heading\">iTunes</li>\n
+          \                                               <li><a href=\"/browse/movies/score/metascore/90day/filtered/itunes\">New
+          Releases for iTunes</a></li>\n                                                <li><a
+          href=\"/browse/movies/score/metascore/year/filtered/itunes\">Best New Movies
+          on iTunes</a></li>\n                                                <li><a
+          href=\"/browse/movies/score/metascore/all/filtered/itunes\">Best Movies on
+          iTunes</a></li>\n                                            </ul>\n                                        </div>\n
+          \                                   </div>\n                                    \n\n
+          \                               </div>\n\n                            </nav>\n\n
+          \                                       </nav>\n                                                            <nav
+          id=\"primary_nav_item_tv\" class=\"primary_nav_item\">\n                    <span
+          class=\"primary_nav_text\">\n                        \n                            TV\n\n
+          \                   </span>\n\n                                                    <nav
+          class=\"primary_drop_down masked\">\n                                <div
+          class=\"mask-container\">\n\n                                    <div class=\"mask-section\"
+          section=\"header-tv\">\n                                        <div class=\"column
+          feature\">\n                                                                                                                                                                                                \n
+          \                                                   <a href=\"/feature/what-to-watch-on-paramount-plus\"
+          class=\"feature-img-container\" section=\"articles\">\n                                                        <img
+          class=\"primary_feature_img\" src=\"https://static.metacritic.com/images/features/main/paramountplus202111-180.jpg\"
+          alt=\"What to Watch Right Now on Paramount+ Image\" />\n                                                    </a>\n
+          \                                                   <span class=\"primary_feature_text\"
+          section=\"articles\"><a href=\"/feature/what-to-watch-on-paramount-plus\">What
+          to Watch Right Now on Paramount+</a></span>\n                                                    <a
+          class=\"reports-see-all\" href=\"/features\" section=\"see_all_articles\">See
+          All Reports</a>\n                                                                                                                                    </div>\n
+          \                                       <div class=\"column subnav\">\n                                            <ul>\n
+          \                                               <li><a href=\"/tv\" section=\"home\">TV
+          Home >></a></li>\n                                                <li><a href=\"/feature/tv-premiere-dates\"
+          section=\"TV Premiere Calendar\">TV Premiere Calendar</a></li>\n                                                <li><a
+          href=\"/feature/tv-renew-cancel-scorecard\" section=\"TV Renew/Cancel Scorecard\">TV
+          Renew/Cancel Scorecard</a></li>\n                                                <li><a
+          href=\"/browse/tv/release-date/new-series/date?view=detailed\" section=\"New
+          & Returning TV Shows\">New & Returning TV Shows</a></li>\n                                                <h3><p>Best...</p></h3>\n
+          \                                               <li><a href=\"/browse/tv/score/metascore/90day/filtered?sort=desc&view=detailed\"
+          section=\"New TV Shows\">New TV Shows</a></li>\n                                                <li><a
+          href=\"/browse/tv/score/metascore/year/filtered?sort=desc&view=detailed\"
+          section=\"TV Shows This Year\">TV Shows This Year</a></li>\n                                                <li><a
+          href=\"/browse/tv/score/metascore/all/filtered?sort=desc\" section=\"TV Shows
+          of All Time\">TV Shows of All Time</a></li>\n                                                <li><a
+          href=\"/browse/tv/genre/metascore/action\" section=\"TV Shows by Genre\">TV
+          Shows by Genre</a></li>\n                                                <h3><p>More...</p></h3>\n
+          \                                               <li><a href=\"/browse/tv/score/userscore/90day/filtered\"
+          section=\"User's Best New Shows\">User's Best New Shows</a></li>\n                                                <li><a
+          href=\"/browse/tv/score/userscore/all/filtered\" section=\"User's All Time
+          Best Shows\">User's All Time Best Shows</a></li>\n                                            </ul>\n
+          \                                       </div>\n                                        <div
+          class=\"column platforms\">\n                                            <ul>\n
+          \                                               <li class=\"title\">Streaming:<li>\n
+          \                                               <li><a href=\"/feature/now-streaming-on-netflix\"
+          section=\"streaming;Netflix\">Netflix</a></li>\n                                                <li><a
+          href=\"/feature/now-streaming-on-amazon-instant-video\" section=\"streaming;Amazon\">Amazon</a></li>\n
+          \                                               <li><a href=\"/feature/now-streaming-on-disney-plus\"
+          section=\"streaming;Disney+\">Disney+</a></li>\n                                                <li><a
+          href=\"/feature/now-streaming-on-apple-tv-plus\" section=\"streaming;Apple
+          TV+\">Apple TV+</a></li>\n                                                <li><a
+          href=\"/feature/hulu-best-new-movies-and-shows\" section=\"streaming;Hulu\">Hulu</a></li>\n
+          \                                               <li><a href=\"/feature/best-new-movies-and-shows-on-hbo-go-now\"
+          section=\"streaming;HBO\">HBO</a></li>\n                                                <li><a
+          href=\"/feature/best-new-movies-and-shows-on-starz\" section=\"streaming;Starz\">Starz</a></li>\n
+          \                                               <li><a href=\"/feature/peacock-best-movies-tv-shows-to-watch\"
+          section=\"streaming;Peacock\">Peacock</a></li>\n                                                <li><a
+          href=\"/feature/what-to-watch-on-paramount-plus\" section=\"streaming;Paramount\">Paramount+</a></li>\n
+          \                                           </ul>\n                                        </div>\n
+          \                                       <div class=\"column top-five\">\n
+          \                                       \n                                                                                                                                                            \n
+          \                                                                                                                                                           \n
+          \                                                                                                                                                                               <h3>Top\n
+          \       Shows\n     Right Now</h3>\n<div class=\"top-five\" section=top_shows>\n
+          \                   \n<div class=\"item\">\n    <a href=\"/tv/vigil/season-1\">\n\n
+          \       <div class=\"img-wrap\">\n            <img src=\"https://static.metacritic.com/images/products/tv/8/fdfaa782172d7484da7a8ed933126521-98.jpg\"
+          alt=\"Vigil: Season 1\" />\n                                                                                    \n\n
+          \       \n<div class=\"metascore_w medium season positive\">83</div>\n\n                                                                </div>\n\n
+          \                   <div class=\"product-name\">\n                Vigil: Season
+          1\n            </div>\n        \n        <div class=\"mid\">\n                     \n
+          \       </div>\n    </a>\n</div>\n\n                    \n<div class=\"item\">\n
+          \   <a href=\"/tv/station-eleven/season-1\">\n\n        <div class=\"img-wrap\">\n
+          \           <img src=\"https://static.metacritic.com/images/products/tv/4/92c8456c2e14058a1ea5fe87beed1a3e-98.jpg\"
+          alt=\"Station Eleven: Season 1\" />\n                                                                                    <img
+          src=\"/images/icons/mc-mustwatch-sm.svg\" class=\"must-see-list\" />\n                                                                </div>\n\n
+          \                   <div class=\"product-name\">\n                Station
+          Eleven: Season 1\n            </div>\n        \n        <div class=\"mid\">\n
+          \                    \n        </div>\n    </a>\n</div>\n\n                    \n<div
+          class=\"item\">\n    <a href=\"/tv/1883/season-1\">\n\n        <div class=\"img-wrap\">\n
+          \           <img src=\"https://static.metacritic.com/images/products/tv/0/929133f54a46777fc83b1e45e516e44b-98.jpg\"
+          alt=\"1883: Season 1\" />\n                                                                                    \n\n
+          \       \n<div class=\"metascore_w medium season positive\">69</div>\n\n                                                                </div>\n\n
+          \                   <div class=\"product-name\">\n                1883: Season
+          1\n            </div>\n        \n        <div class=\"mid\">\n                     \n
+          \       </div>\n    </a>\n</div>\n\n                    \n<div class=\"item\">\n
+          \   <a href=\"/tv/the-witcher/season-2\">\n\n        <div class=\"img-wrap\">\n
+          \           <img src=\"https://static.metacritic.com/images/products/tv/8/35db7ef5d8e2973911575fae10123dc0-98.jpg\"
+          alt=\"The Witcher: Season 2\" />\n                                                                                    \n\n
+          \       \n<div class=\"metascore_w medium season positive\">68</div>\n\n                                                                </div>\n\n
+          \                   <div class=\"product-name\">\n                The Witcher:
+          Season 2\n            </div>\n        \n        <div class=\"mid\">\n                     \n
+          \       </div>\n    </a>\n</div>\n\n                    \n<div class=\"item
+          last\">\n    <a href=\"/tv/emily-in-paris/season-2\">\n\n        <div class=\"img-wrap\">\n
+          \           <img src=\"https://static.metacritic.com/images/products/tv/3/9ac638cac30cf9d1cedcea5b54321df8-98.jpg\"
+          alt=\"Emily in Paris: Season 2\" />\n                                                                                    \n\n
+          \       \n<div class=\"metascore_w medium season positive\">64</div>\n\n                                                                </div>\n\n
+          \                   <div class=\"product-name\">\n                Emily in
+          Paris: Season 2\n            </div>\n        \n        <div class=\"mid\">\n
+          \                    \n        </div>\n    </a>\n</div>\n\n    </div>\n\n
+          \                                                                           \n
+          \                                                                                                                                                           \n
+          \                                                                               \n
+          \                                       </div>\n                                    </div>\n\n
+          \                                   \n                                    <input
+          id=\"tv_netflix_close\" class=\"subtier-close\" type=\"radio\" name=\"subtier\"
+          index=\"1\"/>\n                                    <input id=\"tv_netflix_open\"
+          class=\"subtier-open\" type=\"radio\" name=\"subtier\" index=\"1\"/>\n                                    <div
+          class=\"mask-section\">\n                                        <div class=\"column
+          subnav\">\n                                            <ul>\n                                                <li
+          class=\"back\"><label for=\"tv_netflix_close\">&lt;&lt; Back to All Streaming</label></li>\n
+          \                                               <li class=\"heading\">Netflix</li>\n
+          \                                               <li><a href=\"#\">New Releases</a></li>\n
+          \                                               <li><a href=\"#\">Coming Soon</a></li>\n
+          \                                               <li><a href=\"#\">Best Movies</a></li>\n
+          \                                               <li><a href=\"#\">Best Movies
+          by Genre</a></li>\n                                                <li><a
+          href=\"#\">Latest Trailers</a></li>\n                                            </ul>\n
+          \                                       </div>\n                                    </div>\n
+          \                                   \n\n                                    \n
+          \                                   <input id=\"tv_hulu_close\" class=\"subtier-close\"
+          type=\"radio\" name=\"subtier\" index=\"1\"/>\n                                    <input
+          id=\"tv_hulu_open\" class=\"subtier-open\" type=\"radio\" name=\"subtier\"
+          index=\"1\"/>\n                                    <div class=\"mask-section\">\n
+          \                                       <div class=\"column subnav\">\n                                            <ul>\n
+          \                                               <li class=\"back\"><label
+          for=\"tv_hulu_close\">&lt;&lt; Back to All Streaming</label></li>\n                                                <li
+          class=\"heading\">HULU</li>\n                                                <li><a
+          href=\"#\">New Releases</a></li>\n                                                <li><a
+          href=\"#\">Coming Soon</a></li>\n                                                <li><a
+          href=\"#\">Best Movies</a></li>\n                                                <li><a
+          href=\"#\">Best Movies by Genre</a></li>\n                                                <li><a
+          href=\"#\">Latest Trailers</a></li>\n                                            </ul>\n
+          \                                       </div>\n                                    </div>\n
+          \                                   \n\n                                    \n
+          \                                   <input id=\"tv_amazon_close\" class=\"subtier-close\"
+          type=\"radio\" name=\"subtier\" index=\"1\"/>\n                                    <input
+          id=\"tv_amazon_open\" class=\"subtier-open\" type=\"radio\" name=\"subtier\"
+          index=\"1\"/>\n                                    <div class=\"mask-section\">\n
+          \                                       <div class=\"column subnav\">\n                                            <ul>\n
+          \                                               <li class=\"back\"><label
+          for=\"tv_amazon_close\">&lt;&lt; Back to All Streaming</label></li>\n                                                <li
+          class=\"heading\">Amazon</li>\n                                                <li><a
+          href=\"#\">New Releases</a></li>\n                                                <li><a
+          href=\"#\">Coming Soon</a></li>\n                                                <li><a
+          href=\"#\">Best Movies</a></li>\n                                                <li><a
+          href=\"#\">Best Movies by Genre</a></li>\n                                                <li><a
+          href=\"#\">Latest Trailers</a></li>\n                                            </ul>\n
+          \                                       </div>\n                                    </div>\n
+          \                                   \n\n                                    \n
+          \                                   <input id=\"tv_apple_close\" class=\"subtier-close\"
+          type=\"radio\" name=\"subtier\" index=\"1\"/>\n                                    <input
+          id=\"tv_apple_open\" class=\"subtier-open\" type=\"radio\" name=\"subtier\"
+          index=\"1\"/>\n                                    <div class=\"mask-section\">\n
+          \                                       <div class=\"column subnav\">\n                                            <ul>\n
+          \                                               <li class=\"back\"><label
+          for=\"tv_apple_close\">&lt;&lt; Back to All Streaming</label></li>\n                                                <li
+          class=\"heading\">Apple TV+</li>\n                                                <li><a
+          href=\"#\">New Releases</a></li>\n                                                <li><a
+          href=\"#\">Coming Soon</a></li>\n                                                <li><a
+          href=\"#\">Best Movies</a></li>\n                                                <li><a
+          href=\"#\">Best Movies by Genre</a></li>\n                                                <li><a
+          href=\"#\">Latest Trailers</a></li>\n                                            </ul>\n
+          \                                       </div>\n                                    </div>\n
+          \                                   \n\n                                </div>\n
+          \                           </nav>\n\n                                        </nav>\n
+          \                                                           <nav id=\"primary_nav_item_music\"
+          class=\"primary_nav_item\">\n                    <span class=\"primary_nav_text\">\n
+          \                       \n                            Music\n\n                    </span>\n\n
+          \                                                   <nav class=\"primary_drop_down\"
+          section=\"header-music\">\n                                <div class=\"column
+          feature\">\n                                                                                                                                                                \n
+          \                                           <a href=\"/pictures/best-albums-of-2021\"
+          class=\"feature-img-container\" section=\"articles\">\n                                                <img
+          class=\"primary_feature_img\" src=\"https://static.metacritic.com/images/features/main/yearend2021_music_taylorswift-180.jpg\"
+          alt=\"The 40 Best Albums of 2021 Image\" />\n                                            </a>\n
+          \                                           <span class=\"primary_feature_text\"
+          section=\"articles\"><a href=\"/pictures/best-albums-of-2021\">The 40 Best
+          Albums of 2021</a></span>\n                                            <a
+          class=\"reports-see-all\" href=\"/features\" section=\"see_all_articles\">See
+          All Reports</a>\n                                                                                                            </div>\n
+          \                               <div class=\"column subnav\">\n                                    <ul>\n
+          \                                       <li><a href=\"/music\" section=\"home\">Music
+          Home >></a></li>\n                                        <li><a href=\"/browse/albums/release-date/new-releases/date\"
+          section=\"New Releases\">New Releases</a></li>\n                                        <li><a
+          href=\"/browse/albums/release-date/coming-soon/date\" section=\"Coming Soon\">Coming
+          Soon</a></li>\n                                        <li><a href=\"/browse/albums/genre/date/rock\"
+          section=\"Music by Genre\">Music by Genre</a></li>\n                                        <h3><p>Best...</p></h3>\n
+          \                                       <li><a href=\"/browse/albums/score/metascore/90day/filtered\"
+          section=\"New Albums\">New Albums</a></li>\n                                        <li><a
+          href=\"/browse/albums/score/metascore/year/filtered\" section=\"Albums This
+          Year\">Albums This Year</a></li>\n                                        <li><a
+          href=\"/browse/albums/score/metascore/all/filtered?sort=desc\" section=\"Albums
+          of All Time\">Albums of All Time</a></li>\n                                        <h3><p>More...</p></h3>\n
+          \                                       <li><a href=\"/browse/albums/score/userscore/90day/filtered\"
+          section=\"User's Best New Albums\">User's Best New Albums</a></li>\n                                        <li><a
+          href=\"/browse/albums/score/userscore/all/filtered\" section=\"User's All
+          Time Best Albums\">User's All Time Best Albums</a></li>\n                                    </ul>\n
+          \                               </div>\n                                <div
+          class=\"column top-five\">\n                                \n                                                                                                                                    \n
+          \                                                                                                                                   \n
+          \                                                                                                                                   \n
+          \                                                                                                                                               <h3>Top\n
+          \       Albums\n     Right Now</h3>\n<div class=\"top-five\" section=top_music>\n
+          \                   \n<div class=\"item\">\n    <a href=\"/music/sometimes-i-might-be-introvert/little-simz\">\n\n
+          \       <div class=\"img-wrap\">\n            <img src=\"https://static.metacritic.com/images/products/music/5/f73bb93d4ccf412e271177b2b3339ca5-98.jpg\"
+          alt=\"Sometimes I Might Be Introvert\" />\n                            \n\n
+          \       \n<div class=\"metascore_w medium release positive\">88</div>\n\n
+          \                   </div>\n\n                    <div class=\"product-name\">\n
+          \               Sometimes I Might Be Introvert\n            </div>\n        \n
+          \       <div class=\"mid\">\n                     \n        </div>\n    </a>\n</div>\n\n
+          \                   \n<div class=\"item\">\n    <a href=\"/music/bbc-sessions/green-day\">\n\n
+          \       <div class=\"img-wrap\">\n            <img src=\"https://static.metacritic.com/images/products/music/6/660482a0fea20be4e4da74216b4dd92c-98.jpg\"
+          alt=\"BBC Sessions\" />\n                            \n\n        \n<div class=\"metascore_w
+          medium release positive\">84</div>\n\n                    </div>\n\n                    <div
+          class=\"product-name\">\n                BBC Sessions\n            </div>\n
+          \       \n        <div class=\"mid\">\n                     \n        </div>\n
+          \   </a>\n</div>\n\n                    \n<div class=\"item\">\n    <a href=\"/music/barn/neil-young-crazy-horse\">\n\n
+          \       <div class=\"img-wrap\">\n            <img src=\"https://static.metacritic.com/images/products/music/0/59dcc3bdfa1b45b6da4c720d77948c83-98.jpg\"
+          alt=\"Barn\" />\n                            \n\n        \n<div class=\"metascore_w
+          medium release positive\">75</div>\n\n                    </div>\n\n                    <div
+          class=\"product-name\">\n                Barn\n            </div>\n        \n
+          \       <div class=\"mid\">\n                     \n        </div>\n    </a>\n</div>\n\n
+          \                   \n<div class=\"item\">\n    <a href=\"/music/fighting-demons/juice-wrld\">\n\n
+          \       <div class=\"img-wrap\">\n            <img src=\"https://static.metacritic.com/images/products/music/5/c86da280b4bb16e06b81c023bf94a990-98.jpg\"
+          alt=\"Fighting Demons\" />\n                            \n\n        \n<div
+          class=\"metascore_w medium release positive\">73</div>\n\n                    </div>\n\n
+          \                   <div class=\"product-name\">\n                Fighting
+          Demons\n            </div>\n        \n        <div class=\"mid\">\n                     \n
+          \       </div>\n    </a>\n</div>\n\n                    \n<div class=\"item
+          last\">\n    <a href=\"/music/live-life-fast/roddy-ricch\">\n\n        <div
+          class=\"img-wrap\">\n            <img src=\"https://static.metacritic.com/images/products/music/3/c6c89c9f5f42addc0b55e2090ff8d2c8-98.jpg\"
+          alt=\"Live Life Fast\" />\n                            \n\n        \n<div
+          class=\"metascore_w medium release positive\">70</div>\n\n                    </div>\n\n
+          \                   <div class=\"product-name\">\n                Live Life
+          Fast\n            </div>\n        \n        <div class=\"mid\">\n                     \n
+          \       </div>\n    </a>\n</div>\n\n    </div>\n\n                                                                    \n
+          \                                                               \n                                </div>\n
+          \                           </nav>\n\n                                        </nav>\n
+          \                                                                   <div class=\"tracker\"></div>\n
+          \       </nav>\n\n        <nav id=\"primary_menu_item_enter_search\" class=\"\">\n
+          \           <span class=\"\">\n                Enter to Search\n            </span>\n
+          \       </nav>\n\n\n        \n                    <nav id=\"primary_menu_item_create\"
+          class=\"primary_nav_item\">\n                <span class=\"primary_nav_text\">\n
+          \                   <a id=\"signup\" class=\"signup\" href=\"/login\">Sign
+          In</a>\n                </span>\n            </nav>\n                \n    </nav>\n\n
+          \   <header id=\"primary_backdrop\">\n    </header>\n</header>\n\n\n            \n
+          \                                                                                                                                                                   <aside
+          id=\"popup_dialog\">\n                <header class=\"pad_btm1\"></header>\n
+          \               <div class=\"left\">\n                </div>\n                <div
+          class=\"right\">\n                </div>\n                <div class=\"clr\"></div>\n
+          \               <footer></footer>\n                \n                <div
+          class=\"popup_close\" onclick=\"MetaC.Popup.hide()\"><i class=\"fa fa-times\"
+          aria-hidden=\"true\"></i></div>\n            </aside>\n            <aside
+          class=\"popup_hidden\" id=\"popup_login\">\n                <div class=\"login_section\">\n
+          \                   <button class=\"meta_fb_login\">\n                        <span
+          class=\"fb_icon\">\n                            <svg viewBox=\"0 0 15.2 32\">\n
+          \                           <g>\n                                <path d=\"M15.2,11.1H9.6V7c0-1.2,1.3-1.5,1.9-1.5c0.6,0,3.6,0,3.6,0V0L11,0C5.4,0,4.1,4.1,4.1,6.7v4.4H0v5.6h4.1\n
+          \                                   c0,7.3,0,15.2,0,15.2h5.5c0,0,0-8.1,0-15.2h4.7L15.2,11.1z\"/>\n
+          \                           </g>\n                            </svg>\n                        </span>Continue
+          with Facebook</button>\n\n                    <div class=\"ruled_divider pad_top1\">\n
+          \                       <hr class=\"rdleft\"/>OR<hr class=\"rdright\" />\n
+          \                   </div>\n\n                    <div id=\"popup_email_wrapper\"
+          class=\"pad_top1\">\n                        <div class=\"field innerLabel\">\n
+          \                           <input id=\"popup_email\" class=\"field_input
+          popup_email\" tabindex=\"2\" name=\"email\" type=\"email\" autocomplete=\"off\">\n
+          \                           <label for=\"popup_email\">Email Address</label>\n
+          \                       </div>\n                    </div>\n\n                    <div
+          id=\"popup_pwd_wrapper\" class=\"pad_top1\">\n                        <div
+          class=\"field innerLabel\">\n                            <input id=\"popup_password\"
+          class=\"field_input popup_password\" tabindex=\"3\" name=\"password\" type=\"password\"
+          autocomplete=\"off\">\n                            <label for=\"popup_password\">Password</label>\n
+          \                       </div>\n                        <div class=\"popup_forgot\">\n
+          \                           <a href=\"/forgot-password\">Forgot password?</a>\n
+          \                       </div>\n                    </div>\n\n                    <div
+          class=\"pad_top1 fr\">\n                        <span class=\"progress \">\n
+          \   <i class=\"fa fa-spinner\"></i>\n</span>\n\n                        <button
+          class=\"popup_login_btn grey_button marg_right_half\">LOG IN</button>\n                        <button
+          class=\"popup_signup_btn grey_button\">CREATE AN ACCOUNT</button>\n                    </div>\n
+          \                   <div class=\"clr\"></div>\n                </div>\n            </aside>\n\n
+          \                           <div id=\"main_content\" class=\"pad_btm2 fill_height\">\n
+          \                               <div class=\"fxdrow search_results_wrapper\">\n
+          \       <div class=\"search_header fxdcol gu12\">\n            <div>\n                        <p
+          class=\"query_results\">Showing 5 results</p>\n        </div>\n        <h2
+          class=\"search_form_header\">Top Results for \"<span class=\"bold\">The Matrix</span>\"</h2>\n</div>\n<div
+          class=\"search_filters_nav fxdcol gu3\">\n            <div class=\"filter_area\">\n
+          \                           <div class=\"filter\">\n                    <a
+          rel=\"nofollow\" class=\"filter_button all\" href=\"/search/all/The%2BMatrix/results\">\n
+          \                       <input type=\"radio\" name=\"filter_sort\" class=\"filter_btn\"
+          data-mc-filter-url=\"\" >\n                        <span class=\"title\">\n
+          \                           All Items\n                        </span>\n                                            </a>\n
+          \               </div>\n                                                                                <div
+          class=\"filter selected\">\n                    <a rel=\"nofollow\" class=\"filter_button
+          movie\" href=\"/search/movie/The%2BMatrix/results\">\n                        <input
+          type=\"radio\" name=\"filter_sort\" class=\"filter_btn\" data-mc-filter-url=\"\"
+          checked>\n                        <span class=\"title\">\n                            Movies\n
+          \                       </span>\n                                                    <span
+          class=\"filter_wrap_toggle fa fa-angle-up\"</span>\n                                            </a>\n
+          \               </div>\n                                                            <div
+          class=\"adv_filters_dialog\">\n                            <div class=\"filter_area\">\n
+          \                               <div class=\"area_title\">\n                                    sort
+          by\n                                </div>\n                                                                    <div
+          class=\"filter selected\">\n                                        <a href=\"/search/movie/The%2BMatrix/results?sort=relevancy\"
+          class=\"filter_button\" rel=\"nofollow\">\n                                            <input
+          type=\"radio\" name=\"filter_sort\" class=\"filter_btn\" checked>\n                                            <span
+          class=\"title\">\n                                                Relevancy\n
+          \                                           </span>\n                                        </a>\n
+          \                                   </div>\n                                                                    <div
+          class=\"filter\">\n                                        <a href=\"/search/movie/The%2BMatrix/results?sort=score\"
+          class=\"filter_button\" rel=\"nofollow\">\n                                            <input
+          type=\"radio\" name=\"filter_sort\" class=\"filter_btn\">\n                                            <span
+          class=\"title\">\n                                                Score\n
+          \                                           </span>\n                                        </a>\n
+          \                                   </div>\n                                                                    <div
+          class=\"filter\">\n                                        <a href=\"/search/movie/The%2BMatrix/results?sort=recent\"
+          class=\"filter_button\" rel=\"nofollow\">\n                                            <input
+          type=\"radio\" name=\"filter_sort\" class=\"filter_btn\">\n                                            <span
+          class=\"title\">\n                                                Most Recent\n
+          \                                           </span>\n                                        </a>\n
+          \                                   </div>\n                                                            </div>\n
+          \                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <div
+          class=\"filter_area\">\n                                        <div class=\"area_title\">\n
+          \                                                                                           genres\n
+          \                                                                                   </div>\n\n
+          \                                       <div class=\"filter selected\" data-mcadvval=\"\"
+          data-mcadvname=\"genres\">\n                                            <span
+          class=\"filter_button\">\n                                                <input
+          type=\"radio\" checked>\n                                                <span
+          class=\"title\">\n                                                    All\n
+          \                                               </span>\n                                            </span>\n
+          \                                       </div>\n\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"action\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Action\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"adventure\" data-mcadvname=\"genres\">\n
+          \                                               <a class=\"filter_button\">\n
+          \                                                                                                           <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Adventure\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"animation\" data-mcadvname=\"genres\">\n
+          \                                               <a class=\"filter_button\">\n
+          \                                                                                                           <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Animation\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"biography\" data-mcadvname=\"genres\">\n
+          \                                               <a class=\"filter_button\">\n
+          \                                                                                                           <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Biography\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"comedy\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Comedy\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"crime\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Crime\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"documentary\" data-mcadvname=\"genres\">\n
+          \                                               <a class=\"filter_button\">\n
+          \                                                                                                           <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Documentary\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"drama\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Drama\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"family\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Family\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"fantasy\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Fantasy\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"film-noir\" data-mcadvname=\"genres\">\n
+          \                                               <a class=\"filter_button\">\n
+          \                                                                                                           <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Film-Noir\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"history\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        History\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"horror\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Horror\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"music\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Music\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"musical\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Musical\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"mystery\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Mystery\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"news\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        News\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"reality-tv\" data-mcadvname=\"genres\">\n
+          \                                               <a class=\"filter_button\">\n
+          \                                                                                                           <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Reality-TV\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"romance\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Romance\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"sci-fi\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Sci-Fi\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"short\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Short\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"sport\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Sport\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"thriller\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Thriller\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"war\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        War\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                    <div
+          class=\"filter\" data-mcadvval=\"western\" data-mcadvname=\"genres\">\n                                                <a
+          class=\"filter_button\">\n                                                                                                            <input
+          type=\"radio\" name=\"filter_sort_cat\" >\n                                                                                                        <span
+          class=\"title\">\n                                                        Western\n
+          \                                                   </span>\n                                                </a>\n
+          \                                           </div>\n                                                                                </div>\n
+          \                                                                                                                       </div>\n
+          \                                                               <div class=\"filter\">\n
+          \                   <a rel=\"nofollow\" class=\"filter_button game\" href=\"/search/game/The%2BMatrix/results\">\n
+          \                       <input type=\"radio\" name=\"filter_sort\" class=\"filter_btn\"
+          data-mc-filter-url=\"\" >\n                        <span class=\"title\">\n
+          \                           Games\n                        </span>\n                                                    <span
+          class=\"filter_wrap_toggle fa fa-angle-down\"</span>\n                                            </a>\n
+          \               </div>\n                                                                                <div
+          class=\"filter\">\n                    <a rel=\"nofollow\" class=\"filter_button
+          album\" href=\"/search/album/The%2BMatrix/results\">\n                        <input
+          type=\"radio\" name=\"filter_sort\" class=\"filter_btn\" data-mc-filter-url=\"\"
+          >\n                        <span class=\"title\">\n                            Albums\n
+          \                       </span>\n                                                    <span
+          class=\"filter_wrap_toggle fa fa-angle-down\"</span>\n                                            </a>\n
+          \               </div>\n                                                                                <div
+          class=\"filter\">\n                    <a rel=\"nofollow\" class=\"filter_button
+          tv\" href=\"/search/tv/The%2BMatrix/results\">\n                        <input
+          type=\"radio\" name=\"filter_sort\" class=\"filter_btn\" data-mc-filter-url=\"\"
+          >\n                        <span class=\"title\">\n                            TV
+          Shows\n                        </span>\n                                                    <span
+          class=\"filter_wrap_toggle fa fa-angle-down\"</span>\n                                            </a>\n
+          \               </div>\n                                                                                <div
+          class=\"filter\">\n                    <a rel=\"nofollow\" class=\"filter_button
+          person\" href=\"/search/person/The%2BMatrix/results\">\n                        <input
+          type=\"radio\" name=\"filter_sort\" class=\"filter_btn\" data-mc-filter-url=\"\"
+          >\n                        <span class=\"title\">\n                            Person\n
+          \                       </span>\n                                                    <span
+          class=\"filter_wrap_toggle fa fa-angle-down\"</span>\n                                            </a>\n
+          \               </div>\n                                                                                <div
+          class=\"filter\">\n                    <a rel=\"nofollow\" class=\"filter_button
+          video\" href=\"/search/video/The%2BMatrix/results\">\n                        <input
+          type=\"radio\" name=\"filter_sort\" class=\"filter_btn\" data-mc-filter-url=\"\"
+          >\n                        <span class=\"title\">\n                            Trailers\n
+          \                       </span>\n                                                    <span
+          class=\"filter_wrap_toggle fa fa-angle-down\"</span>\n                                            </a>\n
+          \               </div>\n                                                                                <div
+          class=\"filter\">\n                    <a rel=\"nofollow\" class=\"filter_button
+          company\" href=\"/search/company/The%2BMatrix/results\">\n                        <input
+          type=\"radio\" name=\"filter_sort\" class=\"filter_btn\" data-mc-filter-url=\"\"
+          >\n                        <span class=\"title\">\n                            Companies\n
+          \                       </span>\n                                                    <span
+          class=\"filter_wrap_toggle fa fa-angle-down\"</span>\n                                            </a>\n
+          \               </div>\n                                                                                <div
+          class=\"filter\">\n                    <a rel=\"nofollow\" class=\"filter_button
+          story\" href=\"/search/story/The%2BMatrix/results\">\n                        <input
+          type=\"radio\" name=\"filter_sort\" class=\"filter_btn\" data-mc-filter-url=\"\"
+          >\n                        <span class=\"title\">\n                            Reports\n
+          \                       </span>\n                                                    <span
+          class=\"filter_wrap_toggle fa fa-angle-down\"</span>\n                                            </a>\n
+          \               </div>\n                                                                        </div>\n
+          \       \n    <script>\n        $(document).ready(function(){\n            $(\"input.filter_btn\").click(function(){\n
+          \               var filter_url = $(this).parent().attr('href');\n                if
+          (filter_url){\n                    location.href = filter_url;\n                }\n
+          \           });\n\n            $('.filter[data-mcadvname]').on('click', function()
+          {\n                var obj = $(this);\n                var advname = obj.data('mcadvname');\n
+          \               var advval = obj.data('mcadvval');\n                var url
+          = MetaC.setUrlParam('page', false, url);\n                var url = MetaC.setUrlParam(advname
+          + '[]', false, url);\n                if ( advval && advval != '' ) {\n                    url
+          = MetaC.setUrlParam(advname + '[' + advval + ']', '1', url);\n                    url
+          = MetaC.setUrlParam('search_type', 'advanced', url);\n                }\n
+          \               window.location = url;\n            });\n        });\n    </script>\n
+          \   \n</div>\n\n            <div class=\"module search_results fxdcol gu6\">\n
+          \                       <div class=\"body\">\n                                    <ul
+          class=\"search_results module\">\n                                            \n
+          \                                                                                                                                                                                                                                                                                                           \n
+          \                                                                                                                                                                                                                               \n
+          \                       <li class=\"result first_result\">\n                            <div
+          class=\"result_wrap\">\n                                <div class=\"result_thumbnail\">\n
+          \                                                                               <img
+          src=\"https://static.metacritic.com/images/products/movies/5/14d38f138eb320954cd1e07d0449e5a6-78.jpg\"
+          alt=\"The Matrix thumbnail\" />\n                                                                    </div>\n
+          \                               <div class=\"basic_stats has_thumbnail\">\n
+          \                                   <div class=\"main_stats\">\n                                                                                    \n\n
+          \       \n<span class=\"metascore_w medium movie positive\">73</span>\n\n
+          \                                       \n                                                                                                                                                                    <h3
+          class=\"product_title basic_stat\">\n                                            <a
+          href=\"/movie/the-matrix\">\n                                                                                                    The
+          Matrix\n                                                                                            </a>\n
+          \                                       </h3>\n                                        <p>\n
+          \                                           \n                                                                                            Movie,
+          1999                                                                                    </p>\n
+          \                                   </div>\n                                </div>\n
+          \                               <p class=\"deck basic_stat\">A computer hacker
+          (Keanu Reeves) learns that his entire life has been a virtual dream, orchestrated
+          by a strange class of computer overlords in the far future. He joins a resistance
+          movement to...</p>                            </div>\n                        </li>\n
+          \                                           \n                                                                                                                                                                                                                                                                                                            \n
+          \                                                                                                                                                                   \n
+          \                       <li class=\"result\">\n                            <div
+          class=\"result_wrap\">\n                                <div class=\"result_thumbnail\">\n
+          \                                                                               <img
+          src=\"https://static.metacritic.com/images/products/movies/5/dde43b299ed60626b0a522142f06f2e9-78.jpg\"
+          alt=\"The Matrix Reloaded thumbnail\" />\n                                                                    </div>\n
+          \                               <div class=\"basic_stats has_thumbnail\">\n
+          \                                   <div class=\"main_stats\">\n                                                                                    \n\n
+          \       \n<span class=\"metascore_w medium movie positive\">62</span>\n\n
+          \                                       \n                                                                                                                                                                    <h3
+          class=\"product_title basic_stat\">\n                                            <a
+          href=\"/movie/the-matrix-reloaded\">\n                                                                                                    The
+          Matrix Reloaded\n                                                                                            </a>\n
+          \                                       </h3>\n                                        <p>\n
+          \                                           \n                                                                                            Movie,
+          2003                                                                                    </p>\n
+          \                                   </div>\n                                </div>\n
+          \                               <p class=\"deck basic_stat\">Neo, Morpheus,
+          Trinity, and the rest of their crew continue to battle the machines that have
+          enslaved the human race in the Matrix.</p>                            </div>\n
+          \                       </li>\n                                            \n
+          \                                                                                                                                                                                                                                                                                                           \n
+          \                                                                                                                                                                   \n
+          \                       <li class=\"result\">\n                            <div
+          class=\"result_wrap\">\n                                <div class=\"result_thumbnail\">\n
+          \                                                                               <img
+          src=\"https://static.metacritic.com/images/products/movies/9/3db9048cb125858068a6f56c7c1e73c2-78.jpg\"
+          alt=\"The Matrix Revolutions thumbnail\" />\n                                                                    </div>\n
+          \                               <div class=\"basic_stats has_thumbnail\">\n
+          \                                   <div class=\"main_stats\">\n                                                                                    \n\n
+          \       \n<span class=\"metascore_w medium movie mixed\">47</span>\n\n                                        \n
+          \                                                                                                                                                                   <h3
+          class=\"product_title basic_stat\">\n                                            <a
+          href=\"/movie/the-matrix-revolutions\">\n                                                                                                    The
+          Matrix Revolutions\n                                                                                            </a>\n
+          \                                       </h3>\n                                        <p>\n
+          \                                           \n                                                                                            Movie,
+          2003                                                                                    </p>\n
+          \                                   </div>\n                                </div>\n
+          \                               <p class=\"deck basic_stat\">Neo, Morpheus
+          and Trinity battle to defend Zion, the last real-world city, against the onslaught
+          of the machines that have enslaved the human race. And, now as Neo learns
+          more about his heroic...</p>                            </div>\n                        </li>\n
+          \                                           \n                                                                                                                                                                                                                                                                                                            \n
+          \                                                                                                                                                                   \n
+          \                       <li class=\"result\">\n                            <div
+          class=\"result_wrap\">\n                                <div class=\"result_thumbnail\">\n
+          \                                                                               <img
+          src=\"https://static.metacritic.com/images/products/movies/9/e170448d81eb1535a158eb3a834aacf2-78.jpg\"
+          alt=\"The Matrix Resurrections thumbnail\" />\n                                                                    </div>\n
+          \                               <div class=\"basic_stats has_thumbnail\">\n
+          \                                   <div class=\"main_stats\">\n                                                                                    \n\n
+          \       \n<span class=\"metascore_w medium movie positive\">64</span>\n\n
+          \                                       \n                                                                                                                                                                    <h3
+          class=\"product_title basic_stat\">\n                                            <a
+          href=\"/movie/the-matrix-4\">\n                                                                                                    The
+          Matrix Resurrections\n                                                                                            </a>\n
+          \                                       </h3>\n                                        <p>\n
+          \                                           \n                                                                                            Movie,
+          2021                                                                                    </p>\n
+          \                                   </div>\n                                </div>\n
+          \                               <p class=\"deck basic_stat\">In The Matrix
+          Resurrections, return to a world of two realities: one, everyday life; the
+          other, what lies behind it. To find out if his reality is a physical or mental
+          construct, to truly know...</p>                            </div>\n                        </li>\n
+          \                                           \n                                                                                                                                                                                                                                                                                                            \n
+          \                                                                                                                                                                   \n
+          \                       <li class=\"result\">\n                            <div
+          class=\"result_wrap\">\n                                <div class=\"result_thumbnail\">\n
+          \                                                                               <img
+          src=\"https://static.metacritic.com/images/products/movies/5/13f2d1dbf5516885a83c97f1c65225a8-78.jpg\"
+          alt=\"A Glitch in the Matrix thumbnail\" />\n                                                                    </div>\n
+          \                               <div class=\"basic_stats has_thumbnail\">\n
+          \                                   <div class=\"main_stats\">\n                                                                                    \n\n
+          \       \n<span class=\"metascore_w medium movie positive\">62</span>\n\n
+          \                                       \n                                                                                                                                                                    <h3
+          class=\"product_title basic_stat\">\n                                            <a
+          href=\"/movie/a-glitch-in-the-matrix\">\n                                                                                                    A
+          Glitch in the Matrix\n                                                                                            </a>\n
+          \                                       </h3>\n                                        <p>\n
+          \                                           \n                                                                                            Movie,
+          2021                                                                                    </p>\n
+          \                                   </div>\n                                </div>\n
+          \                               <p class=\"deck basic_stat\">What if we are
+          living in a simulation, and the world as we know it is not real? To tackle
+          this mind-bending idea, acclaimed filmmaker Rodney Ascher (ROOM 237, THE NIGHTMARE)
+          uses a noted speech...</p>                            </div>\n                        </li>\n
+          \                                       </ul>\n\n                    \n                            </div>\n
+          \       </div>\n        </div>\n\n\n                            </div>\n        </div>\n\n
+          \           <footer id=\"bottom_footer\" class=\"footer_flex\">\n    <div
+          id=\"providers\">\r\n\t<a href=\"https://www.allmusic.com\" target=\"_blank\">Music
+          title data, credits, and images provided by <span>AMG</span></a>\r\n\t<span
+          class=\"link_divider\">|</span><a href=\"https://www.imdb.com\" target=\"_blank\">Movie
+          title data, credits, and poster art provided by <span>IMDb</span></a>\r\n\t<span
+          class=\"link_divider\">|</span><a href=\"https://www.internetvideoarchive.com\"
+          target=\"_blank\">Video and Images provided by <span>IVA</span></a>\r\n    <div
+          id=\"trademark\">\r\n        We Deal With Criticism<sup>&reg;</sup>&nbsp;\r\n\t</div>\r\n</div>\r\n\n\n
+          \           <div class=\"site_links upper\">\n                    <a href=\"https://www.metacritic.com/movie\">\n
+          \               <span>\n                                            Movies\n
+          \                                   </span>\n            </a>\n                    <a
+          href=\"https://www.metacritic.com/tv\">\n                <span>\n                                            TV\n
+          \                                   </span>\n            </a>\n                    <a
+          href=\"https://www.metacritic.com/music\">\n                <span>\n                                            Music\n
+          \                                   </span>\n            </a>\n                    <a
+          href=\"https://www.metacritic.com/game/playstation-4\">\n                <span>\n
+          \                                           PS4\n                                    </span>\n
+          \           </a>\n                    <a href=\"https://www.metacritic.com/game/xbox-one\">\n
+          \               <span>\n                                            XboxOne\n
+          \                                   </span>\n            </a>\n                    <a
+          href=\"https://www.metacritic.com/game/switch\">\n                <span>\n
+          \                                           Switch\n                                    </span>\n
+          \           </a>\n                    <a href=\"https://www.metacritic.com/game/pc\">\n
+          \               <span>\n                                            PC\n                                    </span>\n
+          \           </a>\n                    <a href=\"https://www.metacritic.com/game/wii-u\">\n
+          \               <span>\n                                            WiiU\n
+          \                                   </span>\n            </a>\n                    <a
+          href=\"https://www.metacritic.com/game/3ds\">\n                <span>\n                                            3DS\n
+          \                                   </span>\n            </a>\n                    <a
+          href=\"https://www.metacritic.com/game/playstation-vita\">\n                <span>\n
+          \                                           PS Vita\n                                    </span>\n
+          \           </a>\n                    <a href=\"https://www.metacritic.com/game/ios\">\n
+          \               <span>\n                                            iOS\n
+          \                                   </span>\n            </a>\n                    <a
+          href=\"https://www.metacritic.com/feature\">\n                <span>\n                                            Reports\n
+          \                                   </span>\n            </a>\n                    <a
+          href=\"https://www.metacritic.com/rss\">\n                <span>\n                                            RSS
+          Feeds\n                                    </span>\n            </a>\n                </div>\n
+          \   \n    <div class=\"pad_top1 pad_btm1\">\n        <div class=\"social_icons\">\n
+          \           <a href=\"https://www.facebook.com/Metacritic\" target=\"_blank\"
+          rel=\"noopener\" class=\"social_round\"><i class=\"fa fa-facebook\"></i></a>\n
+          \           <a href=\"https://www.instagram.com/metacritic/\" target=\"_blank\"
+          rel=\"noopener\"><i class=\"fa fa-instagram\"></i></a>\n            <a href=\"https://twitter.com/metacritic\"
+          target=\"_blank\" rel=\"noopener\" class=\"social_round\"><i class=\"fa fa-twitter\"></i></a>\n
+          \       </div>\n    </div>\n\n    <div class=\"about_cbs\">\n        <div
+          class=\"footer_about_links\">\n            <a class=\"first\" href=\"https://careers.redventures.com/\"
+          target=\"_blank\">Careers</a>\n            <span class=\"link_divider\">|</span><a
+          href=\"https://www.metacritic.com/faq\">FAQ</a>\n            <span class=\"link_divider\">|</span><a
+          href=\"https://www.metacritic.com/about-metacritic\">About Metacritic</a>\n
+          \           <span class=\"link_divider\">|</span><a href=\"https://metacritic.zendesk.com/hc/en-us\">Help
+          & Support</a>\n            <span class=\"link_divider\">|</span><a href=\"https://www.metacritic.com/contact-us\">Contact</a>\n
+          \       </div>\n        <div class=\"footer_about_links\">\n            <span
+          class=\"link_divider\">|</span><span><a href=\"https://privacyportal.onetrust.com/webform/79ba7c84-ebc2-4740-8d11-bf1cc4501e59/ae88e03f-2b16-4276-9980-27124ba4b2c1\"
+          target=\"_blank\">Do Not Sell My Information</a></span>\n            <span
+          class=\"link_divider\">|</span><span id=\"footer_privacy\"><a href=\"https://redventures.com/privacy-policy.html\"
+          target=\"_blank\">Privacy Policy</a></span>\n            <span class=\"link_divider\">|</span><span
+          id=\"footer_cookie\"><a class=\"ot-sdk-show-settings\">Cookie Settings</a></span>\n
+          \           <span class=\"link_divider\">|</span><span id=\"footer_terms\"><a
+          href=\"https://redventures.com/CMG-terms-of-use.html\" target=\"_blank\">Terms
+          of Use</a></span>\n                            <span class=\"link_divider\">|</span><span
+          id=\"footer_attribution\"><a href=\"https://www.cnet.com/\" target=\"_blank\">CNET</a></span>\n
+          \                   </div>\n        <div id=\"footer_rights\" class=\"pad_btm2\">\n
+          \           &copy; 2021 METACRITIC, A RED VENTURES COMPANY. ALL RIGHTS RESERVED.\n
+          \       </div>\n    </div>\n</footer>\n\n    </div>\n\n    \n<script type=\"text/javascript\">\n
+          \   \n    if (self != top) {\n        top.location = self.location;\n    }\n</script>\n\n\n\n\n\n<script
+          language=\"JavaScript\" type=\"text/javascript\">\n    utag_data.session =
+          MetaC.adSession() + ':' + MetaC.adSubses();\n        \n    \n    \n    if
+          ( window.eventAmazonBuyView ) {\n        utag_data.eventAmazonBuyView = 1;\n
+          \   }\n    if ( window.eventAmazonPivView ) {\n        utag_data.eventAmazonPivView
+          = 1;\n    }\n    \n</script>\n\n\n\n\n\n\n\n    <script type=\"text/javascript\"
+          src=\"https://urs.metacritic.com/sdk/urs.js\"></script>\n\n\n    <script type=\"text/javascript\">\n
+          \       if ( window.MetaC && MetaC.URS ) {\n            MetaC.URS.config(227,
+          false);\n        }\n    </script>\n\n\n\n\n    \n<script type=\"text/javascript\">\n
+          \   window.cbsoptanon.onScriptsReady(function(cmp) {\n        //\n        //
+          fire off tealium if the banner is not present after\n        // onetrust has
+          loaded. (cbsoptanon has a promise polyfill)\n        //\n        cmp.ot.awaitInitialConsent(function()
+          {\n            (function(a,b,c,d){\n            a='//tags.tiqcdn.com/utag/redventures/metacriticsite/prod/utag.js';\n
+          \           b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;\n
+          \           a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);\n
+          \           })();\n        });\n    });\n</script>\n\n\n\n\n    <script type=\"text/javascript\">\n
+          \       $(document).ready(function(){\n            setTimeout(function(){\n
+          \               MetaC.checkOmniEvents();\n            }, 300);\n        });\n
+          \   </script>\n\n\n\n<script type=\"text/javascript\">\n    \n    dwVars =
+          {\"siteId\":\"50\",\"onId\":\"1\",\"ptId\":\"6056\"};\n    if (typeof DW ==
+          \"object\"){\n        DW.pageParams = dwVars;\n        DW.regSilo = '12';\n
+          \       DW.clear();\n    }\n</script>\n\n\n\n<script>\n    var cbsiApexGlobal
+          = {\n        'SITE': dwVars.siteId,\n        'NODE': dwVars.onId,\n        'PTYPE':dwVars.ptId\n
+          \   };\n</script>\n\n\n\n\n<script>\n    var _gaq = _gaq || [];\n    _gaq.push(['_setAccount',
+          'UA-22577913-5']);\n    _gaq.push(['_setCustomVar',1,'PageType',dwVars.ptId,3]);\n
+          \   _gaq.push(['_trackPageview']);\n    _gaq.push(['_trackPageLoadTime']);\n
+          \   _gaq.push(['_setAllowLinker', true]);\n    _gaq.push(['nT._setAccount',
+          'UA-27653683-1']);\n    _gaq.push(['nT._setAllowLinker', true]);\n    _gaq.push(['nT._setSampleRate',
+          '1']);\n    _gaq.push(['nT._trackPageview']);\n</script>\n\n\n\n<div id=\"fb-root\"></div>\n<script>\n
+          \   gdprConsentCallback('facebook', function () {\n        window.fbAsyncInit
+          = function() {\n            FB.init({\n                appId      : '123113677890173',\n
+          \               version    : 'v2.6',\n                channelUrl : 'https://www.metacritic.com/static/fbchannel.html',\n
+          \               status     : true,\n                xfbml      : true,\n                cookie
+          \    : true\n                });\n            MetaC.FB.initialized();\n            };\n
+          \       \n        (function(d, s, id){\n            var js, fjs = d.getElementsByTagName(s)[0];\n
+          \           if (d.getElementById(id)) {return;}\n            js = d.createElement(s);
+          js.id = id;\n            js.src = \"//connect.facebook.net/en_US/sdk.js\";\n
+          \           fjs.parentNode.insertBefore(js, fjs);\n        }(document, 'script',
+          'facebook-jssdk'));\n    }, {}, 'social');\n    \n</script>\n\n\n\n<script>\n
+          \   gdprConsentCallback('twitter', function () {\n        window.twttr = (function
+          (d,s,id) {\n        var t, js, fjs = d.getElementsByTagName(s)[0];\n        if
+          (d.getElementById(id)) return; js=d.createElement(s); js.id=id;\n        js.src=\"https://platform.twitter.com/widgets.js\";
+          fjs.parentNode.insertBefore(js, fjs);\n        return window.twttr || (t =
+          { _e: [], ready: function(f){ t._e.push(f) } });\n        }(document, \"script\",
+          \"twitter-wjs\"));\n\n        twttr.ready(function (twttr) {\n            MetaC.Twitter.initialized();\n
+          \       });\n    }, {}, 'social');\n</script>\n\n\n\n\n\n\n\n\n\n\n\n<script
+          type='text/javascript'>\n    \n    // immediate function to scope initialization\n
+          \   (function(){\n        var mc_chartbeat_page_types = [\"front_door\", \"section_door\",
+          \"article\", \"image_gallery\", \"product_overview\", \"product_tvepisode\",
+          \"product_tvseason\", \"list_page\"];\n        var mc_utag_page_type = \"search\";\n\n
+          \       // only load chartbeat based on page_type\n        if (mc_chartbeat_page_types.includes(mc_utag_page_type)){\n
+          \           // If its an image gallery, it gets convaluted, see if you have
+          a firstPhotoIdx, if you do not its a door\n            // We say /pictures/recommend
+          is a image_gallery in utag, when its really a door\n            if (mc_utag_page_type
+          == \"image_gallery\"){\n                                    mc_utag_page_type
+          = \"section_door\";\n                            }\n            if (window.VideoStrategy){\n
+          \               window['_cbv_strategies'] = window['_cbv_strategies'] || [];\n
+          \               window['_cbv_strategies'].push(window.VideoStrategy);\n            }\n\n
+          \           var _sf_async_config = window._sf_async_config = (window._sf_async_config
+          || {});\n            _sf_async_config.uid = 66142;\n            _sf_async_config.domain
+          = 'metacritic.com';\n            _sf_async_config.useCanonical = true;\n            _sf_async_config.flickerControl
+          = false;\n            _sf_async_config.useCanonicalDomain = true;\n            _sf_async_config.sections
+          = mc_utag_page_type;\n            // make sure its an article, image galleries
+          are stories and will have an author, but we only tag\n            // authors
+          name(s) on article pages, on other pages, just pass empty string\n            if
+          (mc_utag_page_type == \"article\"){\n                _sf_async_config.authors
+          = '';\n            } else {\n                _sf_async_config.authors = '';\n
+          \           }\n\n            var _cbq = window._cbq = (window._cbq || []);\n\n
+          \                           _cbq.push(['_acct', 'anon']);\n            \n
+          \           window._sf_endpt = (new Date()).getTime();\n        }\n    })();\n
+          \   \n</script>\n<script type=\"text/plain\" class=\"optanon-category-2\"
+          async src=\"https://static.chartbeat.com/js/chartbeat_video.js\" charset=\"utf-8\"></script>\n\n\n\n
+          \   <!-- bottom scripts -->\n    <script typle=\"text/javascript\">\n        //
+          UVPJS-RV configuration\n        window.uvpjs.Configuration.hostname = '//www.metacritic.com';\n
+          \       window.uvpjs.Configuration.path = '/a/video-player/uvpjs-rv/3.1.8/';\n
+          \   </script>\n</body>\n</html>\n"
+      headers:
+        Accept-Ranges:
+          - bytes
+        Age:
+          - "54870"
+        Cache-Control:
+          - public, max-age=300
+        Connection:
+          - keep-alive
+        Content-Encoding:
+          - gzip
+        Content-Length:
+          - "16044"
+        Content-Security-Policy:
+          - frame-ancestors 'self';
+        Content-Type:
+          - text/html; charset=UTF-8
+        Date:
+          - Fri, 24 Dec 2021 09:01:43 GMT
+        Strict-Transport-Security:
+          - max-age=63072000; includeSubDomains; preload
+        Vary:
+          - Accept, Accept-Encoding
+        X-Timer:
+          - S1640336503.135464,VS0,VE1
+      status:
+        code: 200
+        message: OK
+      url: https://www.metacritic.com/search/movie/The+Matrix/results
+version: 1

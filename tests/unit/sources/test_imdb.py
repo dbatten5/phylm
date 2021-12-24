@@ -47,6 +47,15 @@ def zdt_search_results_fixture() -> Any:
 class TestInit:
     """Tests for the `__init__` method."""
 
+    def test_initial_state(self) -> None:
+        """
+        When the `Imdb` class is instantiated,
+        Then the data is `None`
+        """
+        imdb = Imdb("Alien")
+
+        assert imdb.title is None
+
     @patch(IMDB_IA_PATH)
     def test_exact_match(
         self,
@@ -62,6 +71,7 @@ class TestInit:
         mock_ia.search_movie.return_value = [the_matrix, alien]
 
         imdb = Imdb("Alien")
+        imdb.load_data()
 
         assert imdb.title == "Alien"
         assert imdb.low_confidence is False
@@ -77,6 +87,7 @@ class TestInit:
         mock_ia.search_movie.return_value = [the_matrix]
 
         imdb = Imdb(raw_title)
+        imdb.load_data()
 
         assert imdb.title == "The Matrix"
         assert imdb.low_confidence is True
@@ -92,6 +103,7 @@ class TestInit:
         mock_ia.search_movie.return_value = []
 
         imdb = Imdb(raw_title)
+        imdb.load_data()
 
         assert imdb.title is None
 
@@ -107,6 +119,7 @@ class TestYearMatching:
         Then the year is the preferred method of matching
         """
         imdb = Imdb(raw_title="Dune", raw_year=2021)
+        imdb.load_data()
 
         assert imdb.title == "Dune"
         assert imdb.year == 2021
@@ -119,6 +132,7 @@ class TestYearMatching:
         Then the year is the preferred method of matching
         """
         imdb = Imdb(raw_title="Dune", raw_year=1984)
+        imdb.load_data()
 
         assert imdb.title == "Dune"
         assert imdb.year == 1984
@@ -131,6 +145,7 @@ class TestYearMatching:
         Then the year is the preferred method of matching
         """
         imdb = Imdb(raw_title="Zero Dark Thirty", raw_year=2013)
+        imdb.load_data()
 
         assert imdb.title == "Zero Dark Thirty"
         assert imdb.year == 2012
@@ -149,6 +164,7 @@ class TestGenres:
         mock_ia.search_movie.return_value = [the_matrix_full]
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.genres(1) == ["Action"]
 
@@ -162,6 +178,7 @@ class TestGenres:
         mock_ia.search_movie.return_value = [the_matrix]
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.genres(1) == []
 
@@ -175,6 +192,7 @@ class TestGenres:
         mock_ia.search_movie.return_value = []
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.genres(1) == []
 
@@ -192,6 +210,7 @@ class TestCast:
         mock_ia.search_movie.return_value = [the_matrix_full]
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.cast(1) == ["Keanu Reeves"]
 
@@ -205,6 +224,7 @@ class TestCast:
         mock_ia.search_movie.return_value = [the_matrix]
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.cast(1) == []
 
@@ -218,6 +238,7 @@ class TestCast:
         mock_ia.search_movie.return_value = []
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.cast(1) == []
 
@@ -235,6 +256,7 @@ class TestRuntime:
         mock_ia.search_movie.return_value = [the_matrix_full]
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.runtime == "136"
 
@@ -248,6 +270,7 @@ class TestRuntime:
         mock_ia.search_movie.return_value = [the_matrix]
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.runtime is None
 
@@ -261,6 +284,7 @@ class TestRuntime:
         mock_ia.search_movie.return_value = []
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.runtime is None
 
@@ -278,6 +302,7 @@ class TestId:
         mock_ia.search_movie.return_value = [the_matrix]
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.id == "0133093"
 
@@ -291,6 +316,7 @@ class TestId:
         mock_ia.search_movie.return_value = []
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.id is None
 
@@ -308,6 +334,7 @@ class TestYear:
         mock_ia.search_movie.return_value = [the_matrix]
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.year == 1999
 
@@ -321,6 +348,7 @@ class TestYear:
         mock_ia.search_movie.return_value = [the_matrix]
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.year == 1999
 
@@ -334,6 +362,7 @@ class TestYear:
         mock_ia.search_movie.return_value = []
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.year is None
 
@@ -351,6 +380,7 @@ class TestDirectors:
         mock_ia.search_movie.return_value = [the_matrix_full]
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.directors(1) == ["Lana Wachowski"]
 
@@ -365,6 +395,7 @@ class TestDirectors:
         mock_ia.search_movie.return_value = [the_matrix]
 
         imdb = Imdb(raw_title)
+        imdb.load_data()
 
         assert imdb.directors(1) == []
 
@@ -378,6 +409,7 @@ class TestDirectors:
         mock_ia.search_movie.return_value = []
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.directors(1) == []
 
@@ -395,6 +427,7 @@ class TestRating:
         mock_ia.search_movie.return_value = [the_matrix_full]
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.rating == 8.7
 
@@ -408,6 +441,7 @@ class TestRating:
         mock_ia.search_movie.return_value = [the_matrix]
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.rating is None
 
@@ -421,6 +455,7 @@ class TestRating:
         mock_ia.search_movie.return_value = []
 
         imdb = Imdb("The Matrix")
+        imdb.load_data()
 
         assert imdb.rating is None
 
@@ -442,6 +477,7 @@ class TestPlot:
         mock_ia.get_movie.return_value = the_matrix_full
 
         imdb = Imdb(movie_id="0133093")
+        imdb.load_data()
 
         assert isinstance(imdb.plot, str)
         assert "Neo" in imdb.plot
@@ -460,6 +496,7 @@ class TestPlot:
         mock_ia.search_movie.return_value = [mock_movie]
 
         imdb = Imdb(raw_title)
+        imdb.load_data()
 
         assert imdb.plot == "the plot"
         mock_ia.update.assert_called_with(mock_movie, info=["plot"])
@@ -477,6 +514,7 @@ class TestPlot:
         mock_ia.search_movie.return_value = [mock_movie]
 
         imdb = Imdb(raw_title)
+        imdb.load_data()
 
         assert imdb.plot is None
 
@@ -490,6 +528,7 @@ class TestPlot:
         mock_ia.search_movie.return_value = []
 
         imdb = Imdb("The Movie")
+        imdb.load_data()
 
         assert imdb.plot is None
 
@@ -522,6 +561,7 @@ class TestMovieId:
         mock_ia.get_movie.return_value = the_matrix_full
 
         imdb = Imdb(movie_id="0133093")
+        imdb.load_data()
 
         assert imdb.title == "The Matrix"
         assert imdb.low_confidence is False
@@ -535,6 +575,7 @@ class TestMovieId:
         Then data remains as `None`
         """
         imdb = Imdb(movie_id="9999999999999999999999999999")
+        imdb.load_data()
 
         assert imdb.title is None
 
@@ -553,6 +594,7 @@ class TestMovieId:
         mock_ia.search_movie.return_value = [the_matrix]
 
         imdb = Imdb(raw_title="The Matrix", movie_id="9999999999999999999999999999")
+        imdb.load_data()
 
         assert imdb.title == "The Matrix"
 
@@ -569,6 +611,31 @@ class TestMovieId:
         mock_ia.get_movie.return_value = the_matrix
 
         imdb = Imdb(movie_id="0133093")
+        imdb.load_data()
 
         assert imdb.title == "The Matrix"
         mock_ia.search_movie.assert_not_called()
+
+
+@pytest.mark.asyncio
+class TestAsyncLoadData:
+    """Tests for the `async_load_data` method."""
+
+    @patch(IMDB_IA_PATH)
+    async def test_success(
+        self,
+        mock_ia: MagicMock,
+        the_matrix: Movie,
+        alien: Movie,
+    ) -> None:
+        """
+        Given a raw title with exact match,
+        When the `async_load_data` method is invoked,
+        Then the match is selected asynchronously
+        """
+        mock_ia.search_movie.return_value = [the_matrix, alien]
+
+        imdb = Imdb("Alien")
+        await imdb.async_load_data()
+
+        assert imdb.title == "Alien"

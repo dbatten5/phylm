@@ -49,16 +49,18 @@ class Rt:
         self.low_confidence = True
         return results[0]
 
-    def _scrape_data(self) -> BeautifulSoup:
+    def _generate_search_url(self) -> str:
         url_encoded_film = url_encode(self.raw_title)
-        search_url = f"{RT_BASE_MOVIE_URL}?search={url_encoded_film}"
+        return f"{RT_BASE_MOVIE_URL}?search={url_encoded_film}"
+
+    def _scrape_data(self) -> BeautifulSoup:
+        search_url = self._generate_search_url()
         return soupify(search_url)
 
     async def _async_scrape_data(
         self, session: Optional[ClientSession] = None
     ) -> BeautifulSoup:
-        url_encoded_film = url_encode(self.raw_title)
-        search_url = f"{RT_BASE_MOVIE_URL}?search={url_encoded_film}"
+        search_url = self._generate_search_url()
         return await async_soupify(search_url, session)
 
     def load_data(self) -> None:

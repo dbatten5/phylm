@@ -50,16 +50,18 @@ class Mtc:
         self.low_confidence = True
         return results[0]
 
-    def _scrape_data(self) -> BeautifulSoup:
+    def _generate_search_url(self) -> str:
         url_encoded_film = url_encode(self.raw_title)
-        search_url = f"{MTC_BASE_MOVIE_URL}/{url_encoded_film}/results"
+        return f"{MTC_BASE_MOVIE_URL}/{url_encoded_film}/results"
+
+    def _scrape_data(self) -> BeautifulSoup:
+        search_url = self._generate_search_url()
         return soupify(search_url)
 
     async def _async_scrape_data(
         self, session: Optional[ClientSession] = None
     ) -> BeautifulSoup:
-        url_encoded_film = url_encode(self.raw_title)
-        search_url = f"{MTC_BASE_MOVIE_URL}/{url_encoded_film}/results"
+        search_url = self._generate_search_url()
         return await async_soupify(search_url, session)
 
     def load_data(self) -> None:
