@@ -30,7 +30,7 @@ class TestInit:
         Then the match is selected and low confidence remains False
         """
         rot_tom = Rt("The Matrix")
-        await rot_tom.load_data()
+        await rot_tom.load_source()
 
         assert rot_tom.title == "The Matrix"
         assert rot_tom.low_confidence is False
@@ -43,7 +43,7 @@ class TestInit:
         Then the match is selected
         """
         rot_tom = Rt("  The mAtrix  ")
-        await rot_tom.load_data()
+        await rot_tom.load_source()
 
         assert rot_tom.title == "The Matrix"
         assert rot_tom.low_confidence is False
@@ -56,7 +56,7 @@ class TestInit:
         Then the first match with a tomato score is selected and low confidence is True
         """
         rot_tom = Rt("The Matrix Resuur")
-        await rot_tom.load_data()
+        await rot_tom.load_source()
 
         assert rot_tom.title == "The Matrix Resurrections"
         assert rot_tom.low_confidence is True
@@ -73,7 +73,7 @@ class TestYearMatching:
         Then the year is the preferred method of matching
         """
         rot_tom = Rt(raw_title="Dune", raw_year=2021)
-        await rot_tom.load_data()
+        await rot_tom.load_source()
 
         assert rot_tom.title == "Dune"
         assert rot_tom.year == "2021"
@@ -86,7 +86,7 @@ class TestYearMatching:
         Then the year is the preferred method of matching
         """
         rot_tom = Rt(raw_title="Dune", raw_year=1984)
-        await rot_tom.load_data()
+        await rot_tom.load_source()
 
         assert rot_tom.title == "Dune"
         assert rot_tom.year == "1984"
@@ -103,7 +103,7 @@ class TestTitle:
         Then None is returned
         """
         rot_tom = Rt("asldkjaskdnlaskdjaslkjdas")
-        await rot_tom.load_data()
+        await rot_tom.load_source()
 
         assert rot_tom.title is None
 
@@ -119,7 +119,7 @@ class TestYear:
         Then the year can be returned
         """
         rot_tom = Rt("The Matrix")
-        await rot_tom.load_data()
+        await rot_tom.load_source()
 
         assert rot_tom.year == "1999"
 
@@ -131,7 +131,7 @@ class TestYear:
         Then None is returned
         """
         rot_tom = Rt("asldkjaskdnlaskdjaslkjdas")
-        await rot_tom.load_data()
+        await rot_tom.load_source()
 
         assert rot_tom.year is None
 
@@ -147,7 +147,7 @@ class TestTomatoScore:
         Then the score is returned
         """
         rot_tom = Rt("The Matrix")
-        await rot_tom.load_data()
+        await rot_tom.load_source()
 
         assert rot_tom.tomato_score == "88"
 
@@ -159,6 +159,6 @@ class TestTomatoScore:
         Then None is returned
         """
         rot_tom = Rt("asldkjaskdnlaskdjaslkjdas")
-        await rot_tom.load_data()
+        await rot_tom.load_source()
 
         assert rot_tom.tomato_score is None

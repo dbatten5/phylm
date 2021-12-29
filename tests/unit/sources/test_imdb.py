@@ -33,7 +33,7 @@ class TestInit:
         Then the match is selected and low confidence remains False
         """
         imdb = Imdb("The Matrix")
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.title == "The Matrix"
         assert imdb.low_confidence is False
@@ -48,7 +48,7 @@ class TestInit:
         raw_title = "The Matrixy"
 
         imdb = Imdb(raw_title)
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.title == "The Matrix"
         assert imdb.low_confidence is True
@@ -63,7 +63,7 @@ class TestInit:
         raw_title = "asldkjnkasnxlajsnxkasjxnas"
 
         imdb = Imdb(raw_title)
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.title is None
 
@@ -79,7 +79,7 @@ class TestYearMatching:
         Then the year is the preferred method of matching
         """
         imdb = Imdb(raw_title="The Matrix", raw_year=2021)
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.title == "The Matrix Resurrections"
         assert imdb.year == 2021
@@ -96,7 +96,7 @@ class TestGenres:
         Then the genres are returned with a given limit
         """
         imdb = Imdb("The Matrix")
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.genres(1) == ["Action"]
 
@@ -124,7 +124,7 @@ class TestGenres:
         raw_title = "asldkjnkasnxlajsnxkasjxnas"
 
         imdb = Imdb(raw_title)
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.genres(1) == []
 
@@ -140,7 +140,7 @@ class TestCast:
         Then the cast is returned with a given limit
         """
         imdb = Imdb("The Matrix")
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.cast(1) == ["Keanu Reeves"]
 
@@ -168,7 +168,7 @@ class TestCast:
         raw_title = "asldkjnkasnxlajsnxkasjxnas"
 
         imdb = Imdb(raw_title)
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.cast(1) == []
 
@@ -184,7 +184,7 @@ class TestRuntime:
         Then the runtime is returned
         """
         imdb = Imdb("The Matrix")
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.runtime == "136"
 
@@ -216,7 +216,7 @@ class TestRuntime:
         raw_title = "asldkjnkasnxlajsnxkasjxnas"
 
         imdb = Imdb(raw_title)
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.runtime is None
 
@@ -232,7 +232,7 @@ class TestId:
         Then the id is returned
         """
         imdb = Imdb("The Matrix")
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.id == "0133093"
 
@@ -246,7 +246,7 @@ class TestId:
         raw_title = "asldkjnkasnxlajsnxkasjxnas"
 
         imdb = Imdb(raw_title)
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.id is None
 
@@ -262,7 +262,7 @@ class TestYear:
         Then the year is returned
         """
         imdb = Imdb("The Matrix")
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.year == 1999
 
@@ -276,7 +276,7 @@ class TestYear:
         raw_title = "asldkjnkasnxlajsnxkasjxnas"
 
         imdb = Imdb(raw_title)
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.year is None
 
@@ -292,7 +292,7 @@ class TestDirectors:
         Then the directors are returned with a given limit
         """
         imdb = Imdb("The Matrix")
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.directors(1) == ["Lana Wachowski"]
 
@@ -321,7 +321,7 @@ class TestDirectors:
         raw_title = "asldkjnkasnxlajsnxkasjxnas"
 
         imdb = Imdb(raw_title)
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.directors(1) == []
 
@@ -337,7 +337,7 @@ class TestRating:
         Then the rating is returned
         """
         imdb = Imdb("The Matrix")
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.rating == 8.7
 
@@ -365,7 +365,7 @@ class TestRating:
         raw_title = "asldkjnkasnxlajsnxkasjxnas"
 
         imdb = Imdb(raw_title)
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.rating is None
 
@@ -383,7 +383,7 @@ class TestPlot:
         Then the plot is returned
         """
         imdb = Imdb(movie_id="0133093")
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert isinstance(imdb.plot, str)
         assert "Neo" in imdb.plot
@@ -396,7 +396,7 @@ class TestPlot:
         Then the plot is fetched and then returned
         """
         imdb = Imdb("The Matrix")
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert isinstance(imdb.plot, str)
         assert "Neo" in imdb.plot
@@ -431,7 +431,7 @@ class TestPlot:
         raw_title = "asldkjnkasnxlajsnxkasjxnas"
 
         imdb = Imdb(raw_title)
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.plot is None
 
@@ -460,7 +460,7 @@ class TestMovieId:
         Then the match is selected and `low_confidence` remains False
         """
         imdb = Imdb(movie_id="0133093")
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.title == "The Matrix"
         assert imdb.low_confidence is False
@@ -475,7 +475,7 @@ class TestMovieId:
         Then data remains as `None`
         """
         imdb = Imdb(movie_id="9999999999999999999999999999")
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.title is None
 
@@ -489,7 +489,7 @@ class TestMovieId:
         Then the title is used to perform the search
         """
         imdb = Imdb(raw_title="The Matrix", movie_id="9999999999999999999999999999")
-        await imdb.load_data()
+        await imdb.load_source()
 
         assert imdb.title == "The Matrix"
 

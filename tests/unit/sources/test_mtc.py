@@ -30,7 +30,7 @@ class TestInit:
         Then the match is selected and low confidence remains False
         """
         mtc = Mtc("The Matrix")
-        await mtc.load_data()
+        await mtc.load_source()
 
         assert mtc.title == "The Matrix"
         assert mtc.low_confidence is False
@@ -43,7 +43,7 @@ class TestInit:
         Then the match is selected and low confidence remains False
         """
         mtc = Mtc(" the mAtrix ")
-        await mtc.load_data()
+        await mtc.load_source()
 
         assert mtc.title == "The Matrix"
         assert mtc.low_confidence is False
@@ -56,7 +56,7 @@ class TestInit:
         Then the first match is selected and low confidence is True
         """
         mtc = Mtc("The Martix")
-        await mtc.load_data()
+        await mtc.load_source()
 
         assert mtc.title == "The Matrix"
         assert mtc.low_confidence is True
@@ -73,7 +73,7 @@ class TestYearMatching:
         Then the year is the preferred method of matching
         """
         mtc = Mtc(raw_title="Dune", raw_year=2021)
-        await mtc.load_data()
+        await mtc.load_source()
 
         assert mtc.title == "Dune: Part One"
         assert mtc.year == 2021
@@ -86,7 +86,7 @@ class TestYearMatching:
         Then the year is the preferred method of matching
         """
         mtc = Mtc(raw_title="Dune", raw_year=1984)
-        await mtc.load_data()
+        await mtc.load_source()
 
         assert mtc.title == "Dune"
         assert mtc.year == 1984
@@ -103,7 +103,7 @@ class TestTitle:
         Then None is returned
         """
         mtc = Mtc("asldkjaskdnlaskdjaslkjdas")
-        await mtc.load_data()
+        await mtc.load_source()
 
         assert mtc.title is None
 
@@ -119,7 +119,7 @@ class TestYear:
         Then the year can be returned
         """
         mtc = Mtc("The Matrix")
-        await mtc.load_data()
+        await mtc.load_source()
 
         assert mtc.year == 1999
 
@@ -131,7 +131,7 @@ class TestYear:
         Then None is returned
         """
         mtc = Mtc("asldkjaskdnlaskdjaslkjdas")
-        await mtc.load_data()
+        await mtc.load_source()
 
         assert mtc.year is None
 
@@ -143,7 +143,7 @@ class TestYear:
         Then None is returned
         """
         mtc = Mtc("Inu-oh")
-        await mtc.load_data()
+        await mtc.load_source()
 
         assert mtc.low_confidence is False
         assert mtc.year is None
@@ -160,7 +160,7 @@ class TestRating:
         Then the rating can be returned
         """
         mtc = Mtc("The Matrix")
-        await mtc.load_data()
+        await mtc.load_source()
 
         assert mtc.rating == "73"
 
@@ -172,6 +172,6 @@ class TestRating:
         Then None is returned
         """
         mtc = Mtc("asldkjaskdnlaskdjaslkjdas")
-        await mtc.load_data()
+        await mtc.load_source()
 
         assert mtc.rating is None

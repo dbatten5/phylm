@@ -56,7 +56,7 @@ class Mtc:
         search_url = f"{MTC_BASE_MOVIE_URL}/{url_encoded_film}/results"
         return await async_soupify(search_url, session)
 
-    async def load_data(self, session: Optional[ClientSession] = None) -> None:
+    async def load_source(self, session: Optional[ClientSession] = None) -> None:
         """Asynchronously load the data for from the source.
 
         Args:
