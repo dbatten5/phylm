@@ -52,11 +52,11 @@ class TestSearchMovies:
         When the `search_movies` method is invoked with the region,
         Then the region is passed to the api request
         """
-        client = TmdbClient(api_key="9017d5457c4e8ec5f0999d1b10012ae1")
+        client = TmdbClient(api_key="dummy_key")
 
         results = client.search_movies(query="The Matrix", region="gb")
 
-        assert results[0]["release_date"] == "1999-06-11"
+        assert results[0]["release_date"] == "2021-12-22"
 
     @vcr.use_cassette(
         f"{VCR_FIXTURES_DIR}/invalid_key.yaml", filter_query_parameters=["api_key"]

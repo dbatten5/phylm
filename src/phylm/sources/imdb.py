@@ -1,4 +1,5 @@
 """Module to contain the IMDb class definition."""
+import asyncio
 from typing import List
 from typing import Optional
 
@@ -37,7 +38,7 @@ class Imdb:
         self.movie_id = movie_id
         self.raw_year = raw_year
         self.low_confidence = False
-        self._imdb_data = self._get_imdb_data()
+        self._imdb_data: Optional[Movie] = None
 
     def _get_imdb_data(self) -> Optional[Movie]:
         """Fetch the data from IMDb.
@@ -96,6 +97,11 @@ class Imdb:
         # finally pick the first result
         self.low_confidence = True
         return results[0]
+
+    async def load_source(self) -> None:
+        """Asynchronously load the data for from the source."""
+        loop = asyncio.get_running_loop()
+        self._imdb_data = await loop.run_in_executor(None, self._get_imdb_data)
 
     @property
     def title(self) -> Optional[str]:

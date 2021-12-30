@@ -1,0 +1,157 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        Accept-Language:
+          - en-us,en;q=0.5
+        Connection:
+          - close
+        Host:
+          - www.imdb.com
+        User-Agent:
+          - Mozilla/5.0
+      method: GET
+      uri: https://www.imdb.com/title/tt9999999999999999999999999999/reference
+    response:
+      body:
+        string: !!binary |
+          eJzFV21v4jgQ/t5f4aXqqZUIGMJLoRSpDXR10q321Ns76T6tHGKI1RCzjnnpnu6/34ztUBIC6t2H
+          20BI8IxnnnmzxxejD5PPwZc/f52SWC+T8cUIHyRh6eK+xtMaDnAWjS8IGS25ZmQWM5VxfV9b67l3
+          WyNNQ9JCJ3zcoR0yVUoq4pGfP03CUdOOI0emX/ENpddJKKNX8hcMx1wsYj0kLUqv7i7+vtgTlkwt
+          RDokbK3lHfzfikjHhu92tcOBkM1eFkqu08ibyUSqIbmcdCaDyQSJc5lqb86WInkdkj+4iljK6uRB
+          CQbKM5ZmXsaVmKNGZtRpvtNexGdSMS0k6E1lyg15GMsNV9VMoJyrROSc8PZSJ24GvmxEJjSPzOQc
+          ZMvvBY9tO4HNtNjwAnnaf5xSiuRLbjx57KUq27cxKDIkqQCTl/A58q92JJOJiMjlwFwHHMqJrGbZ
+          eVnMIrkdEgqfLjDhfRl0g4dggugaBt3XJc8ytiia8CbHhCET3zno6Te6NnArFkUiXQyJT0FkH3/a
+          FEl7oeE6DBMrsxBIF7+YJxuuxYwVQ+mYt85XoUyiQ3NZJNbZkLjs8Zbyu1dNyjOPWmz2UQDerYQb
+          iY2BHIlslTCAK1JMDS9M5OwF50NSIOrEY4lYgIKliKKEHwj6tpa66Monc5Vc6Ts8Rvo+NRp+ly8P
+          YLoU6DpmVz9dWsQ+k9GBo12oaJWCXJB1j6flaggOe5PE4HdrRDm37qtyGjy0ekQriNWKKZ7qU+8H
+          4TKrxdBm5sGws6KNWUvd7bctsBwoNdCN8f1KSwzDSkJpmiJWPGFYhjiKVhGvVXAZLbtrTABvWvZa
+          KSmY1kqEp+oikQyAmBIs10nHKrdD1gtCQ8bMCinY2teO3zsK6NcO9UkhOeslcuc8mZ4nD4pkYqO+
+          X5Ps4gl+XXGmSTZTMkkIvcKvS4a3iBYWoJx40hj8f9KUKiI9RxyQchHkkXp8epi0/DKQbtkv/8Lu
+          6SR4aHdO2J0TT6o7AhgEAPDpzAxTjRXFaFW9rxjLwv3/bH17OgimDyesz4kn1R1Z3271fbuFnphx
+          ci2yut5rPmuEOi2Z6VkDh85Qb3dHqpuRaTBtB73Sbi2WsFkOzXLElLfAnQd0XatFyK7b3W49vxu3
+          N6R7VSdHBNqgN1D31SSYhB3CTRmS02r2vB+kesvDF6F/lPZl9v9oLtUaxQ8UK8XP29OOV/QmPi7n
+          b/e7t0O3X+V6qbnMyFplOLSSItVcVW09bjt33WD/eJMn7V6p/aENny/ht2f7jdOtM5bPQft8HBjL
+          eey43uOt7YEbswSiZosf37Ct0zFS4ETRdEeKUdOeUEZ4eIAHNmIigtMLrgU1mMiyzP3bbxo1PJOA
+          DOQtMLiG1tHx+hLjqvZtzTNs5X9//oVsWQbQNezRYAuRKZFrRaALBUMb+2kjRmLF5/e1Zm38UUJn
+          QTQIiuWSr0D+qMnG5CfFoOW7s0iaAOUUKLvgHmA6ZkHDangAG4VqPMIGZTx9fv78DF7C9wPx1fNN
+          71kbg7GKE4H2EcTZOMR1DqJZcmvj8zymJzo0w2D7bSXBh4/ytU5ytHvfmfNjU2va8n068JsGIfnE
+          QNCOXLegn7pBV57DZxJnjyx/fPA8E9kUshe6xQ1PiOch2SVR056G/wHKmaXl
+      headers:
+        Connection:
+          - close
+        Content-Language:
+          - en-US
+        Content-Security-Policy:
+          - frame-ancestors 'self' imdb.com *.imdb.com *.media-imdb.com withoutabox.com
+            *.withoutabox.com amazon.com *.amazon.com amazon.co.uk *.amazon.co.uk amazon.de
+            *.amazon.de translate.google.com images.google.com www.google.com www.google.co.uk
+            search.aol.com bing.com www.bing.com
+        Content-Type:
+          - text/html;charset=UTF-8
+        Date:
+          - Wed, 29 Dec 2021 09:57:32 GMT
+        Permissions-Policy:
+          - interest-cohort=()
+        Server:
+          - Server
+        Strict-Transport-Security:
+          - max-age=47474747; includeSubDomains; preload
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Content-Type,Accept-Encoding,X-Amzn-CDN-Cache,X-Amzn-AX-Treatment,User-Agent
+        Via:
+          - 1.1 5bcd40a2316c5562d7412ab736bca3a2.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - cLQtFGB6mb4eSWhBcD2cn5u1VD9YOLQUEBy4GaGuRjdTInPO-nP6OA==
+        X-Amz-Cf-Pop:
+          - LHR3-C2
+        X-Cache:
+          - Error from cloudfront
+        X-Frame-Options:
+          - SAMEORIGIN
+        x-amz-rid:
+          - RDRD32HQ2CAMCJ7J8WQV
+      status:
+        code: 404
+        message: ""
+  - request:
+      body: null
+      headers:
+        Accept-Language:
+          - en-us,en;q=0.5
+        Connection:
+          - close
+        Host:
+          - www.imdb.com
+        User-Agent:
+          - Mozilla/5.0
+      method: GET
+      uri: https://www.imdb.com/title/tt9999999999999999999999999999/plotsummary
+    response:
+      body:
+        string: !!binary |
+          eJzFV21v4kYQ/p5fMSG6ayJhWDCQQDgkAqQ6qdVVybVSP53WeINXsb3ceg3JVf3vnX0xwcagaz/0
+          AGN7Z3bmmbfd2bPx+fzT7POfvy0gUkk8ORvrG8Q0XX1osLShBxgNJ2cA44QpCsuIyoypD41cPXk3
+          DWgbkuIqZpMe6cFCSiHBg4+/zoNx245rjky96ictvQmBCF/hLxyOGF9FagQdQt7dnv19tiMkVK54
+          OgKaK3GL71seqsjw3axf9EBAl88rKfI09JYiFnIEF/PefDifa+KTSJX3RBMev47gDyZDmtImTCWn
+          qDyjaeZlTPInrZEadYq9KC9kSyGp4gL1piJlhjyKxIbJeiZUzmTMC058em6Cm6EfNjzjioVmcgGy
+          4w9md107gS4V37ASeXF9tyBEky+Y8eShl+ps30aoyJCERExezJ40//oFMhHzEC6G5rPHIZ3IepYX
+          L4toKLYjIPjtI5O+Lmb92XQ21+haBt2XhGUZXZVNeJNjwpDxbwz1XLf6NnBrGoY8XY3AJyjyWv91
+          iSbthAZ5EMRWZimQLn4RizdM8SUth9Ixb52vAhGH++bSkOfZCFz2eIn45tWTiswjFpu9lYD3a+GG
+          fGMghzxbxxTh8lSnhhfEYvms52NSaNSxR2O+QgUJD8OY7Qn6mgtVduW9+VRc6Ts8RvouNVp+nyV7
+          MF0K9B2zq58+KWNfinDP0S5UpE5BIci6x1NiPUKHvUmi+L81opxbd1W5mE07A1ASY7WmkqXq2PNe
+          uMxqMbKZuTfsrOjqrCXu8rsWWAGUGOjG+OtaSwzDWmBpmiKWLKa6DPWotgq8TsllpOquCSDetOq1
+          SlJQpSQPjtVFLCgCMSVYrZOeVW6HrBe4woxZllKws6sdf3AQ0C894kMpOZsVcu80mZwmD8tksFHf
+          rUl28US/rhlVkC2liGMg7/TPJcNbREsLUEE8aox+P2pKHZGcIg6hWgRFpO7up/OOXwXSr/rlX9i9
+          mM+m3d4RuwviUXUHAGczBHh/YoapxppitKq+rxirwv3/bH13MZwtpkesL4hH1R1Y3+1c+3YLPTLj
+          6FpkdX2v+bQVqLRipmcNHDlDvZdbqG9GFrNFdzao7NY8wc1yZJYjKr2V3nlQ16VcBfSy2+83i6t1
+          cwX9d004IJAWucK6ryfhJN0hXFUhOa1mz/tBqrcseObqR2lPsv9Hc6XWiP5isRL9fbvb8ZrexNfL
+          +dv13duh268KvcR8zEguMz20FjxVTNZtPW47d93g9eEmD91Bpf0hLZ8l+D+w/cbx1lmXz177fBgY
+          y3nouMHdje2BW8sYo2aLXz/ptk5FmoInirY7Uozb9oQy1ocHvOlGjId4etFrQQMn0ixzb7tNo6HP
+          JChD85YYXEPr6PrzOdKr2tecZbqV//3hF9jSDKEr3KPRFhApiFwCdqFoaGs3bUwhkuzpQ6PdmPws
+          sLMAhYIikbA1yh+36QTeS4ot361F0kYox0DZBXcP0yGLNqyhD2DjQE7GukGZLB4ePj2gl/Tznvj6
+          +ab3bEwec2yHXuFV5LCk6U8KAqYt4yLPzuEj0KR4a8EUbQ+F5sGeNoaEwWPEZcxeW/u2nDLLLNON
+          yWke00ftm27s+YyheETKM+bWe3jIE8ytJhTG7lxvjp9tpfDUSHx/iKGYcondecrO4bIzvCFXOhCn
+          kJq022EsbueeZ/IixdzHXnPDYvA8TXYp2LZn6X8AouW7BQ==
+      headers:
+        Connection:
+          - close
+        Content-Language:
+          - en-US
+        Content-Security-Policy:
+          - frame-ancestors 'self' imdb.com *.imdb.com *.media-imdb.com withoutabox.com
+            *.withoutabox.com amazon.com *.amazon.com amazon.co.uk *.amazon.co.uk amazon.de
+            *.amazon.de translate.google.com images.google.com www.google.com www.google.co.uk
+            search.aol.com bing.com www.bing.com
+        Content-Type:
+          - text/html;charset=UTF-8
+        Date:
+          - Wed, 29 Dec 2021 09:57:32 GMT
+        Permissions-Policy:
+          - interest-cohort=()
+        Server:
+          - Server
+        Strict-Transport-Security:
+          - max-age=47474747; includeSubDomains; preload
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Content-Type,Accept-Encoding,X-Amzn-CDN-Cache,X-Amzn-AX-Treatment,User-Agent
+        Via:
+          - 1.1 9a0da3962832290b2dd219763f12257a.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - 3P25wfnBEbuVqZ6LYhmwUo5kYhHIiSqAc7Tl-Hc76bGmghB6N2lDyQ==
+        X-Amz-Cf-Pop:
+          - LHR3-C2
+        X-Cache:
+          - Error from cloudfront
+        X-Frame-Options:
+          - SAMEORIGIN
+        x-amz-rid:
+          - 4NBYNATXTAZBBPJ99MXD
+      status:
+        code: 404
+        message: ""
+version: 1

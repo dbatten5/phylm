@@ -2,9 +2,11 @@
 import re
 from typing import Optional
 
+from aiohttp import ClientSession
+from bs4 import BeautifulSoup
 from bs4.element import Tag
 
-from phylm.utils.web import soupify
+from phylm.utils.web import async_soupify
 from phylm.utils.web import url_encode
 
 MTC_BASE_MOVIE_URL = "https://www.metacritic.com/search/movie"
@@ -23,17 +25,9 @@ class Mtc:
         self.raw_title = raw_title
         self.raw_year = raw_year
         self.low_confidence = False
-        self._mtc_data = self._get_mtc_data()
+        self._mtc_data: Optional[Tag] = None
 
-    def _get_mtc_data(self) -> Optional[Tag]:
-        """Scrape mtc for the movie.
-
-        Attempt to find a match with the given `raw_title`. If none is found then select
-        the first result and set `low_confidence` to `True`.
-        """
-        url_encoded_film = url_encode(self.raw_title)
-        search_url = f"{MTC_BASE_MOVIE_URL}/{url_encoded_film}/results"
-        soup = soupify(search_url)
+    def _parse_data(self, soup: BeautifulSoup) -> Optional[Tag]:
         results = soup.find_all("li", {"class": "result"})
 
         if not results:
@@ -54,6 +48,23 @@ class Mtc:
         # finally pick the first result
         self.low_confidence = True
         return results[0]
+
+    async def _scrape_data(
+        self, session: Optional[ClientSession] = None
+    ) -> BeautifulSoup:
+        url_encoded_film = url_encode(self.raw_title)
+        search_url = f"{MTC_BASE_MOVIE_URL}/{url_encoded_film}/results"
+        return await async_soupify(search_url, session)
+
+    async def load_source(self, session: Optional[ClientSession] = None) -> None:
+        """Asynchronously load the data for from the source.
+
+        Args:
+            session: an optional instance of `aiohttp.ClientSession` in which to run the
+                request
+        """
+        raw_data = await self._scrape_data(session=session)
+        self._mtc_data = self._parse_data(raw_data)
 
     @property
     def title(self) -> Optional[str]:
