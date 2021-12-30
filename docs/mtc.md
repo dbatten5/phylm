@@ -4,7 +4,7 @@ To access Metacritic data points, first ensure you have loaded the Metacritic so
 through:
 
 ```python
-phylm.load_source("mtc")
+await phylm.load_source("mtc")
 ```
 
 Alternatively you can instantiate the Metacritic source class directly through:
@@ -13,6 +13,7 @@ Alternatively you can instantiate the Metacritic source class directly through:
 from phylm.sources import Mtc
 
 mtc = Mtc(raw_title="The Matrix", raw_year=1999)  # raw_year is optional
+await mtc.load_source()
 ```
 
 # Reference

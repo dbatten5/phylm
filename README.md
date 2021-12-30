@@ -5,7 +5,7 @@
 [![codecov](https://codecov.io/gh/dbatten5/phylm/branch/master/graph/badge.svg?token=P233M48EA6)](https://codecov.io/gh/dbatten5/phylm)
 [![PyPI version](https://badge.fury.io/py/phylm.svg)](https://badge.fury.io/py/phylm)
 
-Film data aggregation.
+Film data aggregation with async support.
 
 ## Motivation
 
@@ -23,9 +23,10 @@ pip install phylm
 ## Usage
 
 ```python
+>>> import asyncio
 >>> from phylm import Phylm
 >>> p = Phylm("The Matrix")
->>> p.load_source("imdb")
+>>> asyncio.run(p.load_source("imdb"))
 >>> p.imdb.year
 1999
 >>> p.imdb.rating

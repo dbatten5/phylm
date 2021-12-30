@@ -18,11 +18,12 @@ from phylm import Phylm
 p = Phylm(title="The Matrix", year=1999)
 ```
 
-Next load a source through either `load_sources` or `load_source`:
+Next, asynchronously load a source through either `load_sources` or
+`load_source`:
 
 ```python
-p.load_sources(["imdb", "rt"])
-p.load_source("mtc")
+await p.load_sources(["imdb", "rt"])
+await p.load_source("mtc")
 ```
 
 The available sources are:
@@ -54,7 +55,7 @@ one:
 ```python
 from phylm import Phylm
 p = Phylm("Ambiguous Movie")  # suppose this movie was released in 1999
-p.load_source("imdb")
+await p.load_source("imdb")
 if p.imdb.low_confidence and p.imdb.year != 1999:
     # it's unlikely we're dealing with the right "Ambigous Movie"
 ```
