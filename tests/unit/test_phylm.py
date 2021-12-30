@@ -1,4 +1,5 @@
 """Tests for the `Phylm` module."""
+from typing import Any
 from unittest.mock import MagicMock
 from unittest.mock import patch
 
@@ -9,6 +10,14 @@ from phylm.errors import SourceNotLoadedError
 from phylm.errors import UnrecognizedSourceError
 
 MODULE_PATH = "phylm.phylm"
+
+
+class AsyncMock(MagicMock):
+    """Extend `MagicMock` to accept async actions."""
+
+    async def __call__(self, *args: Any, **kwargs: Any) -> Any:
+        """Overload the `__call__` method to make it async."""
+        return super().__call__(*args, **kwargs)
 
 
 class TestInit:
@@ -54,10 +63,11 @@ class TestRepr:
         assert str(phylm) == "<class 'Phylm' title:'foo'>"
 
 
+@pytest.mark.asyncio
 class TestLoadSource:
     """Tests for the `load_source` method."""
 
-    def test_source_not_found(self) -> None:
+    async def test_source_not_found(self) -> None:
         """
         Given an unrecognized source,
         When the `load_source` method is invoked with the source,
@@ -68,10 +78,9 @@ class TestLoadSource:
         with pytest.raises(
             UnrecognizedSourceError, match="bar is not a recognized source"
         ):
-            phylm.load_source("bar")
+            await phylm.load_source("bar")
 
-    @patch(f"{MODULE_PATH}.Imdb", autospec=True)
-    def test_recognized_source_imdb(self, mock_imdb: MagicMock) -> None:
+    async def test_recognized_source_imdb(self) -> None:
         """
         Given a `Phylm` instance,
         When the `load_source` method is invoked with the `imdb` source,
@@ -83,13 +92,16 @@ class TestLoadSource:
         ):
             assert phylm.imdb is None
 
-        phylm.load_source("imdb")
+        with patch(f"{MODULE_PATH}.Imdb", autospec=True) as mock_imdb:
+            mock_imdb.return_value.load_source = AsyncMock()
+            await phylm.load_source("imdb")
 
-        assert phylm.imdb == mock_imdb.return_value
-        mock_imdb.assert_called_once_with(raw_title="bar", movie_id=None, raw_year=2000)
+            assert phylm.imdb == mock_imdb.return_value
+            mock_imdb.assert_called_once_with(
+                raw_title="bar", movie_id=None, raw_year=2000
+            )
 
-    @patch(f"{MODULE_PATH}.Imdb", autospec=True)
-    def test_recognized_source_imdb_with_movie_id(self, mock_imdb: MagicMock) -> None:
+    async def test_recognized_source_imdb_with_movie_id(self) -> None:
         """
         Given a `Phylm` instance,
         When the `load_source` method is invoked with the `imdb` source
@@ -98,17 +110,16 @@ class TestLoadSource:
         """
         phylm = Phylm(title="bar")
 
-        phylm.load_source("imdb", imdb_id="abc")
+        with patch(f"{MODULE_PATH}.Imdb", autospec=True) as mock_imdb:
+            mock_imdb.return_value.load_source = AsyncMock()
+            await phylm.load_source("imdb", imdb_id="abc")
 
-        assert phylm.imdb == mock_imdb.return_value
-        mock_imdb.assert_called_once_with(
-            raw_title="bar", movie_id="abc", raw_year=None
-        )
+            assert phylm.imdb == mock_imdb.return_value
+            mock_imdb.assert_called_once_with(
+                raw_title="bar", movie_id="abc", raw_year=None
+            )
 
-    @patch(f"{MODULE_PATH}.Imdb", autospec=True)
-    def test_recognized_source_imdb_with_movie_id_instance_variable(
-        self, mock_imdb: MagicMock
-    ) -> None:
+    async def test_recognized_source_imdb_with_movie_id_instance_variable(self) -> None:
         """
         Given a `Phylm` instance,
         When the `load_source` method is invoked with an `imdb_id` provided at `init`,
@@ -116,15 +127,16 @@ class TestLoadSource:
         """
         phylm = Phylm(title="foo", imdb_id="abc")
 
-        phylm.load_source("imdb")
+        with patch(f"{MODULE_PATH}.Imdb", autospec=True) as mock_imdb:
+            mock_imdb.return_value.load_source = AsyncMock()
+            await phylm.load_source("imdb")
 
-        assert phylm.imdb == mock_imdb.return_value
-        mock_imdb.assert_called_once_with(
-            raw_title="foo", movie_id="abc", raw_year=None
-        )
+            assert phylm.imdb == mock_imdb.return_value
+            mock_imdb.assert_called_once_with(
+                raw_title="foo", movie_id="abc", raw_year=None
+            )
 
-    @patch(f"{MODULE_PATH}.Mtc", autospec=True)
-    def test_recognized_source_mtc(self, mock_mtc: MagicMock) -> None:
+    async def test_recognized_source_mtc(self) -> None:
         """
         Given a `Phylm` instance,
         When the `load_source` method is invoked with the `mtc` source,
@@ -137,13 +149,14 @@ class TestLoadSource:
         ):
             assert phylm.mtc is None
 
-        phylm.load_source("mtc")
+        with patch(f"{MODULE_PATH}.Mtc", autospec=True) as mock_mtc:
+            mock_mtc.return_value.load_source = AsyncMock()
+            await phylm.load_source("mtc")
 
-        assert phylm.mtc == mock_mtc.return_value
-        mock_mtc.assert_called_once_with(raw_title="bar", raw_year=2000)
+            assert phylm.mtc == mock_mtc.return_value
+            mock_mtc.assert_called_once_with(raw_title="bar", raw_year=2000)
 
-    @patch(f"{MODULE_PATH}.Rt", autospec=True)
-    def test_recognized_source_rt(self, mock_rt: MagicMock) -> None:
+    async def test_recognized_source_rt(self) -> None:
         """
         Given a `Phylm` instance,
         When the `load_source` method is invoked with the `rt` source,
@@ -156,13 +169,15 @@ class TestLoadSource:
         ):
             assert phylm.rt is None
 
-        phylm.load_source("rt")
+        with patch(f"{MODULE_PATH}.Rt", autospec=True) as mock_rt:
+            mock_rt.return_value.load_source = AsyncMock()
+            await phylm.load_source("rt")
 
-        assert phylm.rt == mock_rt.return_value
-        mock_rt.assert_called_once_with(raw_title="bar", raw_year=2000)
+            assert phylm.rt == mock_rt.return_value
+            mock_rt.assert_called_once_with(raw_title="bar", raw_year=2000)
 
     @pytest.mark.parametrize("source_class", ("Rt", "Mtc", "Imdb"))
-    def test_source_already_loaded(self, source_class: str) -> None:
+    async def test_source_already_loaded(self, source_class: str) -> None:
         """
         Given phylm instance with a source already loaded,
         When `load_source` is invoked with the same source,
@@ -171,19 +186,36 @@ class TestLoadSource:
         phylm = Phylm(title="foo")
 
         with patch(f"{MODULE_PATH}.{source_class}") as mock_source:
+            mock_source.return_value.load_source = AsyncMock()
             source_name = source_class.lower()
-            phylm.load_source(source_name)
-            phylm.load_source(source_name)
+            await phylm.load_source(source_name)
+            await phylm.load_source(source_name)
 
         assert mock_source.call_count == 1
 
+    @pytest.mark.parametrize("source_class", ("Rt", "Mtc"))
+    async def test_with_given_session(self, source_class: str) -> None:
+        """
+        Given phylm instance,
+        When `load_source` is invoked with a `session`,
+        Then the `session` is passed to the source `load_source` method
+        """
+        phylm = Phylm(title="foo")
+        session = MagicMock()
 
+        with patch(f"{MODULE_PATH}.{source_class}") as mock_source:
+            mock_source.return_value.load_source = AsyncMock()
+            source_name = source_class.lower()
+            await phylm.load_source(source_name, session=session)
+
+        mock_source.return_value.load_source.assert_called_once_with(session=session)
+
+
+@pytest.mark.asyncio
 class TestLoadSources:
     """Tests for the `load_sources` method."""
 
-    @patch(f"{MODULE_PATH}.Mtc", autospec=True)
-    @patch(f"{MODULE_PATH}.Rt", autospec=True)
-    def test_success(self, mock_rt: MagicMock, mock_mtc: MagicMock) -> None:
+    async def test_success(self) -> None:
         """
         Given a list of sources,
         When the `load_sources` is invoked with the list,
@@ -191,15 +223,20 @@ class TestLoadSources:
         """
         phylm = Phylm(title="foo")
 
-        phylm.load_sources(["rt", "mtc"])
+        with patch(f"{MODULE_PATH}.Mtc", autospec=True) as mock_mtc, patch(
+            f"{MODULE_PATH}.Rt", autospec=True
+        ) as mock_rt:
+            mock_mtc.return_value.load_source = AsyncMock()
+            mock_rt.return_value.load_source = AsyncMock()
+
+            await phylm.load_sources(["rt", "mtc"])
 
         assert phylm.rt == mock_rt.return_value
         assert phylm.mtc == mock_mtc.return_value
         with pytest.raises(SourceNotLoadedError):
             assert phylm.imdb is None
 
-    @patch(f"{MODULE_PATH}.Rt", autospec=True)
-    def test_one_source_not_recognised(self, mock_rt: MagicMock) -> None:
+    async def test_one_source_not_recognised(self) -> None:
         """
         Given a list of sources where one is unrecognised,
         When the `load_sources` is invoked with the list,
@@ -207,7 +244,10 @@ class TestLoadSources:
         """
         phylm = Phylm(title="foo")
 
-        with pytest.raises(UnrecognizedSourceError):
-            phylm.load_sources(["rt", "blort"])
+        with pytest.raises(UnrecognizedSourceError), patch(
+            f"{MODULE_PATH}.Rt", autospec=True
+        ) as mock_rt:
+            mock_rt.return_value.load_source = AsyncMock()
+            await phylm.load_sources(["rt", "blort"])
 
         assert phylm.rt == mock_rt.return_value
