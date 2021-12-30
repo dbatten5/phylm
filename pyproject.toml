@@ -30,7 +30,7 @@ aiohttp = "^3.8.1"
 pytest = "^6.2.4"
 coverage = {extras = ["toml"], version = "^6.1"}
 safety = "^1.10.3"
-mypy = "^0.910"
+mypy = "^0.930"
 typeguard = "^2.12.1"
 xdoctest = {extras = ["colors"], version = "^0.15.5"}
 pre-commit = "^2.13.0"
