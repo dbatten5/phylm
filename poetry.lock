@@ -19,10 +19,6 @@ yarl = ">=1.0,<2.0"
 python = "<3.8"
 version = "0.13.0"
 
-[package.dependencies.idna-ssl]
-python = "<3.7"
-version = ">=1.0"
-
 [package.dependencies.typing-extensions]
 python = "<3.8"
 version = ">=3.7.4"
@@ -163,10 +159,6 @@ toml = ">=0.10.1"
 typed-ast = ">=1.4.0"
 typing-extensions = ">=3.7.4"
 
-[package.dependencies.dataclasses]
-python = "<3.7"
-version = ">=0.6"
-
 [package.extras]
 colorama = ["colorama (>=0.4.3)"]
 d = ["aiohttp (>=3.3.2)", "aiohttp-cors"]
@@ -264,15 +256,6 @@ version = "1.8.1"
 
 [[package]]
 category = "dev"
-description = "A backport of the dataclasses module for Python 3.6"
-marker = "python_version < \"3.7\""
-name = "dataclasses"
-optional = false
-python-versions = "*"
-version = "0.6"
-
-[[package]]
-category = "dev"
 description = "Distribution utilities"
 name = "distlib"
 optional = false
@@ -308,8 +291,8 @@ category = "dev"
 description = "A platform independent file lock."
 name = "filelock"
 optional = false
-python-versions = ">=3.6"
-version = "3.4.1"
+python-versions = ">=3.7"
+version = "3.4.2"
 
 [package.extras]
 docs = ["furo (>=2021.8.17b43)", "sphinx (>=4.1)", "sphinx-autodoc-typehints (>=1.12)"]
@@ -432,11 +415,11 @@ smmap = ">=3.0.1,<6"
 
 [[package]]
 category = "dev"
-description = "Python Git Library"
+description = "GitPython is a python library used to interact with Git repositories"
 name = "gitpython"
 optional = false
-python-versions = ">=3.6"
-version = "3.1.20"
+python-versions = ">=3.7"
+version = "3.1.24"
 
 [package.dependencies]
 gitdb = ">=4.0.1,<5"
@@ -479,23 +462,11 @@ license = ["ukkonen"]
 [[package]]
 category = "main"
 description = "Internationalized Domain Names in Applications (IDNA)"
-marker = "python_version >= \"3\" or python_version < \"3.7\""
+marker = "python_version >= \"3\""
 name = "idna"
 optional = false
 python-versions = ">=3.5"
 version = "3.3"
-
-[[package]]
-category = "main"
-description = "Patch ssl.match_hostname for Unicode(idna) domains support"
-marker = "python_version < \"3.7\""
-name = "idna-ssl"
-optional = false
-python-versions = "*"
-version = "1.1.0"
-
-[package.dependencies]
-idna = ">=2.0"
 
 [[package]]
 category = "main"
@@ -532,24 +503,6 @@ version = ">=3.6.4"
 [package.extras]
 docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "packaging", "pep517", "pyfakefs", "flufl.flake8", "pytest-black (>=0.3.7)", "pytest-mypy", "importlib-resources (>=1.3)"]
-
-[[package]]
-category = "dev"
-description = "Read resources from Python packages"
-marker = "python_version < \"3.7\""
-name = "importlib-resources"
-optional = false
-python-versions = ">=3.6"
-version = "5.2.3"
-
-[package.dependencies]
-[package.dependencies.zipp]
-python = "<3.10"
-version = ">=3.1.0"
-
-[package.extras]
-docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
-testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
 [[package]]
 category = "dev"
@@ -680,8 +633,8 @@ category = "dev"
 description = "Automatically link across pages in MkDocs."
 name = "mkdocs-autorefs"
 optional = false
-python-versions = ">=3.6,<4.0"
-version = "0.3.0"
+python-versions = ">=3.6.2,<4.0.0"
+version = "0.3.1"
 
 [package.dependencies]
 Markdown = ">=3.3,<4.0"
@@ -859,8 +812,8 @@ category = "dev"
 description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
 name = "platformdirs"
 optional = false
-python-versions = ">=3.6"
-version = "2.4.0"
+python-versions = ">=3.7"
+version = "2.4.1"
 
 [package.extras]
 docs = ["Sphinx (>=4)", "furo (>=2021.7.5b38)", "proselint (>=0.10.2)", "sphinx-autodoc-typehints (>=1.12)"]
@@ -902,10 +855,6 @@ virtualenv = ">=20.0.8"
 [package.dependencies.importlib-metadata]
 python = "<3.8"
 version = "*"
-
-[package.dependencies.importlib-resources]
-python = "<3.7"
-version = "<5.3"
 
 [[package]]
 category = "dev"
@@ -1280,8 +1229,8 @@ category = "dev"
 description = "A lil' TOML parser"
 name = "tomli"
 optional = false
-python-versions = ">=3.6"
-version = "1.2.3"
+python-versions = ">=3.7"
+version = "2.0.0"
 
 [[package]]
 category = "dev"
@@ -1367,10 +1316,6 @@ six = ">=1.9.0,<2"
 python = "<3.8"
 version = ">=0.12"
 
-[package.dependencies.importlib-resources]
-python = "<3.7"
-version = ">=1.0"
-
 [package.extras]
 docs = ["proselint (>=0.10.2)", "sphinx (>=3)", "sphinx-argparse (>=0.2.5)", "sphinx-rtd-theme (>=0.4.3)", "towncrier (>=21.3)"]
 testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", "pytest (>=4)", "pytest-env (>=0.6.2)", "pytest-freezegun (>=0.4.1)", "pytest-mock (>=2)", "pytest-randomly (>=1)", "pytest-timeout (>=1)", "packaging (>=20.0)"]
@@ -1449,9 +1394,9 @@ docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
 [metadata]
-content-hash = "6d6e1399178c1e81367989a8213e175ca86ba76a26a4c9899428dd0f7ab2c8b8"
+content-hash = "9e582d9dd2d42b41716db5732b82a5d6df7e8920cf8650a42228b2d1043e6351"
 lock-version = "1.0"
-python-versions = "^3.6.1"
+python-versions = "^3.7.1"
 
 [metadata.files]
 aiohttp = [
@@ -1651,10 +1596,6 @@ darglint = [
     {file = "darglint-1.8.1-py3-none-any.whl", hash = "sha256:5ae11c259c17b0701618a20c3da343a3eb98b3bc4b5a83d31cdd94f5ebdced8d"},
     {file = "darglint-1.8.1.tar.gz", hash = "sha256:080d5106df149b199822e7ee7deb9c012b49891538f14a11be681044f0bb20da"},
 ]
-dataclasses = [
-    {file = "dataclasses-0.6-py3-none-any.whl", hash = "sha256:454a69d788c7fda44efd71e259be79577822f5e3f53f029a22d08004e951dc9f"},
-    {file = "dataclasses-0.6.tar.gz", hash = "sha256:6988bd2b895eef432d562370bb707d540f32f7360ab13da45340101bc2307d84"},
-]
 distlib = [
     {file = "distlib-0.3.4-py2.py3-none-any.whl", hash = "sha256:6564fe0a8f51e734df6333d08b8b94d4ea8ee6b99b5ed50613f731fd4089f34b"},
     {file = "distlib-0.3.4.zip", hash = "sha256:e4b58818180336dc9c529bfb9a0b58728ffc09ad92027a3f30b7cd91e3458579"},
@@ -1668,8 +1609,8 @@ dparse = [
     {file = "dparse-0.5.1.tar.gz", hash = "sha256:a1b5f169102e1c894f9a7d5ccf6f9402a836a5d24be80a986c7ce9eaed78f367"},
 ]
 filelock = [
-    {file = "filelock-3.4.1-py3-none-any.whl", hash = "sha256:a4bc51381e01502a30e9f06dd4fa19a1712eab852b6fb0f84fd7cce0793d8ca3"},
-    {file = "filelock-3.4.1.tar.gz", hash = "sha256:0f12f552b42b5bf60dba233710bf71337d35494fc8bdd4fd6d9f6d082ad45e06"},
+    {file = "filelock-3.4.2-py3-none-any.whl", hash = "sha256:cf0fc6a2f8d26bd900f19bf33915ca70ba4dd8c56903eeb14e1e7a2fd7590146"},
+    {file = "filelock-3.4.2.tar.gz", hash = "sha256:38b4f4c989f9d06d44524df1b24bd19e167d851f19b50bf3e3559952dddc5b80"},
 ]
 flake8 = [
     {file = "flake8-4.0.1-py2.py3-none-any.whl", hash = "sha256:479b1304f72536a55948cb40a32dce8bb0ffe3501e26eaf292c7e60eb5e0428d"},
@@ -1777,8 +1718,8 @@ gitdb = [
     {file = "gitdb-4.0.9.tar.gz", hash = "sha256:bac2fd45c0a1c9cf619e63a90d62bdc63892ef92387424b855792a6cabe789aa"},
 ]
 gitpython = [
-    {file = "GitPython-3.1.20-py3-none-any.whl", hash = "sha256:b1e1c269deab1b08ce65403cf14e10d2ef1f6c89e33ea7c5e5bb0222ea593b8a"},
-    {file = "GitPython-3.1.20.tar.gz", hash = "sha256:df0e072a200703a65387b0cfdf0466e3bab729c0458cf6b7349d0e9877636519"},
+    {file = "GitPython-3.1.24-py3-none-any.whl", hash = "sha256:dc0a7f2f697657acc8d7f89033e8b1ea94dd90356b2983bca89dc8d2ab3cc647"},
+    {file = "GitPython-3.1.24.tar.gz", hash = "sha256:df83fdf5e684fef7c6ee2c02fc68a5ceb7e7e759d08b694088d0cacb4eba59e5"},
 ]
 greenlet = [
     {file = "greenlet-1.1.2-cp27-cp27m-macosx_10_14_x86_64.whl", hash = "sha256:58df5c2a0e293bf665a51f8a100d3e9956febfbf1d9aaf8c0677cf70218910c6"},
@@ -1843,9 +1784,6 @@ idna = [
     {file = "idna-3.3-py3-none-any.whl", hash = "sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"},
     {file = "idna-3.3.tar.gz", hash = "sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"},
 ]
-idna-ssl = [
-    {file = "idna-ssl-1.1.0.tar.gz", hash = "sha256:a933e3bb13da54383f9e8f35dc4f9cb9eb9b3b78c6b36f311254d6d0d92c6c7c"},
-]
 imdbpy = [
     {file = "IMDbPY-2021.4.18-py3-none-any.whl", hash = "sha256:b5e2e0f9a9034e26da8158c8e6fc7201d9c8cf0d70cccccf9549577c4442a500"},
     {file = "IMDbPY-2021.4.18.tar.gz", hash = "sha256:af57f03638ba3b8ab3d696bfef0eeaf6414385c85f09260aba0a16b32174853f"},
@@ -1853,10 +1791,6 @@ imdbpy = [
 importlib-metadata = [
     {file = "importlib_metadata-4.2.0-py3-none-any.whl", hash = "sha256:057e92c15bc8d9e8109738a48db0ccb31b4d9d5cfbee5a8670879a30be66304b"},
     {file = "importlib_metadata-4.2.0.tar.gz", hash = "sha256:b7e52a1f8dec14a75ea73e0891f3060099ca1d8e6a462a4dff11c3e119ea1b31"},
-]
-importlib-resources = [
-    {file = "importlib_resources-5.2.3-py3-none-any.whl", hash = "sha256:ae35ed1cfe8c0d6c1a53ecd168167f01fa93b893d51a62cdf23aea044c67211b"},
-    {file = "importlib_resources-5.2.3.tar.gz", hash = "sha256:203d70dda34cfbfbb42324a8d4211196e7d3e858de21a5eb68c6d1cdd99e4e98"},
 ]
 iniconfig = [
     {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},
@@ -2011,8 +1945,8 @@ mkdocs-autolinks-plugin = [
     {file = "mkdocs_autolinks_plugin-0.4.0-py2-none-any.whl", hash = "sha256:2d6584ab7e525aa3c18292553bf2af3d29085ef19308afca5e3cf3723390c37e"},
 ]
 mkdocs-autorefs = [
-    {file = "mkdocs-autorefs-0.3.0.tar.gz", hash = "sha256:2f89556eb2107d72e3aff41b04dcaaf1125d407a33b8027fbc982137d248d37d"},
-    {file = "mkdocs_autorefs-0.3.0-py3-none-any.whl", hash = "sha256:261875003e49b5d708993fd2792a69d624cbc8cf7de49e96c81d3d9825977ca4"},
+    {file = "mkdocs-autorefs-0.3.1.tar.gz", hash = "sha256:12baad29359f468b44d980ed35b713715409097a1d8e3d0ef90962db95205eda"},
+    {file = "mkdocs_autorefs-0.3.1-py3-none-any.whl", hash = "sha256:f0fd7c115eaafda7fb16bf5ff5d70eda55d7c0599eac64f8b25eacf864312a85"},
 ]
 mkdocs-git-revision-date-localized-plugin = [
     {file = "mkdocs-git-revision-date-localized-plugin-0.11.1.tar.gz", hash = "sha256:ce19b3af90f076d1b55b68f841059c9fcb7c9d53f93b3323f0a493492f4cc841"},
@@ -2162,8 +2096,8 @@ pep8-naming = [
     {file = "pep8_naming-0.12.1-py2.py3-none-any.whl", hash = "sha256:4a8daeaeb33cfcde779309fc0c9c0a68a3bbe2ad8a8308b763c5068f86eb9f37"},
 ]
 platformdirs = [
-    {file = "platformdirs-2.4.0-py3-none-any.whl", hash = "sha256:8868bbe3c3c80d42f20156f22e7131d2fb321f5bc86a2a345375c6481a67021d"},
-    {file = "platformdirs-2.4.0.tar.gz", hash = "sha256:367a5e80b3d04d2428ffa76d33f124cf11e8fff2acdaa9b43d545f5c7d661ef2"},
+    {file = "platformdirs-2.4.1-py3-none-any.whl", hash = "sha256:1d7385c7db91728b83efd0ca99a5afb296cab9d0ed8313a45ed8ba17967ecfca"},
+    {file = "platformdirs-2.4.1.tar.gz", hash = "sha256:440633ddfebcc36264232365d7840a970e75e1018d15b4327d11f91909045fda"},
 ]
 pluggy = [
     {file = "pluggy-1.0.0-py2.py3-none-any.whl", hash = "sha256:74134bbf457f031a36d68416e1509f34bd5ccc019f0bcc952c7b909d06b37bd3"},
@@ -2424,8 +2358,8 @@ toml = [
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
 ]
 tomli = [
-    {file = "tomli-1.2.3-py3-none-any.whl", hash = "sha256:e3069e4be3ead9668e21cb9b074cd948f7b3113fd9c8bba083f48247aab8b11c"},
-    {file = "tomli-1.2.3.tar.gz", hash = "sha256:05b6166bff487dc068d322585c7ea4ef78deed501cc124060e0f238e89a9231f"},
+    {file = "tomli-2.0.0-py3-none-any.whl", hash = "sha256:b5bde28da1fed24b9bd1d4d2b8cba62300bfb4ec9a6187a957e8ddb9434c5224"},
+    {file = "tomli-2.0.0.tar.gz", hash = "sha256:c292c34f58502a1eb2bbb9f5bbc9a5ebc37bee10ffb8c2d6bbdfa8eb13cc14e1"},
 ]
 typed-ast = [
     {file = "typed_ast-1.4.3-cp35-cp35m-manylinux1_i686.whl", hash = "sha256:2068531575a125b87a41802130fa7e29f26c09a2833fea68d9a40cf33902eba6"},

@@ -10,7 +10,6 @@ repository = "https://github.com/dbatten5/phylm"
 documentation = "https://dbatten5.github.io/phylm"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
-    "Programming Language :: Python :: 3.6",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
@@ -20,7 +19,7 @@ classifiers = [
 Changelog = "https://github.com/dbatten5/phylm/releases"
 
 [tool.poetry.dependencies]
-python = "^3.6.1"
+python = "^3.7.1"
 click = "^8.0.1"
 imdbpy = "^2021.4.18"
 requests = "^2.26.0"
