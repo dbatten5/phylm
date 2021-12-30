@@ -57,7 +57,7 @@ class Mtc:
         return await async_soupify(search_url, session)
 
     async def load_source(self, session: Optional[ClientSession] = None) -> None:
-        """Asynchronously load the data for from the source.
+        """Asynchronously load the data from the source.
 
         Args:
             session: an optional instance of `aiohttp.ClientSession` in which to run the

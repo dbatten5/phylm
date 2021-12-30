@@ -4,7 +4,7 @@ To access Rotten Tomatoes data points, first ensure you have loaded the Rotten T
 through:
 
 ```python
-phylm.load_source("rt")
+await phylm.load_source("rt")
 ```
 
 Alternatively you can instantiate the Rotten Tomatoes source class directly through:
@@ -13,6 +13,7 @@ Alternatively you can instantiate the Rotten Tomatoes source class directly thro
 from phylm.sources import Rt
 
 rot_tom = Rt(raw_title="The Matrix", raw_year=1999)  # raw_year is optional
+await rot_tom.load_source()
 ```
 
 # Reference

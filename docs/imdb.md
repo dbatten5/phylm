@@ -4,7 +4,7 @@ To access IMDb data points, first ensure you have loaded the IMDb source
 through:
 
 ```python
-phylm.load_source("imdb")
+await phylm.load_source("imdb")
 ```
 
 Alternatively you can instantiate the IMDb source class directly through:
@@ -13,6 +13,7 @@ Alternatively you can instantiate the IMDb source class directly through:
 from phylm.sources import Imdb
 
 imdb = Imdb(raw_title="The Matrix", raw_year=1999)  # raw_year is optional
+await imdb.load_source()
 ```
 
 ## Movie ID
@@ -33,7 +34,7 @@ to a title search.
 Alternatively, you can pass it to `load_source` with `"imdb"` as the first argument:
 
 ```python
-phylm.load_source("imdb", imdb_id="0133093")
+await phylm.load_source("imdb", imdb_id="0133093")
 ```
 
 Or instantiate the IMDb source class with the ID:

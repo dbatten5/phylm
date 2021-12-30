@@ -16,9 +16,10 @@ pip install phylm
 # Example
 
 ```python
+>>> import asyncio
 >>> from phylm import Phylm
 >>> p = Phylm("The Matrix")
->>> p.load_source("imdb")
+>>> asyncio.run(p.load_source("imdb"))
 >>> p.imdb.rating
 8.7
 ```
