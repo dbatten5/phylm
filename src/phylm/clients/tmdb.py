@@ -65,4 +65,4 @@ class TmdbClient:
 
         results: Dict[str, Any] = res.json()["results"]
 
-        return {key: results[key.upper()] for key in regions}
+        return {key: results.get(key.upper(), {}) for key in regions}

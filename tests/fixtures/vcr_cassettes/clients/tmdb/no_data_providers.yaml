@@ -1,0 +1,65 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.26.0
+      method: GET
+      uri: https://api.themoviedb.org/3/movie/674324/watch/providers
+    response:
+      body:
+        string: !!binary |
+          H4sIAAAAAAAAA02OTU/DMAyG/4vPayO6aUWREJdxA2kHNoEQqrzWbdKlSZS4RGPqfyeDCxfrlT+e
+          x1fQHchtvVlXmxUEirPhCPIKu6dbNdqeQYJi9lEKkVIqWdHkvjR1p9KFQfxm8Qco8qw4oY2KKBau
+          L7TVOQdtRUJu1aNxLRp6yOwV9AY5IBPIj+xxg2s8ssoyMR+eHX2PVTzv2y1OfQpzXR324/vbsRz9
+          kG99yNaOQnN7/q6+/9exOGUkvOBAlvH1mLc7Hb3BS+ODdkHzBWS1Xj6XZfkBREarrP0AAAA=
+      headers:
+        Age:
+          - "128"
+        Alt-Svc:
+          - h3=":443"; ma=86400
+        Cache-Control:
+          - public, max-age=28800
+        Connection:
+          - keep-alive
+        Content-Encoding:
+          - gzip
+        Content-Type:
+          - application/json;charset=utf-8
+        Date:
+          - Sat, 05 Nov 2022 14:07:27 GMT
+        ETag:
+          - W/"2664e4814d2ef695aa44befeafaa3d35"
+        Server:
+          - openresty
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept-Encoding,Accept-Encoding,Accept-Encoding
+          - Origin
+        Via:
+          - 1.1 015da43fe736d821483283d1edd6578c.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - xk5ASEZyl5D4BWugqRI0xl5VSUbRzPsGXVC2LUH81ldEFDObYGQEEQ==
+        X-Amz-Cf-Pop:
+          - LHR50-P2
+        X-Cache:
+          - Hit from cloudfront
+        X-Memc:
+          - HIT
+        X-Memc-Age:
+          - "8306"
+        X-Memc-Expires:
+          - "9657"
+        X-Memc-Key:
+          - f112fbe205aa04a5bf968d69340a47c37fd6e058
+      status:
+        code: 200
+        message: OK
+version: 1
