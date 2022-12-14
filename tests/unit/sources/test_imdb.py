@@ -71,7 +71,7 @@ class TestInit:
 class TestYearMatching:
     """Tests for the `init` method with a `raw_title`."""
 
-    @my_vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix.yaml")
+    @my_vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix_3.yaml")
     async def test_year_match_first_result(self) -> None:
         """
         Given a `raw_title` and `raw_year`
