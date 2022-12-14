@@ -38,7 +38,7 @@ class TestSearchMovies:
         When the `search_movies` function is invoked with the query,
         Then a list of search results is returned
         """
-        mock_ia.search_movie.return_value = the_matrix
+        mock_ia.search_movie.return_value = the_matrix[:3]
 
         result: List[Movie] = search_movies("the matrix")
 

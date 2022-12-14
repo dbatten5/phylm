@@ -4,9 +4,10 @@ from typing import List
 from typing import Optional
 
 import imdb
+from imdb._exceptions import IMDbDataAccessError
 from imdb.Movie import Movie
 
-ia = imdb.IMDb()
+ia = imdb.Cinemagoer()
 
 
 class Imdb:
@@ -51,9 +52,12 @@ class Imdb:
             an optional `IMDb` `Movie` object
         """
         if self.movie_id:
-            get_movie_result: Movie = ia.get_movie(self.movie_id)
-            if get_movie_result:
-                return get_movie_result
+            try:
+                get_movie_result: Movie = ia.get_movie(self.movie_id)
+                if get_movie_result:
+                    return get_movie_result
+            except IMDbDataAccessError:
+                pass
 
         if not self.raw_title:
             return None
