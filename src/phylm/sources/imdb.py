@@ -6,7 +6,7 @@ from typing import Optional
 import imdb
 from imdb.Movie import Movie
 
-ia = imdb.IMDb()
+ia = imdb.Cinemagoer()
 
 
 class Imdb:
