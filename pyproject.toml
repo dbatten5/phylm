@@ -31,7 +31,7 @@ coverage = {extras = ["toml"], version = "^6.1"}
 safety = "^2.2.0"
 mypy = "^0.910"
 typeguard = "^2.12.1"
-xdoctest = {extras = ["colors"], version = "^0.15.5"}
+xdoctest = {extras = ["colors"], version = "^1.1.0"}
 pre-commit = "^2.13.0"
 black = "^22.12.0"
 flake8 = "^6.0.0"
