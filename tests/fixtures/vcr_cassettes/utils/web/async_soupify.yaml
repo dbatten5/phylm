@@ -3,7 +3,8 @@ interactions:
       body: null
       headers:
         User-agent:
-          - Mozilla/5.0
+          - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+            like Gecko) Chrome/108.0.0.0 Safari/537.36
       method: GET
       uri: http://httpbin.org
     response:
@@ -76,7 +77,7 @@ interactions:
         Content-Type:
           - text/html; charset=utf-8
         Date:
-          - Wed, 29 Dec 2021 09:24:23 GMT
+          - Wed, 04 Jan 2023 16:48:35 GMT
         Server:
           - gunicorn/19.9.0
       status:

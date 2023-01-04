@@ -3,16 +3,19 @@ interactions:
       body: null
       headers:
         User-agent:
-          - Mozilla/5.0
+          - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+            like Gecko) Chrome/108.0.0.0 Safari/537.36
       method: GET
       uri: http://httpbin.org/gzip
     response:
       body:
         string: !!binary |
-          eJw9j7tuwyAUhnc/BWKMAjHUoLZSBw9R2qFLlUpduZxgJAcsTBZHefeCI3n8v/+ic+4NQtgtfprA
-          4neU0w32qLIBlIU0F3YvsoDeGJhy0Xh32OE1tFFyDCZaH1y169oeWbiMKsMW/IzzWh5ynrQPNCa3
-          eb8zJNI7CGviOy5+HNVB0HZL/JH+ugRyTsoA+aqX4p8Y8wcjkhnD34QkXIsX22nBu05eNNMtgBZS
-          GVwWHs+frpCHuJZPx/NzG8fknQ+VvUrKhKScMcpbgZtH8w8pfkrz
+          eJw9kE9vgkAQxe9+igknNbKw8kdo0wNpjBpLmlSbejMLDLARd8myvWj87l2wIXOa37z3Mnn3CYBV
+          3XjbYmG9gFa/uICe1cgKVJ1hd7MakOQ5ttrs1tyZW4NopPZa5LLgourPfdoCCiwbpnEUbmU3mGut
+          24wLIlU13r47VHZSoRgUqbzxpmFOQFyYpiznQsuufoWd0NiAAfB5gBNQ90yD82oGSds2+IPZnmsn
+          8FbEC2G63x7TjwU0/IKwwfwiZ/BeK3lFh7oRcfuBAyuZ4v+W8ZeTnVxvwj4qlqO96zuxvqTUb9QO
+          vSwwnfi2V2Z+FEWMBm65dJd06cdxlBehZRIez/auqGs5mDfr4zPbkopXXPTMD0kYk1VMqGtMj8kf
+          LVFotg==
       headers:
         Access-Control-Allow-Credentials:
           - "true"
@@ -23,11 +26,11 @@ interactions:
         Content-Encoding:
           - gzip
         Content-Length:
-          - "222"
+          - "301"
         Content-Type:
           - application/json
         Date:
-          - Wed, 29 Dec 2021 09:24:38 GMT
+          - Wed, 04 Jan 2023 16:48:36 GMT
         Server:
           - gunicorn/19.9.0
       status:

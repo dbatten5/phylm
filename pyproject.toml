@@ -52,7 +52,7 @@ Pygments = "^2.9.0"
 types-requests = "^2.25.11"
 
 [tool.poetry.group.docs.dependencies]
-markdown-include = "^0.6.0"
+markdown-include = "*"
 mkdocs = "*"
 mkdocs-autolinks-plugin = "*"
 mkdocs-autorefs = "*"
@@ -62,6 +62,7 @@ mkdocs-material = "*"
 mkdocs-material-extensions = "*"
 mkdocs-minify-plugin = "*"
 mkdocstrings = "*"
+mkdocstrings-python = "^0.8.2"
 
 [tool.poetry.scripts]
 phylm = "phylm.__main__:main"
