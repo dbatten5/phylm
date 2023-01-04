@@ -94,6 +94,27 @@ class TestStreamingProviders:
         assert len(results["gb"]["flatrate"])
 
     @vcr.use_cassette(
+        f"{VCR_FIXTURES_DIR}/no_data_providers.yaml",
+        filter_query_parameters=["api_key"],
+    )
+    def test_results_no_data(self) -> None:
+        """
+        Given a movie id with no streaming data,
+        When the `get_streaming_providers` method is invoked with the id,
+        Then the issue is caught and an empty dictionary is returned
+        """
+        client = TmdbClient(api_key="dummy_key")
+
+        results = client.get_streaming_providers(
+            movie_id="674324",
+            regions=["gb", "fr"],
+        )
+
+        assert "fr" in results
+        assert "gb" in results
+        assert results["gb"] == {}
+
+    @vcr.use_cassette(
         f"{VCR_FIXTURES_DIR}/no_results_providers.yaml",
         filter_query_parameters=["api_key"],
     )
