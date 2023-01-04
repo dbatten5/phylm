@@ -88,5 +88,5 @@ jobs:
       - run: pip install poetry
       - run: pip install lxml
       - run: poetry config virtualenvs.create false --local
-      - run: poetry install
+      - run: poetry install --without test,dev
       - run: mkdocs gh-deploy --force
