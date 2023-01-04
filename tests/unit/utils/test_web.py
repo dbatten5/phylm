@@ -9,6 +9,7 @@ from tests.conftest import FIXTURES_DIR
 from tests.conftest import my_vcr
 
 from phylm.utils.web import async_soupify
+from phylm.utils.web import DEFAULT_HEADERS
 from phylm.utils.web import soupify
 from phylm.utils.web import url_encode
 
@@ -49,9 +50,7 @@ class TestSoupify:
 
         assert isinstance(result, BeautifulSoup)
         assert result.text == "The Great Movie"
-        mock_requests.get.assert_called_once_with(
-            url=url, headers={"User-agent": "Mozilla/5.0"}
-        )
+        mock_requests.get.assert_called_once_with(url=url, headers=DEFAULT_HEADERS)
 
 
 class TestAsyncSoupify:
@@ -71,7 +70,7 @@ class TestAsyncSoupify:
         ) as cass:
             result = await async_soupify(url=url)
             assert len(cass.requests) == 1
-            assert cass.requests[0].headers == {"User-agent": "Mozilla/5.0"}
+            assert cass.requests[0].headers == DEFAULT_HEADERS
 
         assert isinstance(result, BeautifulSoup)
 
