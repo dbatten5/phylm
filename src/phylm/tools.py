@@ -6,6 +6,7 @@ from typing import List
 from typing import Optional
 from typing import Union
 
+from aiohttp import ClientSession
 from imdb.Movie import Movie
 
 from phylm.clients.tmdb import TmdbClient
@@ -36,11 +37,15 @@ def search_movies(query: str) -> List[Dict[str, Union[str, int]]]:
     ]
 
 
-def _initialize_tmdb_client(api_key: Optional[str] = None) -> TmdbClient:
+def initialize_tmdb_client(
+    api_key: Optional[str] = None,
+    async_session: Optional[ClientSession] = None,
+) -> TmdbClient:
     """Initialize and return a TmdbClient.
 
     Args:
         api_key: an optional api_key to take precedence over an env var key
+        async_session: an optional aiohttp ClienSession
 
     Raises:
         NoTMDbApiKeyError: when no api_key has been provided
@@ -53,7 +58,7 @@ def _initialize_tmdb_client(api_key: Optional[str] = None) -> TmdbClient:
     if not tmdb_api_key:
         raise NoTMDbApiKeyError("An `api_key` must be provided to use this service")
 
-    return TmdbClient(api_key=tmdb_api_key)
+    return TmdbClient(api_key=tmdb_api_key, async_session=async_session)
 
 
 def search_tmdb_movies(
@@ -72,7 +77,7 @@ def search_tmdb_movies(
     Returns:
         List[Dict[str, Any]]: the search results
     """
-    client = _initialize_tmdb_client(api_key=api_key)
+    client = initialize_tmdb_client(api_key=api_key)
 
     return client.search_movies(query=query, region=region)
 
@@ -93,6 +98,6 @@ def get_streaming_providers(
     Returns:
         Dict[str, Any]: a dictionary of streaming providers, keyed by region name
     """
-    client = _initialize_tmdb_client(api_key=api_key)
+    client = initialize_tmdb_client(api_key=api_key)
 
     return client.get_streaming_providers(movie_id=tmdb_movie_id, regions=regions)
