@@ -1,12 +1,20 @@
 """Tests for the Tmdb client."""
+import os
+from unittest.mock import MagicMock
+from unittest.mock import Mock
+from unittest.mock import patch
+
 import pytest
 import vcr
 from requests.exceptions import HTTPError
 from tests.conftest import FIXTURES_DIR
 
+from phylm.clients.tmdb import initialize_tmdb_client
 from phylm.clients.tmdb import TmdbClient
+from phylm.errors import NoTMDbApiKeyError
 
 VCR_FIXTURES_DIR = f"{FIXTURES_DIR}/clients/tmdb"
+CLIENT_MODULE_PATH = "phylm.clients.tmdb"
 
 
 class TestSearchMovies:
@@ -230,3 +238,56 @@ class TestStreamingProviders:
 
         with pytest.raises(HTTPError):
             client.get_streaming_providers(movie_id="-1", regions=["gb"])
+
+
+class TestInitializeTmdbClient:
+    """Tests for the `initialize_tmdb_client` function."""
+
+    @patch.dict(os.environ, {"TMDB_API_KEY": ""}, clear=True)
+    def test_no_key(self) -> None:
+        """Raises an error if no key available."""
+        with pytest.raises(NoTMDbApiKeyError) as err:
+            initialize_tmdb_client()
+
+        assert str(err.value) == "An `api_key` must be provided to use this service"
+
+    @patch(f"{CLIENT_MODULE_PATH}.TmdbClient", autospec=True)
+    def test_supplied_key(
+        self,
+        mock_initialize_client: MagicMock,
+    ) -> None:
+        """Returns a client with provided key."""
+        client = initialize_tmdb_client(api_key="nice_key")
+
+        assert client == mock_initialize_client.return_value
+        mock_initialize_client.assert_called_once_with(
+            api_key="nice_key", async_session=None
+        )
+
+    @patch.dict(os.environ, {"TMDB_API_KEY": "nice_key"}, clear=True)
+    @patch(f"{CLIENT_MODULE_PATH}.TmdbClient", autospec=True)
+    def test_key_from_env(
+        self,
+        mock_initialize_client: MagicMock,
+    ) -> None:
+        """Returns a client with key from env."""
+        client = initialize_tmdb_client()
+
+        assert client == mock_initialize_client.return_value
+        mock_initialize_client.assert_called_once_with(
+            api_key="nice_key", async_session=None
+        )
+
+    @patch(f"{CLIENT_MODULE_PATH}.TmdbClient", autospec=True)
+    def test_with_session(
+        self,
+        mock_initialize_client: MagicMock,
+    ) -> None:
+        """Returns a client with key from env."""
+        mock_session = Mock
+        client = initialize_tmdb_client(api_key="nice_key", async_session=mock_session)
+
+        assert client == mock_initialize_client.return_value
+        mock_initialize_client.assert_called_once_with(
+            api_key="nice_key", async_session=mock_session
+        )

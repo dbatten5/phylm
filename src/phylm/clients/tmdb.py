@@ -1,4 +1,5 @@
 """Client to interact with The Movie DB (TMDB)."""
+import os
 from typing import Any
 from typing import Dict
 from typing import List
@@ -7,6 +8,8 @@ from typing import Union
 
 from aiohttp import ClientSession
 from requests import Session
+
+from phylm.errors import NoTMDbApiKeyError
 
 
 class TmdbClient:
@@ -125,3 +128,27 @@ class TmdbClient:
         results: Dict[str, Any] = res.json()["results"]
 
         return {key: results.get(key.upper(), {}) for key in regions}
+
+
+def initialize_tmdb_client(
+    api_key: Optional[str] = None,
+    async_session: Optional[ClientSession] = None,
+) -> TmdbClient:
+    """Initialize and return a TmdbClient.
+
+    Args:
+        api_key: an optional api_key to take precedence over an env var key
+        async_session: an optional aiohttp ClienSession
+
+    Raises:
+        NoTMDbApiKeyError: when no api_key has been provided
+
+    Returns:
+        TmdbClient: an authorized Tmdb client
+    """
+    tmdb_api_key = api_key or os.environ.get("TMDB_API_KEY")
+
+    if not tmdb_api_key:
+        raise NoTMDbApiKeyError("An `api_key` must be provided to use this service")
+
+    return TmdbClient(api_key=tmdb_api_key, async_session=async_session)
