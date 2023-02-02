@@ -72,6 +72,108 @@ class TestSearchMovies:
             client.search_movies(query="The Matrix")
 
 
+class TestSearchMoviesAsync:
+    """Tests for the `search_movies_async` method."""
+
+    @pytest.mark.asyncio
+    async def test_success(self) -> None:
+        """Movies search results are returned."""
+        client = TmdbClient(api_key="not_a_key")
+
+        with vcr.use_cassette(
+            f"{VCR_FIXTURES_DIR}/the_matrix_async.yaml",
+            filter_query_parameters=["api_key"],
+        ) as cass:
+            results = await client.search_movies_async(query="The Matrix")
+
+            assert results[0]["title"] == "The Matrix Resurrections"
+
+        cass.rewind()
+
+        assert len(cass) == 1
+        assert cass.requests[0].query == [
+            ("include_adult", "false"),
+            ("language", "en-US"),
+            ("query", "The Matrix"),
+            ("region", "US"),
+        ]
+
+    @pytest.mark.asyncio
+    async def test_success_year(self) -> None:
+        """Movies search results filtered by year are returned."""
+        client = TmdbClient(api_key="not_a_key")
+
+        with vcr.use_cassette(
+            f"{VCR_FIXTURES_DIR}/the_matrix_year_async.yaml",
+            filter_query_parameters=["api_key"],
+        ) as cass:
+            results = await client.search_movies_async(query="The Matrix", year=1999)
+
+            breakpoint()
+            assert results[0]["title"] == "The Matrix"
+
+        cass.rewind()
+
+        assert len(cass) == 1
+        assert cass.requests[0].query == [
+            ("include_adult", "false"),
+            ("language", "en-US"),
+            ("query", "The Matrix"),
+            ("region", "US"),
+            ("year", "1999"),
+        ]
+
+    @pytest.mark.asyncio
+    async def test_no_results(self) -> None:
+        """Empty list is returned for no results."""
+        client = TmdbClient(api_key="not_a_key")
+
+        with vcr.use_cassette(
+            f"{VCR_FIXTURES_DIR}/search_no_results.yaml",
+            filter_query_parameters=["api_key"],
+        ):
+            results = await client.search_movies_async(query="askdjhashdaskdasljd")
+
+        assert results == []
+
+
+class TestGetMovie:
+    """Tests for the `get_movie` method."""
+
+    @pytest.mark.asyncio
+    async def test_success(self) -> None:
+        """Movie result is returned."""
+        client = TmdbClient(api_key="not_a_key")
+
+        with vcr.use_cassette(
+            f"{VCR_FIXTURES_DIR}/get_the_matrix.yaml",
+            filter_query_parameters=["api_key"],
+        ) as cass:
+            results = await client.get_movie("603")
+
+        assert results["title"] == "The Matrix"
+
+        cass.rewind()
+
+        assert len(cass) == 1
+        assert cass.requests[0].query == [
+            ("language", "en-US"),
+        ]
+
+    @pytest.mark.asyncio
+    async def test_not_found(self) -> None:
+        """Unrecognised movie id is handled."""
+        client = TmdbClient(api_key="not_a_key")
+
+        with vcr.use_cassette(
+            f"{VCR_FIXTURES_DIR}/get_invalid_id.yaml",
+            filter_query_parameters=["api_key"],
+        ):
+            results = await client.get_movie("xxxxx")
+
+        assert results["success"] is False
+
+
 class TestStreamingProviders:
     """Tests for the `get_streaming_providers` method."""
 

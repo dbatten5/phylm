@@ -82,6 +82,14 @@ class TmdbClient:
         return movies
 
     async def get_movie(self, movie_id: str) -> Dict[str, Any]:
+        """Return a movie by id.
+
+        Args:
+            movie_id: the tmdb id of the movie
+
+        Returns:
+            Dict[str, Any]: a dictionary of the movie data
+        """
         params = {
             "api_key": self.api_key,
             "language": "en-US",
