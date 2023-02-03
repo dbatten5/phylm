@@ -47,6 +47,14 @@ class TestInit:
 
         assert phylm.imdb_id == imdb_id
 
+    def test_tmdb_id(self) -> None:
+        """TMDB id can be passed through"""
+        tmdb_id = "bar"
+
+        phylm = Phylm(title="foo", tmdb_id=tmdb_id)
+
+        assert phylm.tmdb_id == tmdb_id
+
 
 class TestRepr:
     """Tests for the __repr__ method."""
@@ -176,7 +184,50 @@ class TestLoadSource:
             assert phylm.rt == mock_rt.return_value
             mock_rt.assert_called_once_with(raw_title="bar", raw_year=2000)
 
-    @pytest.mark.parametrize("source_class", ("Rt", "Mtc", "Imdb"))
+    async def test_recognized_source_tmdb(self) -> None:
+        """Can load `tmdb` source."""
+        phylm = Phylm(title="bar", year=2000)
+        with pytest.raises(
+            SourceNotLoadedError, match="The data for TMDB has not yet been loaded"
+        ):
+            assert phylm.tmdb is None
+
+        with patch(f"{MODULE_PATH}.Tmdb", autospec=True) as mock_tmdb:
+            mock_tmdb.return_value.load_source = AsyncMock()
+            await phylm.load_source("tmdb")
+
+            assert phylm.tmdb == mock_tmdb.return_value
+            mock_tmdb.assert_called_once_with(
+                raw_title="bar", movie_id=None, raw_year=2000
+            )
+
+    async def test_recognized_source_tmdb_with_movie_id(self) -> None:
+        """Can load `tmdb` source with a `movie_id`."""
+        phylm = Phylm(title="bar")
+
+        with patch(f"{MODULE_PATH}.Tmdb", autospec=True) as mock_tmdb:
+            mock_tmdb.return_value.load_source = AsyncMock()
+            await phylm.load_source("tmdb", tmdb_id="abc")
+
+            assert phylm.tmdb == mock_tmdb.return_value
+            mock_tmdb.assert_called_once_with(
+                raw_title="bar", movie_id="abc", raw_year=None
+            )
+
+    async def test_recognized_source_tmdb_with_movie_id_instance_variable(self) -> None:
+        """Can load `tmdb` source with a `movie_id` instance variable."""
+        phylm = Phylm(title="foo", tmdb_id="abc")
+
+        with patch(f"{MODULE_PATH}.Tmdb", autospec=True) as mock_tmdb:
+            mock_tmdb.return_value.load_source = AsyncMock()
+            await phylm.load_source("tmdb")
+
+            assert phylm.tmdb == mock_tmdb.return_value
+            mock_tmdb.assert_called_once_with(
+                raw_title="foo", movie_id="abc", raw_year=None
+            )
+
+    @pytest.mark.parametrize("source_class", ("Rt", "Mtc", "Imdb", "Tmdb"))
     async def test_source_already_loaded(self, source_class: str) -> None:
         """
         Given phylm instance with a source already loaded,
@@ -193,7 +244,7 @@ class TestLoadSource:
 
         assert mock_source.call_count == 1
 
-    @pytest.mark.parametrize("source_class", ("Rt", "Mtc"))
+    @pytest.mark.parametrize("source_class", ("Rt", "Mtc", "Tmdb"))
     async def test_with_given_session(self, source_class: str) -> None:
         """
         Given phylm instance,
