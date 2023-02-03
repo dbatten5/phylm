@@ -22,6 +22,7 @@ class TmdbClient:
 
         Args:
             api_key: an api_key for authentication
+            async_session: an optional instance of `aiohttp.ClientSession`
         """
         self.session = Session()
         self.async_session = async_session or ClientSession()

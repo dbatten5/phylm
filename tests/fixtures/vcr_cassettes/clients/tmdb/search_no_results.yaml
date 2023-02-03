@@ -3,7 +3,7 @@ interactions:
       body: null
       headers: {}
       method: GET
-      uri: https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&query=askdjhashdaskdasljd&region=US
+      uri: https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&query=askdjhashdaskdasljd&region=US
     response:
       body:
         string: '{"page":1,"results":[],"total_pages":0,"total_results":0}'
@@ -19,7 +19,7 @@ interactions:
         Content-Type:
           - application/json;charset=utf-8
         Date:
-          - Thu, 02 Feb 2023 17:26:36 GMT
+          - Fri, 03 Feb 2023 12:32:53 GMT
         Server:
           - openresty
         Transfer-Encoding:
@@ -28,15 +28,15 @@ interactions:
           - Accept-Encoding,Accept-Encoding
           - Origin
         Via:
-          - 1.1 198b7d1bb217783eef010e6636984c9e.cloudfront.net (CloudFront)
+          - 1.1 1675c96d31e7d6eacf2a9135ddb13210.cloudfront.net (CloudFront)
         X-Amz-Cf-Id:
-          - IUtrJEmIug_zsP707DiTSCg-CNsJl07BJCamzBNi25j9BOTXJh-TTA==
+          - EYUEi2iPEUGJrFUtJnoy6vBb4TjZzSh4xst7rUBPjCSdOQ7zvIvUFw==
         X-Amz-Cf-Pop:
-          - MAN50-C2
+          - LHR50-P2
         X-Cache:
           - Miss from cloudfront
       status:
         code: 200
         message: OK
-      url: https://api.themoviedb.org/3/search/movie?api_key=9017d5457c4e8ec5f0999d1b10012ae1&language=en-US&query=askdjhashdaskdasljd&include_adult=false&region=US
+      url: https://api.themoviedb.org/3/search/movie?api_key=9017d5457c4e8ec5f0999d1b10012ae1&language=en-US&query=askdjhashdaskdasljd&include_adult=false&region=US&page=1
 version: 1

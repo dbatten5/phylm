@@ -3,26 +3,28 @@ interactions:
       body: null
       headers: {}
       method: GET
-      uri: https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&query=The+Matrix&region=US&year=1999
+      uri: https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&query=The+Matrix&region=US&year=1999
     response:
       body:
         string:
           '{"page":1,"results":[{"adult":false,"backdrop_path":"/waCRuAW5ocONRehP556vPexVXA9.jpg","genre_ids":[28,878],"id":603,"original_language":"en","original_title":"The
           Matrix","overview":"Set in the 22nd century, The Matrix tells the story of
           a computer hacker who joins a group of underground insurgents fighting the
-          vast and powerful computers who now rule the earth.","popularity":67.747,"poster_path":"/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg","release_date":"1999-03-30","title":"The
-          Matrix","video":false,"vote_average":8.2,"vote_count":22735},{"adult":false,"backdrop_path":null,"genre_ids":[99],"id":684431,"original_language":"en","original_title":"Making
+          vast and powerful computers who now rule the earth.","popularity":77.213,"poster_path":"/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg","release_date":"1999-03-30","title":"The
+          Matrix","video":false,"vote_average":8.2,"vote_count":22741},{"adult":false,"backdrop_path":null,"genre_ids":[99],"id":684431,"original_language":"en","original_title":"Making
           ''The Matrix''","overview":"A promotional making-of documentary for the film
           Matrix, The (1999) that devotes its time to explaining the digital and practical
           effects contained in the film. This is very interesting, seeing as how they''re
           giving away the cinematic secrets that they created solely for the this movie,
-          that have now been spoofed and referenced in countless other films.","popularity":1.22,"poster_path":"/m2yIfRJYwpCgHON1Ig1pNKMWTxp.jpg","release_date":"1999-09-21","title":"Making
+          that have now been spoofed and referenced in countless other films.","popularity":1.294,"poster_path":"/m2yIfRJYwpCgHON1Ig1pNKMWTxp.jpg","release_date":"1999-09-21","title":"Making
           ''The Matrix''","video":false,"vote_average":7.8,"vote_count":12},{"adult":false,"backdrop_path":null,"genre_ids":[99,28,878],"id":684428,"original_language":"en","original_title":"The
           Matrix: What Is Bullet-Time?","overview":"Special Effects wizard John Gaeta
           demonstrates how the \"Bullet-Time\" effects were created for the film Matrix,
-          The (1999).","popularity":1.551,"poster_path":"/hSTervHaROcTd8Ir3DPfepN80dL.jpg","release_date":"1999-09-21","title":"The
+          The (1999).","popularity":2.171,"poster_path":"/hSTervHaROcTd8Ir3DPfepN80dL.jpg","release_date":"1999-09-21","title":"The
           Matrix: What Is Bullet-Time?","video":false,"vote_average":6.6,"vote_count":7}],"total_pages":1,"total_results":3}'
       headers:
+        Age:
+          - "28"
         Alt-Svc:
           - h3=":443"; ma=86400
         Cache-Control:
@@ -34,7 +36,7 @@ interactions:
         Content-Type:
           - application/json;charset=utf-8
         Date:
-          - Thu, 02 Feb 2023 17:19:43 GMT
+          - Fri, 03 Feb 2023 12:29:26 GMT
         Server:
           - openresty
         Transfer-Encoding:
@@ -43,15 +45,15 @@ interactions:
           - Accept-Encoding,Accept-Encoding
           - Origin
         Via:
-          - 1.1 e3c9babead5fab332ff03e514d113a3c.cloudfront.net (CloudFront)
+          - 1.1 85c7eb00d1c619654f7c50f01330c9a0.cloudfront.net (CloudFront)
         X-Amz-Cf-Id:
-          - LTzmOgog8rEjkTN9tiyXVHQPC6ZCj4uETVFge05AGlkqWqiALnU-ZQ==
+          - hRSoRRNAP30ezpEZ1hCfBBYTKoDjmMZcgLKJD2_jLot4qGG2m1410w==
         X-Amz-Cf-Pop:
-          - MAN50-C2
+          - LHR61-P7
         X-Cache:
-          - Miss from cloudfront
+          - Hit from cloudfront
       status:
         code: 200
         message: OK
-      url: https://api.themoviedb.org/3/search/movie?api_key=9017d5457c4e8ec5f0999d1b10012ae1&language=en-US&query=The+Matrix&include_adult=false&region=US&year=1999
+      url: https://api.themoviedb.org/3/search/movie?api_key=9017d5457c4e8ec5f0999d1b10012ae1&language=en-US&query=The+Matrix&include_adult=false&region=US&page=1&year=1999
 version: 1

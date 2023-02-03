@@ -102,6 +102,7 @@ class TestSearchMoviesAsync:
         assert cass.requests[0].query == [
             ("include_adult", "false"),
             ("language", "en-US"),
+            ("page", "1"),
             ("query", "The Matrix"),
             ("region", "US"),
         ]
@@ -117,7 +118,6 @@ class TestSearchMoviesAsync:
         ) as cass:
             results = await client.search_movies_async(query="The Matrix", year=1999)
 
-            breakpoint()
             assert results[0]["title"] == "The Matrix"
 
         cass.rewind()
@@ -126,6 +126,7 @@ class TestSearchMoviesAsync:
         assert cass.requests[0].query == [
             ("include_adult", "false"),
             ("language", "en-US"),
+            ("page", "1"),
             ("query", "The Matrix"),
             ("region", "US"),
             ("year", "1999"),
