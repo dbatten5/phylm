@@ -71,6 +71,7 @@ class TmdbClient:
             "query": query,
             "include_adult": "false",
             "region": region.upper(),
+            "page": 1,
         }
 
         if year:

@@ -284,7 +284,7 @@ class TestInitializeTmdbClient:
         mock_initialize_client: MagicMock,
     ) -> None:
         """Returns a client with key from env."""
-        mock_session = Mock
+        mock_session = Mock()
         client = initialize_tmdb_client(api_key="nice_key", async_session=mock_session)
 
         assert client == mock_initialize_client.return_value

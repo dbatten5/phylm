@@ -1,4 +1,5 @@
 """Module to define Tmdb class."""
+from datetime import datetime
 from typing import Any
 from typing import Dict
 from typing import List
@@ -26,12 +27,16 @@ class Tmdb:
         a search term. `movie_id` is preferred over `raw_title`.
 
         Args:
-            raw_title: the title of the movie
-            movie_id: the `IMDb` id of the movie
-            raw_year: an optional year for improved matching if only title is given
+            raw_title: the title of the movie. Note that TMDB doesn't support fuzzy
+                search.
+            movie_id: the TMDB id of the movie.
+            raw_year: an optional year for improved matching if only title is given.
+            api_key: a TMDB api key. Must be supplied here or as an env var
+            session: a `aiohttp.ClientSession` instance. One will be created if not
+                supplied.
 
         Raises:
-            ValueError: if neither `raw_title` nor `movie_id` is supplied
+            ValueError: if neither `raw_title` nor `movie_id` is supplied.
         """
         if not (raw_title or movie_id):
             raise ValueError("At least one of raw_title and movie_id must be given")
@@ -42,7 +47,7 @@ class Tmdb:
         self.low_confidence = False
         self.session = session
         self._api_key = api_key
-        self._imdb_data: Dict[str, Any] = {}
+        self._tmdb_data: Dict[str, Any] = {}
 
         self._client = initialize_tmdb_client(api_key, async_session=session)
 
@@ -125,12 +130,13 @@ class Tmdb:
         Returns:
             the year the movie was made
         """
-        year = self._tmdb_data.get("release_date")
+        release_date = self._tmdb_data.get("release_date")
 
-        if not year:
+        if not release_date:
             return None
 
-        return int(year)
+        date = datetime.strptime(release_date, "%Y-%m-%d")
+        return int(date.year)
 
     @property
     def rating(self) -> Optional[float]:
