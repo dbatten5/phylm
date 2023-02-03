@@ -14,7 +14,7 @@ from phylm.clients.tmdb import TmdbClient
 from phylm.errors import NoTMDbApiKeyError
 
 VCR_FIXTURES_DIR = f"{FIXTURES_DIR}/clients/tmdb"
-CLIENT_MODULE_PATH = "phylm.clients.tmdb"
+MODULE_PATH = "phylm.clients.tmdb"
 
 
 class TestSearchMovies:
@@ -252,7 +252,7 @@ class TestInitializeTmdbClient:
 
         assert str(err.value) == "An `api_key` must be provided to use this service"
 
-    @patch(f"{CLIENT_MODULE_PATH}.TmdbClient", autospec=True)
+    @patch(f"{MODULE_PATH}.TmdbClient", autospec=True)
     def test_supplied_key(
         self,
         mock_initialize_client: MagicMock,
@@ -266,7 +266,7 @@ class TestInitializeTmdbClient:
         )
 
     @patch.dict(os.environ, {"TMDB_API_KEY": "nice_key"}, clear=True)
-    @patch(f"{CLIENT_MODULE_PATH}.TmdbClient", autospec=True)
+    @patch(f"{MODULE_PATH}.TmdbClient", autospec=True)
     def test_key_from_env(
         self,
         mock_initialize_client: MagicMock,
@@ -279,7 +279,7 @@ class TestInitializeTmdbClient:
             api_key="nice_key", async_session=None
         )
 
-    @patch(f"{CLIENT_MODULE_PATH}.TmdbClient", autospec=True)
+    @patch(f"{MODULE_PATH}.TmdbClient", autospec=True)
     def test_with_session(
         self,
         mock_initialize_client: MagicMock,
@@ -292,3 +292,42 @@ class TestInitializeTmdbClient:
         mock_initialize_client.assert_called_once_with(
             api_key="nice_key", async_session=mock_session
         )
+
+
+class TestAsyncSession:
+    """Tests for the `async_session` support."""
+
+    @patch(f"{MODULE_PATH}.asyncio", autospec=True)
+    async def test_no_async(self, mock_asyncio: MagicMock) -> None:
+        """Ensure async methods handle no aiohttp.ClientSession."""
+        mock_asyncio.get_running_loop.side_effect = RuntimeError
+
+        client = TmdbClient(api_key="dummy_key")
+
+        assert client.async_session is None
+
+        with pytest.raises(RuntimeError) as err_1:
+            await client.get_movie("abc")
+        assert str(err_1.value) == "No `async_session` available."
+
+        with pytest.raises(RuntimeError) as err_2:
+            await client.search_movies_async("abc")
+        assert str(err_2.value) == "No `async_session` available."
+
+    @patch(f"{MODULE_PATH}.ClientSession", autospec=True)
+    @patch(f"{MODULE_PATH}.asyncio", autospec=True)
+    async def test_async(
+        self,
+        mock_asyncio: MagicMock,
+        mock_client_session: MagicMock,
+    ) -> None:
+        """Ensure a ClientSession is created under the right conditions."""
+        mock_asyncio.get_running_loop.return_value = True
+
+        client = TmdbClient(api_key="dummy_key")
+
+        assert client.async_session == mock_client_session.return_value
+
+        await client.get_movie("abc")
+
+        mock_client_session.return_value.get.assert_called_once()

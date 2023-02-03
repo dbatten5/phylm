@@ -183,6 +183,18 @@ class TestRuntime:
         assert tmdb.runtime == 136
 
 
+class TestReleaseDate:
+    """Tests for the `release_date` property."""
+
+    @vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix.yaml")
+    async def test_year(self) -> None:
+        """The release date can be returned."""
+        tmdb = Tmdb("The Matrix")
+        await tmdb.load_source()
+
+        assert tmdb.release_date == "1999-03-30"
+
+
 class TestRating:
     """Tests for the `rating` property."""
 
