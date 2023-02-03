@@ -1,4 +1,5 @@
 """Tests for the `tools` module."""
+import os
 from typing import List
 from unittest.mock import MagicMock
 from unittest.mock import patch
@@ -51,6 +52,7 @@ class TestSearchMovies:
 class TestSearchTmdbMovies:
     """Tests for the `search_tmdb_movies` method."""
 
+    @patch.dict(os.environ, {"TMDB_API_KEY": ""}, clear=True)
     def test_no_api_key(self) -> None:
         """
         Given no api key,
