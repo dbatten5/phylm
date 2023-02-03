@@ -32,6 +32,7 @@ The available sources are:
 "imdb" # IMDb
 "rt" # Rotten Tomatoes
 "mtc" # Metacritic
+"tmdb" # TMDB
 ```
 
 Now the source will be available through a property of the same name and datapoints on
