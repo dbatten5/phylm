@@ -306,11 +306,13 @@ class TestAsyncSession:
 
         assert client.async_session is None
 
-        with pytest.raises(RuntimeError, match="No `async_session` available."):
+        with pytest.raises(RuntimeError) as err_1:
             await client.get_movie("abc")
+        assert str(err_1.value) == "No `async_session` available."
 
-        with pytest.raises(RuntimeError, match="No `async_session` available."):
+        with pytest.raises(RuntimeError) as err_2:
             await client.search_movies_async("abc")
+        assert str(err_2.value) == "No `async_session` available."
 
     @patch(f"{MODULE_PATH}.ClientSession", autospec=True)
     @patch(f"{MODULE_PATH}.asyncio", autospec=True)
