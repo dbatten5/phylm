@@ -65,7 +65,11 @@ class Tmdb:
         return await self._client.get_movie(results[0]["id"])
 
     async def load_source(self, session: Optional[ClientSession] = None) -> None:
-        """Asynchronously load the data for from the source."""
+        """Asynchronously load the data for from the source.
+
+        Args:
+            session: an optional `aiohttp.ClientSession` instance
+        """
         if session:
             self._client = initialize_tmdb_client(self._api_key, async_session=session)
 

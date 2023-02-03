@@ -10,8 +10,6 @@ from tests.conftest import vcr
 
 from phylm.sources.tmdb import Tmdb
 
-# from aiohttp import ClientSession
-
 MODULE_PATH = "phylm.sources.tmdb"
 VCR_FIXTURES_DIR = f"{FIXTURES_DIR}/tmdb"
 pytestmark = pytest.mark.asyncio

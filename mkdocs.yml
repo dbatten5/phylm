@@ -19,6 +19,7 @@ nav:
           IMDb: imdb.md
           Metacritic: mtc.md
           Rotten Tomatoes: rt.md
+          TMDB: tmdb.md
       - Tools: tools.md
   - Contributing: contributing.md
 
