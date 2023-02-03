@@ -10,6 +10,7 @@ from phylm.errors import UnrecognizedSourceError
 from phylm.sources import Imdb
 from phylm.sources import Mtc
 from phylm.sources import Rt
+from phylm.sources import Tmdb
 
 
 class Phylm:
@@ -20,6 +21,7 @@ class Phylm:
         title: str,
         imdb_id: Optional[str] = None,
         year: Optional[int] = None,
+        tmdb_id: Optional[str] = None,
     ) -> None:
         """Initialize a `Phylm` object.
 
@@ -27,13 +29,16 @@ class Phylm:
             title: the title of the movie
             imdb_id: an optional `IMDb` ID of the movie
             year: an optional year of the movie
+            tmdb_id: an optional `TMDB` ID of the movie
         """
         self.title = title
         self.imdb_id = imdb_id
         self.year = year
+        self.tmdb_id = tmdb_id
         self._imdb: Optional[Imdb] = None
         self._mtc: Optional[Mtc] = None
         self._rt: Optional[Rt] = None
+        self._tmdb: Optional[Tmdb] = None
 
     def __repr__(self) -> str:
         """Return the string representation.
@@ -96,11 +101,27 @@ class Phylm:
 
         return self._rt
 
+    @property
+    def tmdb(self) -> Tmdb:
+        """Return the TMDB data.
+
+        Returns:
+            The TMDB data
+
+        Raises:
+            SourceNotLoadedError: if the source is not loaded
+        """
+        if self._tmdb is None:
+            raise SourceNotLoadedError("The data for TMDB has not yet been loaded")
+
+        return self._tmdb
+
     async def load_source(
         self,
         source: str,
         imdb_id: Optional[str] = None,
         session: Optional[ClientSession] = None,
+        tmdb_id: Optional[str] = None,
     ) -> "Phylm":
         """Asynchronously load the film data for a source.
 
@@ -110,6 +131,8 @@ class Phylm:
                 instead of a basic search on the title
             session: an optional instance of `aiohttp.ClientSession` in which to run the
                 request
+            tmdb_id: an optional `TMDB` id which will be used to load the TMDB data
+                instead of a basic search on the title
 
         Returns:
             the instance
@@ -138,6 +161,17 @@ class Phylm:
             if not self._rt:
                 self._rt = Rt(raw_title=self.title, raw_year=self.year)
                 await self._rt.load_source(session=session)
+            return self
+
+        if source == "tmdb":
+            if not self._tmdb:
+                movie_id = tmdb_id or self.tmdb_id
+                self._tmdb = Tmdb(
+                    raw_title=self.title,
+                    movie_id=movie_id,
+                    raw_year=self.year,
+                )
+                await self._tmdb.load_source(session=session)
             return self
 
         raise UnrecognizedSourceError(f"{source} is not a recognized source")

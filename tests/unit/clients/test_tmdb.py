@@ -1,12 +1,20 @@
 """Tests for the Tmdb client."""
+import os
+from unittest.mock import MagicMock
+from unittest.mock import Mock
+from unittest.mock import patch
+
 import pytest
 import vcr
 from requests.exceptions import HTTPError
 from tests.conftest import FIXTURES_DIR
 
+from phylm.clients.tmdb import initialize_tmdb_client
 from phylm.clients.tmdb import TmdbClient
+from phylm.errors import NoTMDbApiKeyError
 
 VCR_FIXTURES_DIR = f"{FIXTURES_DIR}/clients/tmdb"
+CLIENT_MODULE_PATH = "phylm.clients.tmdb"
 
 
 class TestSearchMovies:
@@ -72,6 +80,109 @@ class TestSearchMovies:
             client.search_movies(query="The Matrix")
 
 
+class TestSearchMoviesAsync:
+    """Tests for the `search_movies_async` method."""
+
+    @pytest.mark.asyncio
+    async def test_success(self) -> None:
+        """Movies search results are returned."""
+        client = TmdbClient(api_key="not_a_key")
+
+        with vcr.use_cassette(
+            f"{VCR_FIXTURES_DIR}/the_matrix_async.yaml",
+            filter_query_parameters=["api_key"],
+        ) as cass:
+            results = await client.search_movies_async(query="The Matrix")
+
+            assert results[0]["title"] == "The Matrix Resurrections"
+
+        cass.rewind()
+
+        assert len(cass) == 1
+        assert cass.requests[0].query == [
+            ("include_adult", "false"),
+            ("language", "en-US"),
+            ("page", "1"),
+            ("query", "The Matrix"),
+            ("region", "US"),
+        ]
+
+    @pytest.mark.asyncio
+    async def test_success_year(self) -> None:
+        """Movies search results filtered by year are returned."""
+        client = TmdbClient(api_key="not_a_key")
+
+        with vcr.use_cassette(
+            f"{VCR_FIXTURES_DIR}/the_matrix_year_async.yaml",
+            filter_query_parameters=["api_key"],
+        ) as cass:
+            results = await client.search_movies_async(query="The Matrix", year=1999)
+
+            assert results[0]["title"] == "The Matrix"
+
+        cass.rewind()
+
+        assert len(cass) == 1
+        assert cass.requests[0].query == [
+            ("include_adult", "false"),
+            ("language", "en-US"),
+            ("page", "1"),
+            ("query", "The Matrix"),
+            ("region", "US"),
+            ("year", "1999"),
+        ]
+
+    @pytest.mark.asyncio
+    async def test_no_results(self) -> None:
+        """Empty list is returned for no results."""
+        client = TmdbClient(api_key="not_a_key")
+
+        with vcr.use_cassette(
+            f"{VCR_FIXTURES_DIR}/search_no_results.yaml",
+            filter_query_parameters=["api_key"],
+        ):
+            results = await client.search_movies_async(query="askdjhashdaskdasljd")
+
+        assert results == []
+
+
+class TestGetMovie:
+    """Tests for the `get_movie` method."""
+
+    @pytest.mark.asyncio
+    async def test_success(self) -> None:
+        """Movie result is returned."""
+        client = TmdbClient(api_key="not_a_key")
+
+        with vcr.use_cassette(
+            f"{VCR_FIXTURES_DIR}/get_the_matrix.yaml",
+            filter_query_parameters=["api_key"],
+        ) as cass:
+            results = await client.get_movie("603")
+
+        assert results["title"] == "The Matrix"
+
+        cass.rewind()
+
+        assert len(cass) == 1
+        assert cass.requests[0].query == [
+            ("language", "en-US"),
+        ]
+
+    @pytest.mark.asyncio
+    async def test_not_found(self) -> None:
+        """Unrecognised movie id is handled."""
+        client = TmdbClient(api_key="not_a_key")
+
+        with vcr.use_cassette(
+            f"{VCR_FIXTURES_DIR}/get_invalid_id.yaml",
+            filter_query_parameters=["api_key"],
+        ):
+            results = await client.get_movie("xxxxx")
+
+        assert results["success"] is False
+
+
 class TestStreamingProviders:
     """Tests for the `get_streaming_providers` method."""
 
@@ -128,3 +239,56 @@ class TestStreamingProviders:
 
         with pytest.raises(HTTPError):
             client.get_streaming_providers(movie_id="-1", regions=["gb"])
+
+
+class TestInitializeTmdbClient:
+    """Tests for the `initialize_tmdb_client` function."""
+
+    @patch.dict(os.environ, {"TMDB_API_KEY": ""}, clear=True)
+    def test_no_key(self) -> None:
+        """Raises an error if no key available."""
+        with pytest.raises(NoTMDbApiKeyError) as err:
+            initialize_tmdb_client()
+
+        assert str(err.value) == "An `api_key` must be provided to use this service"
+
+    @patch(f"{CLIENT_MODULE_PATH}.TmdbClient", autospec=True)
+    def test_supplied_key(
+        self,
+        mock_initialize_client: MagicMock,
+    ) -> None:
+        """Returns a client with provided key."""
+        client = initialize_tmdb_client(api_key="nice_key")
+
+        assert client == mock_initialize_client.return_value
+        mock_initialize_client.assert_called_once_with(
+            api_key="nice_key", async_session=None
+        )
+
+    @patch.dict(os.environ, {"TMDB_API_KEY": "nice_key"}, clear=True)
+    @patch(f"{CLIENT_MODULE_PATH}.TmdbClient", autospec=True)
+    def test_key_from_env(
+        self,
+        mock_initialize_client: MagicMock,
+    ) -> None:
+        """Returns a client with key from env."""
+        client = initialize_tmdb_client()
+
+        assert client == mock_initialize_client.return_value
+        mock_initialize_client.assert_called_once_with(
+            api_key="nice_key", async_session=None
+        )
+
+    @patch(f"{CLIENT_MODULE_PATH}.TmdbClient", autospec=True)
+    def test_with_session(
+        self,
+        mock_initialize_client: MagicMock,
+    ) -> None:
+        """Returns a client with key from env."""
+        mock_session = Mock()
+        client = initialize_tmdb_client(api_key="nice_key", async_session=mock_session)
+
+        assert client == mock_initialize_client.return_value
+        mock_initialize_client.assert_called_once_with(
+            api_key="nice_key", async_session=mock_session
+        )

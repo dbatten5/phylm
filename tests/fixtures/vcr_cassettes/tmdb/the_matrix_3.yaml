@@ -1,0 +1,139 @@
+interactions:
+  - request:
+      body: null
+      headers: {}
+      method: GET
+      uri: https://api.themoviedb.org/3/search/movie?api_key=9017d5457c4e8ec5f0999d1b10012ae1&language=en-US&query=The+Matrix&include_adult=false&region=US&page=1&year=2021
+    response:
+      body:
+        string:
+          "{\"page\":1,\"results\":[{\"adult\":false,\"backdrop_path\":\"/eNI7PtK6DEYgZmHWP9gQNuff8pv.jpg\",\"genre_ids\":[878,28,12],\"id\":624860,\"original_language\":\"en\",\"original_title\":\"The
+          Matrix Resurrections\",\"overview\":\"Plagued by strange memories, Neo's life
+          takes an unexpected turn when he finds himself back inside the Matrix.\",\"popularity\":104.234,\"poster_path\":\"/8c4a8kE7PizaGQQnditMmI1xbRp.jpg\",\"release_date\":\"2021-12-22\",\"title\":\"The
+          Matrix Resurrections\",\"video\":false,\"vote_average\":6.6,\"vote_count\":4516},{\"adult\":false,\"backdrop_path\":\"/waCRuAW5ocONRehP556vPexVXA9.jpg\",\"genre_ids\":[28,878],\"id\":603,\"original_language\":\"en\",\"original_title\":\"The
+          Matrix\",\"overview\":\"Set in the 22nd century, The Matrix tells the story
+          of a computer hacker who joins a group of underground insurgents fighting
+          the vast and powerful computers who now rule the earth.\",\"popularity\":77.213,\"poster_path\":\"/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg\",\"release_date\":\"1999-03-30\",\"title\":\"The
+          Matrix\",\"video\":false,\"vote_average\":8.2,\"vote_count\":22741},{\"adult\":false,\"backdrop_path\":\"/5nxDn3mrdmeUHJOZi1Wfqya8Vji.jpg\",\"genre_ids\":[99],\"id\":696109,\"original_language\":\"en\",\"original_title\":\"A
+          Glitch in the Matrix\",\"overview\":\"Are we in fact living in a simulation?
+          This is the question postulated, wrestled with, and ultimately argued for
+          through archival footage, compelling interviews with real people shrouded
+          in digital avatars, and a collection of cases from some of our most iconoclastic
+          figures in contemporary culture.\",\"popularity\":7.989,\"poster_path\":\"/bn0BLVadmvzq6MmJ0n97MLxGpNQ.jpg\",\"release_date\":\"2021-02-05\",\"title\":\"A
+          Glitch in the Matrix\",\"video\":false,\"vote_average\":5.2,\"vote_count\":28},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[16],\"id\":919064,\"original_language\":\"en\",\"original_title\":\"Me
+          and The Matrix\",\"overview\":\"Filmmaker Cressa Maeve Beer recalls her experience
+          growing up as a fan of the Matrix movies, in celebration of the upcoming release
+          of The Matrix Resurrections.\",\"popularity\":0.6,\"poster_path\":\"/i9A8PKfzxyp4HxjqoEupKcZfofr.jpg\",\"release_date\":\"2021-12-22\",\"title\":\"Me
+          and The Matrix\",\"video\":false,\"vote_average\":0,\"vote_count\":0},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[99],\"id\":1038494,\"original_language\":\"en\",\"original_title\":\"Panopticon
+          Destiny \u2013 The Matrix Files\",\"overview\":\"On August 6th 1977, the world\u2019s
+          first DOCTOR WHO convention was held at a church hall in Battersea, South
+          London.  Organised by The Doctor Who Appreciation Society (DWAS) , Convention
+          \u201977 was ground breaking \u2013 featuring sta appearances from the (then)
+          current Doctor Tom baker with his latest companion Louise Jameson (Leela)
+          and former Doctor Jon Pertwee.  40 years later, stars, fans and organisers
+          returned to the church hall to reminisce about that special day!  In this
+          second volume celebrating the anniversary, we feature a convention panel with
+          organiser Keith Barnfather, contributor Kevin Davies and attendee Andrew Beech,
+          held at another DWAS event The Capitol II on the 7th May 2017.\",\"popularity\":0.6,\"poster_path\":\"/r1fOhVtFRMqFkG8I6MaK6eDvX8r.jpg\",\"release_date\":\"2021-05-07\",\"title\":\"Panopticon
+          Destiny \u2013 The Matrix Files\",\"video\":false,\"vote_average\":0,\"vote_count\":0},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[99],\"id\":859876,\"original_language\":\"en\",\"original_title\":\"Josh
+          Allen - A Glitch in the Matrix\",\"overview\":\"Quarterback Josh Allen rises
+          from obscurity along his hard path from a small town California farm to the
+          NFL.\",\"popularity\":0.699,\"poster_path\":\"/1kJFHxYpfB9D6REBAJOfp61Jufu.jpg\",\"release_date\":\"2021-08-09\",\"title\":\"Josh
+          Allen - A Glitch in the Matrix\",\"video\":false,\"vote_average\":0,\"vote_count\":0},{\"adult\":false,\"backdrop_path\":\"/1wdULm68hAqRwaQH9GuVcGO430e.jpg\",\"genre_ids\":[99],\"id\":850111,\"original_language\":\"en\",\"original_title\":\"Delusions
+          End: Breaking Free of the Matrix\",\"overview\":\"In a world of lies and deception
+          and false hopes, the time is now to remove the blinders of deception and take
+          back our lives.\",\"popularity\":0.623,\"poster_path\":\"/5sfH0dXcRrzMmuQ7tBdQl0n9PXv.jpg\",\"release_date\":\"2021-07-13\",\"title\":\"Delusions
+          End: Breaking Free of the Matrix\",\"video\":false,\"vote_average\":0,\"vote_count\":0}],\"total_pages\":1,\"total_results\":7}"
+      headers:
+        Alt-Svc:
+          - h3=":443"; ma=86400
+        Cache-Control:
+          - public, max-age=600
+        Connection:
+          - keep-alive
+        Content-Encoding:
+          - gzip
+        Content-Type:
+          - application/json;charset=utf-8
+        Date:
+          - Fri, 03 Feb 2023 11:38:01 GMT
+        Server:
+          - openresty
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept-Encoding,Accept-Encoding
+          - Origin
+        Via:
+          - 1.1 0049c5577a998a3c21b741181b3609cc.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - hp5RS_v-MW3KsIezur127C3245n7DGqbjSJL0UG902EK8g4XT8ZmIA==
+        X-Amz-Cf-Pop:
+          - LHR50-P2
+        X-Cache:
+          - Miss from cloudfront
+      status:
+        code: 200
+        message: OK
+      url: https://api.themoviedb.org/3/search/movie?api_key=9017d5457c4e8ec5f0999d1b10012ae1&language=en-US&query=The+Matrix&include_adult=false&region=US&page=1&year=2021
+  - request:
+      body: null
+      headers: {}
+      method: GET
+      uri: https://api.themoviedb.org/3/movie/624860?api_key=9017d5457c4e8ec5f0999d1b10012ae1&language=en-US
+    response:
+      body:
+        string:
+          '{"adult":false,"backdrop_path":"/eNI7PtK6DEYgZmHWP9gQNuff8pv.jpg","belongs_to_collection":{"id":2344,"name":"The
+          Matrix Collection","poster_path":"/bV9qTVHTVf0gkW0j7p7M0ILD4pG.jpg","backdrop_path":"/bRm2DEgUiYciDw3myHuYFInD7la.jpg"},"budget":190000000,"genres":[{"id":878,"name":"Science
+          Fiction"},{"id":28,"name":"Action"},{"id":12,"name":"Adventure"}],"homepage":"https://www.whatisthematrix.com","id":624860,"imdb_id":"tt10838180","original_language":"en","original_title":"The
+          Matrix Resurrections","overview":"Plagued by strange memories, Neo''s life
+          takes an unexpected turn when he finds himself back inside the Matrix.","popularity":104.234,"poster_path":"/8c4a8kE7PizaGQQnditMmI1xbRp.jpg","production_companies":[{"id":79,"logo_path":"/tpFpsqbleCzEE2p5EgvUq6ozfCA.png","name":"Village
+          Roadshow Pictures","origin_country":"US"},{"id":174,"logo_path":"/IuAlhI9eVC9Z8UQWOIDdWRKSEJ.png","name":"Warner
+          Bros. Pictures","origin_country":"US"},{"id":84764,"logo_path":null,"name":"Venus
+          Castina Productions","origin_country":"US"}],"production_countries":[{"iso_3166_1":"CA","name":"Canada"},{"iso_3166_1":"DE","name":"Germany"},{"iso_3166_1":"US","name":"United
+          States of America"}],"release_date":"2021-12-16","revenue":156497322,"runtime":147,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"Return
+          to the Source.","title":"The Matrix Resurrections","video":false,"vote_average":6.552,"vote_count":4516}'
+      headers:
+        Alt-Svc:
+          - h3=":443"; ma=86400
+        Cache-Control:
+          - public, max-age=28800
+        Connection:
+          - keep-alive
+        Content-Encoding:
+          - gzip
+        Content-Type:
+          - application/json;charset=utf-8
+        Date:
+          - Fri, 03 Feb 2023 11:38:02 GMT
+        Etag:
+          - W/"416e9740ce7439b9c1f51c40f28dcb4f"
+        Server:
+          - openresty
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept-Encoding,Accept-Encoding,Accept-Encoding
+          - Origin
+        Via:
+          - 1.1 0049c5577a998a3c21b741181b3609cc.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - mDCRSDhvbzcSx9DBXX-j23oUEpWGtm4tBz456qFjreF_bxKt_Fc0pQ==
+        X-Amz-Cf-Pop:
+          - LHR50-P2
+        X-Cache:
+          - Miss from cloudfront
+        X-Memc:
+          - HIT
+        X-Memc-Age:
+          - "8273"
+        X-Memc-Expires:
+          - "7008"
+        X-Memc-Key:
+          - 8312016bf93f1e2b2b9412af28ac5718a3119176
+      status:
+        code: 200
+        message: OK
+      url: https://api.themoviedb.org/3/movie/624860?api_key=9017d5457c4e8ec5f0999d1b10012ae1&language=en-US
+version: 1

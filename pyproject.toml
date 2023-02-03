@@ -39,17 +39,13 @@ typeguard = "^2.12.1"
 xdoctest = {extras = ["colors"], version = "^0.15.5"}
 pre-commit = "^2.13.0"
 black = "^22.12.0"
-flake8 = "^6.0.0"
-flake8-bandit = "^4.1.1"
-flake8-bugbear = "^21.11.29"
-flake8-docstrings = "^1.6.0"
-flake8-rst-docstrings = "^0.2.3"
 pep8-naming = "^0.12.0"
 darglint = "^1.8.0"
 reorder-python-imports = "^2.6.0"
 pre-commit-hooks = "^4.0.1"
 Pygments = "^2.9.0"
 types-requests = "^2.25.11"
+ruff = "^0.0.240"
 
 [tool.poetry.group.docs.dependencies]
 markdown-include = "*"
@@ -77,6 +73,52 @@ source = ["phylm"]
 [tool.coverage.report]
 show_missing = true
 fail_under = 90
+
+[tool.ruff]
+ignore = [
+  'B019',
+  'D203',
+  'D204',
+  'D213',
+  'D215',
+  'D400',
+  'D404',
+  'D406',
+  'D407',
+  'D408',
+  'D409',
+  'D413',
+  'E501',
+  'S113'
+]
+line-length = 80
+select = [
+    'B',
+    'B9',
+    'C',
+    'D',
+    'E',
+    'F',
+    'N',
+    'S',
+    'W',
+]
+
+[tool.ruff.mccabe]
+max-complexity = 10
+
+[tool.ruff.pydocstyle]
+convention = 'google'
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ['F401']
+"tests/*" = [
+    'S101',
+    'D212',
+    'D415',
+    'D205',
+    'D104',
+]
 
 [tool.mypy]
 strict = true

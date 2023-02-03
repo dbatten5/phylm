@@ -52,6 +52,7 @@ class TestSearchMovies:
 class TestSearchTmdbMovies:
     """Tests for the `search_tmdb_movies` method."""
 
+    @patch.dict(os.environ, {"TMDB_API_KEY": ""}, clear=True)
     def test_no_api_key(self) -> None:
         """
         Given no api key,
@@ -61,69 +62,34 @@ class TestSearchTmdbMovies:
         with pytest.raises(NoTMDbApiKeyError):
             search_tmdb_movies(query="The Matrix")
 
-    @patch(f"{TOOLS_MODULE_PATH}.TmdbClient", autospec=True)
-    def test_with_api_key_as_arg(self, mock_tmdb_client_class: MagicMock) -> None:
+    @patch(f"{TOOLS_MODULE_PATH}.initialize_tmdb_client", autospec=True)
+    def test_with_api_key_as_arg(self, mock_initialize_tmdb_client: MagicMock) -> None:
         """
         Given an api_key supplied as an arg,
         When the `search_tmdb_movies` function is invoked,
         Then the api_key is used in the client
         """
         api_key = "nice_key"
-        mock_tmdb_client = mock_tmdb_client_class.return_value
+        mock_tmdb_client = mock_initialize_tmdb_client.return_value
         mock_tmdb_client.search_movies.return_value = [{"title": "The Matrix"}]
 
         results = search_tmdb_movies(query="The Matrix", api_key=api_key)
 
         assert results == [{"title": "The Matrix"}]
-        mock_tmdb_client_class.assert_called_once_with(api_key=api_key)
+        mock_initialize_tmdb_client.assert_called_once_with(api_key=api_key)
         mock_tmdb_client.search_movies.assert_called_once_with(
             query="The Matrix", region="us"
         )
 
-    @patch(f"{TOOLS_MODULE_PATH}.TmdbClient", autospec=True)
-    @patch.dict(os.environ, {"TMDB_API_KEY": "nice_key"}, clear=True)
-    def test_with_api_key_as_env_var(self, mock_tmdb_client_class: MagicMock) -> None:
-        """
-        Given an api_key supplied as an env var,
-        When the `search_tmdb_movies` function is invoked,
-        Then the api_key is used in the client
-        """
-        mock_tmdb_client = mock_tmdb_client_class.return_value
-        mock_tmdb_client.search_movies.return_value = [{"title": "The Matrix"}]
-
-        results = search_tmdb_movies(query="The Matrix")
-
-        assert results == [{"title": "The Matrix"}]
-        mock_tmdb_client_class.assert_called_once_with(api_key="nice_key")
-
-    @patch(f"{TOOLS_MODULE_PATH}.TmdbClient", autospec=True)
-    @patch.dict(os.environ, {"TMDB_API_KEY": "nice_key"}, clear=True)
-    def test_with_api_key_arg_preferred(
-        self, mock_tmdb_client_class: MagicMock
-    ) -> None:
-        """
-        Given an api_key supplied as an env var and one as an arg,
-        When the `search_tmdb_movies` function is invoked,
-        Then the api_key as an arg is used in the client
-        """
-        api_key = "better_key"
-        mock_tmdb_client = mock_tmdb_client_class.return_value
-        mock_tmdb_client.search_movies.return_value = [{"title": "The Matrix"}]
-
-        results = search_tmdb_movies(query="The Matrix", api_key=api_key)
-
-        assert results == [{"title": "The Matrix"}]
-        mock_tmdb_client_class.assert_called_once_with(api_key=api_key)
-
-    @patch(f"{TOOLS_MODULE_PATH}.TmdbClient", autospec=True)
-    def test_different_region(self, mock_tmdb_client_class: MagicMock) -> None:
+    @patch(f"{TOOLS_MODULE_PATH}.initialize_tmdb_client", autospec=True)
+    def test_different_region(self, mock_initialize_tmdb_client: MagicMock) -> None:
         """
         Given a region supplied as an arg,
         When the `search_tmdb_movies` function is invoked,
         Then the region is passed to the `search_movies` method
         """
         api_key = "nice_key"
-        mock_tmdb_client = mock_tmdb_client_class.return_value
+        mock_tmdb_client = mock_initialize_tmdb_client.return_value
         mock_tmdb_client.search_movies.return_value = [{"title": "The Matrix"}]
 
         results = search_tmdb_movies(query="The Matrix", api_key=api_key, region="gb")
@@ -137,7 +103,7 @@ class TestSearchTmdbMovies:
 class TestGetStreamingProviders:
     """Tests for the `get_streaming_providers` method."""
 
-    @patch(f"{TOOLS_MODULE_PATH}.TmdbClient", autospec=True)
+    @patch(f"{TOOLS_MODULE_PATH}.initialize_tmdb_client", autospec=True)
     def test_success(
         self,
         mock_initialize_client: MagicMock,

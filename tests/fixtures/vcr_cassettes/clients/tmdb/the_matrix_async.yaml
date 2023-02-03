@@ -1,0 +1,162 @@
+interactions:
+  - request:
+      body: null
+      headers: {}
+      method: GET
+      uri: https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&query=The+Matrix&region=US
+    response:
+      body:
+        string:
+          "{\"page\":1,\"results\":[{\"adult\":false,\"backdrop_path\":\"/eNI7PtK6DEYgZmHWP9gQNuff8pv.jpg\",\"genre_ids\":[878,28,12],\"id\":624860,\"original_language\":\"en\",\"original_title\":\"The
+          Matrix Resurrections\",\"overview\":\"Plagued by strange memories, Neo's life
+          takes an unexpected turn when he finds himself back inside the Matrix.\",\"popularity\":104.234,\"poster_path\":\"/8c4a8kE7PizaGQQnditMmI1xbRp.jpg\",\"release_date\":\"2021-12-22\",\"title\":\"The
+          Matrix Resurrections\",\"video\":false,\"vote_average\":6.6,\"vote_count\":4516},{\"adult\":false,\"backdrop_path\":\"/waCRuAW5ocONRehP556vPexVXA9.jpg\",\"genre_ids\":[28,878],\"id\":603,\"original_language\":\"en\",\"original_title\":\"The
+          Matrix\",\"overview\":\"Set in the 22nd century, The Matrix tells the story
+          of a computer hacker who joins a group of underground insurgents fighting
+          the vast and powerful computers who now rule the earth.\",\"popularity\":77.213,\"poster_path\":\"/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg\",\"release_date\":\"1999-03-30\",\"title\":\"The
+          Matrix\",\"video\":false,\"vote_average\":8.2,\"vote_count\":22741},{\"adult\":false,\"backdrop_path\":\"/pxK1iK6anS6erGg4QePmMKbB1E7.jpg\",\"genre_ids\":[12,28,53,878],\"id\":604,\"original_language\":\"en\",\"original_title\":\"The
+          Matrix Reloaded\",\"overview\":\"Six months after the events depicted in The
+          Matrix, Neo has proved to be a good omen for the free humans, as more and
+          more humans are being freed from the matrix and brought to Zion, the one and
+          only stronghold of the Resistance.  Neo himself has discovered his superpowers
+          including super speed, ability to see the codes of the things inside the matrix
+          and a certain degree of pre-cognition. But a nasty piece of news hits the
+          human resistance: 250,000 machine sentinels are digging to Zion and would
+          reach them in 72 hours. As Zion prepares for the ultimate war, Neo, Morpheus
+          and Trinity are advised by the Oracle to find the Keymaker who would help
+          them reach the Source.  Meanwhile Neo's recurrent dreams depicting Trinity's
+          death have got him worried and as if it was not enough, Agent Smith has somehow
+          escaped deletion, has become more powerful than before and has fixed Neo as
+          his next target.\",\"popularity\":35.264,\"poster_path\":\"/9TGHDvWrqKBzwDxDodHYXEmOE6J.jpg\",\"release_date\":\"2003-05-15\",\"title\":\"The
+          Matrix Reloaded\",\"video\":false,\"vote_average\":7,\"vote_count\":9600},{\"adult\":false,\"backdrop_path\":\"/533xAMhhVyjTy8hwMUFEt5TuDfR.jpg\",\"genre_ids\":[12,28,53,878],\"id\":605,\"original_language\":\"en\",\"original_title\":\"The
+          Matrix Revolutions\",\"overview\":\"The human city of Zion defends itself
+          against the massive invasion of the machines as Neo fights to end the war
+          at another front while also opposing the rogue Agent Smith.\",\"popularity\":32.731,\"poster_path\":\"/ynMQ4nVwkoP2gLxXXDgcdltihTD.jpg\",\"release_date\":\"2003-11-05\",\"title\":\"The
+          Matrix Revolutions\",\"video\":false,\"vote_average\":6.7,\"vote_count\":8631},{\"adult\":false,\"backdrop_path\":\"/lBdXACywnLwKUZmZkZ87djDQBeV.jpg\",\"genre_ids\":[99],\"id\":14543,\"original_language\":\"en\",\"original_title\":\"The
+          Matrix Revisited\",\"overview\":\"The film goes behind the scenes of the 1999
+          sci-fi movie The Matrix.\",\"popularity\":10.63,\"poster_path\":\"/8yxSztoc5sqZiGuKcFuVOh65B6Y.jpg\",\"release_date\":\"2001-11-20\",\"title\":\"The
+          Matrix Revisited\",\"video\":false,\"vote_average\":6.9,\"vote_count\":169},{\"adult\":false,\"backdrop_path\":\"/5nxDn3mrdmeUHJOZi1Wfqya8Vji.jpg\",\"genre_ids\":[99],\"id\":696109,\"original_language\":\"en\",\"original_title\":\"A
+          Glitch in the Matrix\",\"overview\":\"Are we in fact living in a simulation?
+          This is the question postulated, wrestled with, and ultimately argued for
+          through archival footage, compelling interviews with real people shrouded
+          in digital avatars, and a collection of cases from some of our most iconoclastic
+          figures in contemporary culture.\",\"popularity\":7.989,\"poster_path\":\"/bn0BLVadmvzq6MmJ0n97MLxGpNQ.jpg\",\"release_date\":\"2021-02-05\",\"title\":\"A
+          Glitch in the Matrix\",\"video\":false,\"vote_average\":5.2,\"vote_count\":28},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[99,878],\"id\":221495,\"original_language\":\"en\",\"original_title\":\"The
+          Matrix Recalibrated\",\"overview\":\"The making of Matrix Revolutions, The
+          (2003) is briefly touched on here in this documentary. Interviews with various
+          cast and crew members inform us how they were affected by the deaths of Gloria
+          Foster and Aaliyah, and also delve into the making of the visual effects that
+          takes up a lot of screen time. Written by Rhyl Donnelly\",\"popularity\":4.1,\"poster_path\":\"/gRni1Q651AZPnLqZczmahiIxG0s.jpg\",\"release_date\":\"2004-04-06\",\"title\":\"The
+          Matrix Recalibrated\",\"video\":true,\"vote_average\":6.7,\"vote_count\":37},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[99],\"id\":591955,\"original_language\":\"en\",\"original_title\":\"The
+          Matrix Reloaded Revisited\",\"overview\":\"The making of The Matrix Reloaded:
+          \ Go to the middle movie's furthest reaches via five documentary paths revealing
+          21 featurettes.\",\"popularity\":3.031,\"poster_path\":\"/gb7C4oRzYWXWCuZMR1cwtHa53Pz.jpg\",\"release_date\":\"2004-12-07\",\"title\":\"The
+          Matrix Reloaded Revisited\",\"video\":false,\"vote_average\":7.4,\"vote_count\":16},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[99],\"id\":684731,\"original_language\":\"en\",\"original_title\":\"The
+          Matrix Reloaded: Pre-Load\",\"overview\":\"This making-of piece offers the
+          standard mix of movie snippets, behind the scenes materials, and interviews
+          from cast and crew on the making of the film.\",\"popularity\":3.03,\"poster_path\":null,\"release_date\":\"2003-10-14\",\"title\":\"The
+          Matrix Reloaded: Pre-Load\",\"video\":false,\"vote_average\":6.3,\"vote_count\":15},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[99],\"id\":684431,\"original_language\":\"en\",\"original_title\":\"Making
+          'The Matrix'\",\"overview\":\"A promotional making-of documentary for the
+          film Matrix, The (1999) that devotes its time to explaining the digital and
+          practical effects contained in the film. This is very interesting, seeing
+          as how they're giving away the cinematic secrets that they created solely
+          for the this movie, that have now been spoofed and referenced in countless
+          other films.\",\"popularity\":1.294,\"poster_path\":\"/m2yIfRJYwpCgHON1Ig1pNKMWTxp.jpg\",\"release_date\":\"1999-09-21\",\"title\":\"Making
+          'The Matrix'\",\"video\":false,\"vote_average\":7.8,\"vote_count\":12},{\"adult\":false,\"backdrop_path\":\"/b3toMttpZ0cFeYMgLeL042uJJpi.jpg\",\"genre_ids\":[99,28,878],\"id\":684735,\"original_language\":\"en\",\"original_title\":\"Making
+          'Enter the Matrix'\",\"overview\":\"A look at Enter the Matrix: The game's
+          story picks up just before The Matrix Reloaded and runs parallel to that of
+          the film. Bend the rules of the Matrix with martial arts, pilot the fastest
+          hovercraft in the fleet, or just fight with lots of guns.\",\"popularity\":1.683,\"poster_path\":\"/zQbJkJkzpB8EthEJ3r2Y6A2kkP6.jpg\",\"release_date\":\"2003-10-14\",\"title\":\"Making
+          'Enter the Matrix'\",\"video\":false,\"vote_average\":5.8,\"vote_count\":6},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[99],\"id\":503880,\"original_language\":\"en\",\"original_title\":\"The
+          Matrix Revolutions Revisited\",\"overview\":\"The making of The Matrix Revolutions:
+          \ The cataclysmic final confrontation chronicled through six documentary pods
+          revealing 28 featurettes\",\"popularity\":2.179,\"poster_path\":\"/61ASnmqvzpuz9VEfFElo3e2nIft.jpg\",\"release_date\":\"2004-12-07\",\"title\":\"The
+          Matrix Revolutions Revisited\",\"video\":false,\"vote_average\":7.8,\"vote_count\":13},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[99,28,878],\"id\":684428,\"original_language\":\"en\",\"original_title\":\"The
+          Matrix: What Is Bullet-Time?\",\"overview\":\"Special Effects wizard John
+          Gaeta demonstrates how the \\\"Bullet-Time\\\" effects were created for the
+          film Matrix, The (1999).\",\"popularity\":2.171,\"poster_path\":\"/hSTervHaROcTd8Ir3DPfepN80dL.jpg\",\"release_date\":\"1999-09-21\",\"title\":\"The
+          Matrix: What Is Bullet-Time?\",\"video\":false,\"vote_average\":6.6,\"vote_count\":7},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[99,28,878],\"id\":684729,\"original_language\":\"en\",\"original_title\":\"The
+          Matrix Reloaded: Car Chase\",\"overview\":\"This thirty-minute documentary
+          follows the Wachowski sisters and the film's crew through production on the
+          film's famed highway chase sequence. We get interviews with the visual effects
+          supervisors, the stunt coordinators and even are taken through aspects of
+          pre-production and planning for the scene. Then the documentary moves into
+          production, the scariest aspect of which is certainly Carrie Anne-Moss trying
+          to learn to ride a motorcycle good enough to do so safely without helmet for
+          the scene. We also watch as the stretch of freeway used in the film is being
+          built.\",\"popularity\":1.282,\"poster_path\":\"/zkpzfTyF7BjadH1PZKlC6kueWXf.jpg\",\"release_date\":\"2004-12-07\",\"title\":\"The
+          Matrix Reloaded: Car Chase\",\"video\":false,\"vote_average\":6,\"vote_count\":4},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[],\"id\":344225,\"original_language\":\"en\",\"original_title\":\"Sex
+          and the Matrix\",\"overview\":\"A spoof created for the 2000 MTV Movie Awards,
+          combining The Matrix and \\\"Sex in the City\\\".\",\"popularity\":0.943,\"poster_path\":null,\"release_date\":\"2000-06-03\",\"title\":\"Sex
+          and the Matrix\",\"video\":false,\"vote_average\":6.7,\"vote_count\":3},{\"adult\":false,\"backdrop_path\":\"/htYaLEQ41N2Ls7mhWvgP8JD21E3.jpg\",\"genre_ids\":[99],\"id\":505806,\"original_language\":\"en\",\"original_title\":\"A
+          Glitch in the Matrix\",\"overview\":\"In 'A Glitch in the Matrix', journalist
+          David Fuller analyzes and assesses Dr. Jordan B Peterson's recent viral interview
+          with Cathy Newman, unpacking the deeper political, psychological and archetypal
+          levels of the clash.\",\"popularity\":0.963,\"poster_path\":\"/7vZPj3lFSc6eJsLk5nzvqacvrGR.jpg\",\"release_date\":\"2018-02-17\",\"title\":\"A
+          Glitch in the Matrix\",\"video\":false,\"vote_average\":6,\"vote_count\":2},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[99],\"id\":274866,\"original_language\":\"en\",\"original_title\":\"The
+          Roots of the Matrix\",\"overview\":\"Disc 8 of 10 of 'The Matrix: Ultimate
+          Edition': Probe the philosophical and technological inspirations of The Matrix
+          Trilogy through two insightful documentaries:  - Return to Source: Philosophy
+          &amp; The Matrix documentary \u2013 Scholars, philosophers and theorists deconstruct
+          the intellectual underpinnings of the trilogy  - The Hard Problem: The Science
+          Behind the Fiction documentary \u2013 Is the notion of a real Matrix plausible?
+          An investigation of the technologies that inspire the metaphor of the Matrix.\",\"popularity\":1.094,\"poster_path\":\"/qmOtnpPihV3Wj6ukpiNIgzo4Ax7.jpg\",\"release_date\":\"2004-12-07\",\"title\":\"The
+          Roots of the Matrix\",\"video\":false,\"vote_average\":7,\"vote_count\":3},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[16],\"id\":919064,\"original_language\":\"en\",\"original_title\":\"Me
+          and The Matrix\",\"overview\":\"Filmmaker Cressa Maeve Beer recalls her experience
+          growing up as a fan of the Matrix movies, in celebration of the upcoming release
+          of The Matrix Resurrections.\",\"popularity\":0.6,\"poster_path\":\"/i9A8PKfzxyp4HxjqoEupKcZfofr.jpg\",\"release_date\":\"2021-12-22\",\"title\":\"Me
+          and The Matrix\",\"video\":false,\"vote_average\":0,\"vote_count\":0},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[28,99,878],\"id\":684721,\"original_language\":\"en\",\"original_title\":\"The
+          Matrix Revolutions: Super Big Mini Models\",\"overview\":\"This making-of
+          piece includes remarks from production designer Owen Paterson, concept artist
+          George Hull, visual effects supervisor John Gaeta, US unit production manager
+          L. Dean Jones Jr., US model unit special effects coordinator Geoffrey Heron,
+          Zion unit sequence lead Rodney Iwashina, high speed first assistant camera
+          Paul Sanchez, US model unit art director Nanci Noblett, conceptual designer
+          Geofrey Darrow, model shop supervisor Michael Lynch, US model unit producer
+          David Dranitzke, prop maker foremen Dave Fogler and Fon Davis, and visual
+          effects supervisor John \\\"DJ\\\" Des Jardin.\",\"popularity\":1.094,\"poster_path\":\"/2US7uuM36El9pnk8WLdGh1XN39r.jpg\",\"release_date\":\"2004-04-06\",\"title\":\"The
+          Matrix Revolutions: Super Big Mini Models\",\"video\":false,\"vote_average\":6.8,\"vote_count\":2},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[99],\"id\":1038494,\"original_language\":\"en\",\"original_title\":\"Panopticon
+          Destiny \u2013 The Matrix Files\",\"overview\":\"On August 6th 1977, the world\u2019s
+          first DOCTOR WHO convention was held at a church hall in Battersea, South
+          London.  Organised by The Doctor Who Appreciation Society (DWAS) , Convention
+          \u201977 was ground breaking \u2013 featuring sta appearances from the (then)
+          current Doctor Tom baker with his latest companion Louise Jameson (Leela)
+          and former Doctor Jon Pertwee.  40 years later, stars, fans and organisers
+          returned to the church hall to reminisce about that special day!  In this
+          second volume celebrating the anniversary, we feature a convention panel with
+          organiser Keith Barnfather, contributor Kevin Davies and attendee Andrew Beech,
+          held at another DWAS event The Capitol II on the 7th May 2017.\",\"popularity\":0.6,\"poster_path\":\"/r1fOhVtFRMqFkG8I6MaK6eDvX8r.jpg\",\"release_date\":\"2021-05-07\",\"title\":\"Panopticon
+          Destiny \u2013 The Matrix Files\",\"video\":false,\"vote_average\":0,\"vote_count\":0}],\"total_pages\":3,\"total_results\":42}"
+      headers:
+        Alt-Svc:
+          - h3=":443"; ma=86400
+        Cache-Control:
+          - public, max-age=600
+        Connection:
+          - keep-alive
+        Content-Encoding:
+          - gzip
+        Content-Type:
+          - application/json;charset=utf-8
+        Date:
+          - Fri, 03 Feb 2023 12:29:54 GMT
+        Server:
+          - openresty
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept-Encoding,Accept-Encoding
+          - Origin
+        Via:
+          - 1.1 a5dd833f04c432c7ca32c82296794828.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - A1UCU230vPa-SumvZrHTT2uYHznUxme9T3H-IClwhXpWXeXs-DHLkw==
+        X-Amz-Cf-Pop:
+          - LHR61-P7
+        X-Cache:
+          - Miss from cloudfront
+      status:
+        code: 200
+        message: OK
+      url: https://api.themoviedb.org/3/search/movie?api_key=9017d5457c4e8ec5f0999d1b10012ae1&language=en-US&query=The+Matrix&include_adult=false&region=US&page=1
+version: 1
