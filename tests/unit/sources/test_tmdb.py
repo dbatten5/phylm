@@ -5,11 +5,12 @@ from unittest.mock import Mock
 from unittest.mock import patch
 
 import pytest
-from aiohttp import ClientSession
 from tests.conftest import FIXTURES_DIR
-from tests.conftest import my_vcr
+from tests.conftest import vcr
 
 from phylm.sources.tmdb import Tmdb
+
+# from aiohttp import ClientSession
 
 MODULE_PATH = "phylm.sources.tmdb"
 VCR_FIXTURES_DIR = f"{FIXTURES_DIR}/tmdb"
@@ -33,21 +34,21 @@ class TestInit:
 
         assert tmdb.title is None
 
-    @my_vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix.yaml")
-    async def test_exact_match(self, async_session: ClientSession) -> None:
+    @vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix.yaml")
+    async def test_exact_match(self) -> None:
         """Exact title match and `low_confidence` remains `False`."""
-        tmdb = Tmdb("The Matrix", session=async_session)
+        tmdb = Tmdb("The Matrix")
         await tmdb.load_source()
 
         assert tmdb.title == "The Matrix"
         assert tmdb.low_confidence is False
 
-    @my_vcr.use_cassette(f"{VCR_FIXTURES_DIR}/no_results.yaml")
-    async def test_no_results(self, async_session: ClientSession) -> None:
+    @vcr.use_cassette(f"{VCR_FIXTURES_DIR}/no_results.yaml")
+    async def test_no_results(self) -> None:
         """No matches are handled"""
         raw_title = "asldkjnkasnxlajsnxkasjxnas"
 
-        tmdb = Tmdb(raw_title, session=async_session)
+        tmdb = Tmdb(raw_title)
         await tmdb.load_source()
 
         assert tmdb.title is None
@@ -56,10 +57,10 @@ class TestInit:
 class TestYearMatching:
     """Tests for the using year with title method."""
 
-    @my_vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix_3.yaml")
-    async def test_year_match_first_result(self, async_session: ClientSession) -> None:
+    @vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix_3.yaml")
+    async def test_year_match_first_result(self) -> None:
         """Year data is correctly used for getting search results."""
-        tmdb = Tmdb(raw_title="The Matrix", raw_year=2021, session=async_session)
+        tmdb = Tmdb(raw_title="The Matrix", raw_year=2021)
         await tmdb.load_source()
 
         assert tmdb.title == "The Matrix Resurrections"
@@ -139,7 +140,7 @@ class TestLoadSource:
 class TestId:
     """Tests for the `id` property."""
 
-    @my_vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix.yaml")
+    @vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix.yaml")
     async def test_year(self) -> None:
         """The TMDB id can be returned."""
         tmdb = Tmdb("The Matrix")
@@ -151,7 +152,7 @@ class TestId:
 class TestImdbId:
     """Tests for the `imdb_id` property."""
 
-    @my_vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix.yaml")
+    @vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix.yaml")
     async def test_year(self) -> None:
         """The IMDb id can be returned."""
         tmdb = Tmdb("The Matrix")
@@ -163,7 +164,7 @@ class TestImdbId:
 class TestGenres:
     """Tests for the `genres` method."""
 
-    @my_vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix.yaml")
+    @vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix.yaml")
     async def test_year(self) -> None:
         """The IMDb id can be returned."""
         tmdb = Tmdb("The Matrix")
@@ -175,7 +176,7 @@ class TestGenres:
 class TestRuntime:
     """Tests for the `runtime` property."""
 
-    @my_vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix.yaml")
+    @vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix.yaml")
     async def test_year(self) -> None:
         """The runtime can be returned."""
         tmdb = Tmdb("The Matrix")
@@ -187,7 +188,7 @@ class TestRuntime:
 class TestRating:
     """Tests for the `rating` property."""
 
-    @my_vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix.yaml")
+    @vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix.yaml")
     async def test_year(self) -> None:
         """The rating can be returned."""
         tmdb = Tmdb("The Matrix")
@@ -199,7 +200,7 @@ class TestRating:
 class TestPlot:
     """Tests for the `plot` property."""
 
-    @my_vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix.yaml")
+    @vcr.use_cassette(f"{VCR_FIXTURES_DIR}/the_matrix.yaml")
     async def test_year(self) -> None:
         """The plot can be returned."""
         tmdb = Tmdb("The Matrix")
