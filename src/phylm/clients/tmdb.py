@@ -1,4 +1,5 @@
 """Client to interact with The Movie DB (TMDB)."""
+import asyncio
 import os
 from typing import Any
 from typing import Dict
@@ -10,6 +11,15 @@ from aiohttp import ClientSession
 from requests import Session
 
 from phylm.errors import NoTMDbApiKeyError
+
+
+def _has_running_event_loop() -> bool:
+    """Check if there is a currently running event loop."""
+    try:
+        asyncio.get_running_loop()
+        return True
+    except RuntimeError:
+        return False
 
 
 class TmdbClient:
@@ -25,7 +35,9 @@ class TmdbClient:
             async_session: an optional instance of `aiohttp.ClientSession`
         """
         self.session = Session()
-        self.async_session = async_session or ClientSession()
+        self.async_session: Optional[ClientSession] = async_session
+        if _has_running_event_loop() and not self.async_session:
+            self.async_session = ClientSession()
         self.api_key = api_key
         self._base_url = "https://api.themoviedb.org/3"
 
@@ -65,7 +77,13 @@ class TmdbClient:
 
         Returns:
             List[Dict[str, Any]]: the search results
+
+        Raises:
+            RuntimeError: when no `async_session` has been set
         """
+        if not self.async_session:
+            raise RuntimeError("No `async_session` available.")
+
         params: Dict[str, Union[str, int]] = {
             "api_key": self.api_key,
             "language": "en-US",
@@ -94,7 +112,13 @@ class TmdbClient:
 
         Returns:
             Dict[str, Any]: a dictionary of the movie data
+
+        Raises:
+            RuntimeError: when no `async_session` has been set
         """
+        if not self.async_session:
+            raise RuntimeError("No `async_session` available.")
+
         params = {
             "api_key": self.api_key,
             "language": "en-US",

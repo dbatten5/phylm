@@ -128,6 +128,15 @@ class Tmdb:
         return int(runtime)
 
     @property
+    def release_date(self) -> Optional[str]:
+        """Return the movie's release_date.
+
+        Returns:
+            the release date of the movie
+        """
+        return self._tmdb_data.get("release_date")
+
+    @property
     def year(self) -> Optional[int]:
         """Return the movie's year.
 
