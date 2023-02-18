@@ -35,7 +35,7 @@ def search_movies(query: str) -> List[Dict[str, Union[str, int]]]:
 
 
 def search_tmdb_movies(
-    query: str, api_key: Optional[str] = None, region: str = "us"
+    query: str, api_key: Optional[str] = None, region: Optional[str] = None
 ) -> List[Dict[str, Any]]:
     """Search for movies on TMDb.
 

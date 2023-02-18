@@ -73,7 +73,7 @@ class TestSearchTmdbMovies:
         mock_tmdb_client = mock_initialize_tmdb_client.return_value
         mock_tmdb_client.search_movies.return_value = [{"title": "The Matrix"}]
 
-        results = search_tmdb_movies(query="The Matrix", api_key=api_key)
+        results = search_tmdb_movies(query="The Matrix", api_key=api_key, region="us")
 
         assert results == [{"title": "The Matrix"}]
         mock_initialize_tmdb_client.assert_called_once_with(api_key=api_key)
