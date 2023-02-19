@@ -3,7 +3,7 @@ interactions:
       body: null
       headers: {}
       method: GET
-      uri: https://api.themoviedb.org/3/search/movie?api_key=9017d5457c4e8ec5f0999d1b10012ae1&language=en-US&query=The+Matrix&include_adult=false&region=US&page=1&year=2021
+      uri: https://api.themoviedb.org/3/search/movie?api_key=9017d5457c4e8ec5f0999d1b10012ae1&language=en-US&query=The+Matrix&include_adult=false&page=1&year=2021
     response:
       body:
         string:

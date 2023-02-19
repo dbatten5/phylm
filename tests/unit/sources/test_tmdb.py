@@ -204,7 +204,7 @@ class TestRating:
         tmdb = Tmdb("The Matrix")
         await tmdb.load_source()
 
-        assert tmdb.rating == 8.196
+        assert tmdb.rating == 8.2
 
 
 class TestPlot:
