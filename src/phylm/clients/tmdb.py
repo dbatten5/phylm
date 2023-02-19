@@ -68,7 +68,7 @@ class TmdbClient:
         return results
 
     async def search_movies_async(
-        self, query: str, region: str = "us", year: Optional[int] = None
+        self, query: str, region: Optional[str] = None, year: Optional[int] = None
     ) -> List[Dict[str, Any]]:
         """Search for movies async.
 
@@ -91,9 +91,11 @@ class TmdbClient:
             "language": "en-US",
             "query": query,
             "include_adult": "false",
-            "region": region.upper(),
             "page": 1,
         }
+
+        if region:
+            params["region"] = region
 
         if year:
             params["year"] = year

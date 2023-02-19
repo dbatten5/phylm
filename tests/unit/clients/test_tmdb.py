@@ -92,7 +92,7 @@ class TestSearchMoviesAsync:
             f"{VCR_FIXTURES_DIR}/the_matrix_async.yaml",
             filter_query_parameters=["api_key"],
         ) as cass:
-            results = await client.search_movies_async(query="The Matrix")
+            results = await client.search_movies_async(query="The Matrix", region="US")
 
             assert results[0]["title"] == "The Matrix Resurrections"
 
@@ -128,7 +128,6 @@ class TestSearchMoviesAsync:
             ("language", "en-US"),
             ("page", "1"),
             ("query", "The Matrix"),
-            ("region", "US"),
             ("year", "1999"),
         ]
 
