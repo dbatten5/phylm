@@ -23,10 +23,9 @@ pip install phylm
 ## Usage
 
 ```python
->>> import asyncio
 >>> from phylm import Phylm
 >>> p = Phylm("The Matrix")
->>> asyncio.run(p.load_source("imdb"))
+>>> await p.load_source("imdb")
 >>> p.imdb.year
 1999
 >>> p.imdb.rating
