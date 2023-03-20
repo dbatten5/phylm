@@ -25,11 +25,13 @@ pip install phylm
 ```python
 >>> from phylm import Phylm
 >>> p = Phylm("The Matrix")
->>> await p.load_source("imdb")
+>>> await p.load_sources(["imdb", "mtc"])
 >>> p.imdb.year
 1999
 >>> p.imdb.rating
 8.7
+>>> p.mtc.rating
+73
 ```
 
 `phylm` also provides some tools around movie search results and more:
