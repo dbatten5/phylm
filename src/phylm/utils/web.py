@@ -6,7 +6,6 @@ import requests
 from aiohttp import ClientSession
 from bs4 import BeautifulSoup
 
-
 # DEFAULT_HEADERS = {"User-agent": "Mozilla/5.0"}
 DEFAULT_HEADERS = {
     "User-agent": (

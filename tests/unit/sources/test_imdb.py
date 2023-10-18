@@ -1,9 +1,9 @@
 """Module for `Imdb` tests."""
 import pytest
-from tests.conftest import FIXTURES_DIR
-from tests.conftest import my_vcr
 
 from phylm.sources.imdb import Imdb
+from tests.conftest import FIXTURES_DIR
+from tests.conftest import my_vcr
 
 VCR_FIXTURES_DIR = f"{FIXTURES_DIR}/imdb"
 IMDB_IA_PATH = "phylm.sources.imdb.ia"

@@ -4,6 +4,7 @@ from typing import AsyncGenerator
 import pytest
 import vcr
 from aiohttp import ClientSession
+
 from tests.utils.vcr_serializers import ResponseBodyCompressor
 
 my_vcr = vcr.VCR()

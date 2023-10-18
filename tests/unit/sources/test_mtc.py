@@ -1,9 +1,9 @@
 """Tests for the Mtc class."""
 import pytest
-from tests.conftest import FIXTURES_DIR
-from tests.conftest import my_vcr
 
 from phylm.sources.mtc import Mtc
+from tests.conftest import FIXTURES_DIR
+from tests.conftest import my_vcr
 
 VCR_FIXTURES_DIR = f"{FIXTURES_DIR}/mtc"
 pytestmark = pytest.mark.asyncio

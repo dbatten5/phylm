@@ -5,10 +5,10 @@ from unittest.mock import Mock
 from unittest.mock import patch
 
 import pytest
-from tests.conftest import FIXTURES_DIR
-from tests.conftest import vcr
 
 from phylm.sources.tmdb import Tmdb
+from tests.conftest import FIXTURES_DIR
+from tests.conftest import vcr
 
 MODULE_PATH = "phylm.sources.tmdb"
 VCR_FIXTURES_DIR = f"{FIXTURES_DIR}/tmdb"
@@ -116,7 +116,7 @@ class TestLoadSource:
         await tmdb.load_source()
 
         search_movies_mock.assert_awaited_once_with("The Matrix", year=1999)
-        get_movie_mock.assert_not_awaited
+        get_movie_mock.assert_not_awaited()
 
     @patch(f"{MODULE_PATH}.initialize_tmdb_client")
     async def test_new_session(self, mock_initialize_client: MagicMock) -> None:
