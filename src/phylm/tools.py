@@ -1,11 +1,13 @@
 """Module to hold `phylm` tools."""
+from typing import TYPE_CHECKING
 from typing import Any
 from typing import Dict
 from typing import List
 from typing import Optional
 from typing import Union
 
-from imdb.Movie import Movie
+if TYPE_CHECKING:
+    from imdb.Movie import Movie
 
 from phylm.clients.tmdb import initialize_tmdb_client
 from phylm.sources.imdb import ia

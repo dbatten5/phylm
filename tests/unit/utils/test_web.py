@@ -5,13 +5,13 @@ from unittest.mock import patch
 
 from aiohttp import ClientSession
 from bs4 import BeautifulSoup
-from tests.conftest import FIXTURES_DIR
-from tests.conftest import my_vcr
 
-from phylm.utils.web import async_soupify
 from phylm.utils.web import DEFAULT_HEADERS
+from phylm.utils.web import async_soupify
 from phylm.utils.web import soupify
 from phylm.utils.web import url_encode
+from tests.conftest import FIXTURES_DIR
+from tests.conftest import my_vcr
 
 VCR_FIXTURES_DIR = f"{FIXTURES_DIR}/utils/web"
 

@@ -1,9 +1,9 @@
 """Tests for the Rt class."""
 import pytest
-from tests.conftest import FIXTURES_DIR
-from tests.conftest import my_vcr
 
 from phylm.sources.rt import Rt
+from tests.conftest import FIXTURES_DIR
+from tests.conftest import my_vcr
 
 VCR_FIXTURES_DIR = f"{FIXTURES_DIR}/rt"
 pytestmark = pytest.mark.asyncio

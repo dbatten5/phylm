@@ -7,11 +7,11 @@ from unittest.mock import patch
 import pytest
 import vcr
 from requests.exceptions import HTTPError
-from tests.conftest import FIXTURES_DIR
 
-from phylm.clients.tmdb import initialize_tmdb_client
 from phylm.clients.tmdb import TmdbClient
+from phylm.clients.tmdb import initialize_tmdb_client
 from phylm.errors import NoTMDbApiKeyError
+from tests.conftest import FIXTURES_DIR
 
 VCR_FIXTURES_DIR = f"{FIXTURES_DIR}/clients/tmdb"
 MODULE_PATH = "phylm.clients.tmdb"
@@ -83,7 +83,7 @@ class TestSearchMovies:
 class TestSearchMoviesAsync:
     """Tests for the `search_movies_async` method."""
 
-    @pytest.mark.asyncio
+    @pytest.mark.asyncio()
     async def test_success(self) -> None:
         """Movies search results are returned."""
         client = TmdbClient(api_key="not_a_key")
@@ -107,7 +107,7 @@ class TestSearchMoviesAsync:
             ("region", "US"),
         ]
 
-    @pytest.mark.asyncio
+    @pytest.mark.asyncio()
     async def test_success_year(self) -> None:
         """Movies search results filtered by year are returned."""
         client = TmdbClient(api_key="not_a_key")
@@ -131,7 +131,7 @@ class TestSearchMoviesAsync:
             ("year", "1999"),
         ]
 
-    @pytest.mark.asyncio
+    @pytest.mark.asyncio()
     async def test_no_results(self) -> None:
         """Empty list is returned for no results."""
         client = TmdbClient(api_key="not_a_key")
@@ -148,7 +148,7 @@ class TestSearchMoviesAsync:
 class TestGetMovie:
     """Tests for the `get_movie` method."""
 
-    @pytest.mark.asyncio
+    @pytest.mark.asyncio()
     async def test_success(self) -> None:
         """Movie result is returned."""
         client = TmdbClient(api_key="not_a_key")
@@ -168,7 +168,7 @@ class TestGetMovie:
             ("language", "en-US"),
         ]
 
-    @pytest.mark.asyncio
+    @pytest.mark.asyncio()
     async def test_not_found(self) -> None:
         """Unrecognised movie id is handled."""
         client = TmdbClient(api_key="not_a_key")
