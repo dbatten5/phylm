@@ -92,6 +92,7 @@ ignore = [
   'D413',
   'DTZ007',
   'E501',
+  'PT012',
   'S113',
 ]
 line-length = 80

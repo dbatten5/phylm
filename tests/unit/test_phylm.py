@@ -71,7 +71,7 @@ class TestRepr:
         assert str(phylm) == "<class 'Phylm' title:'foo'>"
 
 
-@pytest.mark.asyncio
+@pytest.mark.asyncio()
 class TestLoadSource:
     """Tests for the `load_source` method."""
 
@@ -227,7 +227,7 @@ class TestLoadSource:
                 raw_title="foo", movie_id="abc", raw_year=None
             )
 
-    @pytest.mark.parametrize("source_class", ("Rt", "Mtc", "Imdb", "Tmdb"))
+    @pytest.mark.parametrize("source_class", ["Rt", "Mtc", "Imdb", "Tmdb"])
     async def test_source_already_loaded(self, source_class: str) -> None:
         """
         Given phylm instance with a source already loaded,
@@ -244,7 +244,7 @@ class TestLoadSource:
 
         assert mock_source.call_count == 1
 
-    @pytest.mark.parametrize("source_class", ("Rt", "Mtc", "Tmdb"))
+    @pytest.mark.parametrize("source_class", ["Rt", "Mtc", "Tmdb"])
     async def test_with_given_session(self, source_class: str) -> None:
         """
         Given phylm instance,
@@ -262,7 +262,7 @@ class TestLoadSource:
         mock_source.return_value.load_source.assert_called_once_with(session=session)
 
 
-@pytest.mark.asyncio
+@pytest.mark.asyncio()
 class TestLoadSources:
     """Tests for the `load_sources` method."""
 
