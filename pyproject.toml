@@ -30,7 +30,7 @@ pytest = "^6.2.4"
 coverage = {extras = ["toml"], version = "^6.1"}
 vcrpy = "^4.1.1"
 pytest-aiohttp = "^0.3.0"
-pytest-asyncio = "^0.16.0"
+pytest-asyncio = ">=0.16,<0.21"
 
 [tool.poetry.group.dev.dependencies]
 safety = "^2.2.0"
