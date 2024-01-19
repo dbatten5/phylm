@@ -1,4 +1,6 @@
-# Usage
+# Metacritic
+
+## Usage
 
 To access Metacritic data points, first ensure you have loaded the Metacritic source
 through:
@@ -16,11 +18,9 @@ mtc = Mtc(raw_title="The Matrix", raw_year=1999)  # raw_year is optional
 await mtc.load_source()
 ```
 
-# Reference
+## Reference
 
-::: phylm.sources.mtc.Mtc
-    rendering:
-      show_signature_annotations: true
-      heading_level: 2
-      show_root_heading: false
-      show_root_toc_entry: false
+```{eval-rst}
+.. autoclass:: phylm.sources.mtc.Mtc
+   :members:
+```
