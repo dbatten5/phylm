@@ -1,4 +1,6 @@
-# Usage
+# IMDB
+
+## Usage
 
 To access IMDb data points, first ensure you have loaded the IMDb source
 through:
@@ -16,7 +18,7 @@ imdb = Imdb(raw_title="The Matrix", raw_year=1999)  # raw_year is optional
 await imdb.load_source()
 ```
 
-## Movie ID
+### Movie ID
 
 If you know the IMDb movie ID you can instantiate the `Phylm` class with an `imdb_id`
 property:
@@ -49,11 +51,9 @@ imdb = Imdb(movie_id="0133093")
     If instantiating the class directly you must supply at least one of `movie_id`
     or `raw_title`, otherwise a `ValueError` will be raised.
 
-# Reference
+## Reference
 
-::: phylm.sources.imdb.Imdb
-    rendering:
-      show_signature_annotations: true
-      heading_level: 2
-      show_root_heading: false
-      show_root_toc_entry: false
+```{eval-rst}
+.. autoclass:: phylm.sources.imdb.Imdb
+   :members:
+```

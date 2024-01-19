@@ -1,6 +1,6 @@
-This is the main entrypoint class.
+# Phylm
 
-# Usage
+This is the main entrypoint class.
 
 First instantiate the class with a `title` property:
 
@@ -45,7 +45,7 @@ that source can be accessed:
 8.8
 ```
 
-## Low Confidence
+### Low Confidence
 
 `phylm` will try to match the given title with the results through an exact
 match on the title. If `phylm` can't find an exact match then it will select the
@@ -58,16 +58,14 @@ from phylm import Phylm
 p = Phylm("Ambiguous Movie")  # suppose this movie was released in 1999
 await p.load_source("imdb")
 if p.imdb.low_confidence and p.imdb.year != 1999:
-    # it's unlikely we're dealing with the right "Ambigous Movie"
+    # it's unlikely we're dealing with the right "Ambiguous Movie"
 ```
 
 See the docs for a source for a full list of the available data points.
 
-# Reference
+## Reference
 
-::: phylm.Phylm
-    rendering:
-      show_signature_annotations: true
-      heading_level: 2
-      show_root_heading: false
-      show_root_toc_entry: false
+```{eval-rst}
+.. autoclass:: phylm.Phylm
+   :members:
+```

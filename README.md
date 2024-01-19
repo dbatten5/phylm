@@ -75,8 +75,10 @@ pip install phylm
 
 ## Help
 
-See the [documentation](https://dbatten5.github.io/phylm) for more details.
+See the [documentation](https://phylm.readthedocs.io) for more details.
 
 ## Licence
 
 MIT
+
+<!-- github-only -->

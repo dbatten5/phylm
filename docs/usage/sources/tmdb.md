@@ -1,4 +1,6 @@
-# Usage
+# TMDB
+
+## Usage
 
 To access TMDB data points, first ensure you have loaded the TMDB source
 through:
@@ -16,15 +18,15 @@ tmdb = Tmdb(raw_title="The Matrix", raw_year=1999)  # raw_year is optional
 await tmdb.load_source()
 ```
 
-## Movie ID
+### Movie ID
 
 If you know the TMDB movie ID you can instantiate the `Phylm` class with a `tmdb_id`
 property:
 
 ```python
-from phylm.sources import Tmdb
+from phylm import Phylm
 
-tmdb = Tmdb(raw_title="The Matrix", tmdb_id="609")
+tmdb = Phylm(title="The Matrix", tmdb_id="609")
 ```
 
 Then, when running `load_source` for `tmdb`, `phylm` will first perform a search based
@@ -45,18 +47,17 @@ from phylm.sources import Tmdb
 tmdb = Tmdb(movie_id="0133093")
 ```
 
-!!! warning ""
-    If instantiating the class directly you must supply at least one of `movie_id`
-    or `raw_title`, otherwise a `ValueError` will be raised.
+```{warning}
+If instantiating the class directly you must supply at least one of `movie_id`
+or `raw_title`, otherwise a `ValueError` will be raised.
+```
 
 Note that TMDB doesn't provide any fuzzy search for title, only exact matches are
 returned.
 
-# Reference
+## Reference
 
-::: phylm.sources.tmdb.Tmdb
-    rendering:
-      show_signature_annotations: true
-      heading_level: 2
-      show_root_heading: false
-      show_root_toc_entry: false
+```{eval-rst}
+.. autoclass:: phylm.sources.tmdb.Tmdb
+   :members:
+```
